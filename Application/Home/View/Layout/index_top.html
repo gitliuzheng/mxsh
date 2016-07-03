@@ -1,0 +1,126 @@
+<div class="site-mast__user-nav-w" id="J-site-mast__user-nav-w">
+    <div class="site-mast__user-nav cf">
+        <ul class="basic-info">
+            <li class="site-mast__keep">
+                <a rel="nofollow" class="fav log-mod-viewed" id="J-favorite" href="javascript:void(0);" onclick="javascript:addFavorite2();">
+                    <i class="F-glob F-glob-star-border icon-keep"></i>
+                    收藏网站
+                </a>
+            </li>
+            <li class="user-info cf" data-comboajax-uri="/combo/userinfo" data-comboajax-onsuccess="this.setHTML($response.html);" data-comboajax-state="5">
+                <if condition="$is_cookie_login eq 0">
+                    <a class="user-info__login" id="J-login" href="http://www.mxhhw.com/index.php?act=login&op=index" target="_blank">登录</a>
+                    <a class="user-info__signup" href="http://www.mxhhw.com/index.php?act=login&op=register" target="_blank">注册</a>
+                <else />
+                    <a class="user-info__login" id="J-login" href="http://www.mxhhw.com/shop/index.php?act=member&op=home" target="_blank"><{$vr_member_name}></a>
+                    <a class="user-info__signup" href="http://www.mxhhw.com/shop/index.php?act=login&op=logout" target="_blank">退出</a>
+                </if>               
+            </li>
+            <li data-uix="dropdown" class="dropdown dropdown--msg" data-comboajax-uri="/index/message" data-comboajax-onsuccess="$request.listen(&quot;www-tips&quot;, &quot;www.MsgCenter&quot;);" data-comboajax-state="5" style="display:none;" id="yui_3_16_0_1_1464999326260_453">
+                <a id="J-my-msg" rel="nofollow" class="dropdown__toggle" href="http://www.meituan.com/message/" gaevent="nav/mymsg">
+                    <i class="vertical-bar vertical-bar--left"></i>
+                    <span class="J-title">消息</span>
+                    <i class="tri tri--dropdown"></i>
+                    <i class="vertical-bar"></i>
+                </a>
+            </li>
+            <li data-uix="dropdown" data-params="{&quot;classname&quot;: &quot;dropdown--open dropdown--open-app&quot;}" class="mobile-info__item dropdown" id="mxsh_app_download">
+                <a class="dropdown__toggle" href="javascript:;"><i class="icon-mobile F-glob F-glob-phone"></i>商户APP<i class="tri tri--dropdown"></i></a>
+                <div class="dropdown-menu dropdown-menu--app">
+                    <a class="app-block" href="http://i.meituan.com/mobile/down/meituan" target="_blank">
+                        <span class="app-block__title">免费下载店店通android版</span>
+                        <span class="app-block__content"></span>
+                        <i class="app-block__arrow F-glob F-glob-caret-right"></i>
+                    </a>
+                    <a class="app-block app-block--last app-block--maoyan" href="http://www.maoyan.com/" target="_blank">
+                        <span class="app-block__title">免费下载店店通ios版</span>
+                        <span class="app-block__content"></span>
+                        <i class="app-block__arrow F-glob F-glob-caret-right"></i>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="site-mast__user-w">
+            <li class="user-orders">
+                <a href="http://www.mxhhw.com/shop/index.php?act=member_vr_order&op=index" target="_blank">我的订单</a>
+            </li>
+            <li data-uix="dropdown" class="dropdown dropdown--account" id="mxsh_my_home">
+                <a id="J-my-account-toggle" rel="nofollow" class="dropdown__toggle" href="http://www.mxhhw.com/shop/index.php?act=member&op=home" target="_blank">
+                    <span>我的商城</span>
+                    <i class="tri tri--dropdown"></i>
+                    <i class="vertical-bar"></i>
+                </a>
+                <ul id="J-my-account-menu" class="dropdown-menu dropdown-menu--text dropdown-menu--account account-menu" data-mtnode="Amymeituan">
+                    <li><a class="dropdown-menu__item first " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_vr_order&op=index" target="_blank">我的订单</a></li>
+                    <li><a class="dropdown-menu__item  " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_evaluate&op=list" target="_blank">我的评价</a></li>
+                    <li><a class="dropdown-menu__item  " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_favorites&op=fglist" target="_blank">我的收藏</a></li>
+                    <li><a class="dropdown-menu__item  " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_points&op=index" target="_blank">我的积分</a></li>
+                    <li><a class="dropdown-menu__item  " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_voucher&op=index" target="_blank">抵用券</a></li>
+                    <li><a class="dropdown-menu__item  " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=predeposit&op=pd_log_list" target="_blank">我的余额</a></li>
+                    <li><a class="dropdown-menu__item  last" rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_information&op=member" target="_blank">账户设置</a></li>
+                </ul>
+            </li>
+            <li data-uix="dropdown" data-params="{&quot;classname&quot;: &quot;dropdown--open dropdown--open-history&quot;}" class="dropdown dropdown--history" data-comboajax-uri="/index/rvd" data-comboajax-config="www.History.nav" data-comboajax-state="5" id="mxsh_scan_history">
+                <a id="J-my-history-toggle" rel="nofollow" class="dropdown__toggle" href="javascript:;" gaevent="nav/history">
+                    <span>最近浏览</span>
+                    <i class="tri tri--dropdown"></i>
+                    <i class="vertical-bar"></i>
+                </a>
+                <div id="J-my-history-menu" class="dropdown-menu dropdown-menu--deal dropdown-menu--history">
+                    <p class="dropdown-menu--empty">暂无浏览记录</p>
+                </div>
+            </li>
+            <li data-uix="dropdown" id="J-my-cart" class="dropdown dropdown--cart J-cart-updated" data-comboajax-uri="/index/navcart" data-comboajax-onsuccess="Y.mt.www.CartEx.update($response.data);" data-comboajax-state="5">
+                <a id="J-my-cart-toggle" rel="nofollow" class="dropdown__toggle" href="http://www.meituan.com/cart/" gaevent="nav/cart">
+                    <i class="icon icon-cart F-glob F-glob-cart"></i>
+                    <span>购物车<em class="badge" data-newindex="true"><strong class="cart-count">0</strong>件</em></span>
+                    <i class="tri tri--dropdown"></i>
+                    <i class="vertical-bar"></i>
+                </a>
+                <div id="J-my-cart-menu" class="dropdown-menu dropdown-menu--deal dropdown-menu--cart">
+                    <p class="dropdown-menu--empty">暂时没有商品</p>
+                </div>
+            </li>
+            <li data-uix="dropdown" id="J-site-help" class="dropdown dropdown--help">
+                <a class="dropdown__toggle" href="javascript:void(0);">
+                    <span>联系客服</span>
+                    <i class="tri tri--dropdown"></i>
+                    <i class="vertical-bar"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu--text dropdown-menu--help">
+                    <ul class="site-help-info">
+                        <li><a rel="nofollow" class="J-selfservice-tab dropdown-menu__item" data-tab="0" href="http://www.mxhhw.com/shop/index.php?act=article&op=article&ac_id=2" target="_blank">帮助中心</a></li>
+                        <li><a rel="nofollow" class="J-selfservice-tab dropdown-menu__item" data-tab="1" href="http://www.mxhhw.com/shop/index.php?act=article&op=article&ac_id=5" target="_blank">售后服务</a></li>
+                        <li><a rel="nofollow" class="J-selfservice-tab dropdown-menu__item" data-tab="2" href="http://www.mxhhw.com/shop/index.php?act=article&op=article&ac_id=6" target="_blank">客服中心</a></li>  
+                    </ul>
+                </div>
+            </li>
+            <li data-uix="dropdown" id="J-site-merchant" class="dropdown dropdown--merchant">
+                <a class="dropdown__toggle dropdown__toggle--merchant" href="javascript:;" gaevent="top/merchant">
+                    <span>我是商家</span>
+                    <i class="tri tri--dropdown"></i>
+                    <i class="vertical-bar"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu--text dropdown-menu--merchant">
+                    <ul>
+                       <li><a rel="nofollow" class="dropdown-menu__item" href="http://www.mxhhw.com/shop/index.php?act=seller_login&op=show_login" target="_blank">登录商家中心</a></li>
+                       <li><a rel="nofollow" class="dropdown-menu__item" href="http://www.mxhhw.com/shop/index.php?act=show_joinin&op=index" target="_blank">招商入住</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li data-uix="dropdown" id="J-my-more" class="dropdown dropdown--more dropdown--last">
+                <a id="J-my-more-toggle" class="dropdown__toggle dropdown__toggle--my-more" href="javascript:;" gaevent="nav/more">
+                    <span>更多</span>
+                    <i class="tri tri--dropdown"></i>
+                </a>
+                <div id="J-my-more-menu" class="dropdown-menu dropdown-menu--text dropdown-menu--more">
+                    <ul>
+                        <li>
+                            <a rel="nofollow" class="mobile dropdown-menu__item" href="javascript:void(0);" target="_blank"><span></span>手机版</a>
+                        </li>                        
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

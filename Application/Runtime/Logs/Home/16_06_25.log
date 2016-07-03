@@ -1,0 +1,20 @@
+[ 2016-06-25T18:16:42+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0030s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '5)' at line 1
+ [ SQL语句 ] : SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('','5') ORDER BY FIELD(goods_id,,5) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '5)' at line 1
+ [ SQL语句 ] : SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('','5') ORDER BY FIELD(goods_id,,5) 
+
+[ 2016-06-25T18:16:43+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0020s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '5)' at line 1
+ [ SQL语句 ] : SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('','5') ORDER BY FIELD(goods_id,,5) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '5)' at line 1
+ [ SQL语句 ] : SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('','5') ORDER BY FIELD(goods_id,,5) 
+
