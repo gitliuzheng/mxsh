@@ -4518,3 +4518,483 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2016-07-04T16:58:12+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=2&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 3,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-04T16:58:13+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T16:58:15+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T16:58:16+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=2&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 3,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T16:58:20+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T16:58:24+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-04T16:58:25+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T16:58:29+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T16:58:30+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T16:58:32+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T16:58:37+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=2&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 3,3   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T16:58:48+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-04T17:01:32+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:01:33+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:01:37+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:01:40+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:02:16+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:02:16+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=16
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '16' LIMIT 0,3   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:02:16+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/16.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0040s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('16') ORDER BY FIELD(goods_id,16)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:04:24+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:04:24+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/16.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('16') ORDER BY FIELD(goods_id,16)  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-04T17:04:24+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=16
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '16' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:04:30+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=time
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_addtime desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:04:32+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:05:15+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=2&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 3,3   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:05:16+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:05:18+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=2&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 3,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-04T17:05:26+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:09:12+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/13.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0030s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('13','16') ORDER BY FIELD(goods_id,13,16)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:09:12+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '13' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:14:18+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/13.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0040s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('13','16') ORDER BY FIELD(goods_id,13,16)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-07-04T17:14:18+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '13' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:14:20+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '13' LIMIT 0,3   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-07-04T17:14:20+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/13.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0030s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('13','16') ORDER BY FIELD(goods_id,13,16)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:14:33+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '13' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:14:33+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/13.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0030s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('13','16') ORDER BY FIELD(goods_id,13,16)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-04T17:14:35+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/13.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0040s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('13','16') ORDER BY FIELD(goods_id,13,16)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:14:35+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '13' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-07-04T17:14:48+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '13' LIMIT 0,3   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:14:48+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/13.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0040s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('13','16') ORDER BY FIELD(goods_id,13,16)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-04T17:17:55+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '13' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:17:55+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/13.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0030s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('13','16') ORDER BY FIELD(goods_id,13,16)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:18:26+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-04T17:18:26+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/16.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0030s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('16','13') ORDER BY FIELD(goods_id,16,13)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-04T17:18:26+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=16
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '16' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:18:45+08:00 ] ::1 /mxsh/index.php/Home/Index/evaajax.html?page=1&id=16&de=default
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_evaluate_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `33hao_evaluate_goods` WHERE `geval_goodsid` = '16' ORDER BY geval_scores desc LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-04T17:18:45+08:00 ] ::1 /mxsh/index.php/Home/Index/displayHistory/id/16.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('16','13') ORDER BY FIELD(goods_id,16,13)  [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-07-04T17:18:45+08:00 ] ::1 /mxsh/index.php/Home/Index/addrajax.html?page=1&id=16
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '16' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

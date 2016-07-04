@@ -524,9 +524,9 @@
                     <a href="http://suzhousz.meituan.com/deal/26263695.html#anchor-reviews" data-anchor="#anchor-reviews">
                         <span class="common-rating stars hidden"><span class="rate-stars" style="width:90%;"></span></span>
                     </a>
-                    <a href="http://suzhousz.meituan.com/deal/26263695.html#anchor-reviews" class="look-normal" data-anchor="#anchor-reviews">
+                    <a href="javascript:void(0);" class="look-normal" data-anchor="#anchor-reviews">
                         <span>
-                            <span class="deal-component-rating-stars orange">4.5</span>分
+                            <span class="deal-component-rating-stars orange"><?php echo ($total); ?></span>分
                         </span>
                     </a>
                 </span>
@@ -812,13 +812,13 @@
     <div data-component="review-list" class="component-review-list mt-component--booted" mt-scope="[]" data-component-params="{&quot;cityId&quot;:201,&quot;hasLabelCloud&quot;:false,&quot;showPoiTitle&quot;:&quot;0&quot;,&quot;labelCloudAction&quot;:&quot;\/deal\/feedbacklabels\/26263695&quot;,&quot;labelPlaceholder&quot;:&quot;#J-overview&quot;,&quot;dealId&quot;:26263695}" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1465960232707_112"><div class="rate-detail">
     <ul class="J-rate-filter rate-filter ratelist-title cf">
         <li class="rate-filter__item">
-            <a href="#" target="_blank" data-tab="all" class="rate-filter__link J-filter-link rate-filter__link--active">全部</a>
+            <a href="javascript:void(0);" target="_blank" data-tab="all" class="rate-filter__link J-filter-link rate-filter__link--active">全部</a>
         </li>
         <li class="rate-filter__item">
-            <a href="#" data-tab="withpic" class="rate-filter__link J-filter-link">晒图评价</a>
+            <a href="javascript:void(0);" data-tab="withpic" class="rate-filter__link J-filter-link">晒图评价</a>
         </li>
         <li class="rate-filter__item">
-            <a href="#" data-tab="low" class="rate-filter__link J-filter-link">只看低分</a>
+            <a href="javascript:void(0);" data-tab="low" class="rate-filter__link J-filter-link">只看低分</a>
         </li>
         <li class="rate-filter__item push-right">
             <div class="rate-filter__subitem" style="display:none" hidden="">
@@ -1471,5 +1471,7 @@ a:hover{ text-decoration:none;}
         }
     }
 }
-
+    $('.deal-component-rating-stars').click(function(){
+         $('#yui_3_16_0_1_1465960232707_1835').click();
+    });
 </script>
