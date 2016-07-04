@@ -3,12 +3,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- 导入文件   zhangkuan-->
-<script src="/mxsh/Public/Scripts/jquery.js"></script>
-<script src="/mxsh/Public/Scripts/jquery.page.js"></script>
-<link href="/mxsh/Public/Stylesheets/jquery-ui.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/mxsh/Public/Scripts/jquery-ui.js"></script>
-<script type="text/javascript" src="/mxsh/Public/JS/Home/index.js"></script>
-<script type="text/javascript" src="/mxsh/Public/JS/Home/deal.js"></script>  
+<script src="/Public/Scripts/jquery.js"></script>
+<script src="/Public/Scripts/jquery.page.js"></script>
+<link href="/Public/Stylesheets/jquery-ui.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/Public/Scripts/jquery-ui.js"></script>
+<script type="text/javascript" src="/Public/JS/Home/index.js"></script>
+<script type="text/javascript" src="/Public/JS/Home/deal.js"></script>
+<script type="text/javascript" src="/Public/JS/Home/cart.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LXtbxUBZfNBXjuwrAljAiHIo"></script>
     
 <meta name="renderer" content="webkit">
@@ -30,20 +31,33 @@
 <link rel="shortcut icon" href="http://www.mxhhw.com/favicon.ico">
 <link rel="canonical" href="http://suzhousz.meituan.com/deal/26263695.html">
 <title>【梦想换货网】宿州商户</title>
-<link rel="stylesheet" type="text/css" href="/mxsh/Public/CSS/index_saved_resource(4).css">
-<link rel="stylesheet" type="text/css" href="/mxsh/Public/CSS/index_saved_resource(9).css">
+<link rel="stylesheet" type="text/css" href="/Public/CSS/index_saved_resource(4).css">
+<link rel="stylesheet" type="text/css" href="/Public/CSS/index_saved_resource(9).css">
 
-<link rel="stylesheet" type="text/css" href="/mxsh/Public/CSS/deal_saved_resource(3).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(4).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(6).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(12).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(14).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(22).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(23).css">
+<link rel="stylesheet" type="text/css" href="/Public/CSS/deal_saved_resource(3).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/deal_saved_resource(4).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/deal_saved_resource(6).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/deal_saved_resource(12).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/deal_saved_resource(14).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/deal_saved_resource(22).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/deal_saved_resource(23).css">
 <style type="text/css">@media screen{.smnoscreen {display:none}} @media print{.smnoprint{display:none}}</style>
 <noscript hidden="" style="display:none;" class="J-hub" data-hublaziness="load" data-hubcss="fewww:www/css/lazyload.css,iconfont/css/global-iconfont.css@b64babf" data-hubstamp="yui_3_16_0_1_1465960232707_869" data-hubstate="40"></noscript>
 </head>
-<body class="pg-deal pg-deal-default pg-deal-detail" id="deal-default" style="position: static;"><div id="yui_3_16_0_1_1465960232707_2566" class="yui3-widget widget-flashcopy"><div id="yui_3_16_0_1_1465960232707_2568" class="widget-flashcopy-content"></div></div><div id="qq-dialog" class="mt-overlay-container"><div id="yui_3_16_0_1_1465960232707_2479" class="yui3-widget yui3-overlay yui3-widget-positioned yui3-widget-stacked yui3-overlay-hidden" style="width: 500px; left: 701px; top: 400px; z-index: 102;"><div id="yui_3_16_0_1_1465960232707_2481" class="yui3-overlay-content yui3-widget-stdmod"><div class="yui3-widget-bd" id="yui_3_16_0_1_1465960232707_2592"><div class="mt-dialog" id="yui_3_16_0_1_1465960232707_2591"><h3 class="head" id="yui_3_16_0_1_1465960232707_2590">分享给QQ好友<span class="close" id="yui_3_16_0_1_1465960232707_2589">关闭</span></h3><div class="body" id="yui_3_16_0_1_1465960232707_2599"><p class="error" style="display:none">&nbsp;</p><div id="yui_3_16_0_1_1465960232707_2598">通过QQ、电子邮件发送链接给你的朋友</div><input type="text" class="deal-share-qq-input" value="http://suzhousz.meituan.com/u/15688577" maxlength="40" id="yui_3_16_0_1_1465960232707_2602"><input class="deal-share-qq-copy" type="button" value="复制" style="display:none"></div></div></div></div><div class="mt-overlay-underlay"></div></div></div><div id="mt-overlay-mask" style="width: 1903px; height: 8580px; z-index: 101; visibility: hidden;"></div>
+<body class="pg-deal pg-deal-default pg-deal-detail" id="deal-default" style="position: static;">
+
+<!-- 当前商品信息 -->
+<div style="display:none" id="goods_data">
+    <div class="goods_id"><?php echo ($data['goods_id']); ?></div>
+    <div class="goods_name"><?php echo ($data['goods_name']); ?></div>
+    <div class="goods_price"><?php echo ($data['goods_price']); ?></div>
+</div>
+<!-- 引入的JS不好取值 -->
+<div style="display: none" id="deal_hidden">
+    <div class="delCart_url"><?php echo U('home/cart/delCart');?></div>
+</div>
+
+<div id="yui_3_16_0_1_1465960232707_2566" class="yui3-widget widget-flashcopy"><div id="yui_3_16_0_1_1465960232707_2568" class="widget-flashcopy-content"></div></div><div id="qq-dialog" class="mt-overlay-container"><div id="yui_3_16_0_1_1465960232707_2479" class="yui3-widget yui3-overlay yui3-widget-positioned yui3-widget-stacked yui3-overlay-hidden" style="width: 500px; left: 701px; top: 400px; z-index: 102;"><div id="yui_3_16_0_1_1465960232707_2481" class="yui3-overlay-content yui3-widget-stdmod"><div class="yui3-widget-bd" id="yui_3_16_0_1_1465960232707_2592"><div class="mt-dialog" id="yui_3_16_0_1_1465960232707_2591"><h3 class="head" id="yui_3_16_0_1_1465960232707_2590">分享给QQ好友<span class="close" id="yui_3_16_0_1_1465960232707_2589">关闭</span></h3><div class="body" id="yui_3_16_0_1_1465960232707_2599"><p class="error" style="display:none">&nbsp;</p><div id="yui_3_16_0_1_1465960232707_2598">通过QQ、电子邮件发送链接给你的朋友</div><input type="text" class="deal-share-qq-input" value="http://suzhousz.meituan.com/u/15688577" maxlength="40" id="yui_3_16_0_1_1465960232707_2602"><input class="deal-share-qq-copy" type="button" value="复制" style="display:none"></div></div></div></div><div class="mt-overlay-underlay"></div></div></div><div id="mt-overlay-mask" style="width: 1903px; height: 8580px; z-index: 101; visibility: hidden;"></div>
    
     <!-- 顶部公共部分 -->
      <header id="site-mast" class="site-mast">
@@ -178,16 +192,16 @@
     <div style="display:none;" data-hubmodule="www-banner" data-hublaziness="load" class="J-hub J-banner-newtop ui-slider common-banner common-banner--newtop log-mod-viewed J-banner-stamp-active" data-mod="ib" data-mod-deepview="1-7600" data-banner-conf="{&quot;sheetContainer&quot;:&quot;.common-banner__sheets&quot;,&quot;effect&quot;:&quot;slideFadeIn&quot;}" id="yui_3_16_0_1_1465867114754_337" data-hubstamp="yui_3_16_0_1_1465867114754_336" data-hubstate="40">
             <div class="common-banner__sheet cf">
                 
-                <a class="common-banner__link" target="_blank" href="http://www.meituan.com/topic/4076" gaevent="top/others/4076" data-mttcode="Abanner.B4076" data-mod-idx="7600"><img onload="M.delayImg(this);" alt="【多城市】1元起吃喝玩乐" src="/mxsh/Public/category_files/cac6a15bea79a75d2def02adaab989a268774.jpg" width="980" height="60"></a>
+                <a class="common-banner__link" target="_blank" href="http://www.meituan.com/topic/4076" gaevent="top/others/4076" data-mttcode="Abanner.B4076" data-mod-idx="7600"><img onload="M.delayImg(this);" alt="【多城市】1元起吃喝玩乐" src="/Public/category_files/cac6a15bea79a75d2def02adaab989a268774.jpg" width="980" height="60"></a>
             </div>
             <a href="javascript:void(0)" class="F-glob F-glob-close common-close--iconfont-small close" title="关闭"></a></div>
     <noscript hidden="" style="display:none;" data-comboajax-uri="/combo/leftsidebanner/index" data-comboajax-onsuccess="$request.listen(&quot;www-banner&quot;, &quot;www.Banner.Leftside&quot;, true);" data-comboajax-state="5"></noscript>
     
     <div class="site-mast__branding cf" id="J-site-mast__branding">
-        <h1><a class="site-logo" href="/mxsh/" gaevent="header/logo">宿州团购</a></h1>
+        <h1><a class="site-logo" href="/" gaevent="header/logo">宿州团购</a></h1>
  
         <div class="city-info">
-            <h2><a class="city-info__name" href="/mxsh/" gaevent="header/cityname">宿州</a></h2>
+            <h2><a class="city-info__name" href="/" gaevent="header/cityname">宿州</a></h2>
             <a class="city-info__toggle" href="http://www.meituan.com/index/changecity/initiative" gaevent="header/changecity">切换城市</a>
         </div>
          
@@ -408,7 +422,7 @@
                 <nav>
                     <ul class="navbar cf  log-mod-viewed" data-mod="lz" data-mod-deepview="1" id="yui_3_16_0_1_1465867114754_1864">
                         <li class="navbar__item-w ">
-                            <a class="navbar__item" href="/mxsh/" gaevent="nav/today" hidefocus="true"><span class="nav-label">首页</span></a>
+                            <a class="navbar__item" href="/" gaevent="nav/today" hidefocus="true"><span class="nav-label">首页</span></a>
                         </li>                       
                         <li class="navbar__item-w ">
                             <a class="navbar__item" target="_blank" href="http://www.mxhhw.com" data-mttcode="Acategory.Bwanggou" gaevent="nav/wanggou" hidefocus="true"><span class="nav-label">购物</span></a>
@@ -470,10 +484,10 @@
                                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约
                                 </span>
                             </span>
-                            <img class="focus-view" src="/mxsh/Public/deal_files/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" alt="美佳乐蛋糕" width="460" height="280" onload="M.logFirstScreenTime(this)">
+                            <img class="focus-view" src="/Public/deal_files/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" alt="美佳乐蛋糕" width="460" height="280" onload="M.logFirstScreenTime(this)">
                         </div>
                         <div class="candidates" id="yui_3_16_0_1_1465960232707_1543">
-                                <img class="first-image active" src="/mxsh/Public/deal_files/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" data-large-src="http://p0.meituan.net/460.280/deal/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" width="78" height="45">
+                                <img class="first-image active" src="/Public/deal_files/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" data-large-src="http://p0.meituan.net/460.280/deal/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" width="78" height="45">
                         </div>
                     </div>
                 </div>
@@ -568,7 +582,7 @@
 </div>
             <div class="deal-component-purchase-button" id="yui_3_16_0_1_1465960232707_2417">
     <input type="submit" class="J-mini-cart-buy mini-cart-buy basic-deal data-mod-enabled log-mod-viewed" data-mtevent="{&quot;la&quot;:&quot;deal\/default\/buy&quot;,&quot;dealid&quot;:26263695}" data-mod="dn" value="抢购">
-        <a rel="nofollow" class="J-add-mini-cart mini-cart-button mini-cart-add log-mod-viewed" data-dealid="26263695" data-cityid="201" hidefocus="true" href="http://suzhousz.meituan.com/cart/default/26263695" data-mod="dc" title="加入购物车"><i class="F-glob F-glob-cart2"></i></a>
+        <a onclick="addCart('<?php echo U('Cart/addCart');?>');"  rel="nofollow" class="J-add-mini-cart mini-cart-button mini-cart-add log-mod-viewed" data-dealid="26263695" data-cityid="201" hidefocus="true" href="javascript:void(0);" data-mod="dc" title="加入购物车"><i class="F-glob F-glob-cart2"></i></a>
         <a class="small-btn deal-component-add-favorite J-component-add-favorite item log-mod-viewed" data-mod="df" data-login="false"><i class="F-glob F-glob-star-border"></i><span>收藏</span>(<b class="J-fav-count">328</b>)</a>
     <a class="small-btn share-tip J-component-share-tip-dialog log-mod-viewed" data-mod="dy" id="yui_3_16_0_1_1465960232707_2416" data-mod-mtt="1.deal/default.dy.1-_anchor.ipgaveva"><i class="F-glob F-glob-share"></i>分享到</a>
 </div>
@@ -753,19 +767,19 @@
                     </tbody></table>
                         <p class="deal-menu-summary">价值: <span class="inline-block worth">¥3</span>美团价: <span class="inline-block worth price">¥<i class="inline-block ps_16 pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -30px -48px;"></i><i class="inline-block ps_16 ps_16p pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -60px -48px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -40px -64px;"></i></span></p><ul class="list">
 <li>免费提供餐巾纸</li>
- </ul><p class="standard-bar">美团推荐</p><div class="standard-content"><img class="" src="/mxsh/Public/deal_files/3c2cd9f196d64d4784507b4bfb037687117325.jpg@PC" alt="__33720999__1960475" height="388"><img class="" src="/mxsh/Public/deal_files/211e3e4874e1cfea99a4109fa365086e137890.jpg@PC" alt="__33720984__2087680" height="388"><img class="" src="/mxsh/Public/deal_files/3511a8302a0661ccb426b6662cdf5275122125.jpg@PC" alt="__33720996__1056767" height="388"><img class="" src="/mxsh/Public/deal_files/8b7fd5b7a4b223d4f4128f5180e845d9219639.jpg@PC" alt="__33721001__6541897" height="388"></div><div id="anchor-bizinfo"><h2 class="content-title">商家介绍</h2><p class="standard-bar">
+ </ul><p class="standard-bar">美团推荐</p><div class="standard-content"><img class="" src="/Public/deal_files/3c2cd9f196d64d4784507b4bfb037687117325.jpg@PC" alt="__33720999__1960475" height="388"><img class="" src="/Public/deal_files/211e3e4874e1cfea99a4109fa365086e137890.jpg@PC" alt="__33720984__2087680" height="388"><img class="" src="/Public/deal_files/3511a8302a0661ccb426b6662cdf5275122125.jpg@PC" alt="__33720996__1056767" height="388"><img class="" src="/Public/deal_files/8b7fd5b7a4b223d4f4128f5180e845d9219639.jpg@PC" alt="__33721001__6541897" height="388"></div><div id="anchor-bizinfo"><h2 class="content-title">商家介绍</h2><p class="standard-bar">
 美佳乐蛋糕
 </p><div class="standard-content">
 
-    <img class="" src="/mxsh/Public/deal_files/78b9fd88d6676370cf500c172859d451290983.jpg@PC" alt="_MG_0206_副本" height="467">
+    <img class="" src="/Public/deal_files/78b9fd88d6676370cf500c172859d451290983.jpg@PC" alt="_MG_0206_副本" height="467">
 
 <p>
 美佳乐蛋糕位于胜利中路399号第一小学东50米，多年来主要做生日蛋糕和现烤现卖面包西饼，产品新鲜健康、成立二十多年至今口碑很好！ 本店的奶油蛋糕，纯正的天然美味，0反式脂肪酸，100%天然奶油从新鲜牛奶中提取，无任何色素和、香精、防腐剂，是纯正的天然美味。美嘉乐的慕斯蛋糕、芝士蛋糕、巧克力蛋糕是充满高贵感性、时尚品味的优质产品；在制作工艺中，集南北风味之所长，广泛吸取欧洲产品制作工艺精华，独特的设计与口感完美组合，让每一位食客享受到出乎意料的美味。
 </p>
 
-    <img class="" src="/mxsh/Public/deal_files/6895e158cc55903dcb212a4618b8be60284704.jpg@PC" alt="_MG_0917_副本" height="467">
-    <img class="" src="/mxsh/Public/deal_files/0d8ac9d39b3b007beef04723d04f55ea286793.jpg@PC" alt="_MG_0915_副本" height="467">
-    <img class="" src="/mxsh/Public/deal_files/353e46361548d575077522bf31873879327932.jpg@PC" alt="_MG_0918_副本" height="467"></div></div></div>
+    <img class="" src="/Public/deal_files/6895e158cc55903dcb212a4618b8be60284704.jpg@PC" alt="_MG_0917_副本" height="467">
+    <img class="" src="/Public/deal_files/0d8ac9d39b3b007beef04723d04f55ea286793.jpg@PC" alt="_MG_0915_副本" height="467">
+    <img class="" src="/Public/deal_files/353e46361548d575077522bf31873879327932.jpg@PC" alt="_MG_0918_副本" height="467"></div></div></div>
                     <div id="anchor-reviews" class="user-reviews J-rate-wrapper J-hub" data-huburl="deal/userreviews" data-hubmodule="www-deal" data-hubnamespace="Deal.UserReviews" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_33" data-hubstate="50">
     <div class="rate-overview J-hub" id="J-overview" data-huburl="deal/myreview" data-hubmodule="www-deal" data-hubnamespace="Deal.MyReview" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_1042" data-hubstate="50">
         <div class="overview-head content-title cf">
@@ -835,7 +849,7 @@
         <div class="loading-surround--large ratelist-content__loading J-list-loading" hidden="hidden" style="display: none;"></div><ul class="J-rate-list" data-fetchfirstpage="true" id="yui_3_16_0_1_1465960232707_2276"><li class="J-ratelist-item rate-list__item cf" data-rateid="910796953">
         <div class="user-info-block">
             <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png">
+                <img class="avatar" src="/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png">
             </div>
 
             <p class="name-wrapper">
@@ -862,22 +876,22 @@
         <ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2292" style="width: 452px; left: 0px;">
             <li data-src="http://p0.meituan.net/w.h/shaitu/182b9ff352ec61f4924899adf327e42f205885.jpg">
                 <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/182b9ff352ec61f4924899adf327e42f205885.jpg">
+                    <img src="/Public/deal_files/182b9ff352ec61f4924899adf327e42f205885.jpg">
                 </a>
             </li>
             <li data-src="http://p1.meituan.net/w.h/shaitu/806003a3b459fe898232869eac5bf06d224286.jpg">
                 <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/806003a3b459fe898232869eac5bf06d224286.jpg">
+                    <img src="/Public/deal_files/806003a3b459fe898232869eac5bf06d224286.jpg">
                 </a>
             </li>
             <li data-src="http://p1.meituan.net/w.h/shaitu/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg">
                 <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg">
+                    <img src="/Public/deal_files/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg">
                 </a>
             </li>
             <li data-src="http://p1.meituan.net/w.h/shaitu/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg">
                 <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg">
+                    <img src="/Public/deal_files/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg">
                 </a>
             </li>
         </ul>
@@ -896,7 +910,7 @@
     <li class="J-ratelist-item rate-list__item cf" data-rateid="886938088">
         <div class="user-info-block">
             <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/357903db34a5e7a5735a4844f77f76e484314.jpg">
+                <img class="avatar" src="/Public/deal_files/357903db34a5e7a5735a4844f77f76e484314.jpg">
             </div>
 
             <p class="name-wrapper">
@@ -928,7 +942,7 @@
     <li class="J-ratelist-item rate-list__item cf" data-rateid="897221660">
         <div class="user-info-block">
             <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/8fd17014c791cdf393bed473dab116ff3643.png">
+                <img class="avatar" src="/Public/deal_files/8fd17014c791cdf393bed473dab116ff3643.png">
             </div>
 
             <p class="name-wrapper">
@@ -961,7 +975,7 @@
     <li class="J-ratelist-item rate-list__item cf" data-rateid="870818901">
         <div class="user-info-block">
             <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/9760fd23879c2d20c43b97206d4f943b107969.jpg">
+                <img class="avatar" src="/Public/deal_files/9760fd23879c2d20c43b97206d4f943b107969.jpg">
             </div>
 
             <p class="name-wrapper">
@@ -987,22 +1001,22 @@
         <ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2357" style="width: 452px; left: 0px;">
             <li data-src="http://p0.meituan.net/w.h/shaitu/b04651b2cb61eca47d3cb6b1ff55294b289725.jpg">
                 <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/b04651b2cb61eca47d3cb6b1ff55294b289725.jpg">
+                    <img src="/Public/deal_files/b04651b2cb61eca47d3cb6b1ff55294b289725.jpg">
                 </a>
             </li>
             <li data-src="http://p1.meituan.net/w.h/shaitu/b6c3d7eca05b2c10387507d88c760176286422.jpg">
                 <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/b6c3d7eca05b2c10387507d88c760176286422.jpg">
+                    <img src="/Public/deal_files/b6c3d7eca05b2c10387507d88c760176286422.jpg">
                 </a>
             </li>
             <li data-src="http://p0.meituan.net/w.h/shaitu/85e10013d48cd1fc58fff2487ea17e93294384.jpg">
                 <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/85e10013d48cd1fc58fff2487ea17e93294384.jpg">
+                    <img src="/Public/deal_files/85e10013d48cd1fc58fff2487ea17e93294384.jpg">
                 </a>
             </li>
             <li data-src="http://p0.meituan.net/w.h/shaitu/5756d6edca560add3fee69ee434d4053298186.jpg">
                 <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/5756d6edca560add3fee69ee434d4053298186.jpg">
+                    <img src="/Public/deal_files/5756d6edca560add3fee69ee434d4053298186.jpg">
                 </a>
             </li>
         </ul>
@@ -1021,7 +1035,7 @@
     <li class="J-ratelist-item rate-list__item cf" data-rateid="902932693">
         <div class="user-info-block">
             <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/f26b7d8151e5c80380183cd34cb775eb26532.jpg">
+                <img class="avatar" src="/Public/deal_files/f26b7d8151e5c80380183cd34cb775eb26532.jpg">
             </div>
 
             <p class="name-wrapper">
@@ -1053,7 +1067,7 @@
     <li class="J-ratelist-item rate-list__item cf" data-rateid="911026101">
         <div class="user-info-block">
             <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/35ad1f9253761ea6ff822b5e659f234f3758.png">
+                <img class="avatar" src="/Public/deal_files/35ad1f9253761ea6ff822b5e659f234f3758.png">
             </div>
 
             <p class="name-wrapper">
@@ -1085,7 +1099,7 @@
     <li class="J-ratelist-item rate-list__item cf" data-rateid="882048039">
         <div class="user-info-block">
             <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png">
+                <img class="avatar" src="/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png">
             </div>
 
             <p class="name-wrapper">
@@ -1117,7 +1131,7 @@
     <li class="J-ratelist-item rate-list__item cf" data-rateid="912218493">
         <div class="user-info-block">
             <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png">
+                <img class="avatar" src="/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png">
             </div>
 
             <p class="name-wrapper">
@@ -1168,7 +1182,7 @@
         </div>
     </div>
     <div class="J-bottom-list-wrapper deal-bottom-recommend" style="visibility: hidden;"></div>
-        <a href="http://i.meituan.com/mobile/down/dealbottom" target="_blank" hidefocus="true" title="下载美团app"><img class="" src="/mxsh/Public/Images/deal-mobile-app-promotion.png" width="702"></a>
+        <a href="http://i.meituan.com/mobile/down/dealbottom" target="_blank" hidefocus="true" title="下载美团app"><img class="" src="/Public/Images/deal-mobile-app-promotion.png" width="702"></a>
 </div>
 
 <div id="sidebar">
@@ -1431,7 +1445,7 @@
     <p>©<span title="I:2; Q:2; S:2; C:16; F:3; T:367.01; H:com">2016</span><a href="http://www.mxhhw.com/" target="_blank">梦想换货网</a> mxhhw.com <a href="http://www.beianbeian.com/beianxinxi/5e40326e-16f0-4c22-b329-b40104fd8e4e.html" target="_blank">皖ICP备14012689号-2</a> 
     </p>
     <div style="width:300px;margin:0 auto; padding:20px 0;">
-    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502025545" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/mxsh/Public/Images/wangan.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备11010502025545号</p></a>
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502025545" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/Public/Images/wangan.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备11010502025545号</p></a>
     </div>
 </div>
 <ul class="cert cf">
@@ -1489,7 +1503,7 @@
             {
                 var html = '';
                 $(data).each(function(k,v){                 
-                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="#" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';        
+                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="#" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';        
                 });                          
                 $('#display_history').html(html);
             }
