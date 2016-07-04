@@ -71,8 +71,6 @@ class VrGoodsModel extends Model {
         $count = count($gdata);
         $page = new \Think\Page($count, 2);
         // 配置翻页的样式
-        $page->setConfig('prev', '上一页');
-        $page->setConfig('next', '下一页');
         $data['page'] = $page->show();
         $data['data'] = $this ->field('goods_id,goods_commonid,goods_name,goods_price,goods_marketprice,goods_salenum,evaluation_count,gc_id_1,gc_id_2,gc_id_3')-> where($where) ->limit($page->firstRow.','.$page->listRows) ->order(array($p => "desc")) ->select();      
 		return $data;
