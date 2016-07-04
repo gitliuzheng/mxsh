@@ -415,7 +415,7 @@
                 </div>
                 <div class="total-group total-count">共 <strong><{$temp}></strong> 人评价</div>
             </div>
-            <div class="rating-area score-detail">
+            <!-- <div class="rating-area score-detail">
                 <div class="score-group">
                     <span class="score-title">口味</span><span class="common-rating rating-16x16"><span class="rate-stars" style="width:96%"></span></span>4.8分
                 </div>
@@ -425,7 +425,7 @@
                 <div class="score-group">
                     <span class="score-title">环境</span><span class="common-rating rating-16x16"><span class="rate-stars" style="width:96%"></span></span>4.8分
                 </div>
-            </div>
+            </div> -->
             <div class="rating-area count-detail">
                 <div class="count-wrapper inline-block">
                     <foreach name="favourable" item="vo" key="k">
@@ -441,13 +441,13 @@
     <div data-component="review-list" class="component-review-list mt-component--booted" mt-scope="[]" data-component-params="{&quot;cityId&quot;:201,&quot;hasLabelCloud&quot;:false,&quot;showPoiTitle&quot;:&quot;0&quot;,&quot;labelCloudAction&quot;:&quot;\/deal\/feedbacklabels\/26263695&quot;,&quot;labelPlaceholder&quot;:&quot;#J-overview&quot;,&quot;dealId&quot;:26263695}" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1465960232707_112"><div class="rate-detail">
     <ul class="J-rate-filter rate-filter ratelist-title cf">
         <li class="rate-filter__item">
-            <a href="http://www.meituan.com/comment-deal-26263695" target="_blank" data-tab="all" class="rate-filter__link J-filter-link rate-filter__link--active">全部</a>
+            <a href="#" target="_blank" data-tab="all" class="rate-filter__link J-filter-link rate-filter__link--active">全部</a>
         </li>
         <li class="rate-filter__item">
-            <a href="http://suzhousz.meituan.com/deal/26263695.html#" data-tab="withpic" class="rate-filter__link J-filter-link">晒图评价</a>
+            <a href="#" data-tab="withpic" class="rate-filter__link J-filter-link">晒图评价</a>
         </li>
         <li class="rate-filter__item">
-            <a href="http://suzhousz.meituan.com/deal/26263695.html#" data-tab="low" class="rate-filter__link J-filter-link">只看低分</a>
+            <a href="#" data-tab="low" class="rate-filter__link J-filter-link">只看低分</a>
         </li>
         <li class="rate-filter__item push-right">
             <div class="rate-filter__subitem" style="display:none" hidden="">
@@ -455,9 +455,9 @@
                 <label class="withcontent-label" for="with-content">有内容的评价</label>
             </div>
             <div class="filter-ordertype rate-filter__subitem">
-                <select class="J-filter-ordertype ui-select-small" name="sorttype">
-                    <option value="default">默认排序</option>
-                    <option value="time">时间排序</option>
+                <select id="select_s" class="J-filter-ordertype ui-select-small" name="sorttype" onchange="func()">
+                    <option value="default" >默认排序</option>
+                    <option value="time" >时间排序</option>
                 </select>
             </div>
         </li>
@@ -1016,9 +1016,15 @@ a:hover{ text-decoration:none;}
   };
 </script>
 
-<!-- 评价分页 -->
-<script type="text/javascript">
-$(document).ready(function(){    
+<!-- 评价分页 12323-->
+<script type="text/javascript">      
+    evalu();
+    function func(){
+ //获取被选中的option标签
+        var vs = $('#select_s  option:selected').val();            
+        evalu(vs);
+    }
+    function  evalu(s="default"){
     if(<?php echo $temp;?> > 0){
         InitTable(1);
         var a = <?php echo $temp;?>;
@@ -1033,17 +1039,44 @@ $(document).ready(function(){
             InitTable(p+1);
            
         }
-
+        //时间戳转换
+        function getLocalTime(nS) {     
+            return new Date(parseInt(nS) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");      
+        } 
+        function getxing(x){ 
+            if(x==5||x==4||x==3||x==2||x==1){         
+                if(x==5){
+                    return '100%';
+                }
+                if(x==4){
+                    return '80%';
+                }
+                if(x==3){
+                    return '60%';
+                }
+                if(x==2){
+                    return '40%';
+                }
+                if(x==1){
+                    return '20%';
+                }
+            }else{
+                return 0;
+            }
+            
+        } 
         function InitTable(p){
             $.ajax({
                 type : "GET",
                 url : '<?php echo U("Index/evaajax"); ?>',
-                data:'page='+p+'&id=<?php echo $_GET["id"]; ?>',
+                data:'page='+p+'&id=<?php echo $_GET["id"]; ?>&de='+s,
                 dataType : "json",
                 success : function(data){
                     var b ='';
                     $(data).each(function(k,v){
-                        b+='<li class="J-ratelist-item rate-list__item cf" data-rateid="910796953"><div class="user-info-block"><div class="avatar-wrapper"><img class="avatar" src="__PUBLIC__/deal_files/89bec9d64cde38d441cf976f751c482e3788.png"></div><p class="name-wrapper"><span class="name">DCC19960114</span><span class="growth-info"><i class="sp-growth-icons level-icon level-icon-2" title="等级VIP2"></i></span></p></div><div class="review-content-wrapper"><div class="info cf"><div class="rate-status"><span class="common-rating"><span class="rate-stars" style="width:60%"></span></span></div><span class="time">2016-06-12</span></div><div class="J-normal-view"><p class="content"><a href="http://suzhousz.meituan.com/shop/feedback/910796953" target="_blank" class="hqrate-badge"><strong>[认真评价]</strong></a>'+v.geval_content+'</p><div id="yui_3_16_0_1_1465960232707_2285" class="yui3-widget widget-carousel"><div class="pic-list J-piclist-wrapper widget-carousel-content" id="yui_3_16_0_1_1465960232707_2286"><div class="J-pic-thumbnails pic-thumbnails widget-carousel-indicators" id="yui_3_16_0_1_1465960232707_2290"><ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2292" style="width: 452px; left: 0px;"><li data-src="http://p0.meituan.net/w.h/shaitu/182b9ff352ec61f4924899adf327e42f205885.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="__PUBLIC__/deal_files/182b9ff352ec61f4924899adf327e42f205885.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="__PUBLIC__/deal_files/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="__PUBLIC__/deal_files/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"></a></li></ul><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev" hidden="hidden" style="display: none;"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next" hidden="hidden" style="display: none;"></a></div><div class="J-pic-preview pic-preview widget-carousel-previews" hidden="hidden" style="display: none;"><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next"></a></div></div></div></div><div class="J-long-view long-rate-view" hidden="" style="display:none"></div></div></li>';
+                        var time = getLocalTime(v.geval_addtime);
+                        var x = getxing(v.geval_scores);
+                        b+='<li class="J-ratelist-item rate-list__item cf" data-rateid="910796953"><div class="user-info-block"><div class="avatar-wrapper"><img class="avatar" src="__PUBLIC__/deal_files/89bec9d64cde38d441cf976f751c482e3788.png"></div><p class="name-wrapper"><span class="name">DCC19960114</span><span class="growth-info"><i class="sp-growth-icons level-icon level-icon-2" title="等级VIP2"></i></span></p></div><div class="review-content-wrapper"><div class="info cf"><div class="rate-status"><span class="common-rating"><span class="rate-stars" style="width:'+x+'"></span></span></div><span class="time">'+time+'</span></div><div class="J-normal-view"><p class="content"><a href="http://suzhousz.meituan.com/shop/feedback/910796953" target="_blank" class="hqrate-badge"><strong>[认真评价]</strong></a>'+v.geval_content+'</p><div id="yui_3_16_0_1_1465960232707_2285" class="yui3-widget widget-carousel"><div class="pic-list J-piclist-wrapper widget-carousel-content" id="yui_3_16_0_1_1465960232707_2286"><div class="J-pic-thumbnails pic-thumbnails widget-carousel-indicators" id="yui_3_16_0_1_1465960232707_2290"><ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2292" style="width: 452px; left: 0px;"><li data-src="http://p0.meituan.net/w.h/shaitu/182b9ff352ec61f4924899adf327e42f205885.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="__PUBLIC__/deal_files/182b9ff352ec61f4924899adf327e42f205885.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="__PUBLIC__/deal_files/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="__PUBLIC__/deal_files/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"></a></li></ul><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev" hidden="hidden" style="display: none;"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next" hidden="hidden" style="display: none;"></a></div><div class="J-pic-preview pic-preview widget-carousel-previews" hidden="hidden" style="display: none;"><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next"></a></div></div></div></div><div class="J-long-view long-rate-view" hidden="" style="display:none"></div></div></li>';
                     });
                     $('#geval').html(b);
                     $('.allPage').text(<?php echo $evaluate_count;?>);
@@ -1055,5 +1088,6 @@ $(document).ready(function(){
             }); 
         }
     }
-});
+}
+
 </script>

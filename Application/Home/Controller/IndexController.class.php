@@ -144,7 +144,14 @@ class IndexController extends CommonController {
         $id = I('get.id');
         $page = I('get.page');
         $evaluate_goods = M('EvaluateGoods');
-        $temp = $evaluate_goods -> where(array('geval_goodsid' => array('eq',$id),))->limit(3*$page-3,3)->select(); 
+        $de = I('get.de');
+        if($de){
+            if($de == 'time'){
+                $temp = $evaluate_goods -> where(array('geval_goodsid' => array('eq',$id),))->limit(3*$page-3,3)->order('geval_addtime desc')->select();
+            }else{
+                $temp = $evaluate_goods -> where(array('geval_goodsid' => array('eq',$id),))->limit(3*$page-3,3)->order('geval_scores desc')->select();
+            }
+        } 
         echo json_encode($temp);
     }
    
