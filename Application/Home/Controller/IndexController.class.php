@@ -37,11 +37,42 @@ class IndexController extends CommonController {
         }else{
             $count = count($gcaddress)/3;
         } 
+
+        //取评价
+        $evaluate_goods = M('EvaluateGoods');
+        $temp = $evaluate_goods -> where(array('geval_goodsid' => array('eq',$id),)) -> count();
+       
+        //取出评价总条数
+        if($temp%3 != 0){
+         $evaluate_count =intval($temp/3)+1; //计算记录数
+        }else{
+            $evaluate_count = $temp/3;
+        } 
+        
+        
+        //取评价图示数据
+        for ($i=5; $i >= 1 ; $i--) { 
+            $num[$i] = $evaluate_goods -> where(array('geval_goodsid' => array('eq',$id),'geval_scores' => array('eq',$i),)) -> count();
+            //转换成各分值的百分比
+            $favourable[$i] = round(($num[$i]/$temp)*100).'%';
+
+        }
+        $total = $num[5]/$temp*5+$num[4]/$temp*4+$num[3]/$temp*3+$num[2]/$temp*2+$num[1]/$temp*1;
+        $total_favourable = round(($total/5)*100).'%';
+
+
+
         $this->assign(array(
             'gcname' => $gcname,
             'data' => $data,
             'gcaddress' => $gcaddress,
             'count' => $count,
+            'evaluate_count' => $evaluate_count,
+            'temp' => $temp,
+            'favourable' => $favourable,
+            'num' => $num,
+            'total' => $total,
+            'total_favourable' => $total_favourable
         ));
         $this->display();
     }
@@ -113,6 +144,16 @@ class IndexController extends CommonController {
                 closedir($dh);
             }
         }
+    }
+
+
+//商品详情页评价分页
+    public function evaajax(){
+        $id = I('get.id');
+        $page = I('get.page');
+        $evaluate_goods = M('EvaluateGoods');
+        $temp = $evaluate_goods -> where(array('geval_goodsid' => array('eq',$id),))->limit(3*$page-3,3)->select(); 
+        echo json_encode($temp);
     }
    
 }

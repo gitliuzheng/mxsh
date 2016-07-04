@@ -10,6 +10,10 @@
 <script type="text/javascript" src="/mxsh/Public/JS/Home/index.js"></script>
 <script type="text/javascript" src="/mxsh/Public/JS/Home/deal.js"></script>  
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LXtbxUBZfNBXjuwrAljAiHIo"></script>
+<link rel="stylesheet" href="/mxsh/Public/Stylesheets/reset.css" />
+<link rel="stylesheet" href="/mxsh/Public/Stylesheets/pagination.css" />
+<script type="text/javascript" src="/mxsh/Public/Scripts/jquery.pagination.js"></script>
+
     
 <meta name="renderer" content="webkit">
 <meta name="applicable-device" content="pc">
@@ -767,46 +771,44 @@
     <img class="" src="/mxsh/Public/deal_files/0d8ac9d39b3b007beef04723d04f55ea286793.jpg@PC" alt="_MG_0915_副本" height="467">
     <img class="" src="/mxsh/Public/deal_files/353e46361548d575077522bf31873879327932.jpg@PC" alt="_MG_0918_副本" height="467"></div></div></div>
                     <div id="anchor-reviews" class="user-reviews J-rate-wrapper J-hub" data-huburl="deal/userreviews" data-hubmodule="www-deal" data-hubnamespace="Deal.UserReviews" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_33" data-hubstate="50">
+    
+
+<!-- 评价图示              zhangkuan           -->
     <div class="rate-overview J-hub" id="J-overview" data-huburl="deal/myreview" data-hubmodule="www-deal" data-hubnamespace="Deal.MyReview" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_1042" data-hubstate="50">
         <div class="overview-head content-title cf">
             <h3 class="overview-title" id="anchor-comment">消费评价</h3>
         </div>
-        <div class="overview-detail cf J-hub" data-huburl="deal/dynamicuserreview" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_1067" data-hubstate="50" id="yui_3_16_0_1_1465960232707_2189"><div class="rating-area total-detail">
+        <div class="overview-detail cf J-hub" data-huburl="deal/dynamicuserreview" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_1067" data-hubstate="50" id="yui_3_16_0_1_1465960232707_2189">
+            <div class="rating-area total-detail">
                 <div class="total-group total-score">
-                    <span><span class="average-score">4.5</span>分</span>
+                    <span><span class="average-score"><?php echo ($total); ?></span>分</span>
                 </div>
                 <div class="total-group">
-                    <span class="common-rating rating-16x16"><span class="rate-stars" style="width:90%"></span></span>
+                    <span class="common-rating rating-16x16"><span class="rate-stars" style="width:<?php echo ($total_favourable); ?>"></span></span>
                 </div>
-                    <div class="total-group total-count">共 <strong>1407</strong> 人评价</div></div><div class="rating-area score-detail">
-                        <div class="score-group">
-                            <span class="score-title">口味</span><span class="common-rating rating-16x16"><span class="rate-stars" style="width:96%"></span></span>4.8分
-                        </div>
-                        <div class="score-group">
-                            <span class="score-title">服务</span><span class="common-rating rating-16x16"><span class="rate-stars" style="width:96%"></span></span>4.8分
-                        </div>
-                        <div class="score-group">
-                            <span class="score-title">环境</span><span class="common-rating rating-16x16"><span class="rate-stars" style="width:96%"></span></span>4.8分
-                        </div></div>
-        <div class="rating-area count-detail">
-            <div class="count-wrapper inline-block">
-                <div class="count-group">
-                    <span class="score">5分</span><span class="percent-box inline-block"><em style="width:81.37882018479%" class="percent inline-block"></em></span>1145人
+                <div class="total-group total-count">共 <strong><?php echo ($temp); ?></strong> 人评价</div>
+            </div>
+            <div class="rating-area score-detail">
+                <div class="score-group">
+                    <span class="score-title">口味</span><span class="common-rating rating-16x16"><span class="rate-stars" style="width:96%"></span></span>4.8分
                 </div>
-                <div class="count-group">
-                    <span class="score">4分</span><span class="percent-box inline-block"><em style="width:13.148542999289%" class="percent inline-block"></em></span>185人
+                <div class="score-group">
+                    <span class="score-title">服务</span><span class="common-rating rating-16x16"><span class="rate-stars" style="width:96%"></span></span>4.8分
                 </div>
-                <div class="count-group">
-                    <span class="score">3分</span><span class="percent-box inline-block"><em style="width:5.046197583511%" class="percent inline-block"></em></span>71人
+                <div class="score-group">
+                    <span class="score-title">环境</span><span class="common-rating rating-16x16"><span class="rate-stars" style="width:96%"></span></span>4.8分
                 </div>
-                <div class="count-group">
-                    <span class="score">2分</span><span class="percent-box inline-block"><em style="width:1%" class="percent inline-block"></em></span>5人
+            </div>
+            <div class="rating-area count-detail">
+                <div class="count-wrapper inline-block">
+                    <?php if(is_array($favourable)): foreach($favourable as $k=>$vo): ?><div class="count-group a<?php echo ($k); ?>">
+                            <span class="score"><?php echo ($k); ?>分</span><span class="percent-box inline-block"><em style="width:<?php echo ($vo); ?>" class="percent inline-block"></em></span><?php echo ($num[$k]); ?>人
+                        </div><?php endforeach; endif; ?>
                 </div>
-                <div class="count-group">
-                    <span class="score">1分</span><span class="percent-box inline-block"><em style="width:1%" class="percent inline-block"></em></span>1人
-                </div></div>
-        </div></div>
+            </div>
+        </div>
     </div>
+
     <div data-component="review-list" class="component-review-list mt-component--booted" mt-scope="[]" data-component-params="{&quot;cityId&quot;:201,&quot;hasLabelCloud&quot;:false,&quot;showPoiTitle&quot;:&quot;0&quot;,&quot;labelCloudAction&quot;:&quot;\/deal\/feedbacklabels\/26263695&quot;,&quot;labelPlaceholder&quot;:&quot;#J-overview&quot;,&quot;dealId&quot;:26263695}" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1465960232707_112"><div class="rate-detail">
     <ul class="J-rate-filter rate-filter ratelist-title cf">
         <li class="rate-filter__item">
@@ -831,325 +833,34 @@
             </div>
         </li>
     </ul>
+
+
+<!-- 评价图示           zhangkuan   -->
     <div class="ratelist-content cf">
-        <div class="loading-surround--large ratelist-content__loading J-list-loading" hidden="hidden" style="display: none;"></div><ul class="J-rate-list" data-fetchfirstpage="true" id="yui_3_16_0_1_1465960232707_2276"><li class="J-ratelist-item rate-list__item cf" data-rateid="910796953">
-        <div class="user-info-block">
-            <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png">
-            </div>
-
-            <p class="name-wrapper">
-                <span class="name">DCC19960114</span>
-                <span class="growth-info"><i class="sp-growth-icons level-icon level-icon-2" title="等级VIP2"></i></span>
-            </p>
-        </div>
-
-        <div class="review-content-wrapper">
-            <div class="info cf">
-                <div class="rate-status">
-                    <span class="common-rating"><span class="rate-stars" style="width:60%"></span></span>
-                </div>
-                <span class="time">2016-06-12</span>
-            </div>
-
-            <div class="J-normal-view">
-                <p class="content">
-                    <a href="http://suzhousz.meituan.com/shop/feedback/910796953" target="_blank" class="hqrate-badge"><strong>[认真评价]</strong></a>
-                    很好吃，很酥，第一次购买口味很好特别好吃。。。。离得比较近，一下买了六个尝尝，没想到自己一口气吃了四个，蛋挞也比较大，比外面卖着好吃点，家人也尝了说味道不错，确实很好吃，而且店里也很干净，地方很好找。
-                </p>
-                <div id="yui_3_16_0_1_1465960232707_2285" class="yui3-widget widget-carousel"><div class="pic-list J-piclist-wrapper widget-carousel-content" id="yui_3_16_0_1_1465960232707_2286">
-    <div class="J-pic-thumbnails pic-thumbnails widget-carousel-indicators" id="yui_3_16_0_1_1465960232707_2290">
-        <ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2292" style="width: 452px; left: 0px;">
-            <li data-src="http://p0.meituan.net/w.h/shaitu/182b9ff352ec61f4924899adf327e42f205885.jpg">
-                <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/182b9ff352ec61f4924899adf327e42f205885.jpg">
-                </a>
-            </li>
-            <li data-src="http://p1.meituan.net/w.h/shaitu/806003a3b459fe898232869eac5bf06d224286.jpg">
-                <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/806003a3b459fe898232869eac5bf06d224286.jpg">
-                </a>
-            </li>
-            <li data-src="http://p1.meituan.net/w.h/shaitu/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg">
-                <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg">
-                </a>
-            </li>
-            <li data-src="http://p1.meituan.net/w.h/shaitu/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg">
-                <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg">
-                </a>
-            </li>
+        <div class="loading-surround--large ratelist-content__loading J-list-loading" hidden="hidden" style="display: none;"></div>
+        <ul class="J-rate-list" data-fetchfirstpage="true" id="yui_3_16_0_1_1465960232707_2276">
+            <div id="geval"></div> 
         </ul>
-    <a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev" hidden="hidden" style="display: none;"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next" hidden="hidden" style="display: none;"></a></div>
-    <div class="J-pic-preview pic-preview widget-carousel-previews" hidden="hidden" style="display: none;"><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next"></a></div>
-</div></div>
-
+        <?php if($temp > 0){ ?>
+        <div class="pages">
+            <div id="Pagination"></div>
+            <div class="searchPage">
+             <!--  <span class="page-sum">共<strong class="allPage"></strong>页</span>
+              <span class="page-go">跳转<input type="text" >页</span>
+              <a href="javascript:void(0);" class="page-btn" >GO</a> -->
             </div>
-
-            <div class="J-long-view long-rate-view" hidden="" style="display:none"></div>
-
-
-
         </div>
-    </li>
-    <li class="J-ratelist-item rate-list__item cf" data-rateid="886938088">
-        <div class="user-info-block">
-            <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/357903db34a5e7a5735a4844f77f76e484314.jpg">
-            </div>
-
-            <p class="name-wrapper">
-                <span class="name vip_level_high">轩N宝</span>
-                <span class="growth-info"><i class="sp-growth-icons level-icon level-icon-3" title="等级VIP3"></i></span>
-            </p>
-        </div>
-
-        <div class="review-content-wrapper">
-            <div class="info cf">
-                <div class="rate-status">
-                    <span class="common-rating"><span class="rate-stars" style="width:100%"></span></span>
-                </div>
-                <span class="time">2016-05-16</span>
-            </div>
-
-            <div class="J-normal-view">
-                <p class="content">
-                    在生日蛋糕的时候，看他家的蛋挞烤的很诱人，对于吃货的我来说，怎能错过^_^^_^^_^爱吃蛋挞的吃货们赶紧下手吧^_^^_^
-                </p>
-            </div>
-
-            <div class="J-long-view long-rate-view" hidden="" style="display:none"></div>
-
-
-
-        </div>
-    </li>
-    <li class="J-ratelist-item rate-list__item cf" data-rateid="897221660">
-        <div class="user-info-block">
-            <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/8fd17014c791cdf393bed473dab116ff3643.png">
-            </div>
-
-            <p class="name-wrapper">
-                <span class="name">苗mumumu</span>
-                <span class="growth-info"><i class="sp-growth-icons level-icon level-icon-0" title="等级VIP0"></i></span>
-            </p>
-        </div>
-
-        <div class="review-content-wrapper">
-            <div class="info cf">
-                <div class="rate-status">
-                    <span class="common-rating"><span class="rate-stars" style="width:40%"></span></span>
-                </div>
-                <span class="time">2016-05-28</span>
-            </div>
-
-            <div class="J-normal-view">
-                <p class="content">
-                    首先味道不错，人挺多老板半天都不理我还老是接电话就算了，买了五个回来之后才发现只给了四个，吃的什么的也没法回去找，只希望老板以后卖东西能多长点心，不开心
-                </p>
-            </div>
-
-            <div class="J-long-view long-rate-view" hidden="" style="display:none"></div>
-
-
-                <p class="biz-reply">商家回复：不好意思，人多搞错了，第一次出现这样的情况，您下次过来提一下，再补给您，抱歉</p>
-
-        </div>
-    </li>
-    <li class="J-ratelist-item rate-list__item cf" data-rateid="870818901">
-        <div class="user-info-block">
-            <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/9760fd23879c2d20c43b97206d4f943b107969.jpg">
-            </div>
-
-            <p class="name-wrapper">
-                <span class="name vip_level_high">毒舌李</span>
-                <span class="growth-info"><i class="sp-growth-icons level-icon level-icon-3" title="等级VIP3"></i></span>
-            </p>
-        </div>
-
-        <div class="review-content-wrapper">
-            <div class="info cf">
-                <div class="rate-status">
-                    <span class="common-rating"><span class="rate-stars" style="width:100%"></span></span>
-                </div>
-                <span class="time">2016-04-29</span>
-            </div>
-
-            <div class="J-normal-view">
-                <p class="content">
-                    一下子买了八个，大爱哈，值得购买
-                </p>
-                <div id="yui_3_16_0_1_1465960232707_2350" class="yui3-widget widget-carousel"><div class="pic-list J-piclist-wrapper widget-carousel-content" id="yui_3_16_0_1_1465960232707_2351">
-    <div class="J-pic-thumbnails pic-thumbnails widget-carousel-indicators" id="yui_3_16_0_1_1465960232707_2355">
-        <ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2357" style="width: 452px; left: 0px;">
-            <li data-src="http://p0.meituan.net/w.h/shaitu/b04651b2cb61eca47d3cb6b1ff55294b289725.jpg">
-                <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/b04651b2cb61eca47d3cb6b1ff55294b289725.jpg">
-                </a>
-            </li>
-            <li data-src="http://p1.meituan.net/w.h/shaitu/b6c3d7eca05b2c10387507d88c760176286422.jpg">
-                <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/b6c3d7eca05b2c10387507d88c760176286422.jpg">
-                </a>
-            </li>
-            <li data-src="http://p0.meituan.net/w.h/shaitu/85e10013d48cd1fc58fff2487ea17e93294384.jpg">
-                <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/85e10013d48cd1fc58fff2487ea17e93294384.jpg">
-                </a>
-            </li>
-            <li data-src="http://p0.meituan.net/w.h/shaitu/5756d6edca560add3fee69ee434d4053298186.jpg">
-                <a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true">
-                    <img src="/mxsh/Public/deal_files/5756d6edca560add3fee69ee434d4053298186.jpg">
-                </a>
-            </li>
-        </ul>
-    <a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev" hidden="hidden" style="display: none;"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next" hidden="hidden" style="display: none;"></a></div>
-    <div class="J-pic-preview pic-preview widget-carousel-previews" hidden="hidden" style="display: none;"><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next"></a></div>
-</div></div>
-
-            </div>
-
-            <div class="J-long-view long-rate-view" hidden="" style="display:none"></div>
-
-
-
-        </div>
-    </li>
-    <li class="J-ratelist-item rate-list__item cf" data-rateid="902932693">
-        <div class="user-info-block">
-            <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/f26b7d8151e5c80380183cd34cb775eb26532.jpg">
-            </div>
-
-            <p class="name-wrapper">
-                <span class="name vip_level_high">杨宝宝1995</span>
-                <span class="growth-info"><i class="sp-growth-icons level-icon level-icon-3" title="等级VIP3"></i></span>
-            </p>
-        </div>
-
-        <div class="review-content-wrapper">
-            <div class="info cf">
-                <div class="rate-status">
-                    <span class="common-rating"><span class="rate-stars" style="width:60%"></span></span>
-                </div>
-                <span class="time">2016-06-03</span>
-            </div>
-
-            <div class="J-normal-view">
-                <p class="content">
-                    不错，蛋挞也挺大的，以后会经常光顾
-                </p>
-            </div>
-
-            <div class="J-long-view long-rate-view" hidden="" style="display:none"></div>
-
-
-
-        </div>
-    </li>
-    <li class="J-ratelist-item rate-list__item cf" data-rateid="911026101">
-        <div class="user-info-block">
-            <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/35ad1f9253761ea6ff822b5e659f234f3758.png">
-            </div>
-
-            <p class="name-wrapper">
-                <span class="name vip_level_high">妆点时尚</span>
-                <span class="growth-info"><i class="sp-growth-icons level-icon level-icon-3" title="等级VIP3"></i></span>
-            </p>
-        </div>
-
-        <div class="review-content-wrapper">
-            <div class="info cf">
-                <div class="rate-status">
-                    <span class="common-rating"><span class="rate-stars" style="width:60%"></span></span>
-                </div>
-                <span class="time">2016-06-12</span>
-            </div>
-
-            <div class="J-normal-view">
-                <p class="content">
-                    口味很好，价格实惠，老板是个帅哥呦
-                </p>
-            </div>
-
-            <div class="J-long-view long-rate-view" hidden="" style="display:none"></div>
-
-
-
-        </div>
-    </li>
-    <li class="J-ratelist-item rate-list__item cf" data-rateid="882048039">
-        <div class="user-info-block">
-            <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png">
-            </div>
-
-            <p class="name-wrapper">
-                <span class="name">s***.</span>
-                <span class="growth-info"><i class="sp-growth-icons level-icon level-icon-2" title="等级VIP2"></i></span>
-            </p>
-        </div>
-
-        <div class="review-content-wrapper">
-            <div class="info cf">
-                <div class="rate-status">
-                    <span class="common-rating"><span class="rate-stars" style="width:80%"></span></span>
-                </div>
-                <span class="time">2016-05-11</span>
-            </div>
-
-            <div class="J-normal-view">
-                <p class="content">
-                    既然有前世今生，人的确不要轻易发下誓言，不要轻易说什么海枯石烂，不要轻易说什么地老天荒，因为这些都是做不到的，在阴阳轮回之中，这些誓言显得是多么的苍白无力。谁都逃不掉轮回的安排，一碗孟婆汤，了却今生一世情缘，谁又还会记得当初许下的誓言呢？
-                </p>
-            </div>
-
-            <div class="J-long-view long-rate-view" hidden="" style="display:none"></div>
-
-
-
-        </div>
-    </li>
-    <li class="J-ratelist-item rate-list__item cf" data-rateid="912218493">
-        <div class="user-info-block">
-            <div class="avatar-wrapper">
-                <img class="avatar" src="/mxsh/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png">
-            </div>
-
-            <p class="name-wrapper">
-                <span class="name vip_level_high">_qqdz61345649768</span>
-                <span class="growth-info"><i class="sp-growth-icons level-icon level-icon-3" title="等级VIP3"></i></span>
-            </p>
-        </div>
-
-        <div class="review-content-wrapper">
-            <div class="info cf">
-                <div class="rate-status">
-                    <span class="common-rating"><span class="rate-stars" style="width:100%"></span></span>
-                </div>
-                <span class="time">2016-06-14</span>
-            </div>
-
-            <div class="J-normal-view">
-                <p class="content">
-                    一如既往的好，特别喜欢吃他家的蛋挞
-                </p>
-            </div>
-
-            <div class="J-long-view long-rate-view" hidden="" style="display:none"></div>
-
-
-
-        </div>
-    </li></ul>
-        <div class="paginator-wrapper log-mod-viewed" data-mod="fb">
-            <div class="paginator J-rate-paginator"><li class="first-page"><span>首页</span></li><li class="previous"><span><i class="tri disable"></i>上一页</span></li><li class="current"><span data-index="1">1</span></li><li class="page-link"><a href="javascript:void(0);" gaevent="content/detail/reviews/prepage2" hidefocus="true" data-index="2">2</a></li><li class="page-link"><a href="javascript:void(0);" gaevent="content/detail/reviews/prepage3" hidefocus="true" data-index="3">3</a></li><li class="next"><a href="javascript:void(0);" gaevent="content/detail/reviews/prepagenextpage" hidefocus="true" data-index="2">下一页<i class="tri"></i></a></li><li class="last-page"><a href="javascript:void(0);" gaevent="content/detail/reviews/prepagelastpage" hidefocus="true" data-index="138">尾页</a></li></div>
-        </div>
+        <?php } ?>
     </div>
+
+
+
+
+
+
+
+
+
 </div>
 </div>
 </div>
@@ -1685,4 +1396,54 @@ a:hover{ text-decoration:none;}
       });
     }
   };
+</script>
+
+<!-- 评价分页 -->
+<script type="text/javascript">
+$(document).ready(function() {    
+    if(<?php echo $temp;?> > 0){
+    InitTable(1);
+    var a = <?php echo $temp;?>;
+    $("#Pagination").pagination(a, {     //a共有多少列表项
+    num_edge_entries: 2,                //两侧分页显示     
+    num_display_entries: 4,             //连续分页主体数目显示
+    callback: pageselectCallback,
+    items_per_page:3                    //每页显示列表项
+    });
+
+    function pageselectCallback(p){
+        InitTable(p+1);
+       
+    }
+
+    function InitTable(p){
+        $.ajax({
+            type : "GET",
+            url : '<?php echo U("Index/evaajax"); ?>',
+            data:'page='+p+'&id=<?php echo $_GET["id"]; ?>',
+            dataType : "json",
+            success : function(data){
+                var b ='';
+                $(data).each(function(k,v){
+
+                    b+='<li class="J-ratelist-item rate-list__item cf" data-rateid="910796953"><div class="user-info-block"><div class="avatar-wrapper"><img class="avatar" src="/mxsh/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png"></div><p class="name-wrapper"><span class="name">DCC19960114</span><span class="growth-info"><i class="sp-growth-icons level-icon level-icon-2" title="等级VIP2"></i></span></p></div><div class="review-content-wrapper"><div class="info cf"><div class="rate-status"><span class="common-rating"><span class="rate-stars" style="width:60%"></span></span></div><span class="time">2016-06-12</span></div><div class="J-normal-view"><p class="content"><a href="http://suzhousz.meituan.com/shop/feedback/910796953" target="_blank" class="hqrate-badge"><strong>[认真评价]</strong></a>'+v.geval_content+'</p><div id="yui_3_16_0_1_1465960232707_2285" class="yui3-widget widget-carousel"><div class="pic-list J-piclist-wrapper widget-carousel-content" id="yui_3_16_0_1_1465960232707_2286"><div class="J-pic-thumbnails pic-thumbnails widget-carousel-indicators" id="yui_3_16_0_1_1465960232707_2290"><ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2292" style="width: 452px; left: 0px;"><li data-src="http://p0.meituan.net/w.h/shaitu/182b9ff352ec61f4924899adf327e42f205885.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/182b9ff352ec61f4924899adf327e42f205885.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"></a></li></ul><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev" hidden="hidden" style="display: none;"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next" hidden="hidden" style="display: none;"></a></div><div class="J-pic-preview pic-preview widget-carousel-previews" hidden="hidden" style="display: none;"><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next"></a></div></div></div></div><div class="J-long-view long-rate-view" hidden="" style="display:none"></div></div></li>';
+                });
+                $('#geval').html(b);
+                $('.allPage').text(<?php echo $evaluate_count;?>);
+               
+             $('.pagination a').click(function(){
+                $('#yui_3_16_0_1_1465960232707_1835').click();
+               });
+            }
+        }); 
+    }
+
+     //  $('.page-btn').click(function(){
+     //     var nu = $(".page-go input").val();
+        
+     //     InitTable(nu);
+     // });
+   }
+});
+
 </script>
