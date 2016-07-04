@@ -1244,7 +1244,7 @@ a:hover{ text-decoration:none;}
                 success : function(data){                
                     var html = '';
                     $(data).each(function(k,v){                 
-                        html +='<h3>'+v.message+'</h3><div><p>'+v.address+'<br>电话:'+v.phone+'<br><a href="javascript:void(0)" style="color:#EE9A00;" jing_du="'+v.jing_du+'" wei_du="'+v.wei_du+'" message="'+v.message+'" phone="'+v.phone+'" address="'+v.address+'" class="all_map">查看完整地图</a></p></div> '; 
+                        html +='<h3>'+v.message+'</h3><div><p>'+v.address+'<br>电话:'+v.phone+'<br><a href="javascript:void(0)" style="color:#2bb8aa;" jing_du="'+v.jing_du+'" wei_du="'+v.wei_du+'" message="'+v.message+'" phone="'+v.phone+'" address="'+v.address+'" class="all_map">查看完整地图</a></p></div> '; 
                     });                          
                     $('#accordion').html(html);          
                     $(".all_map").on('click',function(){        
@@ -1269,13 +1269,13 @@ a:hover{ text-decoration:none;}
                         map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
                         var point = new BMap.Point(jing_du, wei_du);
                         var marker = new BMap.Marker(point);  // 创建标注
-                        var content = '<span style="font-size:14px;color:#0A8021">'+address+'<br>电话:'+phone+'</span>';
+                        var content = '<span style="font-size:14px;color:#2bb8aa">'+address+'<br>电话:'+phone+'</span>';
                         map.addOverlay(marker);              // 将标注添加到地图中
                         map.centerAndZoom(point, 15);
                         var opts = {
                             width : 200,     // 信息窗口宽度
                             height: 100,     // 信息窗口高度
-                            title : '<span style="font-size:14px;color:#0A8021">门店:'+message+'</span>', // 信息窗口标题
+                            title : '<span style="font-size:14px;color:#2bb8aa">门店:'+message+'</span>', // 信息窗口标题
                             enableMessage:true,//设置允许信息窗发送短息
                         }
                         var infoWindow = new BMap.InfoWindow(content, opts);  // 创建信息窗口对象          
@@ -1400,50 +1400,42 @@ a:hover{ text-decoration:none;}
 
 <!-- 评价分页 -->
 <script type="text/javascript">
-$(document).ready(function() {    
+$(document).ready(function(){    
     if(<?php echo $temp;?> > 0){
-    InitTable(1);
-    var a = <?php echo $temp;?>;
-    $("#Pagination").pagination(a, {     //a共有多少列表项
-    num_edge_entries: 2,                //两侧分页显示     
-    num_display_entries: 4,             //连续分页主体数目显示
-    callback: pageselectCallback,
-    items_per_page:3                    //每页显示列表项
-    });
+        InitTable(1);
+        var a = <?php echo $temp;?>;
+        $("#Pagination").pagination(a, {     //a共有多少列表项
+        num_edge_entries: 2,                //两侧分页显示     
+        num_display_entries: 4,             //连续分页主体数目显示
+        callback: pageselectCallback,
+        items_per_page:3                    //每页显示列表项
+        });
 
-    function pageselectCallback(p){
-        InitTable(p+1);
-       
+        function pageselectCallback(p){
+            InitTable(p+1);
+           
+        }
+
+        function InitTable(p){
+            $.ajax({
+                type : "GET",
+                url : '<?php echo U("Index/evaajax"); ?>',
+                data:'page='+p+'&id=<?php echo $_GET["id"]; ?>',
+                dataType : "json",
+                success : function(data){
+                    var b ='';
+                    $(data).each(function(k,v){
+                        b+='<li class="J-ratelist-item rate-list__item cf" data-rateid="910796953"><div class="user-info-block"><div class="avatar-wrapper"><img class="avatar" src="/mxsh/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png"></div><p class="name-wrapper"><span class="name">DCC19960114</span><span class="growth-info"><i class="sp-growth-icons level-icon level-icon-2" title="等级VIP2"></i></span></p></div><div class="review-content-wrapper"><div class="info cf"><div class="rate-status"><span class="common-rating"><span class="rate-stars" style="width:60%"></span></span></div><span class="time">2016-06-12</span></div><div class="J-normal-view"><p class="content"><a href="http://suzhousz.meituan.com/shop/feedback/910796953" target="_blank" class="hqrate-badge"><strong>[认真评价]</strong></a>'+v.geval_content+'</p><div id="yui_3_16_0_1_1465960232707_2285" class="yui3-widget widget-carousel"><div class="pic-list J-piclist-wrapper widget-carousel-content" id="yui_3_16_0_1_1465960232707_2286"><div class="J-pic-thumbnails pic-thumbnails widget-carousel-indicators" id="yui_3_16_0_1_1465960232707_2290"><ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2292" style="width: 452px; left: 0px;"><li data-src="http://p0.meituan.net/w.h/shaitu/182b9ff352ec61f4924899adf327e42f205885.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/182b9ff352ec61f4924899adf327e42f205885.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"></a></li></ul><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev" hidden="hidden" style="display: none;"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next" hidden="hidden" style="display: none;"></a></div><div class="J-pic-preview pic-preview widget-carousel-previews" hidden="hidden" style="display: none;"><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next"></a></div></div></div></div><div class="J-long-view long-rate-view" hidden="" style="display:none"></div></div></li>';
+                    });
+                    $('#geval').html(b);
+                    $('.allPage').text(<?php echo $evaluate_count;?>);
+                    // 绑定消费评价事件               
+                    $('.pagination a').click(function(){
+                        $('#yui_3_16_0_1_1465960232707_1835').click();
+                    });
+                }
+            }); 
+        }
     }
-
-    function InitTable(p){
-        $.ajax({
-            type : "GET",
-            url : '<?php echo U("Index/evaajax"); ?>',
-            data:'page='+p+'&id=<?php echo $_GET["id"]; ?>',
-            dataType : "json",
-            success : function(data){
-                var b ='';
-                $(data).each(function(k,v){
-
-                    b+='<li class="J-ratelist-item rate-list__item cf" data-rateid="910796953"><div class="user-info-block"><div class="avatar-wrapper"><img class="avatar" src="/mxsh/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png"></div><p class="name-wrapper"><span class="name">DCC19960114</span><span class="growth-info"><i class="sp-growth-icons level-icon level-icon-2" title="等级VIP2"></i></span></p></div><div class="review-content-wrapper"><div class="info cf"><div class="rate-status"><span class="common-rating"><span class="rate-stars" style="width:60%"></span></span></div><span class="time">2016-06-12</span></div><div class="J-normal-view"><p class="content"><a href="http://suzhousz.meituan.com/shop/feedback/910796953" target="_blank" class="hqrate-badge"><strong>[认真评价]</strong></a>'+v.geval_content+'</p><div id="yui_3_16_0_1_1465960232707_2285" class="yui3-widget widget-carousel"><div class="pic-list J-piclist-wrapper widget-carousel-content" id="yui_3_16_0_1_1465960232707_2286"><div class="J-pic-thumbnails pic-thumbnails widget-carousel-indicators" id="yui_3_16_0_1_1465960232707_2290"><ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2292" style="width: 452px; left: 0px;"><li data-src="http://p0.meituan.net/w.h/shaitu/182b9ff352ec61f4924899adf327e42f205885.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/182b9ff352ec61f4924899adf327e42f205885.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"></a></li></ul><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev" hidden="hidden" style="display: none;"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next" hidden="hidden" style="display: none;"></a></div><div class="J-pic-preview pic-preview widget-carousel-previews" hidden="hidden" style="display: none;"><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next"></a></div></div></div></div><div class="J-long-view long-rate-view" hidden="" style="display:none"></div></div></li>';
-                });
-                $('#geval').html(b);
-                $('.allPage').text(<?php echo $evaluate_count;?>);
-               
-             $('.pagination a').click(function(){
-                $('#yui_3_16_0_1_1465960232707_1835').click();
-               });
-            }
-        }); 
-    }
-
-     //  $('.page-btn').click(function(){
-     //     var nu = $(".page-go input").val();
-        
-     //     InitTable(nu);
-     // });
-   }
 });
-
 </script>

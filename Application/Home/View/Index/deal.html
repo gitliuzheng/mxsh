@@ -862,7 +862,7 @@ a:hover{ text-decoration:none;}
                 success : function(data){                
                     var html = '';
                     $(data).each(function(k,v){                 
-                        html +='<h3>'+v.message+'</h3><div><p>'+v.address+'<br>电话:'+v.phone+'<br><a href="javascript:void(0)" style="color:#EE9A00;" jing_du="'+v.jing_du+'" wei_du="'+v.wei_du+'" message="'+v.message+'" phone="'+v.phone+'" address="'+v.address+'" class="all_map">查看完整地图</a></p></div> '; 
+                        html +='<h3>'+v.message+'</h3><div><p>'+v.address+'<br>电话:'+v.phone+'<br><a href="javascript:void(0)" style="color:#2bb8aa;" jing_du="'+v.jing_du+'" wei_du="'+v.wei_du+'" message="'+v.message+'" phone="'+v.phone+'" address="'+v.address+'" class="all_map">查看完整地图</a></p></div> '; 
                     });                          
                     $('#accordion').html(html);          
                     $(".all_map").on('click',function(){        
@@ -887,13 +887,13 @@ a:hover{ text-decoration:none;}
                         map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
                         var point = new BMap.Point(jing_du, wei_du);
                         var marker = new BMap.Marker(point);  // 创建标注
-                        var content = '<span style="font-size:14px;color:#0A8021">'+address+'<br>电话:'+phone+'</span>';
+                        var content = '<span style="font-size:14px;color:#2bb8aa">'+address+'<br>电话:'+phone+'</span>';
                         map.addOverlay(marker);              // 将标注添加到地图中
                         map.centerAndZoom(point, 15);
                         var opts = {
                             width : 200,     // 信息窗口宽度
                             height: 100,     // 信息窗口高度
-                            title : '<span style="font-size:14px;color:#0A8021">门店:'+message+'</span>', // 信息窗口标题
+                            title : '<span style="font-size:14px;color:#2bb8aa">门店:'+message+'</span>', // 信息窗口标题
                             enableMessage:true,//设置允许信息窗发送短息
                         }
                         var infoWindow = new BMap.InfoWindow(content, opts);  // 创建信息窗口对象          
