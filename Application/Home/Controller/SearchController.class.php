@@ -35,7 +35,7 @@ class SearchController extends CommonController {
         $this->assign(array(
             'gClass' => $gClass,
             'fClass' => $fClass,
-        ));    
+        ));   
         $this -> assign(array(
             'page' => $data['page'],
             'data' => $data['data'],

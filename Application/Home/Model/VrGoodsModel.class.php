@@ -72,7 +72,7 @@ class VrGoodsModel extends Model {
         $page = new \Think\Page($count, 2);
         // 配置翻页的样式
         $data['page'] = $page->show();
-        $data['data'] = $this ->field('goods_id,goods_commonid,goods_name,goods_price,goods_marketprice,goods_salenum,evaluation_count,gc_id_1,gc_id_2,gc_id_3')-> where($where) ->limit($page->firstRow.','.$page->listRows) ->order(array($p => "desc")) ->select();      
+        $data['data'] = $this ->field('goods_id,goods_commonid,goods_name,goods_promotion_price,goods_price,goods_marketprice,goods_salenum,evaluation_count,gc_id_1,gc_id_2,gc_id_3')-> where($where) ->limit($page->firstRow.','.$page->listRows) ->order(array($p => "desc")) ->select();      
 		return $data;
 	}
 

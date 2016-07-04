@@ -638,7 +638,7 @@
                         </a>
                     </h3>
                     <p class="deal-tile__detail" id="yui_3_16_0_1_1465867114754_10325">
-                        <span class="price">¥<strong><i class="inline-block ps_26 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/26/64c2d420f2.png@b64babf);background-position: 0px -120px;"></i><i class="inline-block ps_26 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/26/64c2d420f2.png@b64babf);background-position: -98px -30px;"></i><i class="inline-block ps_26 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/26/64c2d420f2.png@b64babf);background-position: -53px -30px;"></i></strong></span>
+                        <span class="price">¥<strong><?php echo ($v["goods_promotion_price"]); ?></strong></span>
                         <span class="value">门店价<del class="num"><span>¥</span><?php echo ($v["goods_marketprice"]); ?></del></span>
                         <span class="tags">
                         </span>
