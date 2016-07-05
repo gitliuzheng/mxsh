@@ -18,7 +18,7 @@ class SearchController extends CommonController {
                 'gcount' => $data['count'],
             ));        
             $this->display();          
-        }
+        }else{
  //导航类搜索                          
         $catId = I('get.gc_id');
         $arr=explode('-',$catId);
@@ -41,6 +41,7 @@ class SearchController extends CommonController {
             'data' => $data['data'],
         ));         
         $this->display();
+        }
     }
 
 
