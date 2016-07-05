@@ -47,7 +47,7 @@
 <style type="text/css">@media screen{.smnoscreen {display:none}} @media print{.smnoprint{display:none}}</style>
 <noscript hidden="" style="display:none;" class="J-hub" data-hublaziness="load" data-hubcss="fewww:www/css/lazyload.css,iconfont/css/global-iconfont.css@b64babf" data-hubstamp="yui_3_16_0_1_1465960232707_869" data-hubstate="40"></noscript>
 </head>
-<body class="pg-deal pg-deal-default pg-deal-detail" id="deal-default" style="position: static;"><div id="yui_3_16_0_1_1465960232707_2566" class="yui3-widget widget-flashcopy"><div id="yui_3_16_0_1_1465960232707_2568" class="widget-flashcopy-content"></div></div><div id="qq-dialog" class="mt-overlay-container"><div id="yui_3_16_0_1_1465960232707_2479" class="yui3-widget yui3-overlay yui3-widget-positioned yui3-widget-stacked yui3-overlay-hidden" style="width: 500px; left: 701px; top: 400px; z-index: 102;"><div id="yui_3_16_0_1_1465960232707_2481" class="yui3-overlay-content yui3-widget-stdmod"><div class="yui3-widget-bd" id="yui_3_16_0_1_1465960232707_2592"><div class="mt-dialog" id="yui_3_16_0_1_1465960232707_2591"><h3 class="head" id="yui_3_16_0_1_1465960232707_2590">分享给QQ好友<span class="close" id="yui_3_16_0_1_1465960232707_2589">关闭</span></h3><div class="body" id="yui_3_16_0_1_1465960232707_2599"><p class="error" style="display:none">&nbsp;</p><div id="yui_3_16_0_1_1465960232707_2598">通过QQ、电子邮件发送链接给你的朋友</div><input type="text" class="deal-share-qq-input" value="http://suzhousz.meituan.com/u/15688577" maxlength="40" id="yui_3_16_0_1_1465960232707_2602"><input class="deal-share-qq-copy" type="button" value="复制" style="display:none"></div></div></div></div><div class="mt-overlay-underlay"></div></div></div><div id="mt-overlay-mask" style="width: 1903px; height: 8580px; z-index: 101; visibility: hidden;"></div>
+<body class="pg-deal pg-deal-default pg-deal-detail" id="deal-default" style="position: static;"><div id="yui_3_16_0_1_1465960232707_2566" class="yui3-widget widget-flashcopy"><div id="yui_3_16_0_1_1465960232707_2568" class="widget-flashcopy-content"></div></div><div id="qq-dialog" class="mt-overlay-container"><div id="yui_3_16_0_1_1465960232707_2479" class="yui3-widget yui3-overlay yui3-widget-positioned yui3-widget-stacked yui3-overlay-hidden" style="width: 500px; left: 701px; top: 400px; z-index: 102;"><div id="yui_3_16_0_1_1465960232707_2481" class="yui3-overlay-content yui3-widget-stdmod"><div class="yui3-widget-bd" id="yui_3_16_0_1_1465960232707_2592"><div class="mt-dialog" id="yui_3_16_0_1_1465960232707_2591"><h3 class="head" id="yui_3_16_0_1_1465960232707_2590">分享给QQ好友<span class="close" id="yui_3_16_0_1_1465960232707_2589">关闭</span></h3><div class="body" id="yui_3_16_0_1_1465960232707_2599"><p class="error" style="display:none">&nbsp;</p><div id="yui_3_16_0_1_1465960232707_2598">通过QQ、电子邮件发送链接给你的朋友</div><input type="text" class="deal-share-qq-input" value="http://suzhousz.meituan.com/u/15688577" maxlength="40" id="yui_3_16_0_1_1465960232707_2602"><input class="deal-share-qq-copy" type="button" value="复制" style="display:none"></div></div></div></div><div class="mt-overlay-underlay"></div></div></div><div id="mt-overlay-mask" style="width: 1903px; z-index: 101; visibility: hidden;"></div>
    
     <!-- 顶部公共部分 -->
      <header id="site-mast" class="site-mast">
@@ -196,17 +196,31 @@
         </div>
          
             <div data-component="search-box" class="component-search-box mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465867114754_339"><div data-comboajax-uri="/index/hotqueries" data-comboajax-data="{&quot;isshowshops&quot;:true,&quot;isshopspage&quot;:false}" data-comboajax-onsuccess="this.append($response.html);" data-comboajax-state="5" class="J-search-box search-box ">
-    <form action="http://suzhousz.meituan.com/s/" class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1465867114754_1884">
-                        <div class="search-box__tabs-container" style="float:left">
+
+
+
+<!-- 关键字搜索  zhangkuan -->  
+    <form  class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1464999326260_126">
+        <div class="search-box__tabs-container" style="float:left">
             <span class="tri"></span>
             <ul class="J-search-box__tabs search-box__tabs">
-                                <li class="search-box__tab J-search-box__tab--deal search-box__tab--current">商品</li>
-                <li class="search-box__tab J-search-box__tab--shops" gaevent="search/biz">商家</li>
-                            </ul>
+                <li class="search-box__tab J-search-box__tab--deal search-box__tab--current">商品</li>
+                <li class="search-box__tab J-search-box__tab--shops">商家</li>
+            </ul>
         </div>
-                <input tabindex="1" type="text" name="w" autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1465867114754_1890">
-        <input type="submit" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr">
+        <input tabindex="1" type="text" name="name" autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1464999326260_132" class="name">
+       <!--  搜索通过事件提交，增加key字段提交(区分类别跳转) -->
+        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr"  onclick="location.href='<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/'+$('#yui_3_16_0_1_1464999326260_132').val();">       
     </form>
+<!-- 关键字搜索结束  zhangkuan -->  
+
+
+
+
+
+
+
+
     <ul class="search-suggest J-search-suggest" style="display:none;">
     </ul>
     <div class="smart-query-panel" style="display:none" id="yui_3_16_0_1_1465867114754_1880">
@@ -220,195 +234,63 @@
             <span class="commitment-item"><i class="F-glob F-glob-commitment-expire"></i>过期退</span>
         </a>
     </div>
+
+
+
+
+
+
     <div class="site-mast__site-nav-w" id="yui_3_16_0_1_1465867114754_2308">
         <div class="site-mast__site-nav" id="yui_3_16_0_1_1465867114754_2307">
             <div class="site-mast__site-nav-inner" id="yui_3_16_0_1_1465867114754_2306">
-                <div data-component="cate-nav" class="component-cate-nav mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1465867114754_341">
-<span class="mt-cates J-nav__trigger nav-unindex">
-    <i class="F-glob F-glob-caret-down"></i><i class="F-glob F-glob-caret-up"></i>
-全部分类</span>
-<div class="cate-nav J-nav__list J-nav__list--delayed cateNavNew log-mod-viewed" data-mtnode="Acategory.Enavcategory" data-mod="nc" style="display: none;" id="yui_3_16_0_1_1465867114754_10307" hidden="hidden">
-    
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12113">
-    <div class="cate-nav__item J-cate-nav__item--1 cate-nav__item--1 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_749">
-        <div class="nav-level1 nav-level1--first" id="yui_3_16_0_1_1464999326260_12112">
-            <dl id="yui_3_16_0_1_1464999326260_12111">
-                <dt id="yui_3_16_0_1_1464999326260_12110"><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/meishi" hidefocus="true" id="yui_3_16_0_1_1464999326260_12265"> 餐饮美食</a> </dt>                
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="1" style="visibility: visible; top: 0px; display: none;" hidden="hidden"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/meishi" gaevent="nav/category/meishi">餐饮美食</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/daijinquan_meishi" gaevent="nav/category/daijinquan_meishi">中餐/酒楼</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/dangaotiandian" gaevent="nav/category/dangaotiandian">特色菜馆</a></li>
-                        <li><a class="keywords__item  bribe" href="http://suzhousz.meituan.com/category/huoguo" gaevent="nav/category/huoguo">蛋糕甜点</a></li>
-                        <li><a class="keywords__item  bribe" href="http://suzhousz.meituan.com/category/zizhucan" gaevent="nav/category/zizhucan">茶饮酒庄</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/kuaican" gaevent="nav/category/kuaican">其他</a></li>                        
-                    </ul>
-            </div></div>
-    </div>
-</div>
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12109">
-    <div class="cate-nav__item J-cate-nav__item--20 cate-nav__item--20 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_754">
-        <div class="nav-level1" id="yui_3_16_0_1_1464999326260_12108">
-            <dl id="yui_3_16_0_1_1464999326260_12107">
-                <dt><a class="nav-level1__label" href="http://hotel.meituan.com/suzhousz" hidefocus="true"> 酒店宾馆</a>
-                </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="20" style="visibility: visible; top: -51px; display: none;" hidden="hidden"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://hotel.meituan.com/suzhousz" gaevent="nav/category/jiudian">酒店宾馆</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item  bribe" href="http://hotel.meituan.com/suzhousz/c-jingjijiudian" gaevent="nav/category/jingjijiudian">酒店宾馆</a></li>
-                    </ul>
-            </div></div>
-    </div>
-</div>
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12089">
-    <div class="cate-nav__item J-cate-nav__item--99 cate-nav__item--99 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_759">
-        <div class="nav-level1" id="yui_3_16_0_1_1464999326260_12088">
-            <dl id="yui_3_16_0_1_1464999326260_12087">
-                <dt><a class="nav-level1__label" href="http://suzhousz.meituan.com/dianying/" hidefocus="true"> 休闲娱乐</a>
-                </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="99" style="visibility: visible; top: -103px; display: none;" hidden="hidden"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/dianying/" gaevent="nav/category/dianying">休闲娱乐</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/dianying/78421" gaevent="nav/category/HotMovie_0">KTV/夜总会</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/dianying/246177" gaevent="nav/category/HotMovie_1">运动健身</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/dianying/246188" gaevent="nav/category/HotMovie_2">足疗/按摩</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/dianying/248680" gaevent="nav/category/HotMovie_3">其他</a></li>
-                    </ul>
-            </div>
-            </div>
-    </div>
-</div>
-<div class="J-nav-item">
-    <div class="cate-nav__item J-cate-nav__item--10 cate-nav__item--10 cate-nav__item--no-l2 ">
-        <div class="nav-level1">
-            <dl>
-                <dt><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/pc_ktv" hidefocus="true"> 生活服务</a>
-                <span class="sperator">/</span><a href="http://trip.meituan.com/" gaevent="nav/category/nav/category/lvyou" data-mttcode="Blvyou" class="nav-extralink"> 丽人</a> </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="2" style="visibility: visible; top: -155px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/xiuxianyule" gaevent="nav/category/xiuxianyule">生活服务</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item  bribe" href="http://suzhousz.meituan.com/category/pc_ktv" gaevent="nav/category/pc_ktv">摄影/个性写真</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/qitaxiuxian" gaevent="nav/category/qitaxiuxian">婚礼策划/鲜花婚庆</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/yanchu" gaevent="nav/category/yanchu">保险理财</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/zhuoyou" gaevent="nav/category/zhuoyou">其他生活服务</a></li>                        
-                    </ul>
-            </div>
-            <div class="nav-level2-poi nav-level2-item "><div class="nav-level2-poi--title">丽人</div><div class="nav-level2-poi--content">
-            <a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/26045" target="_blank" data-mod-idx="HotCinema_0" title="美发">美发</a>
-            <a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/384262" target="_blank" data-mod-idx="HotCinema_1" title="美容美体">美容美体</a>
-            <a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/26045" target="_blank" data-mod-idx="HotCinema_0" title="汗蒸">汗蒸</a>
-            <a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/384262" target="_blank" data-mod-idx="HotCinema_1" title="其他">其他</a></div></div>
-        </div>
-    </div>
-</div>
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12264">
-    <div class="cate-nav__item J-cate-nav__item--2 cate-nav__item--2 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_764">
-        <div class="nav-level1" id="yui_3_16_0_1_1464999326260_12263">
-            <dl>
-                <dt><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/xiuxianyule" hidefocus="true">家居家装</a> 
-                    <span class="sperator">/</span><a href="http://trip.meituan.com/" gaevent="nav/category/nav/category/lvyou" data-mttcode="Blvyou" class="nav-extralink"> 服饰箱包</a></dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="2" style="visibility: visible; top: -207px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/xiuxianyule" gaevent="nav/category/xiuxianyule">家居家装</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item  bribe" href="http://suzhousz.meituan.com/category/pc_ktv" gaevent="nav/category/pc_ktv">家用电器</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/qitaxiuxian" gaevent="nav/category/qitaxiuxian">家装公司</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/yanchu" gaevent="nav/category/yanchu">装饰材料</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/zhuoyou" gaevent="nav/category/zhuoyou">家纺</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/jianshen" gaevent="nav/category/jianshen">其他</a></li>
-                    </ul>
-            </div>
-            <div class="nav-level2-poi nav-level2-item "><div class="nav-level2-poi--title">服饰箱包</div><div class="nav-level2-poi--content"><a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/26045" target="_blank" data-mod-idx="HotCinema_0" title="服装">服装</a><a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/384262" target="_blank" data-mod-idx="HotCinema_1" title="鞋类">鞋类</a><a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/384262" target="_blank" data-mod-idx="HotCinema_1" title="其他">其他</a></div></div>
-        </div>
-    </div>
-</div>
-<div class="J-nav-item">
-    <div class="cate-nav__item J-cate-nav__item--195 cate-nav__item--195 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_769">
-        <div class="nav-level1">
-            <dl>
-                <dt><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/mobile_poi_zhoubianyou" hidefocus="true">教育培训</a></dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="195" style="visibility: visible; top: -259px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/mobile_poi_zhoubianyou" gaevent="nav/category/mobile_poi_zhoubianyou">教育培训</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/wenquan" gaevent="nav/category/wenquan">教育辅导</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/youle" gaevent="nav/category/youle">培训</a></li>
-                    </ul>
-            </div></div>
-    </div>
-</div>
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12086">
-    <div class="cate-nav__item J-cate-nav__item--3 cate-nav__item--3 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_774">
-        <div class="nav-level1" id="yui_3_16_0_1_1464999326260_12085">
-            <dl id="yui_3_16_0_1_1464999326260_12084">
-                <dt id="yui_3_16_0_1_1464999326260_12083"><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/shenghuo" hidefocus="true" id="yui_3_16_0_1_1464999326260_12262">办公文体</a> </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="3" style="visibility: visible; top: -311px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/shenghuo" gaevent="nav/category/shenghuo">办公文体</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/hunshaphoto" gaevent="nav/category/hunshaphoto">办公/文体用品</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/gexingxiezhen" gaevent="nav/category/gexingxiezhen">电脑周边</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/ertongsheying" gaevent="nav/category/ertongsheying">其他</a></li>
-                    </ul>
-            </div></div>
-    </div>
-</div>
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_9579">
-    <div class="cate-nav__item J-cate-nav__item--4 cate-nav__item--4 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_779">
-        <div class="nav-level1" id="yui_3_16_0_1_1464999326260_9578">
-            <dl id="yui_3_16_0_1_1464999326260_9577">
-                <dt id="yui_3_16_0_1_1464999326260_9576"><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/wanggou" hidefocus="true">汽车/骑行用品</a> </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="4" style="visibility: visible; top: -363px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/wanggou" gaevent="nav/category/wanggou">汽车/骑行用品</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/nvzhuang" gaevent="nav/category/nvzhuang">汽车/维修</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/nanzhuang" gaevent="nav/category/nanzhuang">电动车/自行车</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/neiyi" gaevent="nav/category/neiyi">其他</a></li>
-                    </ul>
-            </div></div>
-    </div>
-</div>
-<div class="J-nav-item">
-    <div class="cate-nav__item J-cate-nav__item--22 cate-nav__item--22 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_784">
-        <div class="nav-level1">
-            <dl>
-                <dt><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/jiankangliren" hidefocus="true"> 传媒/广告设计</a> </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="22" style="visibility: visible; top: -415px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/jiankangliren" gaevent="nav/category/jiankangliren">传媒/广告设计</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/meifa" gaevent="nav/category/meifa">广告传媒</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/meirongmeiti" gaevent="nav/category/meirongmeiti">广告设计</a></li>
-                    </ul>
-            </div></div>
-    </div>
-</div>
 
-</div>
-</div>
+
+
+
+
+
+
+
+
+
+<!-- 导航分类  zhangkuan -->  
+
+    <div data-component="cate-nav" class="component-cate-nav mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1465867114754_341">
+        <span class="mt-cates J-nav__trigger nav-unindex">
+            <i class="F-glob F-glob-caret-down"></i><i class="F-glob F-glob-caret-up"></i>全部分类
+        </span>
+        <div class="cate-nav J-nav__list J-nav__list--delayed cateNavNew log-mod-viewed" data-mtnode="Acategory.Enavcategory" data-mod="nc" style="display: none;" id="yui_3_16_0_1_1465867114754_10307" hidden="hidden">
+            <?php if(is_array($floorData)): $i = 0; $__LIST__ = $floorData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(is_array($v['recSubCat'])): $i = 0; $__LIST__ = $v['recSubCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><!-- 显示九层-->
+                    <?php static $k = 0; if($k>=9){break;} $k++; ?>
+                        <div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12113">
+                            <div class="cate-nav__item J-cate-nav__item--1 cate-nav__item--1 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_749">
+                                <div class="nav-level1 nav-level1--first" id="yui_3_16_0_1_1464999326260_12112">
+                                    <dl id="yui_3_16_0_1_1464999326260_12111">
+                                        <dt id="yui_3_16_0_1_1464999326260_12110"><a class="nav-level1__label" href="<?php echo U('Home/Search/category/gc_id/'.$v1['gc_id'], '', FALSE);?>-<?php echo $v1['gc_name']; ?>" hidefocus="true" id="yui_3_16_0_1_1464999326260_12265"><?php echo ($v1['gc_name']); ?></a> </dt>                
+                                    </dl>
+                                    <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
+                                </div>
+                                <!-- 特效尺寸调整 -->
+                                <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="1" style="visibility: visible; top: <?php static $a = 53; $b=1; $a-=53-($b--); echo $a;?>px; display: none;" hidden="hidden">
+                                    <div class="nav-level2-item nav-level2-keywords">
+                                        <div class="nav-level2-keywords--title"><a href="<?php echo U('Home/Search/category/gc_id/'.$v1['gc_id'], '', FALSE);?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a></div>
+                                        <ul class="nav-level2-keywords--content">
+                                         <?php if(is_array($v1['threeCat'])): $i = 0; $__LIST__ = $v1['threeCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i;?><li><a class="keywords__item " href="<?php echo U('Home/Search/category', '', FALSE);?>/gc_id/<?php echo ($v1['gc_id']); ?>-<?php echo $v1['gc_name']; ?>/gc_id3/<?php echo ($v2['gc_id']); ?>-<?php echo $v2['gc_name']; ?>"><?php echo ($v2['gc_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>                          
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><?php endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
+        </div>
+    </div>
+<!-- 导航分类结束位置zhangkuan -->
+
+
+
+
+
+
+
                 <nav>
                     <ul class="navbar cf  log-mod-viewed" data-mod="lz" data-mod-deepview="1" id="yui_3_16_0_1_1465867114754_1864">
                         <li class="navbar__item-w ">

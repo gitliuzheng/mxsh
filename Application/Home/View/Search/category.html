@@ -69,12 +69,38 @@
                         <?php }else if($gc_id){ ?>
                         <!-- 如果Url中有二级，分类行只显示三级分类，删除行显示二级分类 -->
                             <div class="filter-label-list filter-section category-filter-wrapper first-filter">
-                                <div class="label has-icon">全部：</div>
+                                <div class="label has-icon" id="label">全部：</div>
                                 <ul class="inline-block-list">
-                                    <li class="item"> <?php echo ltrim(strstr($gc_id, '-'), '-'); ?></li>
-                                    <a href="__CONTROLLER__/category">X</a>                                              
+                                    <li class="item" id="item"> <?php echo ltrim(strstr($gc_id, '-'), '-'); ?></li>
+
+                                    <a href="__CONTROLLER__/category" id="a">X</a>                                              
                                 </ul>
                             </div>  
+<style type="text/css">
+   
+    #label{
+        height: 20px;
+        width: 70px;
+        border:1px;            /*边框尺寸*/
+        border-color:#2bb8aa;       /*边框颜色*/
+        border-style : solid;   /*边框样式*/
+    }
+    #item{
+        
+        width: 70px;
+        border:1px;            /*边框尺寸*/
+        border-color:#2bb8aa;       /*边框颜色*/
+        border-style : solid;   /*边框样式*/
+    }
+    #a{
+        
+        border:1px;            /*边框尺寸*/
+        border-color:#2bb8aa;       /*边框颜色*/
+        border-style : solid;   /*边框样式*/
+    }
+</style>
+
+
                             <div id="search_condition">                
                                 <div class="filter-label-list filter-section category-filter-wrapper first-filter">
                                     <div class="label has-icon">分类：</div>

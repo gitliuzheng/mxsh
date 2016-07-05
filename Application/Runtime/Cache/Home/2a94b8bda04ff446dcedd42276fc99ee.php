@@ -1991,7 +1991,7 @@
                 <?php if(is_array($floorData)): $i = 0; $__LIST__ = $floorData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(is_array($v['recSubCat'])): $i = 0; $__LIST__ = $v['recSubCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><!-- 显示八层，改变图标  无图标的显示为提包-->
                      <?php static $k2 = 0; if($k2>=8){break;} $k2++; ?>
                         <?php
- switch ($v1['gc_name']){ case '餐饮美食': $p = "meishi"; break; case '休闲娱乐': $p = "xiuxianyule"; break; case '酒店宾馆': $p = "jiudian"; break; case '生活服务': $p = "shenghuo"; break; case '丽人': $p = "jiankangliren"; break; default: $p = "wanggou"; } ?>
+ switch ($v1['gc_name']){ case '餐饮美食': $p = "meishi"; break; case '休闲娱乐': $p = "xiuxianyule"; break; case '教育培训': $p = "dianying"; break; case '酒店宾馆': $p = "jiudian"; break; case '生活服务': $p = "shenghuo"; break; case '丽人': $p = "jiankangliren"; break; case '家居家装': $p = "lvyou"; break; default: $p = "wanggou"; } ?>
                         <div id="floor-category--<?php echo $p;?>" class="category-floor__head cf" data-mtnode="Acategory">
                             <ul class="sub-categories">                                   
                                 <?php if(is_array($v1['threeCat'])): $i = 0; $__LIST__ = $v1['threeCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i;?><li class="sub-categories__cell ">
@@ -2067,7 +2067,7 @@
                 <?php if(is_array($floorData)): $i = 0; $__LIST__ = $floorData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(is_array($v['recSubCat'])): $i = 0; $__LIST__ = $v['recSubCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><!-- 显示八层，改变图标 无图标的显示提包-->
                         <?php static $k1 = 0; if($k1>=8){break;} $k1++; ?>
                         <?php
- switch ($v1['gc_name']){ case '餐饮美食': $p = "meishi"; break; case '休闲娱乐': $p = "xiuxianyule"; break; case '酒店宾馆': $p = "jiudian"; break; case '生活服务': $p = "shenghuo"; break; case '丽人': $p = "jiankangliren"; break; default: $p = "wanggou"; } ?>
+ switch ($v1['gc_name']){ case '餐饮美食': $p = "meishi"; break; case '休闲娱乐': $p = "xiuxianyule"; break; case '教育培训': $p = "dianying"; break; case '酒店宾馆': $p = "jiudian"; break; case '生活服务': $p = "shenghuo"; break; case '丽人': $p = "jiankangliren"; break; case '家居家装': $p = "lvyou"; break; default: $p = "wanggou"; } ?>
                         <li class="elevator__floor <?php echo $p;?>">
                             <a class="link current" hidefocus="true" data-target='#floor-category--<?php echo $p;?>' data-scroll="#floor-category--<?php echo $p;?>"><i class="link__icon F-glob F-glob-<?php echo $p;?>"></i><span><?php echo ($v1['gc_name']); ?></span></a>
                         </li> 

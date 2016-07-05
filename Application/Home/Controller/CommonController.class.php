@@ -9,7 +9,13 @@ class CommonController extends Controller{
 	protected $vr_member_id = '';
 	protected $vr_member_name = '';
 
-	public function _initialize(){
+	public function _initialize(){		
+	//导航分类数据 
+		$goodsModel = D('GoodsClass');
+    	$floorData = $goodsModel->floorData();
+    	$this->assign(array(
+    		'floorData' => $floorData,
+    	));
 		if ($this->checkCookie()){
 			$this->is_cookie_login = 1;
 

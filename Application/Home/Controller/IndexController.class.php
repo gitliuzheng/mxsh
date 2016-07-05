@@ -9,11 +9,6 @@ class IndexController extends CommonController {
 
 //首页
     public function index(){
-    	$goodsModel = D('GoodsClass');
-    	$floorData = $goodsModel->floorData();
-    	$this->assign(array(
-    		'floorData' => $floorData,
-    		));
         $this->display();
     }
 
