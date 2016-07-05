@@ -17,41 +17,15 @@ class BuyController extends CommonController {
 
     //提交订单
     public function buyStep2(){
-        /*
-        $this->_member_info['member_id'] = $member_id;
-        $this->_member_info['member_name'] = $member_name;
-        $this->_member_info['member_email'] = $member_email;
-        $this->_post_data = $post;
-        */
-
 
         //检查是否登录
-//        if(!$this->is_cookie_login){
-//            header("http://mxhhw-z.com/shop/index.php?act=login&ref_url=http%3A%2F%2Fmxhhw-z.com%2F");
-//            die;
-//        }
+        if(!$this->is_cookie_login){
+            echo "<script>window.location.href='http://mxhhw-z.com/shop/index.php?act=login&ref_url=http://vr.mxhhw-z.com/index.php/Home/cart/index';</script>";
+            die;
+        }
 
 
-        //$model = Model('order');
-
-        //第1步 表单验证
-        //$this->_createOrderStep1();
-
-        //第2步 得到购买商品信息
-        //$this->_createOrderStep2();
-
-        //第3步 得到购买相关金额计算等信息
-        //$this->_createOrderStep3();
-
-        //第4步 生成订单
-        $this->_createOrderStep4();
-
-        //第5步 处理预存款
-        //$this->_createOrderStep5();
-        //$model->commit();
-
-        //第6步 订单后续处理
-        //$this->_createOrderStep6();
+        //增加更新购物车
 
 
 
@@ -65,52 +39,6 @@ class BuyController extends CommonController {
 
     //生成订单
     public function _createOrderStep4(){
-        $model_order = D("Order");
-        $member_id = $this->vr_member_id;
-        $member_name = $this->vr_member_name;
-        $member_email = $this->vr_member_email;
-
-        $pay_sn = $this->makePaySn($member_id);
-        $order_pay = array();
-        $order_pay['pay_sn'] = $pay_sn;
-        $order_pay['buyer_id'] = $member_id;
-        $order_pay_id = $model_order->addOrderPay($order_pay);
-        if (!$order_pay_id) {
-            die("订单保存失败[未生成支付单]");
-        }
-
-        $model_cart = D("Cart");
-        $where = array();
-        $where['buyer_id'] = $member_id;
-        $cart_list = $model_cart->listCart('db',$where);
-
-
-        $order = array();
-        $order_common = array();
-        $order_goods = array();
-        $order['order_sn'] = $this->makeOrderSn($order_pay_id);
-        $order['pay_sn'] = $pay_sn;
-        $order['store_id'] = 1;
-        $order['store_name'] = '官方店铺';
-        $order['buyer_id'] = $member_id;
-        $order['buyer_name'] = $member_name;
-        $order['buyer_email'] = $member_email;
-        $order['add_time'] = time();
-        $order['payment_code'] = '';
-        $order['order_amount'] = $store_final_order_total[$store_id];
-        $order['shipping_fee'] = $store_freight_total[$store_id];
-        $order['goods_amount'] = $order['order_amount'] - $order['shipping_fee'];
-        $order['order_from'] = $order_from;
-        //如果支持方式为空时，默认为货到付款 33hao
-        if( $order['payment_code']=="")
-        {
-            $order['payment_code']="offline";
-        }
-
-        foreach($cart_list as $key => $val){
-
-        }
-
 
     }
 

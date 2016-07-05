@@ -61,5 +61,30 @@ $(function(){
 
             return false;
 		});
-	});	
+	});
+
+    //数量+-
+    $("button[for='J-cart-add']").click(function(){
+        var J_cart_quantity = $("input[class='J-cart-quantity']").val();
+        J_cart_quantity = parseInt(J_cart_quantity) + 1;
+        $("input[class='J-cart-quantity']").val(J_cart_quantity);
+        J_cart_add_and_minus_goods_num(J_cart_quantity);
+    });
+
+    $("button[for='J-cart-minus']").click(function(){
+        var J_cart_minus = $("input[class='J-cart-quantity']").val();
+        J_cart_minus = parseInt(J_cart_minus) - 1;
+        if(J_cart_minus < 1){
+            J_cart_minus = 1;
+        }
+        $("input[class='J-cart-quantity']").val(J_cart_minus);
+        J_cart_add_and_minus_goods_num(J_cart_minus);
+    });
+
+    function J_cart_add_and_minus_goods_num($quantity){
+        $("#deal_hidden").find(".goods_num").text($quantity);
+    }
+
+
+
 });

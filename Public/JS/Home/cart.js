@@ -1,14 +1,16 @@
 
 //添加到购物车
-function addCart(url){
+function addCart(){
+    var goods_id = $("#deal_hidden").find(".goods_id").text();
+    var url = $("#deal_hidden").find(".addCart_url").text();
+    var goods_num = $("#deal_hidden").find(".goods_num").text();
+    var goods_name = $("#deal_hidden").find(".goods_name").text();
+    var goods_price = $("#deal_hidden").find(".goods_price").text();
 
-    var goods_id = $("#goods_data").find(".goods_id").text();
-    var url = url;
-    var cookie_cart = "";
     $.ajax({
         type: "GET",
         url: url,
-        data: {goods_id : goods_id},
+        data: {goods_id : goods_id , goods_num : goods_num ,goods_name : goods_name, goods_price : goods_price},
         dataType: "json",
         success: function(data){
             changeCart(data);

@@ -19,6 +19,7 @@ class CommonController extends Controller{
 			if(!empty($member_info)){
 				$this->vr_member_name = $member_info['member_name'];
 			}
+
 		}
 
 		$this->assign('is_cookie_login', $this->is_cookie_login);
@@ -42,4 +43,6 @@ class CommonController extends Controller{
 
 		return $flag;
 	}
+
+
 }

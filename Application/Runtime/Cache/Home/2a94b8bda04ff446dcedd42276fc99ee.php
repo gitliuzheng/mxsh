@@ -14,13 +14,13 @@
 <link rel="shortcut icon" href="http://www.mxhhw.com/favicon.ico">
 <link rel="canonical" href="http://suzhousz.meituan.com/">
 <title>【梦想换货网】宿州商户</title>
-<link rel="stylesheet" type="text/css" href="/mxsh/Public/CSS/index_saved_resource(4).css">
-<link rel="stylesheet" type="text/css" href="/mxsh/Public/CSS/index_saved_resource(5).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/index_saved_resource(8).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/index_saved_resource(9).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/index_saved_resource(10).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/index_saved_resource(13).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/index_saved_resource(17).css">
+<link rel="stylesheet" type="text/css" href="/Public/CSS/index_saved_resource(4).css">
+<link rel="stylesheet" type="text/css" href="/Public/CSS/index_saved_resource(5).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/index_saved_resource(8).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/index_saved_resource(9).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/index_saved_resource(10).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/index_saved_resource(13).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/index_saved_resource(17).css">
 
 <noscript hidden="" style="display:none;" class="J-hub" data-hublaziness="load" data-hubcss="fewww:www/css/lazyload.css,iconfont/css/global-iconfont.css@6bb4e90" data-hubstamp="yui_3_16_0_1_1464999326260_544" data-hubstate="40"></noscript>
 
@@ -161,15 +161,15 @@
                 
                 <div class="color color--left" style="background:#83d8f5"></div>
                 <div class="color color--right" style="background:#83d8f5"></div>
-                <a class="common-banner__link" target="_blank" href="http://www.meituan.com/topic/4076" gaevent="top/others/4076" data-mttcode="Abanner.B4076" data-mod-idx="7600"><img alt="【多城市】1元起吃喝玩乐" src="/mxsh/Public/index_files/cac6a15bea79a75d2def02adaab989a268774.jpg" width="980" height="60"></a>
+                <a class="common-banner__link" target="_blank" href="http://www.meituan.com/topic/4076" gaevent="top/others/4076" data-mttcode="Abanner.B4076" data-mod-idx="7600"><img alt="【多城市】1元起吃喝玩乐" src="/Public/index_files/cac6a15bea79a75d2def02adaab989a268774.jpg" width="980" height="60"></a>
             </div><a href="javascript:void(0)" class="F-glob F-glob-close common-close--iconfont-small close" title="关闭"></a></div>
     
     <noscript hidden="" style="display:none;" data-comboajax-uri="/combo/unfoldbanner/index/floornewV2" data-comboajax-onsuccess="$request.listen(&quot;www-banner&quot;, &quot;www.Banner.Unfold&quot;);" data-comboajax-state="5"></noscript>
     <div class="site-mast__branding cf" id="J-site-mast__branding">
-        <h1><a class="site-logo" href="/mxsh/" gaevent="header/logo">宿州团购</a></h1>
+        <h1><a class="site-logo" href="/" gaevent="header/logo">宿州团购</a></h1>
  
         <div class="city-info">
-            <h2><a class="city-info__name" href="/mxsh/" gaevent="header/cityname">宿州</a></h2>
+            <h2><a class="city-info__name" href="/" gaevent="header/cityname">宿州</a></h2>
             <a class="city-info__toggle" href="http://www.meituan.com/index/changecity/initiative" gaevent="header/changecity">切换城市</a>
         </div>
          
@@ -266,7 +266,7 @@
                 <nav>
                     <ul class="navbar cf  log-mod-viewed" data-mod="lz" data-mod-deepview="1" id="yui_3_16_0_1_1464999326260_597">
                         <li class="navbar__item-w ">
-                            <a class="navbar__item" href="/mxsh/" gaevent="nav/today" hidefocus="true"><span class="nav-label">首页</span></a>
+                            <a class="navbar__item" href="/" gaevent="nav/today" hidefocus="true"><span class="nav-label">首页</span></a>
                         </li>                      
                         <li class="navbar__item-w ">
                             <a class="navbar__item" href="http://www.mxhhw.com/" target="_blank" data-mttcode="Acategory.Bwanggou" gaevent="nav/wanggou" hidefocus="true"><span class="nav-label">购物</span></a>
@@ -342,13 +342,13 @@
             <li class="sheet mt-slider-sheet mt-slider-current-sheet" style="left: 0px;" id="yui_3_16_0_1_1464999326260_12281">
                         <div class="left promotion__item" id="yui_3_16_0_1_1464999326260_12280">
                             <a class="wrapper" href="http://www.meituan.com/topic/4076" target="_blank" title="1元起吃喝玩乐" data-mod-idx="14439" id="yui_3_16_0_1_1464999326260_12279">
-                                <img width="333" height="320" src="/mxsh/Public/index_files/c976208530fdf93640672468ec2184e847220.jpg" id="yui_3_16_0_1_1464999326260_12278">
+                                <img width="333" height="320" src="/Public/index_files/c976208530fdf93640672468ec2184e847220.jpg" id="yui_3_16_0_1_1464999326260_12278">
                             </a>
                         </div>
                         <div class="right choice__item choice__item--right">
                             <em class="J-discount discount" data-lazyicon--slide="discount">2.6</em>
                             <a class="link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/36307895.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/4bf8f4c1b498ef2e8d710d1b80c58d0b142975.jpg">
+                                <img class="img" width="333" height="232" src="/Public/index_files/4bf8f4c1b498ef2e8d710d1b80c58d0b142975.jpg">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/36307895.html">酷迪量贩KTV（华夏世贸店）</a>
@@ -361,7 +361,7 @@
                         <div class="left choice__item">
                             <em class="J-discount discount" data-lazyicon--slide="discount">8.8</em>
                             <a class="link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/32502997.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/b65a2481b6510429319deb338ff06756180439.jpg@0_24_800_484a-388h_640w_2e_90Q">
+                                <img class="img" width="333" height="232" src="/Public/index_files/b65a2481b6510429319deb338ff06756180439.jpg@0_24_800_484a-388h_640w_2e_90Q">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/32502997.html">巴兴菌汤火锅</a>
@@ -372,7 +372,7 @@
                         <div class="right choice__item choice__item--right">
                             <em class="J-discount discount" data-lazyicon--slide="discount">1.7</em>
                             <a class="link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/38224970.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/be4de7278d8ac2ee8ca5119a2e28017e3114688.jpg">
+                                <img class="img" width="333" height="232" src="/Public/index_files/be4de7278d8ac2ee8ca5119a2e28017e3114688.jpg">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/38224970.html">糖果KTV</a>
@@ -385,7 +385,7 @@
                         <div class="left choice__item">
                             <em class="J-discount discount" data-lazyicon--slide="discount">0.8</em>
                             <a class="link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/38225304.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/5702aa125237a731f75223614a95ee403047793.jpg">
+                                <img class="img" width="333" height="232" src="/Public/index_files/5702aa125237a731f75223614a95ee403047793.jpg">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/38225304.html">糖果KTV</a>
@@ -396,7 +396,7 @@
                         <div class="right choice__item choice__item--right">
                             <em class="J-discount discount" data-lazyicon--slide="discount">9.2</em>
                             <a class="link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/38135043.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/c5558a7d1d2a3c65244baa870552debd78313.jpg@0_12_778_471a-388h_640w_2e_90Q">
+                                <img class="img" width="333" height="232" src="/Public/index_files/c5558a7d1d2a3c65244baa870552debd78313.jpg@0_12_778_471a-388h_640w_2e_90Q">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/38135043.html">船说吧</a>
@@ -409,7 +409,7 @@
                         <div class="left choice__item">
                             <em class="J-discount discount" data-lazyicon--slide="discount">2.4</em>
                             <a class="link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/36306365.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/c5558a7d1d2a3c65244baa870552debd78313.jpg">
+                                <img class="img" width="333" height="232" src="/Public/index_files/c5558a7d1d2a3c65244baa870552debd78313.jpg">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/36306365.html">酷迪KTV</a>
@@ -420,7 +420,7 @@
                         <div class="right choice__item choice__item--right">
                             <em class="J-discount discount" data-lazyicon--slide="discount">2.5</em>
                             <a class="link ccf" target="_blank" href="http://www.meituan.com/deal/37415863.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/c5558a7d1d2a3c65244baa870552debd78313.jpg">
+                                <img class="img" width="333" height="232" src="/Public/index_files/c5558a7d1d2a3c65244baa870552debd78313.jpg">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://www.meituan.com/deal/37415863.html">北京港中旅密云南山房车小镇1晚+双人烧烤套餐+骑行1小时</a>
@@ -433,7 +433,7 @@
                         <div class="left choice__item">
                             <em class="J-discount discount" data-lazyicon--slide="discount">7.7</em>
                             <a class="link ccf" target="_blank" href="http://www.meituan.com/deal/36542810.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/dbc8a4cade72001149033c3afc07371054141.jpg">
+                                <img class="img" width="333" height="232" src="/Public/index_files/dbc8a4cade72001149033c3afc07371054141.jpg">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://www.meituan.com/deal/36542810.html">金龙水寨生态乐园</a>
@@ -444,7 +444,7 @@
                         <div class="right choice__item choice__item--right">
                             <em class="J-discount discount" data-lazyicon--slide="discount">6.7</em>
                             <a class="link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/26555891.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/b2c19676ab3e8a23bc7735bd17ed1ce257831.jpg">
+                                <img class="img" width="333" height="232" src="/Public/index_files/b2c19676ab3e8a23bc7735bd17ed1ce257831.jpg">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/26555891.html">金香焦西饼屋</a>
@@ -457,7 +457,7 @@
                         <div class="left choice__item">
                             <em class="J-discount discount" data-lazyicon--slide="discount">8.5</em>
                             <a class="link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/27662816.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/14e6f2b6fa629004c05badbd1b0c5463104630.jpg">
+                                <img class="img" width="333" height="232" src="/Public/index_files/14e6f2b6fa629004c05badbd1b0c5463104630.jpg">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/27662816.html">金满蛋糕</a>
@@ -468,7 +468,7 @@
                         <div class="right choice__item choice__item--right">
                             <em class="J-discount discount" data-lazyicon--slide="discount">4.4</em>
                             <a class="link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/25485010.html">
-                                <img class="img" width="333" height="232" src="/mxsh/Public/index_files/__47879388__8949007.jpg">
+                                <img class="img" width="333" height="232" src="/Public/index_files/__47879388__8949007.jpg">
                             </a>
                             <div class="title">
                                 <a class="xtitle link ccf" target="_blank" href="http://suzhousz.meituan.com/deal/25485010.html">风波庄</a>
@@ -489,7 +489,7 @@
 
     </div>
     <div class="qrcode-image">
-    <img src="/mxsh/Public/Images/app-qrcode.png">
+    <img src="/Public/Images/app-qrcode.png">
 </div>
 
     <div class="side__new-topic ui-slider log-mod-viewed" data-mod="ii" data-mod-deepview="1" id="yui_3_16_0_1_1464999326260_605">
@@ -502,7 +502,7 @@
                             吃喝玩乐最低价
                         </div>
                     </div>
-                    <img width="198" src="/mxsh/Public/index_files/a90e6f506f86cb29f4b4eb70a628ccba37411.png">
+                    <img width="198" src="/Public/index_files/a90e6f506f86cb29f4b4eb70a628ccba37411.png">
                 </a>
             </li>
     </ul>
@@ -546,7 +546,7 @@
                         <li class="deal-list--hots mt-slider-sheet mt-slider-current-sheet" style="left: -1170px; display: none;" id="yui_3_16_0_1_1464999326260_9551" hidden="hidden">
                             <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9542">    <div class="deal-tile" data-mttcode="C1">
                 <a href="http://suzhousz.meituan.com/deal/33081451.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="巴萨诺瓦BossaNova手工披萨" src="/mxsh/Public/index_files/b60bc385841c4c478698edb3e329e65a130575.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="巴萨诺瓦BossaNova手工披萨" src="/Public/index_files/b60bc385841c4c478698edb3e329e65a130575.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -585,7 +585,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C2">
                 <a href="http://suzhousz.meituan.com/deal/27844290.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="姥家大锅台" src="/mxsh/Public/index_files/078f15bd03eba7442070667d14500b3834868.jpg@0_0_460_278a-388h_640w_2e_90Q.webp">
+            <img class="J-webp" width="205" height="124" alt="姥家大锅台" src="/Public/index_files/078f15bd03eba7442070667d14500b3834868.jpg@0_0_460_278a-388h_640w_2e_90Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -624,7 +624,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C3">
                 <a href="http://suzhousz.meituan.com/deal/33587885.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="馋猫恋渔" src="/mxsh/Public/index_files/0c6d618f14ebfe6d18b2cfec7328c0d538829.jpg@0_7_702_425a-388h_640w_2e_100q.webp">
+            <img class="J-webp" width="205" height="124" alt="馋猫恋渔" src="/Public/index_files/0c6d618f14ebfe6d18b2cfec7328c0d538829.jpg@0_7_702_425a-388h_640w_2e_100q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -663,7 +663,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C4">
                 <a href="http://suzhousz.meituan.com/deal/33678749.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="美佳乐蛋糕" src="/mxsh/Public/index_files/48118649ab9fc6dba68e6881e14b66c6108175.jpg@0_92_1280_775a-388h_640w_2e_90q.webp">
+            <img class="J-webp" width="205" height="124" alt="美佳乐蛋糕" src="/Public/index_files/48118649ab9fc6dba68e6881e14b66c6108175.jpg@0_92_1280_775a-388h_640w_2e_90q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
         </span>
@@ -701,7 +701,7 @@
     </div>
     <div class="deal-tile deal-tile--even" data-mttcode="C5">
                 <a href="http://suzhousz.meituan.com/deal/33812874.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="啦唔咪DIY蛋糕烘培坊" src="/mxsh/Public/index_files/b88149e02cddcbf9593e2428c76d3cef105939.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="啦唔咪DIY蛋糕烘培坊" src="/Public/index_files/b88149e02cddcbf9593e2428c76d3cef105939.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
         </span>
@@ -742,7 +742,7 @@
                         <li class="deal-list--hots mt-slider-sheet" style="left: -1170px; display: none;" id="yui_3_16_0_1_1464999326260_9557" hidden="hidden">
                             <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9543">    <div class="deal-tile" data-mttcode="C1">
                 <a href="http://suzhousz.meituan.com/deal/28486730.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="爱溢烘焙工坊" src="/mxsh/Public/index_files/8bb664042d1007cdbddbfc8500449d7f88320.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="爱溢烘焙工坊" src="/Public/index_files/8bb664042d1007cdbddbfc8500449d7f88320.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
         </span>
@@ -780,7 +780,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C2">
                 <a href="http://suzhousz.meituan.com/deal/30229381.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="趣多客时尚烤鱼" src="/mxsh/Public/index_files/990b77eb7c18b5ea4a3a7658be21d35489141.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="趣多客时尚烤鱼" src="/Public/index_files/990b77eb7c18b5ea4a3a7658be21d35489141.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -819,7 +819,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C3">
                 <a href="http://suzhousz.meituan.com/deal/35858362.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="桃花山庄" src="/mxsh/Public/index_files/70192cdaa000d7b12f86ea56a3973f69116382.jpg@0_92_1280_775a-388h_640w_2e_90Q.webp">
+            <img class="J-webp" width="205" height="124" alt="桃花山庄" src="/Public/index_files/70192cdaa000d7b12f86ea56a3973f69116382.jpg@0_92_1280_775a-388h_640w_2e_90Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--voucher" title="代金券">代金券</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -858,7 +858,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C4">
                 <a href="http://suzhousz.meituan.com/deal/30139253.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="G●M时光蛋糕烘焙坊" src="/mxsh/Public/index_files/90fa2221c0546aee347422fbc6bd37e165578.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="G●M时光蛋糕烘焙坊" src="/Public/index_files/90fa2221c0546aee347422fbc6bd37e165578.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
         </span>
@@ -896,7 +896,7 @@
     </div>
     <div class="deal-tile deal-tile--even" data-mttcode="C5">
                 <a href="http://suzhousz.meituan.com/deal/33371009.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="董小姐的蛋糕房" src="/mxsh/Public/index_files/a8a715a12d641c71f652ff05c0d0f6b882133.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="董小姐的蛋糕房" src="/Public/index_files/a8a715a12d641c71f652ff05c0d0f6b882133.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
         </span>
@@ -937,7 +937,7 @@
                         <li class="deal-list--hots mt-slider-sheet" style="left: -1170px; display: none;" id="yui_3_16_0_1_1464999326260_9558" hidden="hidden">
                             <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9545">    <div class="deal-tile" data-mttcode="C1">
                 <a href="http://suzhousz.meituan.com/deal/36243155.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="德庄火锅" src="/mxsh/Public/index_files/58a991b1a3a65bd0e22f12494d462ab6102916.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="德庄火锅" src="/Public/index_files/58a991b1a3a65bd0e22f12494d462ab6102916.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--voucher" title="代金券">代金券</span>
@@ -977,7 +977,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C2">
                 <a href="http://suzhousz.meituan.com/deal/37153169.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="徽府酒楼" src="/mxsh/Public/index_files/3cd3fe4e84a3d24d43a70640650d34e197071.jpg@0_24_800_484a-388h_640w_2e_90Q.webp">
+            <img class="J-webp" width="205" height="124" alt="徽府酒楼" src="/Public/index_files/3cd3fe4e84a3d24d43a70640650d34e197071.jpg@0_24_800_484a-388h_640w_2e_90Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1016,7 +1016,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C3">
                 <a href="http://suzhousz.meituan.com/deal/33996571.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="野人湾自助烤肉火锅" src="/mxsh/Public/index_files/7006e6769e29b625a5ac04230fad002a61987.jpg@0_9_800_484a-388h_640w_2e_90q.webp">
+            <img class="J-webp" width="205" height="124" alt="野人湾自助烤肉火锅" src="/Public/index_files/7006e6769e29b625a5ac04230fad002a61987.jpg@0_9_800_484a-388h_640w_2e_90q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1055,7 +1055,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C4">
                 <a href="http://suzhousz.meituan.com/deal/28288082.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="摩德纳意式休闲餐厅" src="/mxsh/Public/index_files/6b31610c511f1df2d28d129ec7460b0596440.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="摩德纳意式休闲餐厅" src="/Public/index_files/6b31610c511f1df2d28d129ec7460b0596440.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1094,7 +1094,7 @@
     </div>
     <div class="deal-tile deal-tile--even" data-mttcode="C5">
                 <a href="http://suzhousz.meituan.com/deal/33249831.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="红不让" src="/mxsh/Public/index_files/a9c274a092d7b7a1e51c499c286a828b124079.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="红不让" src="/Public/index_files/a9c274a092d7b7a1e51c499c286a828b124079.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1136,7 +1136,7 @@
                         <li class="deal-list--hots mt-slider-sheet" style="left: -1170px; display: none;" id="yui_3_16_0_1_1464999326260_9559" hidden="hidden">
                             <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9546">    <div class="deal-tile" data-mttcode="C1">
                 <a href="http://suzhousz.meituan.com/deal/34411865.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="张居记私房菜" src="/mxsh/Public/index_files/3521ec26784ce0902ff6e0b8c9ec45fd195037.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="张居记私房菜" src="/Public/index_files/3521ec26784ce0902ff6e0b8c9ec45fd195037.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1175,7 +1175,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C2">
                 <a href="http://suzhousz.meituan.com/deal/33511219.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="农家大锅台" src="/mxsh/Public/index_files/df8166a993dbce69208b5dd83616705396331.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="农家大锅台" src="/Public/index_files/df8166a993dbce69208b5dd83616705396331.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1214,7 +1214,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C3">
                 <a href="http://suzhousz.meituan.com/deal/37408257.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="芙蓉小镇发面馍" src="/mxsh/Public/index_files/167675b1cd9ef86b06c86684b46d16e1110629.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="芙蓉小镇发面馍" src="/Public/index_files/167675b1cd9ef86b06c86684b46d16e1110629.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1253,7 +1253,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C4">
                 <a href="http://suzhousz.meituan.com/deal/33902464.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="韩记猪肚鸡" src="/mxsh/Public/index_files/33caa258c9991ffaab7bb71498e685d841957.jpg@0_29_960_581a-388h_640w_2e_90q.webp">
+            <img class="J-webp" width="205" height="124" alt="韩记猪肚鸡" src="/Public/index_files/33caa258c9991ffaab7bb71498e685d841957.jpg@0_29_960_581a-388h_640w_2e_90q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1292,7 +1292,7 @@
     </div>
     <div class="deal-tile deal-tile--even" data-mttcode="C5">
                 <a href="http://suzhousz.meituan.com/deal/36144870.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="金满蛋糕" src="/mxsh/Public/index_files/e004f05ce5481c7d95b5330b58f8377d34642.jpg@0_27_702_425a-388h_640w_2e_100q.webp">
+            <img class="J-webp" width="205" height="124" alt="金满蛋糕" src="/Public/index_files/e004f05ce5481c7d95b5330b58f8377d34642.jpg@0_27_702_425a-388h_640w_2e_100q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1334,7 +1334,7 @@
                         <li class="deal-list--hots mt-slider-sheet" style="left: -1170px; display: none;" id="yui_3_16_0_1_1464999326260_9560" hidden="hidden">
                             <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9547">    <div class="deal-tile" data-mttcode="C1">
                 <a href="http://suzhousz.meituan.com/deal/36983163.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="青年主题餐厅" src="/mxsh/Public/index_files/96cae727c5ca39e6d201dc7e54db14ac36553.jpg@0_21_702_425a-388h_640w_2e_100Q.webp">
+            <img class="J-webp" width="205" height="124" alt="青年主题餐厅" src="/Public/index_files/96cae727c5ca39e6d201dc7e54db14ac36553.jpg@0_21_702_425a-388h_640w_2e_100Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1373,7 +1373,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C2">
                 <a href="http://suzhousz.meituan.com/deal/32346234.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="YoYoDIY蛋糕烘焙坊" src="/mxsh/Public/index_files/c1c4812f7e299d1e104ad31f51610317262489.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="YoYoDIY蛋糕烘焙坊" src="/Public/index_files/c1c4812f7e299d1e104ad31f51610317262489.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
         </span>
@@ -1411,7 +1411,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C3">
                 <a href="http://suzhousz.meituan.com/deal/34106256.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="金年华宿县老味道" src="/mxsh/Public/index_files/d57a0541297862fb98e7fa54a5cb4fb638313.jpg@0_0_640_387a-388h_640w_2e_100q.webp">
+            <img class="J-webp" width="205" height="124" alt="金年华宿县老味道" src="/Public/index_files/d57a0541297862fb98e7fa54a5cb4fb638313.jpg@0_0_640_387a-388h_640w_2e_100q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1450,7 +1450,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C4">
                 <a href="http://suzhousz.meituan.com/deal/37423690.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="圣世豪都大酒店" src="/mxsh/Public/index_files/fa827973cdfd5a328b4e31c002ecc46a97189.jpg@0_24_800_484a-388h_640w_2e_90q.webp">
+            <img class="J-webp" width="205" height="124" alt="圣世豪都大酒店" src="/Public/index_files/fa827973cdfd5a328b4e31c002ecc46a97189.jpg@0_24_800_484a-388h_640w_2e_90q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
         </span>
@@ -1488,7 +1488,7 @@
     </div>
     <div class="deal-tile deal-tile--even" data-mttcode="C5">
                 <a href="http://suzhousz.meituan.com/deal/30421282.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="腾龙蛋糕" src="/mxsh/Public/index_files/815b127c888e9c6e613331f48dfbde4367464.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="腾龙蛋糕" src="/Public/index_files/815b127c888e9c6e613331f48dfbde4367464.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1530,7 +1530,7 @@
                         <li class="deal-list--hots mt-slider-sheet" style="left: 0px;" id="yui_3_16_0_1_1464999326260_9561">
                             <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9548">    <div class="deal-tile" data-mttcode="C1">
                 <a href="http://suzhousz.meituan.com/deal/33657254.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="皇家美幻蛋糕店" src="/mxsh/Public/index_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q.webp">
+            <img class="J-webp" width="205" height="124" alt="皇家美幻蛋糕店" src="/Public/index_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
         </span>
@@ -1568,7 +1568,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C2">
                 <a href="http://suzhousz.meituan.com/deal/33395861.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="百岁鱼" src="/mxsh/Public/index_files/99c16ca492bec456032314fbbf7027ce66587.jpg@0_0_640_387a-388h_640w_2e_100Q.webp">
+            <img class="J-webp" width="205" height="124" alt="百岁鱼" src="/Public/index_files/99c16ca492bec456032314fbbf7027ce66587.jpg@0_0_640_387a-388h_640w_2e_100Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1607,7 +1607,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C3">
                 <a href="http://suzhousz.meituan.com/deal/37984784.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="卡奇卡洛寿司" src="/mxsh/Public/index_files/3973d2c4a8a30ba15eaa86690e98a2b7113784.jpg@0_159_810_491a-388h_640w_2e_90Q.webp">
+            <img class="J-webp" width="205" height="124" alt="卡奇卡洛寿司" src="/Public/index_files/3973d2c4a8a30ba15eaa86690e98a2b7113784.jpg@0_159_810_491a-388h_640w_2e_90Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1646,7 +1646,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C4">
                 <a href="http://suzhousz.meituan.com/deal/36176589.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="柠檬鱼时尚餐厅" src="/mxsh/Public/index_files/a728a582c1b442186d8cd1e3faf518b8152413.jpg@0_92_1280_775a-388h_640w_2e_90q.webp">
+            <img class="J-webp" width="205" height="124" alt="柠檬鱼时尚餐厅" src="/Public/index_files/a728a582c1b442186d8cd1e3faf518b8152413.jpg@0_92_1280_775a-388h_640w_2e_90q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1685,7 +1685,7 @@
     </div>
     <div class="deal-tile deal-tile--even" data-mttcode="C5">
                 <a href="http://suzhousz.meituan.com/deal/27663858.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="农家大锅台总店" src="/mxsh/Public/index_files/80762be4f1e2d1ec654ebf86882790a4367823.jpg.webp">
+            <img class="J-webp" width="205" height="124" alt="农家大锅台总店" src="/Public/index_files/80762be4f1e2d1ec654ebf86882790a4367823.jpg.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1727,7 +1727,7 @@
                         <li class="deal-list--hots mt-slider-sheet" style=" display:none " id="yui_3_16_0_1_1464999326260_9562" hidden="hidden">
                             <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9549">    <div class="deal-tile" data-mttcode="C1">
                 <a href="http://suzhousz.meituan.com/deal/33515490.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="韩旭道韩国年糕" src="/mxsh/Public/index_files/f0fd8a952d149234c928edff402031e193858.jpg@0_24_800_484a-388h_640w_2e_90q.webp">
+            <img class="J-webp" width="205" height="124" alt="韩旭道韩国年糕" src="/Public/index_files/f0fd8a952d149234c928edff402031e193858.jpg@0_24_800_484a-388h_640w_2e_90q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1766,7 +1766,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C2">
                 <a href="http://suzhousz.meituan.com/deal/37360453.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="便宜坊酒楼" src="/mxsh/Public/index_files/554c30b4c362c5f4a38fdf3c58d2ad4b95864.jpg@0_24_800_484a-388h_640w_2e_90Q.webp">
+            <img class="J-webp" width="205" height="124" alt="便宜坊酒楼" src="/Public/index_files/554c30b4c362c5f4a38fdf3c58d2ad4b95864.jpg@0_24_800_484a-388h_640w_2e_90Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1805,7 +1805,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C3">
                 <a href="http://suzhousz.meituan.com/deal/38207339.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="大户时尚概念餐厅" src="/mxsh/Public/index_files/ff8966bc05e311275c1a747e4eaeee5c69022.jpg@0_58_800_484a-388h_640w_2e_90Q.webp">
+            <img class="J-webp" width="205" height="124" alt="大户时尚概念餐厅" src="/Public/index_files/ff8966bc05e311275c1a747e4eaeee5c69022.jpg@0_58_800_484a-388h_640w_2e_90Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1844,7 +1844,7 @@
     </div>
     <div class="deal-tile" data-mttcode="C4">
                 <a href="http://suzhousz.meituan.com/deal/38105334.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="熊也餐厅三汁焖锅焖面" src="/mxsh/Public/index_files/6bcd6c7ccc114878e34cfcf82213233056628.jpg@0_76_721_380a-388h_640w_2e_90Q.webp">
+            <img class="J-webp" width="205" height="124" alt="熊也餐厅三汁焖锅焖面" src="/Public/index_files/6bcd6c7ccc114878e34cfcf82213233056628.jpg@0_76_721_380a-388h_640w_2e_90Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1883,7 +1883,7 @@
     </div>
     <div class="deal-tile deal-tile--even" data-mttcode="C5">
                 <a href="http://suzhousz.meituan.com/deal/37648288.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="V多寿司" src="/mxsh/Public/index_files/487feb10ef38d3ca40565eb1073b2ab6194254.jpg@0_92_1280_775a-388h_640w_2e_90Q.webp">
+            <img class="J-webp" width="205" height="124" alt="V多寿司" src="/Public/index_files/487feb10ef38d3ca40565eb1073b2ab6194254.jpg@0_92_1280_775a-388h_640w_2e_90Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -1925,7 +1925,7 @@
                         <li class="deal-list--hots mt-slider-sheet" style=" display:none " id="yui_3_16_0_1_1464999326260_9563" hidden="hidden">
                             <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9550">    <div class="deal-tile" data-mttcode="C1">
                 <a href="http://suzhousz.meituan.com/deal/37969967.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="小丑西餐厅clown" src="/mxsh/Public/index_files/6c0826bf71da04ca175b638f4850eaf2198788.jpg@0_252_1280_775a-388h_640w_2e_90Q.webp">
+            <img class="J-webp" width="205" height="124" alt="小丑西餐厅clown" src="/Public/index_files/6c0826bf71da04ca175b638f4850eaf2198788.jpg@0_252_1280_775a-388h_640w_2e_90Q.webp">
         <span class="deal-mark">
                 <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -2012,7 +2012,7 @@
                             <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_8696">    
                             <?php if(is_array($v1['goods'])): $i = 0; $__LIST__ = $v1['goods'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i;?><div class="deal-tile" data-mteventnd="{&quot;id&quot;:26263695,&quot;pos&quot;:1}" data-mttcode="C1">
                                             <a href="<?php echo U('Home/Index/deal/id/'.$v2['goods_id'], '', FALSE);?>" class="deal-tile__cover" hidefocus="true" target="_blank" data-mtevent="{&quot;sr&quot;:&quot;cover&quot;}">
-                                                <img class="J-webp" width="260" height="154" alt="<?php echo ($v2['goods_name']); ?>" src="/mxsh/Public/Images/goods/demo1.webp">
+                                                <img class="J-webp" width="260" height="154" alt="<?php echo ($v2['goods_name']); ?>" src="/Public/Images/goods/demo1.webp">
                                                 <span class="deal-mark">
                                                     <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
                                                     <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
@@ -2446,7 +2446,7 @@
     <p>©<span title="I:2; Q:2; S:2; C:16; F:3; T:367.01; H:com">2016</span><a href="http://www.mxhhw.com/" target="_blank">梦想换货网</a> mxhhw.com <a href="http://www.beianbeian.com/beianxinxi/5e40326e-16f0-4c22-b329-b40104fd8e4e.html" target="_blank">皖ICP备14012689号-2</a> 
     </p>
     <div style="width:300px;margin:0 auto; padding:20px 0;">
-    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502025545" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/mxsh/Public/Images/wangan.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备11010502025545号</p></a>
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502025545" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/Public/Images/wangan.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备11010502025545号</p></a>
     </div>
 </div>
 <ul class="cert cf">
@@ -2473,7 +2473,7 @@
     <div id="fixbar-item-feedback" style="bottom: 20px; right: 10px;"><a target="_blank" class="new-index-triffle lift-nav lift-nav--feedback" hidefocus="true" gaevent="survey/floornew" href="http://suzhousz.meituan.com/feedback/default/serach"><i></i><span>意见反馈</span></a></div>
 </div></div>
 
-<script type="text/javascript" src="/mxsh/Public/Scripts/jquery.min.js"></script>
-<script type="text/javascript" src="/mxsh/Public/JS/Home/index.js"></script>
+<script type="text/javascript" src="/Public/Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/JS/Home/index.js"></script>
 </body>
 </html>
