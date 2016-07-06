@@ -54,15 +54,11 @@
 </div>
 
 
-<!-- 当前商品信息 -->
-<div style="display:none" id="goods_data">
-    <div class="goods_id"><{$data['goods_id']}></div>
-    <div class="goods_name"><{$data['goods_name']}></div>
-    <div class="goods_price"><{$data['goods_price']}></div>
-</div>
+
 <!-- 引入的JS不好取值 -->
-<div style="display: none" id="deal_hidden">
+<div style="display: none" id="cart_hidden">
     <div class="delCart_url"><{:U('home/cart/delCart')}></div>
+    <div class="editCart_url"><{:U('home/cart/editCart')}></div>
 </div>
 
 
@@ -95,7 +91,8 @@
 
 <div class="table-section summary-table" id="yui_3_16_0_1_1467448101261_379">
     <table cellspacing="0" id="yui_3_16_0_1_1467448101261_378">
-        <tbody id="yui_3_16_0_1_1467448101261_377"><tr>
+        <tbody id="yui_3_16_0_1_1467448101261_377">
+        <tr>
             <th width="60">
                 <input type="checkbox" id="cart-selectall" class="ui-checkbox" mb-checked="isAllChecked" mb-onchange="toggleAll($$checked)">
                 <label for="cart-selectall" class="cart-select-all">全选</label>
@@ -107,40 +104,41 @@
             <th width="80">操作</th>
         </tr>
         <volist  name="cart" id="vo" >
-            <tr id="yui_3_16_0_1_1467448101261_1140">
-                <td colspan="6" class="cartItem" id="yui_3_16_0_1_1467448101261_1139">
-                    <table cellspacing="0" id="yui_3_16_0_1_1467448101261_1138">
-                        <tbody id="yui_3_16_0_1_1467448101261_1137"><tr id="yui_3_16_0_1_1467448101261_1136">
-                            <td width="60" rowspan="1" class="select-cartItem">
-                                <input type="checkbox" class="ui-checkbox" name="cartItems[]" id="26263695" value="26263695-0" mb-checked="isChecked('26263695_0')" mb-onchange="toggleOne('26263695_0', $$checked)">
-                                <label for="26263695">&nbsp;</label>
-                            </td>
-                            <td width="auto" class="desc">
-                                <a href="<{$vo.url}>" target="_blank" title="美佳乐蛋糕：葡式蛋挞1个，提供免费WiFi" gaevent="cart/deal">
-                                    <img src="http://p0.meituan.net/75.46/deal/0af5e66e4363eb528f0442444f771eb7179883.jpg" width="63" height="39">
-                                    <span><{$vo.goods_name}></span>
-                                </a>
-                            </td>
-                            <td width="70" class="price">
-                                ¥<span class="J-price"><{$vo.goods_price}></span>
-                            </td>
-                            <td width="150" class="saleNum deal-component-quantity" id="yui_3_16_0_1_1467448101261_1135">
-                                <div data-component="cart-quantity" class="component-cart-quantity mt-component--booted" mt-scope="[&quot;quantity=cartItems.26263695_0.list.0.quantity&quot;,&quot;onchange=onQuantityChange&quot;]" data-component-params="{&quot;dealid&quot;:26263695,&quot;calendarid&quot;:0,&quot;dealgoodsid&quot;:0,&quot;minNumPerOrder&quot;:1,&quot;maxNumPerOrder&quot;:0,&quot;remain&quot;:100,&quot;totalRemain&quot;:null}" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1467448101261_96"><div class="cart-quantity">
-                                    <button for="J-cart-minus" class="minus" data-action="-" gaevent="top/minus" type="button" mt-bind-onclick="decrease()">-</button><input type="text" autocomplete="off" goods_num="goods_num" class="f-text J-quantity J-cart-quantity" maxlength="4" mt-bind-onkeyup="keyup($event)" mt-bind-value="quantity" value="<{$vo.goods_num}>"><button for="J-cart-add" class="item plus" data-action="+" gaevent="top/plus" type="button" mt-bind-onclick="increase()">+</button>
-                                </div>
-                                </div>
-                            </td>
-                            <td width="70" rowspan="1" class="money total">
-                                ¥<span class="J-total" mt-bind-html="fixNumber(cartItems.26263695_0.totalfee)"><{$vo.goods_total}></span>
-                                <br>
-                            </td>
-                            <td width="80" class="op list-delete">
-                                <a class="delete" href="javascript:void(0);"   onclick="delCart('db',<{$vo.cart_id}>);" >删除</a>
-                            </td>
-                        </tr>
-                        <input type="hidden" class="J-type-input" name="goods-26263695-0" mt-bind-value="cartItems.26263695_0.goods" value="0-1">
-                        <input type="hidden" class="J-cartItem-quantity" name="quantity-26263695-0" mt-bind-value="cartItems.26263695_0.quantity" value="1">
-                        </tbody></table>
+            <tr >
+                <td colspan="6" class="cartItem" >
+                    <table cellspacing="0" >
+                        <tbody >
+                            <tr id="yui_3_16_0_1_1467448101261_1136">
+                                <td width="60" rowspan="1" class="select-cartItem">
+                                    <input type="checkbox" class="ui-checkbox" name="cartItems[]" id="26263695" value="26263695-0" mb-checked="isChecked('26263695_0')" mb-onchange="toggleOne('26263695_0', $$checked)">
+                                    <label for="26263695">&nbsp;</label>
+                                </td>
+                                <td width="auto" class="desc">
+                                    <a href="<{$vo.url}>" target="_blank" title="美佳乐蛋糕：葡式蛋挞1个，提供免费WiFi" gaevent="cart/deal">
+                                        <img src="http://p0.meituan.net/75.46/deal/0af5e66e4363eb528f0442444f771eb7179883.jpg" width="63" height="39">
+                                        <span><{$vo.goods_name}></span>
+                                    </a>
+                                </td>
+                                <td width="70" class="price">
+                                    ¥<span class="J-price"><{$vo.goods_price}></span>
+                                </td>
+                                <td width="150" class="saleNum deal-component-quantity" id="yui_3_16_0_1_1467448101261_1135">
+                                    <div data-component="cart-quantity" class="component-cart-quantity mt-component--booted" mt-scope="[&quot;quantity=cartItems.26263695_0.list.0.quantity&quot;,&quot;onchange=onQuantityChange&quot;]" data-component-params="{&quot;dealid&quot;:26263695,&quot;calendarid&quot;:0,&quot;dealgoodsid&quot;:0,&quot;minNumPerOrder&quot;:1,&quot;maxNumPerOrder&quot;:0,&quot;remain&quot;:100,&quot;totalRemain&quot;:null}" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1467448101261_96"><div class="cart-quantity">
+                                        <button for="J-cart-minus" class="minus" data-action="-" gaevent="top/minus" type="button" mt-bind-onclick="decrease()">-</button><input type="text" autocomplete="off" goods_num="goods_num" class="f-text J-quantity J-cart-quantity" maxlength="4" mt-bind-onkeyup="keyup($event)" mt-bind-value="quantity" value="<{$vo.goods_num}>"><button for="J-cart-add" class="item plus" data-action="+" gaevent="top/plus" type="button" mt-bind-onclick="increase()">+</button>
+                                    </div>
+                                    </div>
+                                </td>
+                                <td width="70" rowspan="1" class="money total">
+                                    ¥<span class="J-total" mt-bind-html="fixNumber(cartItems.26263695_0.totalfee)"><{$vo.goods_total}></span>
+                                    <br>
+                                </td>
+                                <td width="80" class="op list-delete">
+                                    <a class="delete" href="javascript:void(0);"   onclick="delCart('db',<{$vo.cart_id}>);" >删除</a>
+                                </td>
+                                <input type="hidden" class="goods_id" value="<{$vo.goods_id}>" />
+                            </tr>
+                        </tbody>
+                    </table>
                 </td>
             </tr>
         </volist>

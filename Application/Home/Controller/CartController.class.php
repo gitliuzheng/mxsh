@@ -53,7 +53,6 @@ class CartController extends CommonController {
      * 购物车首页
      */
     public function index(){
-        //print_r(unserialize(cookie("cart")));die;
         if($this->vr_member_id){
             $model_cart = D("Cart");
             $data = array();
@@ -204,6 +203,28 @@ class CartController extends CommonController {
         }
 
 
+    }
+
+    //修改购物车商品
+    public function editCart(){
+        if($this->vr_member_id){
+
+        }else{
+            //修改COOKIE数据
+            //print_r($_GET);die;
+            $cookie_cart = unserialize(cookie("cart"));
+            foreach($cookie_cart as $key => $val){
+                if($val['goods_id'] == $_GET['goods_id']){
+                    $cookie_arr_new[] = $val;
+                }
+
+
+
+            }
+
+            cookie("cart",serialize($cookie_arr_new),50000);
+
+        }
     }
 
     //修改商品数量
