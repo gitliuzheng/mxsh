@@ -80,7 +80,7 @@
                     <style type="text/css">
                         .user-info__login:hover,.user-info__signup:hover,.user-orders a:hover{text-decoration: underline;}
                     </style>
-                    <?php if($is_cookie_login == 0): ?><a class="user-info__login" id="J-login" href="http://www.mxhhw.com/index.php?act=login&op=index" target="_blank">登录</a>
+                    <?php if($is_cookie_login == 0): ?><a class="user-info__login" id="J-login" href="<?php echo U('cart/login');?>" target="_blank">登录</a>
                         <a class="user-info__signup" href="http://www.mxhhw.com/index.php?act=login&op=register" target="_blank">注册</a>
                     <?php else: ?>
                         <a class="user-info__login" id="J-login" href="http://www.mxhhw.com/shop/index.php?act=member&op=home" target="_blank"><?php echo ($vr_member_name); ?></a>
@@ -141,7 +141,7 @@
                     </div>
                 </li>
                 <li data-uix="dropdown" id="J-my-cart" class="dropdown dropdown--cart J-cart-updated" data-comboajax-uri="/index/navcart" data-comboajax-onsuccess="Y.mt.www.CartEx.update($response.data);" data-comboajax-state="5">
-                    <a id="J-my-cart-toggle" rel="nofollow" class="dropdown__toggle" href="http://www.meituan.com/cart/" gaevent="nav/cart">
+                    <a id="J-my-cart-toggle" rel="nofollow" class="dropdown__toggle" href="<?php echo U('cart/index');?>" gaevent="nav/cart">
                         <i class="icon icon-cart F-glob F-glob-cart"></i>
                         <span>购物车<em class="badge" data-newindex="true"><strong class="cart-count">0</strong>件</em></span>
                         <i class="tri tri--dropdown"></i>
@@ -567,7 +567,7 @@
             
                 <div data-component="deal-digest-quantity" class="component-deal-digest-quantity mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465960232707_1968"><div class="deal-component-quantity">
     <span class="deal-component-detail-leading">数量</span>
-    <button for="J-cart-minus" data-action="-" gaevent="top/minus" type="button">−</button><input type="text" class="J-cart-quantity" name="q" value="1" maxlength="9" data-max="500"><button for="J-cart-add" class="item" data-action="+" gaevent="top/plus" type="button">+</button>
+    <button for="J-cart-minus" data-action="-" gaevent="top/minus" type="button">−</button><input type="text" class="J-cart-quantity" goods_num="goods_num" name="q" value="1" maxlength="9" data-max="500"><button for="J-cart-add" class="item" data-action="+" gaevent="top/plus" type="button">+</button>
     <span class="deal-component-quantity-warning orange"></span>
 </div>
 </div>

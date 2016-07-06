@@ -4,20 +4,73 @@ use Think\Controller;
 
 class CartController extends CommonController {
 
+
+
+    //模拟登陆
+    public function login(){
+        $vr_member_id = 44;
+        //print_r(unserialize(cookie('cart')));die;
+        //如果当前购物车COOKIE存在，就把它放到数据库
+        if(cookie("cart")){
+            foreach(unserialize(cookie("cart")) as $key => $val){
+                $model_cart = D("cart");
+                //查询该商品是否已经放到数据库里
+                $data = array();
+                $data['store_id'] = 1;
+                $data['buyer_id'] = $vr_member_id;
+                $data['goods_id'] = $val['goods_id'];
+                $res = $model_cart->where($data)->find();
+                if($res){
+                    $data = array();
+                    $data['cart_id'] = $res['cart_id'];
+                    $data['goods_num'] = $res['goods_num'] + $val['goods_num'];
+                    $model_cart->save($data);
+
+                }else{
+                    $data = array();
+                    $data['buyer_id'] = $vr_member_id;
+                    $data['store_id'] = 1;
+                    $data['store_name'] = "官方店铺";
+                    $data['goods_id'] = $val['goods_id'];
+                    $data['goods_name'] = $val['goods_name'];
+                    $data['goods_price'] = $val['goods_price'];
+                    $data['goods_num'] = $val['goods_num'];
+                    $data['goods_image'] = '1_04423412434387147.png';
+                    $model_cart->data($data)->add();
+                }
+            }
+
+            //清空购物车cookie
+            cookie("cart",null);
+            $this->success('登陆成功', U('cart/index'));
+        }
+
+    }
+
+
+
     /**
      * 购物车首页
      */
     public function index(){
-        $this->assign("cart",unserialize(cookie("cart")));
+        //print_r(unserialize(cookie("cart")));die;
+        if($this->vr_member_id){
+            $model_cart = D("Cart");
+            $data = array();
+            $data['store_id'] = 1;
+            $data['buyer_id'] = $this->vr_member_id;
+            $res = $model_cart->where($data)->select();
+            foreach($res as $key=>&$val){
+                $val['goods_total'] = $val['goods_num'] * $val['goods_price'];
+            }
+            $this->assign("cart",$res);
+        }else{
+            $this->assign("cart",unserialize(cookie("cart")));
+        }
         $this->display();
     }
 
 
-    //添加COOKIE购物车数据到数据库
-    public function addCartToDb(){
-        $cookie_cart = unserialize(cookie("cart"));
-        print_r($cookie_cart);die;
-    }
 
     //添加到购物车
     public function addCart(){
@@ -52,7 +105,6 @@ class CartController extends CommonController {
 
 
         }else{
-            //cookie("cart",null);die;
             $goods_id = I('get.goods_id');
             $cookie_cart = unserialize(cookie("cart"));
 
@@ -130,19 +182,27 @@ class CartController extends CommonController {
         }
     }
 
-    //删除购物车某个商品
+    //删除购物车里面的商品
     public function delCart(){
-        $cookie_cart_index = I('get.cookie_cart_index');
-        $cookie_arr_new = "";
-        $cookie_cart = unserialize(cookie("cart"));
-        foreach($cookie_cart as $key => $val){
-            if($key != $cookie_cart_index){
-                $cookie_arr_new[] = $val;
-            }
-        }
-        cookie("cart",serialize($cookie_arr_new),50000);
+        if(I('get.del_type') == "db"){
+            $model_cart = D("Cart");
+            $where = array();
+            $where['cart_id'] = I('get.cart_index');
+            $model_cart->where($where)->delete();
 
-        echo json_encode($cookie_arr_new);
+        }elseif(I('get.del_type') == "cookie"){
+            $cookie_cart_index = I('get.cart_index');
+            $cookie_arr_new = "";
+            $cookie_cart = unserialize(cookie("cart"));
+            foreach($cookie_cart as $key => $val){
+                if($key != $cookie_cart_index){
+                    $cookie_arr_new[] = $val;
+                }
+            }
+            cookie("cart",serialize($cookie_arr_new),50000);
+            echo json_encode($cookie_arr_new);
+        }
+
 
     }
 

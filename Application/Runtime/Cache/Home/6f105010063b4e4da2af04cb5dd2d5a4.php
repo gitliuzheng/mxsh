@@ -4,13 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- 导入文件   zhangkuan-->
     <script src="/Public/Scripts/jquery.js"></script>
+    <script type="text/javascript" src="/Public/JS/Home/cart.js"></script>
     <script src="/Public/Scripts/jquery.page.js"></script>
     <link href="/Public/Stylesheets/jquery-ui.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/Public/Scripts/jquery-ui.js"></script>
     <script type="text/javascript" src="/Public/JS/Home/index.js"></script>
     <script type="text/javascript" src="/Public/JS/Home/deal.js"></script>
     <script type="text/javascript" src="/Public/Scripts/phpSerializer.js"></script>
-    <script type="text/javascript" src="/Public/JS/Home/cart.js"></script>
+
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LXtbxUBZfNBXjuwrAljAiHIo"></script>
 
     <meta name="renderer" content="webkit">
@@ -82,7 +83,7 @@
                     <style type="text/css">
                         .user-info__login:hover,.user-info__signup:hover,.user-orders a:hover{text-decoration: underline;}
                     </style>
-                    <?php if($is_cookie_login == 0): ?><a class="user-info__login" id="J-login" href="http://www.mxhhw.com/index.php?act=login&op=index" target="_blank">登录</a>
+                    <?php if($is_cookie_login == 0): ?><a class="user-info__login" id="J-login" href="<?php echo U('cart/login');?>" target="_blank">登录</a>
                         <a class="user-info__signup" href="http://www.mxhhw.com/index.php?act=login&op=register" target="_blank">注册</a>
                     <?php else: ?>
                         <a class="user-info__login" id="J-login" href="http://www.mxhhw.com/shop/index.php?act=member&op=home" target="_blank"><?php echo ($vr_member_name); ?></a>
@@ -143,7 +144,7 @@
                     </div>
                 </li>
                 <li data-uix="dropdown" id="J-my-cart" class="dropdown dropdown--cart J-cart-updated" data-comboajax-uri="/index/navcart" data-comboajax-onsuccess="Y.mt.www.CartEx.update($response.data);" data-comboajax-state="5">
-                    <a id="J-my-cart-toggle" rel="nofollow" class="dropdown__toggle" href="http://www.meituan.com/cart/" gaevent="nav/cart">
+                    <a id="J-my-cart-toggle" rel="nofollow" class="dropdown__toggle" href="<?php echo U('cart/index');?>" gaevent="nav/cart">
                         <i class="icon icon-cart F-glob F-glob-cart"></i>
                         <span>购物车<em class="badge" data-newindex="true"><strong class="cart-count">0</strong>件</em></span>
                         <i class="tri tri--dropdown"></i>
@@ -497,7 +498,7 @@
                             </td>
                             <td width="150" class="saleNum deal-component-quantity" id="yui_3_16_0_1_1467448101261_1135">
                                 <div data-component="cart-quantity" class="component-cart-quantity mt-component--booted" mt-scope="[&quot;quantity=cartItems.26263695_0.list.0.quantity&quot;,&quot;onchange=onQuantityChange&quot;]" data-component-params="{&quot;dealid&quot;:26263695,&quot;calendarid&quot;:0,&quot;dealgoodsid&quot;:0,&quot;minNumPerOrder&quot;:1,&quot;maxNumPerOrder&quot;:0,&quot;remain&quot;:100,&quot;totalRemain&quot;:null}" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1467448101261_96"><div class="cart-quantity">
-                                    <button class="minus" data-action="-" gaevent="top/minus" type="button" mt-bind-onclick="decrease()">-</button><input type="text" autocomplete="off" class="f-text J-quantity J-cart-quantity" maxlength="4" mt-bind-onkeyup="keyup($event)" mt-bind-value="quantity" value="<?php echo ($vo["goods_num"]); ?>"><button for="J-cart-add" class="item plus" data-action="+" gaevent="top/plus" type="button" mt-bind-onclick="increase()">+</button>
+                                    <button for="J-cart-minus" class="minus" data-action="-" gaevent="top/minus" type="button" mt-bind-onclick="decrease()">-</button><input type="text" autocomplete="off" goods_num="goods_num" class="f-text J-quantity J-cart-quantity" maxlength="4" mt-bind-onkeyup="keyup($event)" mt-bind-value="quantity" value="<?php echo ($vo["goods_num"]); ?>"><button for="J-cart-add" class="item plus" data-action="+" gaevent="top/plus" type="button" mt-bind-onclick="increase()">+</button>
                                 </div>
                                 </div>
                             </td>
@@ -506,7 +507,7 @@
                                 <br>
                             </td>
                             <td width="80" class="op list-delete">
-                                <a class="delete" href="javascript:void(0);" data-params="[object Object]" gaevent="cart/delete" mb-onclick="deleteItem($this, 26263695 + '-' + 0 + '-' + 0)">删除</a>
+                                <a class="delete" href="javascript:void(0);"   onclick="delCart('db',<?php echo ($vo["cart_id"]); ?>);" >删除</a>
                             </td>
                         </tr>
                         <input type="hidden" class="J-type-input" name="goods-26263695-0" mt-bind-value="cartItems.26263695_0.goods" value="0-1">

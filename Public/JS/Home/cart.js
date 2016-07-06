@@ -20,13 +20,13 @@ function addCart(){
 
 }
 
+
 //修改购物车显示
 function changeCart(data){
     //修改顶部购物车件数
     var count = data.length;
     $(".cart-count").html(count);
 
-    //
     var html = "<ul class='list-wrapper' >";
     for(var i = 0; i < data.length; i++){
         html += '<li class="dropdown-menu__item">';
@@ -50,18 +50,45 @@ function changeCart(data){
 
 
 //删除购物车某项商品
-function delCart(i){
+function delCart(del_type,i){
     var url = $("#deal_hidden").find(".delCart_url").text();
     $.ajax({
         type: "GET",
         url: url,
-        data: {cookie_cart_index : i},
+        data: {del_type : del_type,cart_index : i},
         dataType: "json",
         success: function(data){
-            changeCart(data);
+            window.location.href="";
+            //changeCart(data);
         }
     });
 }
+    $(document).ready(function(){
+        //数量+-
+        $("button[for='J-cart-add']").click(function(){
+            var goods_num = $(this).parent().find("input[goods_num='goods_num']").val();
+            goods_num = parseInt(goods_num) + 1;
+
+            $(this).parent().find("input[goods_num='goods_num']").val(goods_num);
+            J_cart_add_and_minus_goods_num(goods_num);
+        });
+
+        $("button[for='J-cart-minus']").click(function(){
+            var goods_num = $(this).parent().find("input[goods_num='goods_num']").val();
+            goods_num = parseInt(goods_num) - 1;
+            if(goods_num < 1){
+                goods_num = 1;
+            }
+            $(this).parent().find("input[goods_num='goods_num']").val(goods_num);
+            J_cart_add_and_minus_goods_num(goods_num);
+        });
+
+        function J_cart_add_and_minus_goods_num(goods_num){
+            $("#deal_hidden").find(".goods_num").text(goods_num);
+        }
+    });
+
+
 
 
 

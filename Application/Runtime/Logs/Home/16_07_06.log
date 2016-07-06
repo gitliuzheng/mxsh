@@ -1,0 +1,1642 @@
+[ 2016-07-06T08:10:10+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','3','4','1') ORDER BY FIELD(goods_id,2,3,4,1)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T08:10:11+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T08:23:35+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T08:32:35+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','3','4','1') ORDER BY FIELD(goods_id,2,3,4,1)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T08:32:36+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T08:32:45+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T08:33:49+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','3','4','1') ORDER BY FIELD(goods_id,2,3,4,1)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T08:33:51+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T08:33:52+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0080s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T08:33:53+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T08:34:01+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('3','2','4','1') ORDER BY FIELD(goods_id,3,2,4,1)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-07-06T08:34:02+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '3' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T08:34:03+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=3&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E5%A3%B3&goods_price=30.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T08:34:07+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=3&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E5%A3%B3&goods_price=30.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T08:37:17+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('3','2','4','1') ORDER BY FIELD(goods_id,3,2,4,1)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T08:37:18+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '3' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T08:37:20+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T08:53:28+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T08:53:35+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T08:54:05+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T09:13:33+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('1','3','2','4') ORDER BY FIELD(goods_id,1,3,2,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:13:34+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '1' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:13:38+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=1&goods_num=3&goods_name=%E5%A4%A7%E8%80%B3%E6%9C%BA&goods_price=100.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-07-06T09:13:50+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:13:51+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:13:52+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=2&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:27:24+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:27:25+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:27:29+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:27:30+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:28:13+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:28:14+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:28:19+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:28:21+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:28:47+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0090s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:28:48+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:29:07+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0090s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:29:08+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:31:10+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:31:11+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:31:46+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0140s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:31:47+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:35:58+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:35:59+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:37:24+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:37:25+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:48:14+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:48:15+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-07-06T09:48:52+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:48:53+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:52:20+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:52:21+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:52:51+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:53:23+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('1','2','3','4') ORDER BY FIELD(goods_id,1,2,3,4)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:53:24+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '1' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:53:27+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=1&goods_num=1&goods_name=%E5%A4%A7%E8%80%B3%E6%9C%BA&goods_price=100.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:53:37+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('1','2','3','4') ORDER BY FIELD(goods_id,1,2,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:53:38+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '1' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:55:20+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('1','2','3','4') ORDER BY FIELD(goods_id,1,2,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T09:55:21+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '1' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T09:57:16+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T09:57:31+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T09:58:53+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:04:37+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:04:38+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:04:41+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:04:44+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:04:47+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:05:08+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:05:09+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:05:14+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0080s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\mxsh\Application\Home\Controller\CartController.class.php 第 165 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:05:19+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/4.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('4','2','1','3') ORDER BY FIELD(goods_id,4,2,1,3)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:05:20+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '4' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:05:21+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=4&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E8%80%B3%E6%9C%BA&goods_price=300.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:05:23+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=4&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E8%80%B3%E6%9C%BA&goods_price=300.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:05:24+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=4&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E8%80%B3%E6%9C%BA&goods_price=300.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0080s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:05:25+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=4&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E8%80%B3%E6%9C%BA&goods_price=300.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0090s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:05:45+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=4&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E8%80%B3%E6%9C%BA&goods_price=300.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:05:46+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=4&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E8%80%B3%E6%9C%BA&goods_price=300.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:05:47+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=4&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E8%80%B3%E6%9C%BA&goods_price=300.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:05:48+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=4&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E8%80%B3%E6%9C%BA&goods_price=300.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0120s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:05:49+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=4&goods_num=1&goods_name=%E5%8D%8E%E4%B8%BA%E8%80%B3%E6%9C%BA&goods_price=300.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:06:04+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/3.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('3','4','2','1') ORDER BY FIELD(goods_id,3,4,2,1)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:06:05+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '3' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:06:27+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=3&goods_num=8&goods_name=%E5%8D%8E%E4%B8%BA%E6%89%8B%E6%9C%BA%E5%A3%B3&goods_price=30.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:10:15+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:10:17+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:10:54+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:10:56+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:11:06+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:11:08+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:11:36+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:14:11+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:17:22+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','3','4','1') ORDER BY FIELD(goods_id,2,3,4,1)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:17:23+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:17:25+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\mxsh\Application\Home\Controller\CartController.class.php 第 165 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:17:27+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html?cookie_cart_index=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:17:31+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','3','4','1') ORDER BY FIELD(goods_id,2,3,4,1)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:17:32+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:24:56+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','3','4','1') ORDER BY FIELD(goods_id,2,3,4,1)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:24:57+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:25:02+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\mxsh\Application\Home\Controller\CartController.class.php 第 165 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:25:35+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html?cookie_cart_index=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:25:39+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','3','4','1') ORDER BY FIELD(goods_id,2,3,4,1)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:25:40+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:25:41+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\mxsh\Application\Home\Controller\CartController.class.php 第 165 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:25:57+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','3','4','1') ORDER BY FIELD(goods_id,2,3,4,1)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:25:58+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:26:02+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','3','4','1') ORDER BY FIELD(goods_id,2,3,4,1)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:26:03+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:26:04+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:26:39+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','3','4','1') ORDER BY FIELD(goods_id,2,3,4,1)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:26:40+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:26:42+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=1&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:26:56+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('1','2','3','4') ORDER BY FIELD(goods_id,1,2,3,4)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:26:57+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '1' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:26:58+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=1&goods_num=1&goods_name=%E5%A4%A7%E8%80%B3%E6%9C%BA&goods_price=100.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:29:53+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:38:00+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:44:01+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('1','2','3','4') ORDER BY FIELD(goods_id,1,2,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:44:02+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '1' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T10:51:40+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('1','2','3','4') ORDER BY FIELD(goods_id,1,2,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:51:42+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '1' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:51:47+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:51:50+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T10:51:53+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:52:06+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:52:45+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:53:36+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:53:41+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T10:56:45+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:09:51+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:14:14+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:14:45+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:15:16+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:15:38+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:17:02+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:18:00+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:21:51+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:39:17+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:40:05+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:41:44+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html?del_type=db&cart_index=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_cart` [ RunTime:0.0040s ]
+SQL: DELETE FROM `33hao_cart` WHERE `cart_id` = 1 [ RunTime:0.0500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T11:41:56+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html?del_type=db&cart_index=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_cart` [ RunTime:0.0050s ]
+SQL: DELETE FROM `33hao_cart` WHERE `cart_id` = 3 [ RunTime:0.0430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:42:43+08:00 ] 127.0.0.1 /index.php/home/cart/delCart.html?del_type=db&cart_index=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `33hao_cart` [ RunTime:0.0050s ]
+SQL: DELETE FROM `33hao_cart` WHERE `cart_id` = 2 [ RunTime:0.0320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T11:42:55+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('1','2','3','4') ORDER BY FIELD(goods_id,1,2,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:42:56+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '1' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:42:58+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=1&goods_num=1&goods_name=%E5%A4%A7%E8%80%B3%E6%9C%BA&goods_price=100.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_cart` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_cart` WHERE `store_id` = 1 AND `buyer_id` = 44 AND `goods_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `33hao_cart` (`buyer_id`,`store_id`,`store_name`,`goods_id`,`goods_name`,`goods_price`,`goods_num`,`goods_image`) VALUES ('44','1','官方店铺','1','大耳机','100.00','1','1_04423412434387147.png') [ RunTime:0.0440s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:44:06+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T11:44:07+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T11:45:25+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T11:45:26+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T11:47:33+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T11:47:34+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T11:48:38+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:48:39+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:49:17+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0110s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:49:18+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:51:02+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T11:51:03+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T11:51:27+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0050s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:51:28+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_member` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_member` WHERE `member_id` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:57:49+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0090s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:57:50+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T11:57:54+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:57:59+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:58:10+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:59:24+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:59:52+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T11:59:55+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T12:00:33+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T12:00:54+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T12:01:49+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T12:02:04+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:32:29+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:32:52+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T14:32:53+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T14:34:45+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:39:27+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:41:05+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:43:22+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:43:26+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T14:43:27+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T14:43:31+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T14:43:32+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T14:44:54+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T14:44:55+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T14:45:28+08:00 ] 127.0.0.1 /index.php/home/cart/addCart.html?goods_id=2&goods_num=7&goods_name=%E4%B8%80%E4%B8%AA%E5%B0%8F%E8%80%B3%E6%9C%BA&goods_price=130.00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0080s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-06T14:45:31+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:48:00+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:48:52+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:48:57+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:49:01+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:49:04+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:49:10+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:49:13+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T14:49:18+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:00:40+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:00:52+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:00:55+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:00:57+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:27:26+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:27:30+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:27:32+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:27:38+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:28:41+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:28:45+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:29:04+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_name`,`goods_price`,`goods_promotion_price` FROM `33hao_vr_goods` WHERE `goods_id` IN ('2','1','3','4') ORDER BY FIELD(goods_id,2,1,3,4)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T15:29:05+08:00 ] 127.0.0.1 /index.php/Home/Index/addrajax.html?page=1&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `33hao_vr_goods_address` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `33hao_vr_goods_address` WHERE `goods_commonid` = '2' LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-06T15:29:37+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:29:41+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-07-06T15:29:46+08:00 ] 127.0.0.1 /index.php/Home/cart/index.js.map
+ERR: 非法操作:index.js.map
+
