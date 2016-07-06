@@ -11,7 +11,7 @@ class SearchController extends CommonController {
 //判断是否有key值，有则是关键字搜索
         if(I('get.key')){
             $goodsModel = D('VrGoods');
-            $data = $goodsModel->key_search();  
+            $data = $goodsModel->key_search();
             $this -> assign(array(
                 'page' => $data['page'],
                 'data' => $data['data'],

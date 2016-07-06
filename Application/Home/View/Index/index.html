@@ -122,7 +122,7 @@
                                             <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
                                         </div>
                                         <!-- 特效尺寸调整 -->
-                                        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="1" style="visibility: visible; top: <?php static $a = 53; $b=1; $a-=53-($b--); echo $a;?>px; display: none;" hidden="hidden">
+                                        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="1" style="visibility: visible; top: <?php echo 0 - 52 * ($k-1);?>px; display: none;" hidden="hidden">
                                             <div class="nav-level2-item nav-level2-keywords">
                                                 <div class="nav-level2-keywords--title"><a href="<{:U('Home/Search/category/gc_id/'.$v1['gc_id'], '', FALSE)}>-<?php echo $v1['gc_name']; ?>"><{$v1['gc_name']}></a></div>
                                                 <ul class="nav-level2-keywords--content">
@@ -2413,5 +2413,6 @@
 
 <script type="text/javascript" src="__PUBLIC__/Scripts/jquery.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/JS/Home/index.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Scripts/layer-v2.3/layer/layer.js"></script>
 </body>
 </html>

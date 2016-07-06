@@ -18,13 +18,13 @@ $(function(){
     });
 
     var offset_floor_0 = offset_floor[0] - screenh + 30;
-    var offset_floor_1 = offset_floor[0] - screenh + 30 + (screenh - floor_block_height)/2 + 463;
-    var offset_floor_2 = offset_floor[1] - screenh + 30 + (screenh - floor_block_height)/2 + 384;
-    var offset_floor_3 = offset_floor[2] - screenh + 30 + (screenh - floor_block_height)/2 + 323;
-    var offset_floor_4 = offset_floor[3] - screenh + 30 + (screenh - floor_block_height)/2 + 262;
-    var offset_floor_5 = offset_floor[4] - screenh + 30 + (screenh - floor_block_height)/2 + 183;
-    var offset_floor_6 = offset_floor[5] - screenh + 30 + (screenh - floor_block_height)/2 + 122;
-    var offset_floor_7 = offset_floor[6] - screenh + 30 + (screenh - floor_block_height)/2 + 61;
+    var offset_floor_1 = offset_floor[0] - screenh + 30 + (screenh - floor_block_height)/2 + 535;
+    var offset_floor_2 = offset_floor[1] - screenh + 30 + (screenh - floor_block_height)/2 + 456;
+    var offset_floor_3 = offset_floor[2] - screenh + 30 + (screenh - floor_block_height)/2 + 377;
+    var offset_floor_4 = offset_floor[3] - screenh + 30 + (screenh - floor_block_height)/2 + 298;
+    var offset_floor_5 = offset_floor[4] - screenh + 30 + (screenh - floor_block_height)/2 + 237;
+    var offset_floor_6 = offset_floor[5] - screenh + 30 + (screenh - floor_block_height)/2 + 158;
+    var offset_floor_7 = offset_floor[6] - screenh + 30 + (screenh - floor_block_height)/2 + 79;
     var offset_floor_8 = offset_floor[7] - screenh + 30 + (screenh - floor_block_height)/2;
 
     // 给窗口加滚动条事件    
@@ -205,7 +205,7 @@ function addFavorite2() {
     var title = document.title;
     var ua = navigator.userAgent.toLowerCase();
     if (ua.indexOf("360se") > -1) {
-        alert("由于360浏览器功能限制，请使用按键 Ctrl+D 手动收藏！");
+        layer.alert('由于360浏览器功能限制，请使用按键 Ctrl+D 手动收藏！');
     }
     else if (ua.indexOf("msie 8") > -1) {
         window.external.AddToFavoritesBar(url, title); //IE8
@@ -214,14 +214,14 @@ function addFavorite2() {
   try{
    window.external.addFavorite(url, title);
   }catch(e){
-   alert('抱歉，您的浏览器不支持此操作,请使用按键 Ctrl+D 手动收藏!');
+   layer.alert('抱歉，您的浏览器不支持此操作,请使用按键 Ctrl+D 手动收藏!');
   }
     }
     else if (window.sidebar) {
         window.sidebar.addPanel(title, url, "");
     }
     else {
-  alert('抱歉，您的浏览器不支持此操作,请使用按键 Ctrl+D 手动收藏!');
+  layer.alert('抱歉，您的浏览器不支持此操作,请使用按键 Ctrl+D 手动收藏!');
     }
 }
 
@@ -240,6 +240,6 @@ if(document.all){
      }  
  //处理异常       
 catch (e)        {          
- alert("抱歉，您的浏览器不支持此操作,请使用按键 Ctrl+D 手动收藏!");   
+ layer.alert('抱歉，您的浏览器不支持此操作,请使用按键 Ctrl+D 手动收藏!');
     }
 }

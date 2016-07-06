@@ -7,12 +7,16 @@ use Think\Controller;
  */
 class IndexController extends CommonController {
 
-//首页
+    /*
+    * 首页
+    */
     public function index(){
         $this->display();
     }
 
-//商品详情页 
+    /*
+    * 商品详情页
+    */ 
     public function deal(){
         $id = I('get.id');
         $goods = D('VrGoods');     
@@ -23,10 +27,10 @@ class IndexController extends CommonController {
         for($a=1;$a<=3;$a++){
             $gcname[$a] =  $goodsModel->where(array('gc_id' => array('eq',$data['gc_id_'.$a]),))->find();
         }       
-//获取此商户地址
+        //获取此商户地址
         $goodsAddress = D('VrGoodsAddress');
         $gcaddress = $goodsAddress -> where(array('goods_commonid' => array('eq',$id),))->select();
-//取出商品对应的地址总条数
+        //取出商品对应的地址总条数
         if(count($gcaddress)%3 != 0){
          $count =intval(count($gcaddress)/3)+1; //计算记录数
         }else{
@@ -64,7 +68,9 @@ class IndexController extends CommonController {
         $this->display();
     }
 
-// ajax获取cookie值
+    /*
+    * ajax获取cookie值
+    */
     public function displayHistory()
     {
         $id = I('get.id');
@@ -84,7 +90,9 @@ class IndexController extends CommonController {
         echo json_encode($gData);
     }
 
-//地址信息
+    /*
+    * 地址信息
+    */
     public function addrajax(){
         $id = I('get.id');
         $page = I('get.page');
@@ -134,7 +142,9 @@ class IndexController extends CommonController {
     }
 
 
-//商品详情页评价分页
+    /*
+    * 商品详情页评价分页
+    */
     public function evaajax(){
         $id = I('get.id');
         $page = I('get.page');
