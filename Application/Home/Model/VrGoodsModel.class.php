@@ -78,36 +78,41 @@ class VrGoodsModel extends Model {
 
 
 //顶部搜索关键字及分页
-	public function key_search(){
-		$key = I('get.name');
-		$term['a.goods_commend'] = 1;
-		$term['a.is_virtual'] = 1;
-		if(!empty($key)){        
-        	$where['b.goods_name'] = array('like',"%$key%");
-        	$where['address'] = array('like',"%$key%");
-        	$where['message'] = array('like',"%$key%");
-        	$where['_logic'] = 'or';
-        	$term['_complex'] = $where;
-        }
+    public function key_search(){
+        $key = I('get.name');
+        // $term['a.goods_commend'] = 1;
+        // $term['a.is_virtual'] = 1;
+        // if(!empty($key)){        
+        //     $where['b.goods_name'] = array('like',"%$key%");
+        //     $where['address'] = array('like',"%$key%");
+        //     $where['message'] = array('like',"%$key%");
+        //     $where['_logic'] = 'or';
+        //     $term['_complex'] = $where;
+        // }
         //根据关键字(商品名称，地址，信息窗口取出相应商品ID)
-        $goodsId = $this->alias('a')
-        ->field('GROUP_CONCAT(DISTINCT a.goods_id) gids')
-        ->join('RIGHT JOIN __VR_GOODS_ADDRESS__ b 
-               ON a.goods_commonid = b.goods_commonid')
+        $goodsaddr = M('VrGoodsAddress');
+        $goods_Id = $goodsaddr ->field('GROUP_CONCAT(DISTINCT goods_commonid) gid')
         ->where(array(
-            'a.goods_commend' => array('eq', 1),
-            'a.is_virtual' => array('eq', 1),
-            'a.goods_name' => array('exp', " LIKE '%$key%' OR address LIKE '%$key%' OR message LIKE '%$key%'"),
+            'goods_name' => array('exp', " LIKE '%$key%' OR address LIKE '%$key%' OR message LIKE '%$key%'"),
         ))
         ->find();
-        $goodsId = explode(',',$goodsId['gids']);
-        $data['count'] = count($goodsId);
+        $goods_id = $this -> field('GROUP_CONCAT(DISTINCT goods_commonid) gids')
+        ->where(array(
+            'goods_name' => array('exp', " LIKE '%$key%'"),
+        ))
+        ->find();
+        //分割成数组 
+        $goodsId = explode(',',$goods_Id['gid']);
+        $goodsid = explode(',',$goods_id['gids']);
+        $gid = array_merge($goodsId,$goodsid);
+        $gsid = array_unique($gid);
+        
+        $data['count'] = count($gsid);
+        //return $goodsId;
         $page = new \Think\Page($data['count'], 2);  //设置页面商品显示个数
         // 配置翻页的样式
-        $page->setConfig('prev', '上一页');
-        $page->setConfig('next', '下一页');
         $data['page'] = $page->show();
-        $where1['goods_id'] = array('in',$goodsId);
+        $where1['goods_id'] = array('in',$gsid);
         switch (I('odby')){
             case 'xl':
                 $p = "goods_salenum";
@@ -124,7 +129,7 @@ class VrGoodsModel extends Model {
             default:
                 $p = "goods_id";
         }
-         $data['data'] = $this ->field('goods_id,goods_commonid,goods_name,goods_price,goods_marketprice,goods_salenum,evaluation_count,gc_id_1,gc_id_2,gc_id_3')-> where($where1) ->limit($page->firstRow.','.$page->listRows)
+         $data['data'] = $this ->field('goods_id,goods_commonid,goods_promotion_price,goods_name,goods_price,goods_marketprice,goods_salenum,evaluation_count,gc_id_1,gc_id_2,gc_id_3')-> where($where1) ->limit($page->firstRow.','.$page->listRows)
         ->order(array($p => "desc")) ->select(); 
         // $gadata['data'] = $this->alias('a')
         // ->field('a.goods_id,a.goods_commonid,a.goods_name,a.goods_price,a.goods_marketprice,a.goods_salenum,a.evaluation_count,a.gc_id_1,a.gc_id_2,a.gc_id_3')
@@ -153,18 +158,21 @@ class VrGoodsModel extends Model {
         //     $data['data'][$k]['gc_id_3'] =$array[9];
         // }        
         // foreach ($data['data'] as $k => $v) {
-        //  	$goodsclass['gc_id_2'][] = $v['gc_id_2'];
-        //  	$goodsclass['gc_id_3'][] = $v['gc_id_3'];
+        //      $goodsclass['gc_id_2'][] = $v['gc_id_2'];
+        //      $goodsclass['gc_id_3'][] = $v['gc_id_3'];
         // }
         // //数组去重 
-       	// $data['gc_id_2'] = array_unique($goodsclass['gc_id_2']);
-       	// $data['gc_id_3'] = array_unique($goodsclass['gc_id_3']);      
+        // $data['gc_id_2'] = array_unique($goodsclass['gc_id_2']);
+        // $data['gc_id_3'] = array_unique($goodsclass['gc_id_3']);      
         if(empty($key)){
-        	$data = null;
+            $data = null;
         }
-		return $data;
-	}
-}	
+        return $data;
+    }
+}   
+
+
+
 
 
 
