@@ -512,6 +512,7 @@
 
                                 </td>
                                 <input type="hidden" class="goods_id" value="<?php echo ($vo["goods_id"]); ?>" />
+                                <input type="hidden" class="cart_id" value="<?php echo ($vo["cart_id"]); ?>" />
                             </tr>
                         </tbody>
                     </table>

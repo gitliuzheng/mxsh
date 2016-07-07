@@ -34,12 +34,14 @@ $(document).ready(function(){
         $(thisthis).parent().find("input[goods_num='goods_num']").val(goods_num);
         //修改小计
         $(thisthis).parents("tr").find("span[class='J-total']").html(goods_total);
+        //获取cart_id
+        var cart_id = $(thisthis).parents("tr").find("input[class='cart_id']").val();
 
         var url = $("#cart_hidden").find(".editCart_url").text();
         $.ajax({
             type: "GET",
             url: url,
-            data: {goods_num : goods_num , goods_id : goods_id ,goods_total : goods_total},
+            data: {goods_num : goods_num , goods_id : goods_id ,goods_total : goods_total, cart_id : cart_id},
             dataType: "json",
             success: function(data){
 

@@ -114,36 +114,23 @@ class CartController extends CommonController {
             $model_goods = D('VrGoods');
             $goods_info = $model_goods->field('goods_id,goods_name,goods_price,goods_promotion_price')->where(array('goods_id'=>$goods_id))->find();
 
-            //是否存在购物车
-            if($this->issetCart()){
-                //该商品是否在购物车里
-                if($this->GoodsInCart($goods_id)){
-                    //修改商品点击数量
-                    $this->changeCartGoodsCount($goods_id,$cookie_cart);
-                    //修改商品的小计
-                    $this->changeCartGoodsTotal($goods_id,$cookie_cart);
-
-                }else{
-                    //添加该商品到购物车
-                    $goods_info['url'] = U("Home/Index/deal/id/".$goods_id);
-                    $goods_info['goods_num'] = $_GET['goods_num'];
-                    $goods_info['goods_total'] = $goods_info['goods_num'] * $goods_info['goods_price'];
-                    $index = $cookie_cart ? count($cookie_cart) : 0;
-                    $cookie_cart[$index] = $goods_info;
-
-                }
-
+            //该商品是否在购物车里
+            if($this->GoodsInCart($goods_id)){
+                //修改商品点击数量
+                $this->changeCartGoodsCount($goods_id,$cookie_cart);
+                //修改商品的小计
+                $this->changeCartGoodsTotal($goods_id,$cookie_cart);
 
             }else{
                 //添加该商品到购物车
                 $goods_info['url'] = U("Home/Index/deal/id/".$goods_id);
                 $goods_info['goods_num'] = $_GET['goods_num'];
                 $goods_info['goods_total'] = $goods_info['goods_num'] * $goods_info['goods_price'];
-                $index = $cookie_cart ? count($cookie_cart) : 0;
+                $index = $cookie_cart != "" ? count($cookie_cart) : 0;
                 $cookie_cart[$index] = $goods_info;
 
-
             }
+
             cookie("cart",serialize($cookie_cart),50000);
             echo json_encode(unserialize(cookie("cart")));
         }
@@ -163,11 +150,9 @@ class CartController extends CommonController {
     }
 
 
-
-
     //判断是否存在购物车
     public function issetCart(){
-        if(cookie("cart")){
+        if(cookie("cart") != ""){
             return true;
         }else{
             return false;
@@ -182,6 +167,8 @@ class CartController extends CommonController {
                 return true;
             }
         }
+
+        return false;
     }
 
     //删除购物车里面的商品
@@ -212,10 +199,12 @@ class CartController extends CommonController {
     public function editCart(){
         if($this->vr_member_id){//如果是登录状态:
             $model_cart = D("Cart");
+            $where = array();
             $data = array();
-            //$data['cart_id'] = $res['cart_id'];
-            $data['goods_num'] = $res['goods_num'] + $_GET['goods_num'];
-            $model_cart->save($data);
+            $where['cart_id'] = $_GET['cart_id'];
+            $data['goods_num'] = $_GET['goods_num'];
+            $model_cart->where($where)->save($data);
+
         }else{//如果不是登录状态:
             $cookie_cart = unserialize(cookie("cart"));
             foreach($cookie_cart as $key => &$val){
