@@ -1,6 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
+use Common\CCP_REST_DEMO_PHP_v2_7r\Service\SendTemplateSMS;
 /**
  * 首页显示，商品详情页显示、记录用户浏览记录、用户评价分页
  * zhangkuan
@@ -158,6 +159,15 @@ class IndexController extends CommonController {
             }
         } 
         echo json_encode($temp);
+    }
+
+    /*
+    * 测试发送模板短信
+    * liuzhen 2016-07-06 15:58
+    */
+    public function sendSMS(){
+        $sendSMS = new SendTemplateSMS();
+        $sendSMS->send_template_SMS("15827323295",array('8888','30'),1);
     }
    
 }

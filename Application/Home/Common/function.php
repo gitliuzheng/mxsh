@@ -29,5 +29,3 @@ function fUrl($param,$p)
 	$u =  preg_replace($re, '', $url);
 	return  preg_replace($pe, '', $u);
 }
-
-
