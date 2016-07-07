@@ -5,6 +5,7 @@
     <!-- 导入文件   zhangkuan-->
     <script src="/Public/Scripts/jquery.js"></script>
     <script type="text/javascript" src="/Public/JS/Home/cart.js"></script>
+    <script type="text/javascript" src="/Public/JS/Home/cart_add_minus.js"></script>
     <script src="/Public/Scripts/jquery.page.js"></script>
     <link href="/Public/Stylesheets/jquery-ui.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/Public/Scripts/jquery-ui.js"></script>
@@ -505,7 +506,10 @@
                                     <br>
                                 </td>
                                 <td width="80" class="op list-delete">
-                                    <a class="delete" href="javascript:void(0);"   onclick="delCart('db',<?php echo ($vo["cart_id"]); ?>);" >删除</a>
+                                    <?php if($db_cookie == 'db'): ?><a class="delete" href="javascript:void(0);"   onclick="delCart('db',<?php echo ($vo["cart_id"]); ?>);" >删除</a>
+                                    <?php else: ?>
+                                        <a class="delete" href="javascript:void(0);"   onclick="delCart('cookie',<?php echo ($vo["goods_id"]); ?>);" >删除</a><?php endif; ?>
+
                                 </td>
                                 <input type="hidden" class="goods_id" value="<?php echo ($vo["goods_id"]); ?>" />
                             </tr>

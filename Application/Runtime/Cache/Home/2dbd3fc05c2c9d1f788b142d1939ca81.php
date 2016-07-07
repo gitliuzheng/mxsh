@@ -9,6 +9,8 @@
 <script type="text/javascript" src="/Public/Scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="/Public/JS/Home/index.js"></script>
 <script type="text/javascript" src="/Public/JS/Home/deal.js"></script>
+<script type="text/javascript" src="/Public/JS/Home/Cart.js"></script>
+<script type="text/javascript" src="/Public/JS/Home/deal_add_minus.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LXtbxUBZfNBXjuwrAljAiHIo"></script>
     
 <meta name="renderer" content="webkit">

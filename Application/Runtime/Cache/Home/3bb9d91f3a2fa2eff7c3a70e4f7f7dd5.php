@@ -22,12 +22,12 @@
 <link rel="shortcut icon" href="http://www.mxhhw.com/favicon.ico">
 <link rel="canonical" href="http://suzhousz.meituan.com/category">
 <title>【梦想换货网】宿州商户</title>
-<link rel="stylesheet" type="text/css" href="/mxsh/Public/CSS/index_saved_resource(4).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/index_saved_resource(9).css">
+<link rel="stylesheet" type="text/css" href="/Public/CSS/index_saved_resource(4).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/index_saved_resource(9).css">
 
-<link rel="stylesheet" type="text/css" href="/mxsh/Public/CSS/category_saved_resource(5).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/category_saved_resource(6).css">
-<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/category_saved_resource(13).css">
+<link rel="stylesheet" type="text/css" href="/Public/CSS/category_saved_resource(5).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/category_saved_resource(6).css">
+<link charset="utf-8" rel="stylesheet" href="/Public/CSS/category_saved_resource(13).css">
 <noscript hidden="" style="display:none;" class="J-hub" data-hublaziness="load" data-hubcss="fewww:www/css/lazyload.css,iconfont/css/global-iconfont.css@b64babf" data-hubstamp="yui_3_16_0_1_1465867114754_346" data-hubstate="40"></noscript>
 </head>
 <body class="pg-index" id="yui_3_16_0_1_1465867114754_13" style="position: static;">
@@ -47,7 +47,7 @@
                     <style type="text/css">
                         .user-info__login:hover,.user-info__signup:hover,.user-orders a:hover{text-decoration: underline;}
                     </style>
-                    <?php if($is_cookie_login == 0): ?><a class="user-info__login" id="J-login" href="http://www.mxhhw.com/index.php?act=login&op=index" target="_blank">登录</a>
+                    <?php if($is_cookie_login == 0): ?><a class="user-info__login" id="J-login" href="<?php echo U('cart/login');?>" target="_blank">登录</a>
                         <a class="user-info__signup" href="http://www.mxhhw.com/index.php?act=login&op=register" target="_blank">注册</a>
                     <?php else: ?>
                         <a class="user-info__login" id="J-login" href="http://www.mxhhw.com/shop/index.php?act=member&op=home" target="_blank"><?php echo ($vr_member_name); ?></a>
@@ -108,7 +108,7 @@
                     </div>
                 </li>
                 <li data-uix="dropdown" id="J-my-cart" class="dropdown dropdown--cart J-cart-updated" data-comboajax-uri="/index/navcart" data-comboajax-onsuccess="Y.mt.www.CartEx.update($response.data);" data-comboajax-state="5">
-                    <a id="J-my-cart-toggle" rel="nofollow" class="dropdown__toggle" href="http://www.meituan.com/cart/" gaevent="nav/cart">
+                    <a id="J-my-cart-toggle" rel="nofollow" class="dropdown__toggle" href="<?php echo U('cart/index');?>" gaevent="nav/cart">
                         <i class="icon icon-cart F-glob F-glob-cart"></i>
                         <span>购物车<em class="badge" data-newindex="true"><strong class="cart-count">0</strong>件</em></span>
                         <i class="tri tri--dropdown"></i>
@@ -165,16 +165,16 @@
     <div style="display:none;" data-hubmodule="www-banner" data-hublaziness="load" class="J-hub J-banner-newtop ui-slider common-banner common-banner--newtop log-mod-viewed J-banner-stamp-active" data-mod="ib" data-mod-deepview="1-7600" data-banner-conf="{&quot;sheetContainer&quot;:&quot;.common-banner__sheets&quot;,&quot;effect&quot;:&quot;slideFadeIn&quot;}" id="yui_3_16_0_1_1465867114754_337" data-hubstamp="yui_3_16_0_1_1465867114754_336" data-hubstate="40">
             <div class="common-banner__sheet cf">
                 
-                <a class="common-banner__link" target="_blank" href="http://www.meituan.com/topic/4076" gaevent="top/others/4076" data-mttcode="Abanner.B4076" data-mod-idx="7600"><img onload="M.delayImg(this);" alt="【多城市】1元起吃喝玩乐" src="/mxsh/Public/category_files/cac6a15bea79a75d2def02adaab989a268774.jpg" width="980" height="60"></a>
+                <a class="common-banner__link" target="_blank" href="http://www.meituan.com/topic/4076" gaevent="top/others/4076" data-mttcode="Abanner.B4076" data-mod-idx="7600"><img onload="M.delayImg(this);" alt="【多城市】1元起吃喝玩乐" src="/Public/category_files/cac6a15bea79a75d2def02adaab989a268774.jpg" width="980" height="60"></a>
             </div>
             <a href="javascript:void(0)" class="F-glob F-glob-close common-close--iconfont-small close" title="关闭"></a></div>
     <noscript hidden="" style="display:none;" data-comboajax-uri="/combo/leftsidebanner/index" data-comboajax-onsuccess="$request.listen(&quot;www-banner&quot;, &quot;www.Banner.Leftside&quot;, true);" data-comboajax-state="5"></noscript>
     
     <div class="site-mast__branding cf" id="J-site-mast__branding">
-        <h1><a class="site-logo" href="/mxsh/" gaevent="header/logo">宿州团购</a></h1>
+        <h1><a class="site-logo" href="/" gaevent="header/logo">宿州团购</a></h1>
  
         <div class="city-info">
-            <h2><a class="city-info__name" href="/mxsh/" gaevent="header/cityname">宿州</a></h2>
+            <h2><a class="city-info__name" href="/" gaevent="header/cityname">宿州</a></h2>
             <a class="city-info__toggle" href="http://www.meituan.com/index/changecity/initiative" gaevent="header/changecity">切换城市</a>
         </div>
          
@@ -395,7 +395,7 @@
                 <nav>
                     <ul class="navbar cf  log-mod-viewed" data-mod="lz" data-mod-deepview="1" id="yui_3_16_0_1_1465867114754_1864">
                         <li class="navbar__item-w ">
-                            <a class="navbar__item" href="/mxsh/" gaevent="nav/today" hidefocus="true"><span class="nav-label">首页</span></a>
+                            <a class="navbar__item" href="/" gaevent="nav/today" hidefocus="true"><span class="nav-label">首页</span></a>
                         </li>                       
                         <li class="navbar__item-w ">
                             <a class="navbar__item" target="_blank" href="http://www.mxhhw.com" data-mttcode="Acategory.Bwanggou" gaevent="nav/wanggou" hidefocus="true"><span class="nav-label">购物</span></a>
@@ -430,10 +430,10 @@
                                 <ul class="inline-block-list">
                                 <!-- 二级分类 -->
                                     <li class="item"> <?php echo ltrim(strstr($gc_id, '-'), '-'); ?></li>
-                                    <a href="/mxsh/index.php/Home/Search/category">X</a>    
+                                    <a href="/index.php/Home/Search/category">X</a>    
                                 <!-- 三级分类 -->
                                     <li class="item"> <?php echo ltrim(strstr($gc_id3, '-'), '-'); ?></li>
-                                    <a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $gc_id ?>">X</a>                                            
+                                    <a href="/index.php/Home/Search/category/gc_id/<?php echo $gc_id ?>">X</a>                                            
                                 </ul>
                             </div>  
                         <?php }else if($gc_id){ ?>
@@ -442,7 +442,7 @@
                                 <div class="label has-icon">全部：</div>
                                 <ul class="inline-block-list">
                                     <li class="item"> <?php echo ltrim(strstr($gc_id, '-'), '-'); ?></li>
-                                    <a href="/mxsh/index.php/Home/Search/category">X</a>                                              
+                                    <a href="/index.php/Home/Search/category">X</a>                                              
                                 </ul>
                             </div>  
                             <div id="search_condition">                
@@ -450,7 +450,7 @@
                                     <div class="label has-icon">分类：</div>
                                     <ul class="inline-block-list">
                                         <li class="item current"><a class="briber" href="#">全部</a></li>                                       
-                                        <?php if(is_array($gClass)): $i = 0; $__LIST__ = $gClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><li class="item"><a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $gc_id ?>/gc_id3/<?php echo $v1['gc_id']; ?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>                                        
+                                        <?php if(is_array($gClass)): $i = 0; $__LIST__ = $gClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><li class="item"><a href="/index.php/Home/Search/category/gc_id/<?php echo $gc_id ?>/gc_id3/<?php echo $v1['gc_id']; ?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>                                        
                                     </ul>
                                 </div>
                             </div>
@@ -462,7 +462,7 @@
                                         <div class="label has-icon">分类：</div>
                                         <ul class="inline-block-list">
                                             <li class="item current"><a class="briber" href="#">全部</a></li>                                       
-                                            <?php if(is_array($fClass)): $i = 0; $__LIST__ = $fClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><li class="item"><a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $v1['gc_id']; ?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                            <?php if(is_array($fClass)): $i = 0; $__LIST__ = $fClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><li class="item"><a href="/index.php/Home/Search/category/gc_id/<?php echo $v1['gc_id']; ?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                         </ul>
                                     </div>
                                 </div>
@@ -559,7 +559,7 @@
 
         <div class="deal-tile--small " data-mttcode="Aresys.Bfilterrightside.G1.F32806765.H.CcfRec.DcfRec">
         <a class="deal-tile--small__cover" href="http://www.meituan.com/deal/32806765.html" gaevent="list/mostbuy/all/1/photo" target="_blank" hidefocus="true" rel="nofollow" title="【全国】正新鸡排单人餐">
-            <img class="" width="198" height="120" src="/mxsh/Public/category_files/df8df7d29e80b8e25849058543ce5d2636614.jpg@3_0_684_415a-388h_640w_2e_90Q">                        <span class="deal-rank">1</span>
+            <img class="" width="198" height="120" src="/Public/category_files/df8df7d29e80b8e25849058543ce5d2636614.jpg@3_0_684_415a-388h_640w_2e_90Q">                        <span class="deal-rank">1</span>
                     </a>
         <h4 class="deal-tile--small__title">
             <a class="w-link link--black__green f1" href="http://www.meituan.com/deal/32806765.html" gaevent="list/mostbuy/all/1/title" target="_blank" hidefocus="true" rel="nofollow" title="【全国】正新鸡排单人餐">
@@ -582,31 +582,31 @@
         最近浏览
     </h3>
     <ul class="history-list J-history-list">
-        <li class="history-list__item history-list__item--first" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/category_files/26c9f4e50185c4891ac74370b74a9853151923.jpg" width="80" height="50">
+        <li class="history-list__item history-list__item--first" target="_blank" ref="nofollow"><img class="" src="/Public/category_files/26c9f4e50185c4891ac74370b74a9853151923.jpg" width="80" height="50">
         <h5>
             <a href="http://suzhousz.meituan.com/deal/36306400.html" title="酷迪KTV-下午/午夜档5小时+小吃2份+1份爆米花" target="_blank" ref="nofollow">酷迪KTV-下午/午夜档5小时+小吃2份+1份爆米花</a>
         </h5>
         <p><em class="price">¥ <i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -60px -26px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -32px -13px;"></i><i class="inline-block ps_12 ps_12p pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -67px -39px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -21px -13px;"></i></em><span class="default-price">门店价 ¥<del>366</del></span></p>
         </li>
-        <li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/category_files/0af5e66e4363eb528f0442444f771eb7179883.jpg" width="80" height="50">
+        <li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/Public/category_files/0af5e66e4363eb528f0442444f771eb7179883.jpg" width="80" height="50">
         <h5>
             <a href="http://suzhousz.meituan.com/deal/26263695.html" title="美佳乐蛋糕葡式蛋挞1个" target="_blank" ref="nofollow">美佳乐蛋糕葡式蛋挞1个</a>
         </h5>
         <p><em class="price">¥ <i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -60px 0px;"></i><i class="inline-block ps_12 ps_12p pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -28px -39px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -21px -13px;"></i></em><span class="default-price">门店价 ¥<del>3</del></span></p>
         </li>
-        <li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/category_files/aa63c620ca11691e6cbdd985c855d58d534450.jpeg" width="80" height="50">
+        <li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/Public/category_files/aa63c620ca11691e6cbdd985c855d58d534450.jpeg" width="80" height="50">
         <h5>
             <a href="http://www.meituan.com/deal/27962815.html" title="国色天乡陆地乐园成人票1张" target="_blank" ref="nofollow">国色天乡陆地乐园成人票1张</a>
         </h5>
         <p><em class="price">¥ <i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -46px -39px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -7px -52px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -7px -52px;"></i></em><span class="default-price">门店价 ¥<del>120</del></span></p>
         </li>
-        <li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/category_files/0883cf75eef1bfeb328a891b3e85ff1c139686.jpg" width="80" height="50">
+        <li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/Public/category_files/0883cf75eef1bfeb328a891b3e85ff1c139686.jpg" width="80" height="50">
         <h5>
             <a href="http://www.meituan.com/deal/30160327.html" title="环球中心电子票" target="_blank" ref="nofollow">环球中心电子票</a>
         </h5>
         <p><em class="price">¥ <i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -7px -13px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -32px -13px;"></i></em><span class="default-price">门店价 ¥<del>480</del></span></p>
         </li>
-        <li class="history-list__item history-list__item--last" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/category_files/1bdb7273e684a5d996f2cf69e31340d4121016.jpg" width="80" height="50">
+        <li class="history-list__item history-list__item--last" target="_blank" ref="nofollow"><img class="" src="/Public/category_files/1bdb7273e684a5d996f2cf69e31340d4121016.jpg" width="80" height="50">
         <h5>
             <a href="http://xiaogan.meituan.com/deal/30053491.html" title="锅之恋时尚焖锅代金券1张" target="_blank" ref="nofollow">锅之恋时尚焖锅代金券1张</a>
         </h5>
@@ -626,7 +626,7 @@
         <?php if($data){?>
             <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div class="deal-tile" data-mteventnd="{&quot;id&quot;:27962815,&quot;pos&quot;:1}" id="yui_3_16_0_1_1465867114754_10270">
                     <a href="<?php echo U('Home/Index/deal/id/'.$v['goods_id'], '', FALSE);?>" class="deal-tile__cover" hidefocus="true" target="_blank" data-mtevent="{&quot;sr&quot;:&quot;cover&quot;}" id="yui_3_16_0_1_1465867114754_10269">
-                        <img class="J-webp" width="350" height="214" alt="<?php echo ($v["goods_name"]); ?>" src="/mxsh/Public/category_files/aa63c620ca11691e6cbdd985c855d58d534450(1).jpeg" onload="M.logFirstScreenTime(this)" id="yui_3_16_0_1_1465867114754_10268">
+                        <img class="J-webp" width="350" height="214" alt="<?php echo ($v["goods_name"]); ?>" src="/Public/category_files/aa63c620ca11691e6cbdd985c855d58d534450(1).jpeg" onload="M.logFirstScreenTime(this)" id="yui_3_16_0_1_1465867114754_10268">
                         <span class="deal-mark">
                                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
                         </span>
@@ -1059,7 +1059,7 @@
     <p>©<span title="I:2; Q:2; S:2; C:16; F:3; T:367.01; H:com">2016</span><a href="http://www.mxhhw.com/" target="_blank">梦想换货网</a> mxhhw.com <a href="http://www.beianbeian.com/beianxinxi/5e40326e-16f0-4c22-b329-b40104fd8e4e.html" target="_blank">皖ICP备14012689号-2</a> 
     </p>
     <div style="width:300px;margin:0 auto; padding:20px 0;">
-    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502025545" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/mxsh/Public/Images/wangan.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备11010502025545号</p></a>
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502025545" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/Public/Images/wangan.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备11010502025545号</p></a>
     </div>
 </div>
 <ul class="cert cf">
@@ -1086,6 +1086,6 @@
     <div id="fixbar-item-feedback" style="bottom: 20px; right: 10px;"><a target="_blank" class="new-index-triffle lift-nav lift-nav--feedback" hidefocus="true" gaevent="feedback/search" href="http://suzhousz.meituan.com/vote/survey/59"><i></i><span>意见反馈</span></a></div>
 </div></div>
 
-<script type="text/javascript" src="/mxsh/Public/Scripts/jquery.min.js"></script>
-<script type="text/javascript" src="/mxsh/Public/JS/Home/index.js"></script>
+<script type="text/javascript" src="/Public/Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/JS/Home/index.js"></script>
 </body></html>
