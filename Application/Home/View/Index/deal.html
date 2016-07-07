@@ -8,7 +8,7 @@
 <link href="__PUBLIC__/Stylesheets/jquery-ui.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="__PUBLIC__/Scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="__PUBLIC__/JS/Home/index.js"></script>
-<script type="text/javascript" src="__PUBLIC__/JS/Home/deal.js"></script>  
+<script type="text/javascript" src="__PUBLIC__/JS/Home/deal.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LXtbxUBZfNBXjuwrAljAiHIo"></script>
 <link rel="stylesheet" href="__PUBLIC__/Stylesheets/reset.css" />
 <link rel="stylesheet" href="__PUBLIC__/Stylesheets/pagination.css" />
@@ -47,21 +47,32 @@
 <style type="text/css">@media screen{.smnoscreen {display:none}} @media print{.smnoprint{display:none}}</style>
 <noscript hidden="" style="display:none;" class="J-hub" data-hublaziness="load" data-hubcss="fewww:www/css/lazyload.css,iconfont/css/global-iconfont.css@b64babf" data-hubstamp="yui_3_16_0_1_1465960232707_869" data-hubstate="40"></noscript>
 </head>
-<body class="pg-deal pg-deal-default pg-deal-detail" id="deal-default" style="position: static;"><div id="yui_3_16_0_1_1465960232707_2566" class="yui3-widget widget-flashcopy"><div id="yui_3_16_0_1_1465960232707_2568" class="widget-flashcopy-content"></div></div><div id="qq-dialog" class="mt-overlay-container"><div id="yui_3_16_0_1_1465960232707_2479" class="yui3-widget yui3-overlay yui3-widget-positioned yui3-widget-stacked yui3-overlay-hidden" style="width: 500px; left: 701px; top: 400px; z-index: 102;"><div id="yui_3_16_0_1_1465960232707_2481" class="yui3-overlay-content yui3-widget-stdmod"><div class="yui3-widget-bd" id="yui_3_16_0_1_1465960232707_2592"><div class="mt-dialog" id="yui_3_16_0_1_1465960232707_2591"><h3 class="head" id="yui_3_16_0_1_1465960232707_2590">分享给QQ好友<span class="close" id="yui_3_16_0_1_1465960232707_2589">关闭</span></h3><div class="body" id="yui_3_16_0_1_1465960232707_2599"><p class="error" style="display:none">&nbsp;</p><div id="yui_3_16_0_1_1465960232707_2598">通过QQ、电子邮件发送链接给你的朋友</div><input type="text" class="deal-share-qq-input" value="http://suzhousz.meituan.com/u/15688577" maxlength="40" id="yui_3_16_0_1_1465960232707_2602"><input class="deal-share-qq-copy" type="button" value="复制" style="display:none"></div></div></div></div><div class="mt-overlay-underlay"></div></div></div><div id="mt-overlay-mask" style="width: 1903px; z-index: 101; visibility: hidden;"></div>
+<body class="pg-deal pg-deal-default pg-deal-detail" id="deal-default" style="position: static;">
+
+<!-- 引入的JS不好取值 -->
+<div style="display: none" id="deal_hidden">
+    <!-- 购物车删除URL -->
+    <div class="delCart_url"><{:U('home/cart/delCart')}></div>
+    <!-- 购物车添加URL -->
+    <div class="addCart_url"><{:U('home/cart/addCart')}></div>
+    <!-- goods_id -->
+    <div class="goods_id"><{$data['goods_id']}></div>
+    <!-- goods_name -->
+    <div class="goods_name"><{$data['goods_name']}></div>
+    <!-- goods_price -->
+    <div class="goods_price"><{$data['goods_price']}></div>
+    <!-- goods_num -->
+    <div class="goods_num">1</div>
+
+</div>
+
+<div id="yui_3_16_0_1_1465960232707_2566" class="yui3-widget widget-flashcopy"><div id="yui_3_16_0_1_1465960232707_2568" class="widget-flashcopy-content"></div></div><div id="qq-dialog" class="mt-overlay-container"><div id="yui_3_16_0_1_1465960232707_2479" class="yui3-widget yui3-overlay yui3-widget-positioned yui3-widget-stacked yui3-overlay-hidden" style="width: 500px; left: 701px; top: 400px; z-index: 102;"><div id="yui_3_16_0_1_1465960232707_2481" class="yui3-overlay-content yui3-widget-stdmod"><div class="yui3-widget-bd" id="yui_3_16_0_1_1465960232707_2592"><div class="mt-dialog" id="yui_3_16_0_1_1465960232707_2591"><h3 class="head" id="yui_3_16_0_1_1465960232707_2590">分享给QQ好友<span class="close" id="yui_3_16_0_1_1465960232707_2589">关闭</span></h3><div class="body" id="yui_3_16_0_1_1465960232707_2599"><p class="error" style="display:none">&nbsp;</p><div id="yui_3_16_0_1_1465960232707_2598">通过QQ、电子邮件发送链接给你的朋友</div><input type="text" class="deal-share-qq-input" value="http://suzhousz.meituan.com/u/15688577" maxlength="40" id="yui_3_16_0_1_1465960232707_2602"><input class="deal-share-qq-copy" type="button" value="复制" style="display:none"></div></div></div></div><div class="mt-overlay-underlay"></div></div></div><div id="mt-overlay-mask" style="width: 1903px; height: 8580px; z-index: 101; visibility: hidden;"></div>
    
     <!-- 顶部公共部分 -->
     <include file="Layout/other_top" />
-
-
-    
-
     
     <div id="bdw" class="bdw">
         <div id="bd" class="cf">
-            
-
-
-
 
 <noscript hidden="" style="display:none;" data-comboajax-uri="/event/timetrigger" data-comboajax-state="5"></noscript>
 <noscript hidden="" style="display:none;" data-comboajax-uri="/index/tips/deal/default" data-comboajax-onsuccess="$request.listen(&quot;www-tips&quot;, &quot;www.Tips&quot;);" data-comboajax-data="{&quot;commontips&quot;:true,&quot;page&quot;:&quot;deal&quot;,&quot;deal&quot;:26263695}" data-comboajax-state="5" data-parent="#bd"></noscript>
@@ -186,7 +197,7 @@
             
                 <div data-component="deal-digest-quantity" class="component-deal-digest-quantity mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465960232707_1968"><div class="deal-component-quantity">
     <span class="deal-component-detail-leading">数量</span>
-    <button for="J-cart-minus" data-action="-" gaevent="top/minus" type="button">−</button><input type="text" class="J-cart-quantity" name="q" value="1" maxlength="9" data-max="500"><button for="J-cart-add" class="item" data-action="+" gaevent="top/plus" type="button">+</button>
+    <button for="J-cart-minus" data-action="-" gaevent="top/minus" type="button">−</button><input type="text" class="J-cart-quantity" goods_num="goods_num" name="q" value="1" maxlength="9" data-max="500"><button for="J-cart-add" class="item" data-action="+" gaevent="top/plus" type="button">+</button>
     <span class="deal-component-quantity-warning orange"></span>
 </div>
 </div>
@@ -199,7 +210,7 @@
 </div>
             <div class="deal-component-purchase-button" id="yui_3_16_0_1_1465960232707_2417">
     <input type="submit" class="J-mini-cart-buy mini-cart-buy basic-deal data-mod-enabled log-mod-viewed" data-mtevent="{&quot;la&quot;:&quot;deal\/default\/buy&quot;,&quot;dealid&quot;:26263695}" data-mod="dn" value="抢购">
-        <a rel="nofollow" class="J-add-mini-cart mini-cart-button mini-cart-add log-mod-viewed" data-dealid="26263695" data-cityid="201" hidefocus="true" href="http://suzhousz.meituan.com/cart/default/26263695" data-mod="dc" title="加入购物车"><i class="F-glob F-glob-cart2"></i></a>
+        <a onclick="addCart();"  rel="nofollow" class="J-add-mini-cart mini-cart-button mini-cart-add log-mod-viewed" data-dealid="26263695" data-cityid="201" hidefocus="true" href="javascript:void(0);" data-mod="dc" title="加入购物车"><i class="F-glob F-glob-cart2"></i></a>
         <a class="small-btn deal-component-add-favorite J-component-add-favorite item log-mod-viewed" data-mod="df" data-login="false"><i class="F-glob F-glob-star-border"></i><span>收藏</span>(<b class="J-fav-count">328</b>)</a>
     <a class="small-btn share-tip J-component-share-tip-dialog log-mod-viewed" data-mod="dy" id="yui_3_16_0_1_1465960232707_2416" data-mod-mtt="1.deal/default.dy.1-_anchor.ipgaveva"><i class="F-glob F-glob-share"></i>分享到</a>
 </div>
