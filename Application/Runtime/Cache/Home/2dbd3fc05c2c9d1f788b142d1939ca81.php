@@ -1,20 +1,20 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html class="yui3-js-enabled" id="yui_3_16_0_1_1465960232707_233"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- 导入文件   zhangkuan-->
-<script src="__PUBLIC__/Scripts/jquery.js"></script>
-<script src="__PUBLIC__/Scripts/jquery.page.js"></script>
-<link href="__PUBLIC__/Stylesheets/jquery-ui.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="__PUBLIC__/Scripts/jquery-ui.js"></script>
-<script type="text/javascript" src="__PUBLIC__/JS/Home/index.js"></script>
-<script type="text/javascript" src="__PUBLIC__/JS/Home/deal.js"></script>
-<script type="text/javascript" src="__PUBLIC__/JS/Home/Cart.js"></script>
-<script type="text/javascript" src="__PUBLIC__/JS/Home/deal_add_minus.js"></script>
+<script src="/mxsh/Public/Scripts/jquery.js"></script>
+<script src="/mxsh/Public/Scripts/jquery.page.js"></script>
+<link href="/mxsh/Public/Stylesheets/jquery-ui.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/mxsh/Public/Scripts/jquery-ui.js"></script>
+<script type="text/javascript" src="/mxsh/Public/JS/Home/index.js"></script>
+<script type="text/javascript" src="/mxsh/Public/JS/Home/deal.js"></script>
+<script type="text/javascript" src="/mxsh/Public/JS/Home/Cart.js"></script>
+<script type="text/javascript" src="/mxsh/Public/JS/Home/deal_add_minus.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LXtbxUBZfNBXjuwrAljAiHIo"></script>
-<link rel="stylesheet" href="__PUBLIC__/Stylesheets/reset.css" />
-<link rel="stylesheet" href="__PUBLIC__/Stylesheets/pagination.css" />
-<script type="text/javascript" src="__PUBLIC__/Scripts/jquery.pagination.js"></script>
+<link rel="stylesheet" href="/mxsh/Public/Stylesheets/reset.css" />
+<link rel="stylesheet" href="/mxsh/Public/Stylesheets/pagination.css" />
+<script type="text/javascript" src="/mxsh/Public/Scripts/jquery.pagination.js"></script>
 
     
 <meta name="renderer" content="webkit">
@@ -36,16 +36,16 @@
 <link rel="shortcut icon" href="http://www.mxhhw.com/favicon.ico">
 <link rel="canonical" href="http://suzhousz.meituan.com/deal/26263695.html">
 <title>【梦想换货网】宿州商户</title>
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/index_saved_resource(4).css">
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/index_saved_resource(9).css">
+<link rel="stylesheet" type="text/css" href="/mxsh/Public/CSS/index_saved_resource(4).css">
+<link rel="stylesheet" type="text/css" href="/mxsh/Public/CSS/index_saved_resource(9).css">
 
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/deal_saved_resource(3).css">
-<link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(4).css">
-<link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(6).css">
-<link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(12).css">
-<link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(14).css">
-<link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(22).css">
-<link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(23).css">
+<link rel="stylesheet" type="text/css" href="/mxsh/Public/CSS/deal_saved_resource(3).css">
+<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(4).css">
+<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(6).css">
+<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(12).css">
+<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(14).css">
+<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(22).css">
+<link charset="utf-8" rel="stylesheet" href="/mxsh/Public/CSS/deal_saved_resource(23).css">
 <style type="text/css">@media screen{.smnoscreen {display:none}} @media print{.smnoprint{display:none}}</style>
 <noscript hidden="" style="display:none;" class="J-hub" data-hublaziness="load" data-hubcss="fewww:www/css/lazyload.css,iconfont/css/global-iconfont.css@b64babf" data-hubstamp="yui_3_16_0_1_1465960232707_869" data-hubstate="40"></noscript>
 </head>
@@ -54,15 +54,15 @@
 <!-- 引入的JS不好取值 -->
 <div style="display: none" id="deal_hidden">
     <!-- 购物车删除URL -->
-    <div class="delCart_url"><{:U('home/cart/delCart')}></div>
+    <div class="delCart_url"><?php echo U('home/cart/delCart');?></div>
     <!-- 购物车添加URL -->
-    <div class="addCart_url"><{:U('home/cart/addCart')}></div>
+    <div class="addCart_url"><?php echo U('home/cart/addCart');?></div>
     <!-- goods_id -->
-    <div class="goods_id"><{$data['goods_id']}></div>
+    <div class="goods_id"><?php echo ($data['goods_id']); ?></div>
     <!-- goods_name -->
-    <div class="goods_name"><{$data['goods_name']}></div>
+    <div class="goods_name"><?php echo ($data['goods_name']); ?></div>
     <!-- goods_price -->
-    <div class="goods_price"><{$data['goods_price']}></div>
+    <div class="goods_price"><?php echo ($data['goods_price']); ?></div>
     <!-- goods_num -->
     <div class="goods_num">1</div>
 
@@ -71,7 +71,264 @@
 <div id="yui_3_16_0_1_1465960232707_2566" class="yui3-widget widget-flashcopy"><div id="yui_3_16_0_1_1465960232707_2568" class="widget-flashcopy-content"></div></div><div id="qq-dialog" class="mt-overlay-container"><div id="yui_3_16_0_1_1465960232707_2479" class="yui3-widget yui3-overlay yui3-widget-positioned yui3-widget-stacked yui3-overlay-hidden" style="width: 500px; left: 701px; top: 400px; z-index: 102;"><div id="yui_3_16_0_1_1465960232707_2481" class="yui3-overlay-content yui3-widget-stdmod"><div class="yui3-widget-bd" id="yui_3_16_0_1_1465960232707_2592"><div class="mt-dialog" id="yui_3_16_0_1_1465960232707_2591"><h3 class="head" id="yui_3_16_0_1_1465960232707_2590">分享给QQ好友<span class="close" id="yui_3_16_0_1_1465960232707_2589">关闭</span></h3><div class="body" id="yui_3_16_0_1_1465960232707_2599"><p class="error" style="display:none">&nbsp;</p><div id="yui_3_16_0_1_1465960232707_2598">通过QQ、电子邮件发送链接给你的朋友</div><input type="text" class="deal-share-qq-input" value="http://suzhousz.meituan.com/u/15688577" maxlength="40" id="yui_3_16_0_1_1465960232707_2602"><input class="deal-share-qq-copy" type="button" value="复制" style="display:none"></div></div></div></div><div class="mt-overlay-underlay"></div></div></div><div id="mt-overlay-mask" style="width: 1903px; height: 8580px; z-index: 101; visibility: hidden;"></div>
    
     <!-- 顶部公共部分 -->
-    <include file="Layout/other_top" />
+     <header id="site-mast" class="site-mast">
+    <div class="site-mast__user-nav-w" id="J-site-mast__user-nav-w">
+        <div class="site-mast__user-nav cf">
+            <ul class="basic-info">
+                <li class="site-mast__keep">
+                   <a rel="nofollow" class="fav log-mod-viewed" id="J-favorite" href="javascript:void(0);" onclick="javascript:join_favorite(window.location,document.title);">
+                      <i class="F-glob F-glob-star-border icon-keep"></i>
+                      收藏网站
+                  </a>
+                </li>
+                <li class="user-info cf" data-comboajax-uri="/combo/userinfo" data-comboajax-onsuccess="this.setHTML($response.html);" data-comboajax-state="5">
+                    <style type="text/css">
+                        .user-info__login:hover,.user-info__signup:hover,.user-orders a:hover{text-decoration: underline;}
+                    </style>
+                    <?php if($is_cookie_login == 0): ?><a class="user-info__login" id="J-login" href="<?php echo U('cart/login');?>" target="_blank">登录</a>
+                        <a class="user-info__signup" href="http://www.mxhhw.com/index.php?act=login&op=register" target="_blank">注册</a>
+                    <?php else: ?>
+                        <a class="user-info__login" id="J-login" href="http://www.mxhhw.com/shop/index.php?act=member&op=home" target="_blank"><?php echo ($vr_member_name); ?></a>
+                        <a class="user-info__signup" href="http://www.mxhhw.com/shop/index.php?act=login&op=logout" target="_blank">退出</a><?php endif; ?>
+                </li>
+                <li data-uix="dropdown" class="dropdown dropdown--msg" data-comboajax-uri="/index/message" data-comboajax-onsuccess="$request.listen(&quot;www-tips&quot;, &quot;www.MsgCenter&quot;);" data-comboajax-state="5" style="display:none;" id="yui_3_16_0_1_1465867114754_245">
+                    <a id="J-my-msg" rel="nofollow" class="dropdown__toggle" href="http://www.meituan.com/message/" gaevent="nav/mymsg">
+                        <i class="vertical-bar vertical-bar--left"></i>
+                        <span class="J-title">消息</span>
+                        <i class="tri tri--dropdown"></i>
+                        <i class="vertical-bar"></i>
+                    </a>
+                </li>
+                <li data-uix="dropdown" data-params="{&quot;classname&quot;: &quot;dropdown--open dropdown--open-app&quot;}" class="mobile-info__item dropdown" id="mxsh_app_download">
+                    <a class="dropdown__toggle" href="javascript:;"><i class="icon-mobile F-glob F-glob-phone"></i>商户APP<i class="tri tri--dropdown"></i></a>
+                    <div class="dropdown-menu dropdown-menu--app">
+                        <a class="app-block" href="http://i.meituan.com/mobile/down/meituan" target="_blank">
+                            <span class="app-block__title">免费下载店店通android版</span>
+                            <span class="app-block__content"></span>
+                            <i class="app-block__arrow F-glob F-glob-caret-right"></i>
+                        </a>
+                        <a class="app-block app-block--last app-block--maoyan" href="http://www.maoyan.com/" target="_blank">
+                            <span class="app-block__title">免费下载店店通ios版</span>
+                            <span class="app-block__content"></span>
+                            <i class="app-block__arrow F-glob F-glob-caret-right"></i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="site-mast__user-w">
+                <li class="user-orders">
+                    <a href="http://www.mxhhw.com/shop/index.php?act=member_vr_order&op=index" target="_blank">我的订单</a>
+                </li>
+                <li data-uix="dropdown" class="dropdown dropdown--account" id="mxsh_my_home">
+                    <a id="J-my-account-toggle" rel="nofollow" class="dropdown__toggle" href="http://www.mxhhw.com/shop/index.php?act=member&op=home" target="_blank">
+                        <span>我的商城</span>
+                        <i class="tri tri--dropdown"></i>
+                        <i class="vertical-bar"></i>
+                    </a>
+                    <ul id="J-my-account-menu" class="dropdown-menu dropdown-menu--text dropdown-menu--account account-menu" data-mtnode="Amymeituan">
+                        <li><a class="dropdown-menu__item first " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_vr_order&op=index" target="_blank">我的订单</a></li>
+                       <li><a class="dropdown-menu__item  " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_evaluate&op=list" target="_blank">我的评价</a></li>
+                       <li><a class="dropdown-menu__item  " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_favorites&op=fglist" target="_blank">我的收藏</a></li>
+                       <li><a class="dropdown-menu__item  " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_points&op=index" target="_blank">我的积分</a></li>
+                       <li><a class="dropdown-menu__item  " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_voucher&op=index" target="_blank">抵用券</a></li>
+                       <li><a class="dropdown-menu__item  " rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=predeposit&op=pd_log_list" target="_blank">我的余额</a></li>
+                       <li><a class="dropdown-menu__item  last" rel="nofollow" href="http://www.mxhhw.com/shop/index.php?act=member_information&op=member" target="_blank">账户设置</a></li>
+                    </ul>
+                </li>
+                <li data-uix="dropdown" data-params="{&quot;classname&quot;: &quot;dropdown--open dropdown--open-history&quot;}" class="dropdown dropdown--history" data-comboajax-uri="/index/rvd" data-comboajax-config="www.History.nav" data-comboajax-state="5" id="mxsh_scan_history">
+                    <a id="J-my-history-toggle" rel="nofollow" class="dropdown__toggle" href="javascript:;" gaevent="nav/history">
+                        <span>最近浏览</span>
+                        <i class="tri tri--dropdown"></i>
+                        <i class="vertical-bar"></i>
+                    </a>
+                    <div id="J-my-history-menu" class="dropdown-menu dropdown-menu--deal dropdown-menu--history">
+                        <p class="dropdown-menu--empty">暂无浏览记录</p>
+                    </div>
+                </li>
+                <li data-uix="dropdown" id="J-my-cart" class="dropdown dropdown--cart J-cart-updated" data-comboajax-uri="/index/navcart" data-comboajax-onsuccess="Y.mt.www.CartEx.update($response.data);" data-comboajax-state="5">
+                    <a id="J-my-cart-toggle" rel="nofollow" class="dropdown__toggle" href="<?php echo U('cart/index');?>" gaevent="nav/cart">
+                        <i class="icon icon-cart F-glob F-glob-cart"></i>
+                        <span>购物车<em class="badge" data-newindex="true"><strong class="cart-count">0</strong>件</em></span>
+                        <i class="tri tri--dropdown"></i>
+                        <i class="vertical-bar"></i>
+                    </a>
+                    <div id="J-my-cart-menu" class="dropdown-menu dropdown-menu--deal dropdown-menu--cart">
+                        <p class="dropdown-menu--empty">暂时没有商品</p>
+                    </div>
+                </li>
+                <li data-uix="dropdown" id="J-site-help" class="dropdown dropdown--help">
+                    <a class="dropdown__toggle" href="javascript:void(0);">
+                        <span>联系客服</span>
+                        <i class="tri tri--dropdown"></i>
+                        <i class="vertical-bar"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu--text dropdown-menu--help">
+                        <ul class="site-help-info">
+                            <li><a rel="nofollow" class="J-selfservice-tab dropdown-menu__item" data-tab="0" href="http://www.mxhhw.com/shop/index.php?act=article&op=article&ac_id=2" target="_blank">帮助中心</a></li>
+                            <li><a rel="nofollow" class="J-selfservice-tab dropdown-menu__item" data-tab="1" href="http://www.mxhhw.com/shop/index.php?act=article&op=article&ac_id=5" target="_blank">售后服务</a></li>
+                            <li><a rel="nofollow" class="J-selfservice-tab dropdown-menu__item" data-tab="2" href="http://www.mxhhw.com/shop/index.php?act=article&op=article&ac_id=6" target="_blank">客服中心</a></li>                            
+                        </ul>
+                    </div>
+                </li>
+                <li data-uix="dropdown" id="J-site-merchant" class="dropdown dropdown--merchant">
+                    <a class="dropdown__toggle dropdown__toggle--merchant" href="javascript:;" gaevent="top/merchant">
+                        <span>我是商家</span>
+                        <i class="tri tri--dropdown"></i>
+                        <i class="vertical-bar"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu--text dropdown-menu--merchant">
+                        <ul>
+                            <li><a rel="nofollow" class="dropdown-menu__item" href="http://www.mxhhw.com/shop/index.php?act=seller_login&op=show_login" target="_blank">登录商家中心</a></li>
+                            <li><a rel="nofollow" class="dropdown-menu__item" href="http://www.mxhhw.com/shop/index.php?act=show_joinin&op=index" target="_blank">招商入住</a></li>                           
+                        </ul>
+                    </div>
+                </li>
+                <li data-uix="dropdown" id="J-my-more" class="dropdown dropdown--more dropdown--last">
+                    <a id="J-my-more-toggle" class="dropdown__toggle dropdown__toggle--my-more" href="javascript:;" gaevent="nav/more">
+                        <span>更多</span>
+                        <i class="tri tri--dropdown"></i>
+                    </a>
+                    <div id="J-my-more-menu" class="dropdown-menu dropdown-menu--text dropdown-menu--more">
+                        <ul>
+                            <li>
+                                <a rel="nofollow" class="mobile dropdown-menu__item" href="javascript:void(0);" target="_blank"><span></span>手机版</a>
+                            </li>  
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <noscript hidden="" style="display:none;" data-comboajax-uri="/index/vipbubble" data-comboajax-data="{&quot;ref&quot;:&quot;\/index\/default&quot;}" data-comboajax-onsuccess="$request.listen(&quot;www-tips&quot;, &quot;www.VipBubble&quot;);" data-comboajax-state="5"></noscript>
+        </div>
+    </div>
+    <div style="display:none;" data-hubmodule="www-banner" data-hublaziness="load" class="J-hub J-banner-newtop ui-slider common-banner common-banner--newtop log-mod-viewed J-banner-stamp-active" data-mod="ib" data-mod-deepview="1-7600" data-banner-conf="{&quot;sheetContainer&quot;:&quot;.common-banner__sheets&quot;,&quot;effect&quot;:&quot;slideFadeIn&quot;}" id="yui_3_16_0_1_1465867114754_337" data-hubstamp="yui_3_16_0_1_1465867114754_336" data-hubstate="40">
+            <div class="common-banner__sheet cf">
+                
+                <a class="common-banner__link" target="_blank" href="http://www.meituan.com/topic/4076" gaevent="top/others/4076" data-mttcode="Abanner.B4076" data-mod-idx="7600"><img onload="M.delayImg(this);" alt="【多城市】1元起吃喝玩乐" src="/mxsh/Public/category_files/cac6a15bea79a75d2def02adaab989a268774.jpg" width="980" height="60"></a>
+            </div>
+            <a href="javascript:void(0)" class="F-glob F-glob-close common-close--iconfont-small close" title="关闭"></a></div>
+    <noscript hidden="" style="display:none;" data-comboajax-uri="/combo/leftsidebanner/index" data-comboajax-onsuccess="$request.listen(&quot;www-banner&quot;, &quot;www.Banner.Leftside&quot;, true);" data-comboajax-state="5"></noscript>
+    
+    <div class="site-mast__branding cf" id="J-site-mast__branding">
+        <h1><a class="site-logo" href="/mxsh/" gaevent="header/logo">宿州团购</a></h1>
+ 
+        <div class="city-info">
+            <h2><a class="city-info__name" href="/mxsh/" gaevent="header/cityname">宿州</a></h2>
+            <a class="city-info__toggle" href="http://www.meituan.com/index/changecity/initiative" gaevent="header/changecity">切换城市</a>
+        </div>
+         
+            <div data-component="search-box" class="component-search-box mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465867114754_339"><div data-comboajax-uri="/index/hotqueries" data-comboajax-data="{&quot;isshowshops&quot;:true,&quot;isshopspage&quot;:false}" data-comboajax-onsuccess="this.append($response.html);" data-comboajax-state="5" class="J-search-box search-box ">
+
+
+
+<!-- 关键字搜索  zhangkuan -->  
+    <form  class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1464999326260_126">
+        <div class="search-box__tabs-container" style="float:left">
+            <span class="tri"></span>
+            <ul class="J-search-box__tabs search-box__tabs">
+                <li class="search-box__tab J-search-box__tab--deal search-box__tab--current">商品</li>
+                <li class="search-box__tab J-search-box__tab--shops">商家</li>
+            </ul>
+        </div>
+        <input tabindex="1" type="text" name="name" autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1464999326260_132" class="name">
+       <!--  搜索通过事件提交，增加key字段提交(区分类别跳转) -->
+        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr"  onclick="location.href='<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/'+$('#yui_3_16_0_1_1464999326260_132').val();">       
+    </form>
+<!-- 关键字搜索结束  zhangkuan -->  
+
+
+
+
+
+
+
+
+    <ul class="search-suggest J-search-suggest" style="display:none;">
+    </ul>
+    <div class="smart-query-panel" style="display:none" id="yui_3_16_0_1_1465867114754_1880">
+        <div class="smart-query-content"></div>
+    </div>
+    <div class="J-search-box__hot search-box__hot log-mod-viewed" data-mod="st" id="yui_3_16_0_1_1465867114754_2107"><div class="s-hot" id="J-deal-hot-query"><a class="hot-link  hot-link--first" gaevent="search/hotquery/1" data-mttcode="Asearch.Bhotquery.C1.D" href="http://www.meituan.com/s/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="search/hotquery/2" data-mttcode="Asearch.Bhotquery.C2.D" href="http://www.meituan.com/s/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="search/hotquery/3" data-mttcode="Asearch.Bhotquery.C3.D" href="http://www.meituan.com/s/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="search/hotquery/4" data-mttcode="Asearch.Bhotquery.C4.D" href="http://www.meituan.com/s/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="search/hotquery/5" data-mttcode="Asearch.Bhotquery.C5.D" href="http://www.meituan.com/s/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="search/hotquery/6" data-mttcode="Asearch.Bhotquery.C6.D" href="http://www.meituan.com/s/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="search/hotquery/7" data-mttcode="Asearch.Bhotquery.C7.D" href="http://www.meituan.com/s/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="search/hotquery/8" data-mttcode="Asearch.Bhotquery.C8.D" href="http://www.meituan.com/s/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="search/hotquery/9" data-mttcode="Asearch.Bhotquery.C9.D" href="http://www.meituan.com/s/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="search/hotquery/10" data-mttcode="Asearch.Bhotquery.C10.D" href="http://www.meituan.com/s/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div><div class="s-hot" id="J-poi-hot-query" style="display:none"><a class="hot-link  hot-link--first" gaevent="poisearch/hotquery/1" data-mttcode="Apoisearch.Bhotquery.C1.D" href="http://www.meituan.com/shops/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="poisearch/hotquery/2" data-mttcode="Apoisearch.Bhotquery.C2.D" href="http://www.meituan.com/shops/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="poisearch/hotquery/3" data-mttcode="Apoisearch.Bhotquery.C3.D" href="http://www.meituan.com/shops/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="poisearch/hotquery/4" data-mttcode="Apoisearch.Bhotquery.C4.D" href="http://www.meituan.com/shops/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="poisearch/hotquery/5" data-mttcode="Apoisearch.Bhotquery.C5.D" href="http://www.meituan.com/shops/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="poisearch/hotquery/6" data-mttcode="Apoisearch.Bhotquery.C6.D" href="http://www.meituan.com/shops/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="poisearch/hotquery/7" data-mttcode="Apoisearch.Bhotquery.C7.D" href="http://www.meituan.com/shops/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="poisearch/hotquery/8" data-mttcode="Apoisearch.Bhotquery.C8.D" href="http://www.meituan.com/shops/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="poisearch/hotquery/9" data-mttcode="Apoisearch.Bhotquery.C9.D" href="http://www.meituan.com/shops/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="poisearch/hotquery/10" data-mttcode="Apoisearch.Bhotquery.C10.D" href="http://www.meituan.com/shops/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div></div></div>
+</div>
+        <a class="site-commitment" gaevent="top/commitment" href="http://www.meituan.com/commitment/" target="_blank">
+            <span class="commitment-item"><i class="F-glob F-glob-commitment-retire"></i>随时退</span>
+            <span class="commitment-item"><i class="F-glob F-glob-commitment-free"></i>不满意免单</span>
+            <span class="commitment-item"><i class="F-glob F-glob-commitment-expire"></i>过期退</span>
+        </a>
+    </div>
+
+
+
+
+
+
+    <div class="site-mast__site-nav-w" id="yui_3_16_0_1_1465867114754_2308">
+        <div class="site-mast__site-nav" id="yui_3_16_0_1_1465867114754_2307">
+            <div class="site-mast__site-nav-inner" id="yui_3_16_0_1_1465867114754_2306">
+
+
+
+
+
+
+
+
+
+
+<!-- 导航分类  zhangkuan -->  
+
+    <div data-component="cate-nav" class="component-cate-nav mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1465867114754_341">
+        <span class="mt-cates J-nav__trigger nav-unindex">
+            <i class="F-glob F-glob-caret-down"></i><i class="F-glob F-glob-caret-up"></i>全部分类
+        </span>
+        <div class="cate-nav J-nav__list J-nav__list--delayed cateNavNew log-mod-viewed" data-mtnode="Acategory.Enavcategory" data-mod="nc" style="display: none;" id="yui_3_16_0_1_1465867114754_10307" hidden="hidden">
+            <?php if(is_array($floorData)): $i = 0; $__LIST__ = $floorData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(is_array($v['recSubCat'])): $i = 0; $__LIST__ = $v['recSubCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><!-- 显示九层-->
+                    <?php static $k = 0; if($k>=9){break;} $k++; ?>
+                        <div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12113">
+                            <div class="cate-nav__item J-cate-nav__item--1 cate-nav__item--1 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_749">
+                                <div class="nav-level1 nav-level1--first" id="yui_3_16_0_1_1464999326260_12112">
+                                    <dl id="yui_3_16_0_1_1464999326260_12111">
+                                        <dt id="yui_3_16_0_1_1464999326260_12110"><a class="nav-level1__label" href="<?php echo U('Home/Search/category/gc_id/'.$v1['gc_id'], '', FALSE);?>-<?php echo $v1['gc_name']; ?>" hidefocus="true" id="yui_3_16_0_1_1464999326260_12265"><?php echo ($v1['gc_name']); ?></a> </dt>                
+                                    </dl>
+                                    <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
+                                </div>
+                                <!-- 特效尺寸调整 -->
+                                <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="1" style="visibility: visible; top: <?php echo 0 - 51 * ($k-1);?>px; display: none;" hidden="hidden">
+                                    <div class="nav-level2-item nav-level2-keywords">
+                                        <div class="nav-level2-keywords--title"><a href="<?php echo U('Home/Search/category/gc_id/'.$v1['gc_id'], '', FALSE);?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a></div>
+                                        <ul class="nav-level2-keywords--content">
+                                         <?php if(is_array($v1['threeCat'])): $i = 0; $__LIST__ = $v1['threeCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i;?><li><a class="keywords__item " href="<?php echo U('Home/Search/category', '', FALSE);?>/gc_id/<?php echo ($v1['gc_id']); ?>-<?php echo $v1['gc_name']; ?>/gc_id3/<?php echo ($v2['gc_id']); ?>-<?php echo $v2['gc_name']; ?>"><?php echo ($v2['gc_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>                          
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><?php endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
+        </div>
+    </div>
+<!-- 导航分类结束位置zhangkuan -->
+
+
+
+
+
+
+
+                <nav>
+                    <ul class="navbar cf  log-mod-viewed" data-mod="lz" data-mod-deepview="1" id="yui_3_16_0_1_1465867114754_1864">
+                        <li class="navbar__item-w ">
+                            <a class="navbar__item" href="/mxsh/" gaevent="nav/today" hidefocus="true"><span class="nav-label">首页</span></a>
+                        </li>                       
+                        <li class="navbar__item-w ">
+                            <a class="navbar__item" target="_blank" href="http://www.mxhhw.com" data-mttcode="Acategory.Bwanggou" gaevent="nav/wanggou" hidefocus="true"><span class="nav-label">购物</span></a>
+                        </li>                       
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<script type="text/javascript" src="/mxsh/Public/Scripts/layer-v2.3/layer/layer.js"></script>
     
     <div id="bdw" class="bdw">
         <div id="bd" class="cf">
@@ -83,24 +340,24 @@
 <!-- 部分内容改动  各级类名与店名  zhangkuan-->
     <div data-component="bread-nav" class="component-bread-nav mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1465960232707_76">
         <div class="bread-nav">
-            <a class="link--black__green" gaevent="crumb/index" href="#" data-mttcode="&quot;Abreadcrumb.B1&quot;"> <{$gcname[1]['gc_name']}>
+            <a class="link--black__green" gaevent="crumb/index" href="#" data-mttcode="&quot;Abreadcrumb.B1&quot;"> <?php echo ($gcname[1]['gc_name']); ?>
             </a>
             <span>»</span>        
-            <a class="link--black__green" gaevent="crumb/category/1" href="#" data-mttcode="&quot;Abreadcrumb.B2&quot;"><{$gcname[2]['gc_name']}>
+            <a class="link--black__green" gaevent="crumb/category/1" href="#" data-mttcode="&quot;Abreadcrumb.B2&quot;"><?php echo ($gcname[2]['gc_name']); ?>
             </a>
             <span>»</span>        
-            <a class="link--black__green" gaevent="crumb/category/2" href="#" data-mttcode="&quot;Abreadcrumb.B3&quot;"><{$gcname[3]['gc_name']}>
+            <a class="link--black__green" gaevent="crumb/category/2" href="#" data-mttcode="&quot;Abreadcrumb.B3&quot;"><?php echo ($gcname[3]['gc_name']); ?>
             </a>           
             <span>»</span>        
-            <{$data['goods_name']}>        
+            <?php echo ($data['goods_name']); ?>        
         </div>
     </div>
     <div class="deal-component-container" id="yui_3_16_0_1_1465960232707_232">
         <div class="deal-component-headline">
             <div class="sans-serif">
-                <span class="deal-component-title-prefix">【*****】</span><h1 class="deal-component-title"> <{$data['goods_name']}></h1>
+                <span class="deal-component-title-prefix">【*****】</span><h1 class="deal-component-title"> <?php echo ($data['goods_name']); ?></h1>
             </div>
-            <div class="deal-component-description">仅售 <{$data['goods_promotion_price']}>元！市场价<{$data['goods_marketprice']}>元，提供免费WiFi。</div>
+            <div class="deal-component-description">仅售 <?php echo ($data['goods_promotion_price']); ?>元！市场价<?php echo ($data['goods_marketprice']); ?>元，提供免费WiFi。</div>
     </div>
     <div class="deal-component-detail cf" id="yui_3_16_0_1_1465960232707_231">
         <div class="deal-component-left" id="yui_3_16_0_1_1465960232707_230">
@@ -114,10 +371,10 @@
                                 <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约
                                 </span>
                             </span>
-                            <img class="focus-view" src="__PUBLIC__/deal_files/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" alt="美佳乐蛋糕" width="460" height="280" onload="M.logFirstScreenTime(this)">
+                            <img class="focus-view" src="/mxsh/Public/deal_files/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" alt="美佳乐蛋糕" width="460" height="280" onload="M.logFirstScreenTime(this)">
                         </div>
                         <div class="candidates" id="yui_3_16_0_1_1465960232707_1543">
-                                <img class="first-image active" src="__PUBLIC__/deal_files/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" data-large-src="http://p0.meituan.net/460.280/deal/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" width="78" height="45">
+                                <img class="first-image active" src="/mxsh/Public/deal_files/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" data-large-src="http://p0.meituan.net/460.280/deal/0af5e66e4363eb528f0442444f771eb7179883.jpg@PC" width="78" height="45">
                         </div>
                     </div>
                 </div>
@@ -138,13 +395,13 @@
             </i>
             <i class="inline-block ps_32 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/32/a85b47458f.png@b64babf);background-position: -90px -102px;">                
             </i> -->
-                                <{$data['goods_promotion_price']}>
+                                <?php echo ($data['goods_promotion_price']); ?>
                             </strong>
                         </h2>
                         <span class="promote-default">
                             <span class="status">门店价 
                             </span>
-                            <del class="item sans-serif"> ¥<{$data['goods_marketprice']}>
+                            <del class="item sans-serif"> ¥<?php echo ($data['goods_marketprice']); ?>
                             </del>
                         </span>
                     </div>
@@ -154,7 +411,7 @@
             <div class="deal-component-rating ccf">
                 <span class="item">
                     <span>已售
-                        <span class="deal-component-rating-sold-count orange"><{$data['goods_salenum']}>
+                        <span class="deal-component-rating-sold-count orange"><?php echo ($data['goods_salenum']); ?>
                         </span>
                     </span>
                 </span>
@@ -166,13 +423,13 @@
                     </a>
                     <a href="javascript:void(0);" class="look-normal" data-anchor="#anchor-reviews">
                         <span>
-                            <span class="deal-component-rating-stars orange"><{$total}></span>分
+                            <span class="deal-component-rating-stars orange"><?php echo ($total); ?></span>分
                         </span>
                     </a>
                 </span>
                 <span class="vertical-divider-thin"></span>
                 <span class="comments-count">
-                    <a class="look-normal" href="http://suzhousz.meituan.com/deal/26263695.html#anchor-reviews" data-anchor="#anchor-reviews"><span class="deal-component-rating-comment-count orange"><{$data['evaluation_count']}></span>人评价</a>
+                    <a class="look-normal" href="http://suzhousz.meituan.com/deal/26263695.html#anchor-reviews" data-anchor="#anchor-reviews"><span class="deal-component-rating-comment-count orange"><?php echo ($data['evaluation_count']); ?></span>人评价</a>
                 </span>
             </div>
 <!-- 部分内容改动结束  zhangkuan-->
@@ -397,19 +654,19 @@
                     </tbody></table>
                         <p class="deal-menu-summary">价值: <span class="inline-block worth">¥3</span>美团价: <span class="inline-block worth price">¥<i class="inline-block ps_16 pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -30px -48px;"></i><i class="inline-block ps_16 ps_16p pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -60px -48px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -40px -64px;"></i></span></p><ul class="list">
 <li>免费提供餐巾纸</li>
- </ul><p class="standard-bar">美团推荐</p><div class="standard-content"><img class="" src="__PUBLIC__/deal_files/3c2cd9f196d64d4784507b4bfb037687117325.jpg@PC" alt="__33720999__1960475" height="388"><img class="" src="__PUBLIC__/deal_files/211e3e4874e1cfea99a4109fa365086e137890.jpg@PC" alt="__33720984__2087680" height="388"><img class="" src="__PUBLIC__/deal_files/3511a8302a0661ccb426b6662cdf5275122125.jpg@PC" alt="__33720996__1056767" height="388"><img class="" src="__PUBLIC__/deal_files/8b7fd5b7a4b223d4f4128f5180e845d9219639.jpg@PC" alt="__33721001__6541897" height="388"></div><div id="anchor-bizinfo"><h2 class="content-title">商家介绍</h2><p class="standard-bar">
+ </ul><p class="standard-bar">美团推荐</p><div class="standard-content"><img class="" src="/mxsh/Public/deal_files/3c2cd9f196d64d4784507b4bfb037687117325.jpg@PC" alt="__33720999__1960475" height="388"><img class="" src="/mxsh/Public/deal_files/211e3e4874e1cfea99a4109fa365086e137890.jpg@PC" alt="__33720984__2087680" height="388"><img class="" src="/mxsh/Public/deal_files/3511a8302a0661ccb426b6662cdf5275122125.jpg@PC" alt="__33720996__1056767" height="388"><img class="" src="/mxsh/Public/deal_files/8b7fd5b7a4b223d4f4128f5180e845d9219639.jpg@PC" alt="__33721001__6541897" height="388"></div><div id="anchor-bizinfo"><h2 class="content-title">商家介绍</h2><p class="standard-bar">
 美佳乐蛋糕
 </p><div class="standard-content">
 
-    <img class="" src="__PUBLIC__/deal_files/78b9fd88d6676370cf500c172859d451290983.jpg@PC" alt="_MG_0206_副本" height="467">
+    <img class="" src="/mxsh/Public/deal_files/78b9fd88d6676370cf500c172859d451290983.jpg@PC" alt="_MG_0206_副本" height="467">
 
 <p>
 美佳乐蛋糕位于胜利中路399号第一小学东50米，多年来主要做生日蛋糕和现烤现卖面包西饼，产品新鲜健康、成立二十多年至今口碑很好！ 本店的奶油蛋糕，纯正的天然美味，0反式脂肪酸，100%天然奶油从新鲜牛奶中提取，无任何色素和、香精、防腐剂，是纯正的天然美味。美嘉乐的慕斯蛋糕、芝士蛋糕、巧克力蛋糕是充满高贵感性、时尚品味的优质产品；在制作工艺中，集南北风味之所长，广泛吸取欧洲产品制作工艺精华，独特的设计与口感完美组合，让每一位食客享受到出乎意料的美味。
 </p>
 
-    <img class="" src="__PUBLIC__/deal_files/6895e158cc55903dcb212a4618b8be60284704.jpg@PC" alt="_MG_0917_副本" height="467">
-    <img class="" src="__PUBLIC__/deal_files/0d8ac9d39b3b007beef04723d04f55ea286793.jpg@PC" alt="_MG_0915_副本" height="467">
-    <img class="" src="__PUBLIC__/deal_files/353e46361548d575077522bf31873879327932.jpg@PC" alt="_MG_0918_副本" height="467"></div></div></div>
+    <img class="" src="/mxsh/Public/deal_files/6895e158cc55903dcb212a4618b8be60284704.jpg@PC" alt="_MG_0917_副本" height="467">
+    <img class="" src="/mxsh/Public/deal_files/0d8ac9d39b3b007beef04723d04f55ea286793.jpg@PC" alt="_MG_0915_副本" height="467">
+    <img class="" src="/mxsh/Public/deal_files/353e46361548d575077522bf31873879327932.jpg@PC" alt="_MG_0918_副本" height="467"></div></div></div>
                     <div id="anchor-reviews" class="user-reviews J-rate-wrapper J-hub" data-huburl="deal/userreviews" data-hubmodule="www-deal" data-hubnamespace="Deal.UserReviews" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_33" data-hubstate="50">
     
 
@@ -421,12 +678,12 @@
         <div class="overview-detail cf J-hub" data-huburl="deal/dynamicuserreview" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_1067" data-hubstate="50" id="yui_3_16_0_1_1465960232707_2189">
             <div class="rating-area total-detail">
                 <div class="total-group total-score">
-                    <span><span class="average-score"><{$total}></span>分</span>
+                    <span><span class="average-score"><?php echo ($total); ?></span>分</span>
                 </div>
                 <div class="total-group">
-                    <span class="common-rating rating-16x16"><span class="rate-stars" style="width:<{$total_favourable}>"></span></span>
+                    <span class="common-rating rating-16x16"><span class="rate-stars" style="width:<?php echo ($total_favourable); ?>"></span></span>
                 </div>
-                <div class="total-group total-count">共 <strong><{$temp}></strong> 人评价</div>
+                <div class="total-group total-count">共 <strong><?php echo ($temp); ?></strong> 人评价</div>
             </div>
             <!-- <div class="rating-area score-detail">
                 <div class="score-group">
@@ -441,11 +698,9 @@
             </div> -->
             <div class="rating-area count-detail">
                 <div class="count-wrapper inline-block">
-                    <foreach name="favourable" item="vo" key="k">
-                        <div class="count-group a<{$k}>">
-                            <span class="score"><{$k}>分</span><span class="percent-box inline-block"><em style="width:<{$vo}>" class="percent inline-block"></em></span><{$num[$k]}>人
-                        </div>
-                   </foreach>
+                    <?php if(is_array($favourable)): foreach($favourable as $k=>$vo): ?><div class="count-group a<?php echo ($k); ?>">
+                            <span class="score"><?php echo ($k); ?>分</span><span class="percent-box inline-block"><em style="width:<?php echo ($vo); ?>" class="percent inline-block"></em></span><?php echo ($num[$k]); ?>人
+                        </div><?php endforeach; endif; ?>
                 </div>
             </div>
         </div>
@@ -521,7 +776,7 @@
         </div>
     </div>
     <div class="J-bottom-list-wrapper deal-bottom-recommend" style="visibility: hidden;"></div>
-        <a href="http://i.meituan.com/mobile/down/dealbottom" target="_blank" hidefocus="true" title="下载美团app"><img class="" src="__PUBLIC__/Images/deal-mobile-app-promotion.png" width="702"></a>
+        <a href="http://i.meituan.com/mobile/down/dealbottom" target="_blank" hidefocus="true" title="下载美团app"><img class="" src="/mxsh/Public/Images/deal-mobile-app-promotion.png" width="702"></a>
 </div>
 
 <div id="sidebar">
@@ -780,7 +1035,18 @@
 	</div>
     </div>
     <!-- 版权信息 -->
-    <include file="Layout/copyright" />
+    <div class="copyright">
+    <p>©<span title="I:2; Q:2; S:2; C:16; F:3; T:367.01; H:com">2016</span><a href="http://www.mxhhw.com/" target="_blank">梦想换货网</a> mxhhw.com <a href="http://www.beianbeian.com/beianxinxi/5e40326e-16f0-4c22-b329-b40104fd8e4e.html" target="_blank">皖ICP备14012689号-2</a> 
+    </p>
+    <div style="width:300px;margin:0 auto; padding:20px 0;">
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502025545" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/mxsh/Public/Images/wangan.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备11010502025545号</p></a>
+    </div>
+</div>
+<ul class="cert cf">
+    <li class="cert__item"><a class="sp-ft sp-ft--record" title="备案信息" href="http://www.meituan.com/about/openinfo" hidefocus="true" target="_blank">备案信息</a></li>
+    <li class="cert__item"><a class="sp-ft sp-ft--knet" href="http://t.knet.cn/index_new.jsp" target="_blank" title="可信网站认证" rel="nofollow">可信网站</a></li>
+    <li class="cert__item"><a class="sp-ft sp-ft--12315" href="http://www.bj315.org/xfwq/lstd/201209/t20120910_3344.shtml?dnrpluojqxbceiqq" target="_blank" title="12315消费争议" rel="nofollow">12315消费争议</a></li>
+</ul>
 </footer>
 
 <div data-component="rightbottom-sticky" class="component-rightbottom-sticky mt-component--booted" mt-scope="[]" data-component-config="{&quot;css&quot;:&quot;fewww:\/www\/css\/rightbottom-sticky.css@b64babf&quot;}" id="yui_3_16_0_1_1465960232707_120" style="bottom: 20px; right: 10px;"><div id="fixbar-container" class="new-index-triffle-w" data-config="{&quot;feedbackConfig&quot;:{&quot;url&quot;:&quot;\/vote\/survey\/19&quot;,&quot;ga&quot;:&quot;survey\/deal\/19&quot;}}" style="bottom: 20px; right: 10px;">
@@ -831,7 +1097,7 @@
             {
                 var html = '';
                 $(data).each(function(k,v){                 
-                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="__PUBLIC__/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="#" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';        
+                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="#" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';        
                 });                          
                 $('#display_history').html(html);
             }
@@ -1089,7 +1355,7 @@ a:hover{ text-decoration:none;}
                     $(data).each(function(k,v){
                         var time = getLocalTime(v.geval_addtime);
                         var x = getxing(v.geval_scores);
-                        b+='<li class="J-ratelist-item rate-list__item cf" data-rateid="910796953"><div class="user-info-block"><div class="avatar-wrapper"><img class="avatar" src="__PUBLIC__/deal_files/89bec9d64cde38d441cf976f751c482e3788.png"></div><p class="name-wrapper"><span class="name">'+v.geval_frommembername+'</span><span class="growth-info"><i class="sp-growth-icons level-icon level-icon-2" title="等级VIP2"></i></span></p></div><div class="review-content-wrapper"><div class="info cf"><div class="rate-status"><span class="common-rating"><span class="rate-stars" style="width:'+x+'"></span></span></div><span class="time">'+time+'</span></div><div class="J-normal-view"><p class="content"><a href="http://suzhousz.meituan.com/shop/feedback/910796953" target="_blank" class="hqrate-badge"><strong>[认真评价]</strong></a>'+v.geval_content+'</p><div id="yui_3_16_0_1_1465960232707_2285" class="yui3-widget widget-carousel"><div class="pic-list J-piclist-wrapper widget-carousel-content" id="yui_3_16_0_1_1465960232707_2286"><div class="J-pic-thumbnails pic-thumbnails widget-carousel-indicators" id="yui_3_16_0_1_1465960232707_2290"><ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2292" style="width: 452px; left: 0px;"><li data-src="http://p0.meituan.net/w.h/shaitu/182b9ff352ec61f4924899adf327e42f205885.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="__PUBLIC__/deal_files/182b9ff352ec61f4924899adf327e42f205885.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="__PUBLIC__/deal_files/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="__PUBLIC__/deal_files/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"></a></li></ul><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev" hidden="hidden" style="display: none;"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next" hidden="hidden" style="display: none;"></a></div><div class="J-pic-preview pic-preview widget-carousel-previews" hidden="hidden" style="display: none;"><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next"></a></div></div></div></div><div class="J-long-view long-rate-view" hidden="" style="display:none"></div></div></li>';
+                        b+='<li class="J-ratelist-item rate-list__item cf" data-rateid="910796953"><div class="user-info-block"><div class="avatar-wrapper"><img class="avatar" src="/mxsh/Public/deal_files/89bec9d64cde38d441cf976f751c482e3788.png"></div><p class="name-wrapper"><span class="name">'+v.geval_frommembername+'</span><span class="growth-info"><i class="sp-growth-icons level-icon level-icon-2" title="等级VIP2"></i></span></p></div><div class="review-content-wrapper"><div class="info cf"><div class="rate-status"><span class="common-rating"><span class="rate-stars" style="width:'+x+'"></span></span></div><span class="time">'+time+'</span></div><div class="J-normal-view"><p class="content"><a href="http://suzhousz.meituan.com/shop/feedback/910796953" target="_blank" class="hqrate-badge"><strong>[认真评价]</strong></a>'+v.geval_content+'</p><div id="yui_3_16_0_1_1465960232707_2285" class="yui3-widget widget-carousel"><div class="pic-list J-piclist-wrapper widget-carousel-content" id="yui_3_16_0_1_1465960232707_2286"><div class="J-pic-thumbnails pic-thumbnails widget-carousel-indicators" id="yui_3_16_0_1_1465960232707_2290"><ul class="pic-thumbnail-list widget-carousel-indicator-list" id="yui_3_16_0_1_1465960232707_2292" style="width: 452px; left: 0px;"><li data-src="http://p0.meituan.net/w.h/shaitu/182b9ff352ec61f4924899adf327e42f205885.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/182b9ff352ec61f4924899adf327e42f205885.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/fa9b22bfdcd87497b18cd05b95bcb8ff238087.jpg"></a></li><li data-src="http://p1.meituan.net/w.h/shaitu/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"><a class="pic-thumbnail" href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true"><img src="/mxsh/Public/deal_files/3c7b4ac83af0f3d4440bd2219b43112a257185.jpg"></a></li></ul><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev" hidden="hidden" style="display: none;"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next" hidden="hidden" style="display: none;"></a></div><div class="J-pic-preview pic-preview widget-carousel-previews" hidden="hidden" style="display: none;"><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link  widget-carousel-nav-prev prev"></a><a href="http://suzhousz.meituan.com/deal/26263695.html#" hidefocus="true" class="widget-carousel-nav-link widget-carousel-nav-next next"></a></div></div></div></div><div class="J-long-view long-rate-view" hidden="" style="display:none"></div></div></li>';
                     });
                     $('#geval').html(b);
                     $('.allPage').text(<?php echo $evaluate_count;?>);
