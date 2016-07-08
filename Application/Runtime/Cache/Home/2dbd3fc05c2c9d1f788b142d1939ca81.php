@@ -340,13 +340,14 @@
 <!-- 部分内容改动  各级类名与店名  zhangkuan-->
     <div data-component="bread-nav" class="component-bread-nav mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1465960232707_76">
         <div class="bread-nav">
-            <a class="link--black__green" gaevent="crumb/index" href="#" data-mttcode="&quot;Abreadcrumb.B1&quot;"> <?php echo ($gcname[1]['gc_name']); ?>
+            <a class="link--black__green" gaevent="crumb/index" href="<?php echo U('Home/Search/category', '', FALSE);?>" data-mttcode="&quot;Abreadcrumb.B1&quot;"> <?php echo ($gcname[1]['gc_name']); ?>
             </a>
             <span>»</span>        
-            <a class="link--black__green" gaevent="crumb/category/1" href="#" data-mttcode="&quot;Abreadcrumb.B2&quot;"><?php echo ($gcname[2]['gc_name']); ?>
+            <a class="link--black__green" gaevent="crumb/category/1" href="<?php echo U('Home/Search/category/gc_id/'.$gcname[2]['gc_id'], '', FALSE);?>-<?php echo ($gcname[2]['gc_name']); ?>" data-mttcode="&quot;Abreadcrumb.B2&quot;"><?php echo ($gcname[2]['gc_name']); ?>
             </a>
-            <span>»</span>        
-            <a class="link--black__green" gaevent="crumb/category/2" href="#" data-mttcode="&quot;Abreadcrumb.B3&quot;"><?php echo ($gcname[3]['gc_name']); ?>
+            <span>»</span> 
+            <?php  $a = $gcname[2]['gc_id'].'-'.$gcname[2]['gc_name']; $b = $gcname[3]['gc_id'].'-'.$gcname[3]['gc_name']; ?>       
+            <a class="link--black__green" gaevent="crumb/category/2" href="<?php echo U('Home/Search/category',array('gc_id'=>$a,'gc_id3'=>$b),FALSE);?>" data-mttcode="&quot;Abreadcrumb.B3&quot;"><?php echo ($gcname[3]['gc_name']); ?>
             </a>           
             <span>»</span>        
             <?php echo ($data['goods_name']); ?>        

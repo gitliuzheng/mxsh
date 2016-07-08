@@ -54,6 +54,8 @@ class IndexController extends CommonController {
         }
         $total = $num[5]/$temp*5+$num[4]/$temp*4+$num[3]/$temp*3+$num[2]/$temp*2+$num[1]/$temp*1;
         $total_favourable = round(($total/5)*100).'%';
+      //  print_r($gcname);
+       // exit;
         $this->assign(array(
             'gcname' => $gcname,
             'data' => $data,
