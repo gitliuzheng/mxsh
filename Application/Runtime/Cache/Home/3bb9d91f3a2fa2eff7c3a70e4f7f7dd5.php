@@ -299,9 +299,6 @@
         <div id="bd" class="cf">
             
 
-
-
-
 <!-- 各种情况下的分类显示    zhangkuan -->
 <div data-component="filter-section" class="component-filter-section mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465867114754_343">
     <div id="filter">
@@ -311,82 +308,75 @@
                     <?php  $gc_id = I('get.gc_id'); $gc_id3 = I('get.gc_id3'); if($gc_id && $gc_id3) { ?>
                         <!-- 如果Url中有二级与三级分类，分类行不显示，删除行显示二级分类与三级分类 -->
                             <div class="filter-label-list filter-section category-filter-wrapper first-filter">
-                                <div class="label has-icon">全部：</div>
+                                <div class="label has-icon quan">全部：</div>
                                 <ul class="inline-block-list">
-                                <!-- 二级分类 -->
-                                    <li class="item"> <?php echo ltrim(strstr($gc_id, '-'), '-'); ?></li>
-                                    <a href="/mxsh/index.php/Home/Search/category">X</a>    
-                                <!-- 三级分类 -->
-                                    <li class="item"> <?php echo ltrim(strstr($gc_id3, '-'), '-'); ?></li>
-                                    <a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $gc_id ?>">X</a>                                            
+                                    <span class="sp">></span>
+                                    <!-- 二级分类 -->
+                                    <li class="ming"> <?php echo ltrim(strstr($gc_id, '-'), '-'); ?>&nbsp;<b></b>
+                                        <div  id="id-menu" class="id-menu">
+                                            <a href="<?php echo U('Home/Search/category', '', FALSE);?>">全部</a>
+                                            <?php if(is_array($fClass)): $i = 0; $__LIST__ = $fClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>|<a href="<?php echo U('Home/Search/category/gc_id/'.$v['gc_id'], '', FALSE);?>-<?php echo $v['gc_name']; ?>"><?php echo ($v['gc_name']); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </div>
+                                    </li>
+                                    <a href="/mxsh/index.php/Home/Search/category" id="ab">X</a>    
+                                    <!-- 三级分类 -->
+                                    <span class="sp">></span>
+                                    <li class="ming1"> <?php echo ltrim(strstr($gc_id3, '-'), '-'); ?>&nbsp;<b></b>
+                                        <div  id="id-menu1" class="id-menu1">
+                                        <a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $gc_id ?>">全部</a>
+                                            <?php if(is_array($gClass)): $i = 0; $__LIST__ = $gClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>|<a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $gc_id ?>/gc_id3/<?php echo ($v['gc_id']); ?>-<?php echo ($v['gc_name']); ?>"><?php echo ($v['gc_name']); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </div>
+                                    </li>
+                                    <a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $gc_id ?>" id="ab">X</a>                                            
                                 </ul>
                             </div>  
                         <?php }else if($gc_id){ ?>
                         <!-- 如果Url中有二级，分类行只显示三级分类，删除行显示二级分类 -->
                             <div class="filter-label-list filter-section category-filter-wrapper first-filter">
-                                <div class="label has-icon" id="label">全部：</div>
+                                <div class="label has-icon quan">全部：</div>
+                                <span class="sp">></span>
                                 <ul class="inline-block-list">
-                                    <li class="item" id="item"> <?php echo ltrim(strstr($gc_id, '-'), '-'); ?></li>
-
-                                    <a href="/mxsh/index.php/Home/Search/category" id="a">X</a>                                              
+                                    <li  class="ming"> <?php echo ltrim(strstr($gc_id, '-'), '-'); ?>&nbsp;<b></b>
+                                        <div  id="id-menu" class="id-menu">
+                                        <a href="<?php echo U('Home/Search/category', '', FALSE);?>">全部</a>
+                                            <?php if(is_array($fClass)): $i = 0; $__LIST__ = $fClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>|<a href="<?php echo U('Home/Search/category/gc_id/'.$v['gc_id'], '', FALSE);?>-<?php echo $v['gc_name']; ?>"><?php echo ($v['gc_name']); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </div>
+                                    </li>
+                                    <a href="/mxsh/index.php/Home/Search/category" id="ab">X</a>                                              
                                 </ul>
                             </div>  
-<style type="text/css">
-   
-    #label{
-        height: 20px;
-        width: 70px;
-        border:1px;            /*边框尺寸*/
-        border-color:#2bb8aa;       /*边框颜色*/
-        border-style : solid;   /*边框样式*/
-    }
-    #item{
-        
-        width: 70px;
-        border:1px;            /*边框尺寸*/
-        border-color:#2bb8aa;       /*边框颜色*/
-        border-style : solid;   /*边框样式*/
-    }
-    #a{
-        
-        border:1px;            /*边框尺寸*/
-        border-color:#2bb8aa;       /*边框颜色*/
-        border-style : solid;   /*边框样式*/
-    }
-</style>
-
-
                             <div id="search_condition">                
                                 <div class="filter-label-list filter-section category-filter-wrapper first-filter">
                                     <div class="label has-icon">分类：</div>
                                     <ul class="inline-block-list">
                                         <li class="item current"><a class="briber" href="#">全部</a></li>                                       
-                                        <?php if(is_array($gClass)): $i = 0; $__LIST__ = $gClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><li class="item"><a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $gc_id ?>/gc_id3/<?php echo $v1['gc_id']; ?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>                                        
+                                        <?php if(is_array($gClass)): $i = 0; $__LIST__ = $gClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><li class="item"><a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $gc_id ?>/gc_id3/<?php echo $v1['gc_id']; ?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a>
+                                            </li><?php endforeach; endif; else: echo "" ;endif; ?>                                        
                                     </ul>
                                 </div>
                             </div>
                         <?php }else{ ?>
                         <!-- 如果Url中没有二级与三级分类并且不是关键字查询，分类行显示二级分类 -->
-                                 <?php  if(!I('get.key')) {?>
-                                <div id="search_condition">                
-                                    <div class="filter-label-list filter-section category-filter-wrapper first-filter">
-                                        <div class="label has-icon">分类：</div>
-                                        <ul class="inline-block-list">
-                                            <li class="item current"><a class="briber" href="#">全部</a></li>                                       
-                                            <?php if(is_array($fClass)): $i = 0; $__LIST__ = $fClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><li class="item"><a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $v1['gc_id']; ?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                                        </ul>
+                                <?php  if(!I('get.key')) {?>
+                                    <div id="search_condition">                
+                                        <div class="filter-label-list filter-section category-filter-wrapper first-filter">
+                                            <div class="label has-icon">分类：</div>
+                                            <ul class="inline-block-list">
+                                                <li class="item current"><a class="briber" href="#">全部</a></li>                                       
+                                                <?php if(is_array($fClass)): $i = 0; $__LIST__ = $fClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><li class="item"><a href="/mxsh/index.php/Home/Search/category/gc_id/<?php echo $v1['gc_id']; ?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
                                 <?php } else{?>
                                 <!-- 关键字查询 -->
-                                <div id="search_condition">                
-                                    <div class="filter-label-list filter-section category-filter-wrapper first-filter">
-                                        <div class="label has-icon">找到：</div>
-                                        <ul class="inline-block-list">
-                                            <li class="item current"><span style="color: red"><?php echo I('get.name'); ?></span>&nbsp;相关团购&nbsp;<span style="color: red"><?php echo ($gcount); ?></span>&nbsp;个</li>                                       
-                                        </ul>
+                                    <div id="search_condition">                
+                                        <div class="filter-label-list filter-section category-filter-wrapper first-filter">
+                                            <div class="label has-icon">找到：</div>
+                                            <ul class="inline-block-list">
+                                                <li class="item current"><span style="color: red"><?php echo I('get.name'); ?></span>&nbsp;相关团购&nbsp;<span style="color: red"><?php echo ($gcount); ?></span>&nbsp;个</li>                                       
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
                                 <?php } ?>  
                         <?php } ?> 
 <!-- zhangkuan -->

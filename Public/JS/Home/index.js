@@ -153,6 +153,23 @@ $(function(){
         $(this).removeClass('dropdown--open dropdown--open-app');
     });
 
+     //二级分类
+    $('.ming').mouseover(function(){
+        $('#id-menu').addClass('id-menu-open');       
+    }).mouseout(function(){
+        $('#id-menu').removeClass('id-menu-open');
+    });
+   
+    //三极分类
+    $('.ming1').mouseover(function(){
+        $('#id-menu1').addClass('id-menu-open1');       
+    }).mouseout(function(){
+        $('#id-menu1').removeClass('id-menu-open1');
+    });
+
+
+
+
     //我的商城
     $('#mxsh_my_home').mouseover(function(){
         $(this).addClass('dropdown--open');

@@ -103,6 +103,7 @@
 	border-bottom-color:#2bb8aa
 }
 #filter .inline-block-list {
+	display: inline;     
 	padding-right:66px
 }
 #filter .inline-block-list .item {
@@ -129,7 +130,7 @@
 	padding:10px 0 10px 65px;
 	border-top:1px dotted #ddd
 }
-#filter .filter-section-wrapper .filter-section a {
+#filter .filter-section-wrapper .filter-section  {
 	color:#666
 }
 #filter .filter-section-wrapper .filter-section .filter-opt--more {
@@ -2201,4 +2202,114 @@
 	display:inline-block;
 	_display:inline;
 	vertical-align:middle
+}
+
+
+/*搜索分类样式*/
+.ming b, .ming1 b{
+ 	margin-top:9px;
+ 	border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 6px solid #666;
+    position: absolute;
+}
+.inline-block-list .ming:hover b,.inline-block-list .ming1:hover b { 
+    margin-top:7px;  
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 6px solid #2bb8aa;
+    border-top: 0px ;
+}
+
+.quan{
+    height: 20px;
+    width: 70px;
+    border:1px;            /*边框尺寸*/
+    border-color:#2bb8aa;       /*边框颜色*/
+    border-style : solid;   /*边框样式*/
+    float: left;
+    text-align:center;   /*居中*/
+}
+
+.ming,.ming1{
+    margin-top:3px;
+    padding-left: 15px;
+    padding-right: 15px;    
+    border:1px;            /*边框尺寸*/
+    border-color:#2bb8aa;       /*边框颜色*/
+    border-style : solid;   /*边框样式*/
+    border-right:0px;
+    float: left;
+    text-align:center;   /*居中*/
+    position: relative;
+}
+
+.sp{
+    margin-top:3px;
+    height: 20px;
+    width: 20px;   
+    display:block ;
+    float: left;
+    text-align:center;   /*居中*/
+}
+
+.inline-block-list #ab{
+    margin-top:3px;
+    height: 19px;
+    width: 20px;
+    border:1px;            /*边框尺寸*/
+    border-color:#2bb8aa;       /*边框颜色*/
+    border-style : solid;   /*边框样式*/
+    display:block ;
+    float: left;
+    text-align:center;   /*居中*/
+    text-decoration: none;
+    color: #2bb8aa;
+}
+
+.inline-block-list #ab:hover{
+    margin-top:3px;
+    height: 20px;
+    width: 20px;
+    border:1px;            /*边框尺寸*/
+    border-color:#2bb8aa;       /*边框颜色*/
+    border-style : solid;   /*边框样式*/
+    display:block ;
+    float: left;
+    text-align:center;   /*居中*/
+    text-decoration: none;
+    color: #F7F7F7;
+    background-color:#2bb8aa;
+}
+
+.id-menu,.id-menu1{
+    display: none;       
+}
+
+.id-menu-open,.id-menu-open1{
+    display: block;
+    left: -1px;
+    width: 260px;
+    border:1px;            /*边框尺寸*/
+    border-color:#2bb8aa;       /*边框颜色*/
+    border-style : solid;   /*边框样式*/   
+    background: white;   
+    z-index:9999;
+    position:absolute;
+    text-align:left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#id-menu a,#id-menu1 a{
+    color: #666;
+    margin-right : 15px;
+    margin-left: 15px;
+}
+
+#id-menu a:hover,#id-menu1 a:hover {
+	color: #2bb8aa;
+ 	text-decoration:none;
 }

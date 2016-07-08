@@ -600,16 +600,22 @@
 <!-- 地理位置  zhangkuan -->
                         <div id="side-business" class="J-poi-wrapper poi-wrapper cf">
                             <div class="loading-image lazy-img" hidden="hidden" style="display: none;"></div>
+                            <?php if($gcaddress){ ?>
                             <div class="address-list cf">
                                 <div class="left-content">
                                      <div id="allmap" style="width: 385px;height: 300px;"></div> 
                                 </div>
-                                <div class="biz-wrapper J-biz-wrapper biz-wrapper-nobottom inited" id="yui_3_16_0_1_1465960232707_1869">       
+                                <div class="biz-wrapper J-biz-wrapper biz-wrapper-nobottom inited" id="yui_3_16_0_1_1465960232707_1869" style="position: relative;">       
                                     <div id="accordion"></div>        
                                     <div id="dialog-confirm" title="连锁门店位置" style="display:none;"></div>  
-                                    <div class="tcdPageCode"></div>
+                                    <div class="tcdPageCode" style="bottom: 1px; margin-left: 10px;position: absolute;"></div>
                                 </div>
                             </div>
+                            <?php }else{ ?>
+                                <div style="padding-bottom: 10px;padding-top: 10px;padding-left: 10px;font-size: 14px;color: #999;">
+                                <span>暂时未定位到该商户,相关人员将持续更新......</span>
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
 <!-- 地理位置结束  zhangkuan -->
