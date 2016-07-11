@@ -405,21 +405,16 @@
                         <div class="arrow__inner"></div>
                     </div>
                     <span class="status J-countdown-status status--coming"></span>
-                    <span class="timer">
-                        <span class="J-time" id="yui_3_16_0_1_1464999326260_12090">
-                            <span class="time">0</span>
-                            <span class="time">2</span>
-                        </span>
-                        <span class="colon"></span>
-                        <span class="J-time" id="yui_3_16_0_1_1464999326260_12091">
-                            <span class="time">4</span>
-                            <span class="time">3</span>
-                        </span>
-                        <span class="colon"></span>
-                        <span class="J-time" id="yui_3_16_0_1_1464999326260_12092">
-                            <span class="time">4</span>
-                            <span class="time">9</span>
-                        </span>
+                    <span class="time-item">
+                       <strong id="bq">距开始</strong>
+                            <strong id="hour_show">00</strong>:
+                        
+                        
+                           <strong id="minute_show">00</strong>:
+                       
+                        
+                            <strong id="second_show">00</strong>
+                       
                     </span>
                 </div>
         </div>
@@ -2416,3 +2411,68 @@
 <script type="text/javascript" src="__PUBLIC__/Scripts/layer-v2.3/layer/layer.js"></script>
 </body>
 </html>
+<!-- 倒计时总秒数量 -->
+<script type="text/javascript">
+       var intDiff = parseInt(3600);//倒计时总秒数量
+function timer(intDiff){
+    window.setInterval(function(){
+    var day=0,
+        hour=0,
+        minute=0,
+        second=0;//时间默认值        
+    if(intDiff > 0){
+        day = Math.floor(intDiff / (60 * 60 * 24));
+        hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+        minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+        second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+    }
+    if (hour <= 9) hour = '0' + hour;
+    if (minute <= 9) minute = '0' + minute;
+    if (second <= 9) second = '0' + second;
+    $('#day_show').html(day+"天");
+    $('#hour_show').html('<s id="h"></s>'+hour);
+    $('#minute_show').html('<s></s>'+minute);
+    $('#second_show').html('<s></s>'+second);
+    intDiff--;
+    }, 1000);
+} 
+$(function(){
+    timer(intDiff);
+});    
+    
+    </script>
+ <style type="text/css">
+        
+.time-item strong {
+    background:#2bb8aa;
+    color:#fff;
+    
+    font-size:18px;
+    font-family:Arial;
+    padding:0 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right:5px;
+    border-radius:5px;
+    box-shadow:1px 1px 3px rgba(0,0,0,0.2);
+    
+}
+
+#bq{
+    background:#2bb8aa;
+    color:#fff;
+    
+    font-size:12px;
+    font-family:Arial;
+    padding:0 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right:5px;
+    border-radius:5px;
+    box-shadow:1px 1px 3px rgba(0,0,0,0.2);
+    position: absolute;
+    left: 5px;
+    bottom: 7px;
+}
+
+    </style>

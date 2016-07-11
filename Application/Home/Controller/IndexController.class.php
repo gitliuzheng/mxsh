@@ -54,8 +54,6 @@ class IndexController extends CommonController {
         }
         $total = $num[5]/$temp*5+$num[4]/$temp*4+$num[3]/$temp*3+$num[2]/$temp*2+$num[1]/$temp*1;
         $total_favourable = round(($total/5)*100).'%';
-      //  print_r($gcname);
-       // exit;
         $this->assign(array(
             'gcname' => $gcname,
             'data' => $data,
@@ -74,8 +72,7 @@ class IndexController extends CommonController {
     /*
     * ajax获取cookie值
     */
-    public function displayHistory()
-    {
+    public function displayHistory(){
         $id = I('get.id');
         $data = isset($_COOKIE['display_history']) ? unserialize($_COOKIE['display_history']) : array();
         // 把最新浏览的这件商品放到数组中的第一个位置上
@@ -91,6 +88,18 @@ class IndexController extends CommonController {
             'goods_id' => array('in', $data),            
         ))->order("FIELD(goods_id,$data)")->select();        
         echo json_encode($gData);
+    }
+
+    /*
+    * ajax清除cookie浏览记录
+    */
+    public function deldisplayHistory(){
+        $data = unserialize($_COOKIE['display_history']);
+        foreach ($data as $key => $value) {
+            unset($data[$key]);
+        }
+        cookie("display_history",serialize($data),50000);
+        echo true;
     }
 
     /*

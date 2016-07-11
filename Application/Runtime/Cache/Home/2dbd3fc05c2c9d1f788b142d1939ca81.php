@@ -817,7 +817,7 @@
     <div class="side-extension side-extension--history" style="" data-comboajax-uri="/combo/sidehistory" data-comboajax-config="www.History.side" data-comboajax-state="5" id="yui_3_16_0_1_1465960232707_1770">
         <div class="side-extension__item side-extension__item--last">
             <h3>
-                <a href="javascript:;" gaevent="list/recent/qingkong" class="clear-history J-clear" >清空</a>
+                <a href="javascript:void(0);" gaevent="list/recent/qingkong" class="clear-history J-clear" onclick="deldisplayHistory()">清空</a>
                 最近浏览
             </h3>
             <ul class="history-list J-history-list" id="display_history">               
@@ -1094,8 +1094,9 @@
 
 
 <!-- 获取浏览记录 -->
-<script type="text/javascript">
-    $(function(){
+<script type="text/javascript">    
+    cookieajax();
+    function cookieajax(){
         $.ajax({
             type : "GET",
             url : "<?php echo U('Index/displayHistory?id='.$data['goods_id']); ?>",
@@ -1105,12 +1106,28 @@
                 var html = '';
                 $(data).each(function(k,v){                 
                     html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="#" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';        
-                });                          
+                });                         
                 $('#display_history').html(html);
             }
         });
-  
-    });   
+    }
+       
+
+   //清空cookie浏览记录
+    function  deldisplayHistory(){
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('Index/deldisplayHistory'); ?>",
+            success : function(data){
+                if(data){
+                    html = '<li class="history-list__item" target="_blank" ref="nofollow"><h5><a href="#" title="" target="_blank" ref="nofollow"></a></h5><p><em class="price"></em><span class="default-price"><del></del></span></p></li>';
+                }else{
+                    html = '未删除成功！';
+                }
+                $('#display_history').html(html);
+            }
+        });
+    }
 </script>
 
 
