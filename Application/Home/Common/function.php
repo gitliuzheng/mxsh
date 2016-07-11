@@ -29,3 +29,17 @@ function fUrl($param,$p)
 	$u =  preg_replace($re, '', $url);
 	return  preg_replace($pe, '', $u);
 }
+
+
+/**
+ * 价格格式化
+ *
+ * @param int	$price
+ * @return string	$price_format
+ */
+function ncPriceFormat($price) {
+    $price_format	= number_format($price,2,'.','');
+    return $price_format;
+}
+
+

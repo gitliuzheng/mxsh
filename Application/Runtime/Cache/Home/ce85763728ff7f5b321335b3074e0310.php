@@ -212,17 +212,31 @@
         </div>
          
             <div data-component="search-box" class="component-search-box mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465867114754_339"><div data-comboajax-uri="/index/hotqueries" data-comboajax-data="{&quot;isshowshops&quot;:true,&quot;isshopspage&quot;:false}" data-comboajax-onsuccess="this.append($response.html);" data-comboajax-state="5" class="J-search-box search-box ">
-    <form action="http://suzhousz.meituan.com/s/" class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1465867114754_1884">
-                        <div class="search-box__tabs-container" style="float:left">
+
+
+
+<!-- 关键字搜索  zhangkuan -->  
+    <form  class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1464999326260_126">
+        <div class="search-box__tabs-container" style="float:left">
             <span class="tri"></span>
             <ul class="J-search-box__tabs search-box__tabs">
-                                <li class="search-box__tab J-search-box__tab--deal search-box__tab--current">商品</li>
-                <li class="search-box__tab J-search-box__tab--shops" gaevent="search/biz">商家</li>
-                            </ul>
+                <li class="search-box__tab J-search-box__tab--deal search-box__tab--current">商品</li>
+                <li class="search-box__tab J-search-box__tab--shops">商家</li>
+            </ul>
         </div>
-                <input tabindex="1" type="text" name="w" autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1465867114754_1890">
-        <input type="submit" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr">
+        <input tabindex="1" type="text" name="name" autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1464999326260_132" class="name">
+       <!--  搜索通过事件提交，增加key字段提交(区分类别跳转) -->
+        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr"  onclick="location.href='<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/'+$('#yui_3_16_0_1_1464999326260_132').val();">       
     </form>
+<!-- 关键字搜索结束  zhangkuan -->  
+
+
+
+
+
+
+
+
     <ul class="search-suggest J-search-suggest" style="display:none;">
     </ul>
     <div class="smart-query-panel" style="display:none" id="yui_3_16_0_1_1465867114754_1880">
@@ -236,195 +250,63 @@
             <span class="commitment-item"><i class="F-glob F-glob-commitment-expire"></i>过期退</span>
         </a>
     </div>
+
+
+
+
+
+
     <div class="site-mast__site-nav-w" id="yui_3_16_0_1_1465867114754_2308">
         <div class="site-mast__site-nav" id="yui_3_16_0_1_1465867114754_2307">
             <div class="site-mast__site-nav-inner" id="yui_3_16_0_1_1465867114754_2306">
-                <div data-component="cate-nav" class="component-cate-nav mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1465867114754_341">
-<span class="mt-cates J-nav__trigger nav-unindex">
-    <i class="F-glob F-glob-caret-down"></i><i class="F-glob F-glob-caret-up"></i>
-全部分类</span>
-<div class="cate-nav J-nav__list J-nav__list--delayed cateNavNew log-mod-viewed" data-mtnode="Acategory.Enavcategory" data-mod="nc" style="display: none;" id="yui_3_16_0_1_1465867114754_10307" hidden="hidden">
-    
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12113">
-    <div class="cate-nav__item J-cate-nav__item--1 cate-nav__item--1 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_749">
-        <div class="nav-level1 nav-level1--first" id="yui_3_16_0_1_1464999326260_12112">
-            <dl id="yui_3_16_0_1_1464999326260_12111">
-                <dt id="yui_3_16_0_1_1464999326260_12110"><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/meishi" hidefocus="true" id="yui_3_16_0_1_1464999326260_12265"> 餐饮美食</a> </dt>                
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="1" style="visibility: visible; top: 0px; display: none;" hidden="hidden"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/meishi" gaevent="nav/category/meishi">餐饮美食</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/daijinquan_meishi" gaevent="nav/category/daijinquan_meishi">中餐/酒楼</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/dangaotiandian" gaevent="nav/category/dangaotiandian">特色菜馆</a></li>
-                        <li><a class="keywords__item  bribe" href="http://suzhousz.meituan.com/category/huoguo" gaevent="nav/category/huoguo">蛋糕甜点</a></li>
-                        <li><a class="keywords__item  bribe" href="http://suzhousz.meituan.com/category/zizhucan" gaevent="nav/category/zizhucan">茶饮酒庄</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/kuaican" gaevent="nav/category/kuaican">其他</a></li>                        
-                    </ul>
-            </div></div>
-    </div>
-</div>
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12109">
-    <div class="cate-nav__item J-cate-nav__item--20 cate-nav__item--20 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_754">
-        <div class="nav-level1" id="yui_3_16_0_1_1464999326260_12108">
-            <dl id="yui_3_16_0_1_1464999326260_12107">
-                <dt><a class="nav-level1__label" href="http://hotel.meituan.com/suzhousz" hidefocus="true"> 酒店宾馆</a>
-                </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="20" style="visibility: visible; top: -51px; display: none;" hidden="hidden"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://hotel.meituan.com/suzhousz" gaevent="nav/category/jiudian">酒店宾馆</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item  bribe" href="http://hotel.meituan.com/suzhousz/c-jingjijiudian" gaevent="nav/category/jingjijiudian">酒店宾馆</a></li>
-                    </ul>
-            </div></div>
-    </div>
-</div>
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12089">
-    <div class="cate-nav__item J-cate-nav__item--99 cate-nav__item--99 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_759">
-        <div class="nav-level1" id="yui_3_16_0_1_1464999326260_12088">
-            <dl id="yui_3_16_0_1_1464999326260_12087">
-                <dt><a class="nav-level1__label" href="http://suzhousz.meituan.com/dianying/" hidefocus="true"> 休闲娱乐</a>
-                </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="99" style="visibility: visible; top: -103px; display: none;" hidden="hidden"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/dianying/" gaevent="nav/category/dianying">休闲娱乐</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/dianying/78421" gaevent="nav/category/HotMovie_0">KTV/夜总会</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/dianying/246177" gaevent="nav/category/HotMovie_1">运动健身</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/dianying/246188" gaevent="nav/category/HotMovie_2">足疗/按摩</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/dianying/248680" gaevent="nav/category/HotMovie_3">其他</a></li>
-                    </ul>
-            </div>
-            </div>
-    </div>
-</div>
-<div class="J-nav-item">
-    <div class="cate-nav__item J-cate-nav__item--10 cate-nav__item--10 cate-nav__item--no-l2 ">
-        <div class="nav-level1">
-            <dl>
-                <dt><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/pc_ktv" hidefocus="true"> 生活服务</a>
-                <span class="sperator">/</span><a href="http://trip.meituan.com/" gaevent="nav/category/nav/category/lvyou" data-mttcode="Blvyou" class="nav-extralink"> 丽人</a> </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="2" style="visibility: visible; top: -155px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/xiuxianyule" gaevent="nav/category/xiuxianyule">生活服务</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item  bribe" href="http://suzhousz.meituan.com/category/pc_ktv" gaevent="nav/category/pc_ktv">摄影/个性写真</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/qitaxiuxian" gaevent="nav/category/qitaxiuxian">婚礼策划/鲜花婚庆</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/yanchu" gaevent="nav/category/yanchu">保险理财</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/zhuoyou" gaevent="nav/category/zhuoyou">其他生活服务</a></li>                        
-                    </ul>
-            </div>
-            <div class="nav-level2-poi nav-level2-item "><div class="nav-level2-poi--title">丽人</div><div class="nav-level2-poi--content">
-            <a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/26045" target="_blank" data-mod-idx="HotCinema_0" title="美发">美发</a>
-            <a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/384262" target="_blank" data-mod-idx="HotCinema_1" title="美容美体">美容美体</a>
-            <a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/26045" target="_blank" data-mod-idx="HotCinema_0" title="汗蒸">汗蒸</a>
-            <a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/384262" target="_blank" data-mod-idx="HotCinema_1" title="其他">其他</a></div></div>
-        </div>
-    </div>
-</div>
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12264">
-    <div class="cate-nav__item J-cate-nav__item--2 cate-nav__item--2 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_764">
-        <div class="nav-level1" id="yui_3_16_0_1_1464999326260_12263">
-            <dl>
-                <dt><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/xiuxianyule" hidefocus="true">家居家装</a> 
-                    <span class="sperator">/</span><a href="http://trip.meituan.com/" gaevent="nav/category/nav/category/lvyou" data-mttcode="Blvyou" class="nav-extralink"> 服饰箱包</a></dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="2" style="visibility: visible; top: -207px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/xiuxianyule" gaevent="nav/category/xiuxianyule">家居家装</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item  bribe" href="http://suzhousz.meituan.com/category/pc_ktv" gaevent="nav/category/pc_ktv">家用电器</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/qitaxiuxian" gaevent="nav/category/qitaxiuxian">家装公司</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/yanchu" gaevent="nav/category/yanchu">装饰材料</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/zhuoyou" gaevent="nav/category/zhuoyou">家纺</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/jianshen" gaevent="nav/category/jianshen">其他</a></li>
-                    </ul>
-            </div>
-            <div class="nav-level2-poi nav-level2-item "><div class="nav-level2-poi--title">服饰箱包</div><div class="nav-level2-poi--content"><a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/26045" target="_blank" data-mod-idx="HotCinema_0" title="服装">服装</a><a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/384262" target="_blank" data-mod-idx="HotCinema_1" title="鞋类">鞋类</a><a class="poi-item-text" href="http://suzhousz.meituan.com/dianying/cinemalist/all/384262" target="_blank" data-mod-idx="HotCinema_1" title="其他">其他</a></div></div>
-        </div>
-    </div>
-</div>
-<div class="J-nav-item">
-    <div class="cate-nav__item J-cate-nav__item--195 cate-nav__item--195 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_769">
-        <div class="nav-level1">
-            <dl>
-                <dt><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/mobile_poi_zhoubianyou" hidefocus="true">教育培训</a></dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="195" style="visibility: visible; top: -259px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/mobile_poi_zhoubianyou" gaevent="nav/category/mobile_poi_zhoubianyou">教育培训</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/wenquan" gaevent="nav/category/wenquan">教育辅导</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/youle" gaevent="nav/category/youle">培训</a></li>
-                    </ul>
-            </div></div>
-    </div>
-</div>
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12086">
-    <div class="cate-nav__item J-cate-nav__item--3 cate-nav__item--3 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_774">
-        <div class="nav-level1" id="yui_3_16_0_1_1464999326260_12085">
-            <dl id="yui_3_16_0_1_1464999326260_12084">
-                <dt id="yui_3_16_0_1_1464999326260_12083"><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/shenghuo" hidefocus="true" id="yui_3_16_0_1_1464999326260_12262">办公文体</a> </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="3" style="visibility: visible; top: -311px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/shenghuo" gaevent="nav/category/shenghuo">办公文体</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/hunshaphoto" gaevent="nav/category/hunshaphoto">办公/文体用品</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/gexingxiezhen" gaevent="nav/category/gexingxiezhen">电脑周边</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/ertongsheying" gaevent="nav/category/ertongsheying">其他</a></li>
-                    </ul>
-            </div></div>
-    </div>
-</div>
-<div class="J-nav-item" id="yui_3_16_0_1_1464999326260_9579">
-    <div class="cate-nav__item J-cate-nav__item--4 cate-nav__item--4 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_779">
-        <div class="nav-level1" id="yui_3_16_0_1_1464999326260_9578">
-            <dl id="yui_3_16_0_1_1464999326260_9577">
-                <dt id="yui_3_16_0_1_1464999326260_9576"><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/wanggou" hidefocus="true">汽车/骑行用品</a> </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="4" style="visibility: visible; top: -363px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/wanggou" gaevent="nav/category/wanggou">汽车/骑行用品</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/nvzhuang" gaevent="nav/category/nvzhuang">汽车/维修</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/nanzhuang" gaevent="nav/category/nanzhuang">电动车/自行车</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/neiyi" gaevent="nav/category/neiyi">其他</a></li>
-                    </ul>
-            </div></div>
-    </div>
-</div>
-<div class="J-nav-item">
-    <div class="cate-nav__item J-cate-nav__item--22 cate-nav__item--22 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_784">
-        <div class="nav-level1">
-            <dl>
-                <dt><a class="nav-level1__label" href="http://suzhousz.meituan.com/category/jiankangliren" hidefocus="true"> 传媒/广告设计</a> </dt>
-            </dl>
-            <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
-        </div>
-        <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="22" style="visibility: visible; top: -415px; display: none;"><div class="nav-level2-item nav-level2-keywords">
-                <div class="nav-level2-keywords--title"><a href="http://suzhousz.meituan.com/category/jiankangliren" gaevent="nav/category/jiankangliren">传媒/广告设计</a></div>
-                    <ul class="nav-level2-keywords--content">
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/meifa" gaevent="nav/category/meifa">广告传媒</a></li>
-                        <li><a class="keywords__item " href="http://suzhousz.meituan.com/category/meirongmeiti" gaevent="nav/category/meirongmeiti">广告设计</a></li>
-                    </ul>
-            </div></div>
-    </div>
-</div>
 
-</div>
-</div>
+
+
+
+
+
+
+
+
+
+<!-- 导航分类  zhangkuan -->  
+
+    <div data-component="cate-nav" class="component-cate-nav mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1465867114754_341">
+        <span class="mt-cates J-nav__trigger nav-unindex">
+            <i class="F-glob F-glob-caret-down"></i><i class="F-glob F-glob-caret-up"></i>全部分类
+        </span>
+        <div class="cate-nav J-nav__list J-nav__list--delayed cateNavNew log-mod-viewed" data-mtnode="Acategory.Enavcategory" data-mod="nc" style="display: none;" id="yui_3_16_0_1_1465867114754_10307" hidden="hidden">
+            <?php if(is_array($floorData)): $i = 0; $__LIST__ = $floorData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(is_array($v['recSubCat'])): $i = 0; $__LIST__ = $v['recSubCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?><!-- 显示九层-->
+                    <?php static $k = 0; if($k>=9){break;} $k++; ?>
+                        <div class="J-nav-item" id="yui_3_16_0_1_1464999326260_12113">
+                            <div class="cate-nav__item J-cate-nav__item--1 cate-nav__item--1 cate-nav__item--has-l2 " id="yui_3_16_0_1_1464999326260_749">
+                                <div class="nav-level1 nav-level1--first" id="yui_3_16_0_1_1464999326260_12112">
+                                    <dl id="yui_3_16_0_1_1464999326260_12111">
+                                        <dt id="yui_3_16_0_1_1464999326260_12110"><a class="nav-level1__label" href="<?php echo U('Home/Search/category/gc_id/'.$v1['gc_id'], '', FALSE);?>-<?php echo $v1['gc_name']; ?>" hidefocus="true" id="yui_3_16_0_1_1464999326260_12265"><?php echo ($v1['gc_name']); ?></a> </dt>                
+                                    </dl>
+                                    <i class="nav-level2-indication F-glob F-glob-caret-right-thin"></i>
+                                </div>
+                                <!-- 特效尺寸调整 -->
+                                <div class="nav-level2 J-nav-level2 nav-waterfall" data-level1="1" style="visibility: visible; top: <?php echo 0 - 51 * ($k-1);?>px; display: none;" hidden="hidden">
+                                    <div class="nav-level2-item nav-level2-keywords">
+                                        <div class="nav-level2-keywords--title"><a href="<?php echo U('Home/Search/category/gc_id/'.$v1['gc_id'], '', FALSE);?>-<?php echo $v1['gc_name']; ?>"><?php echo ($v1['gc_name']); ?></a></div>
+                                        <ul class="nav-level2-keywords--content">
+                                         <?php if(is_array($v1['threeCat'])): $i = 0; $__LIST__ = $v1['threeCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i;?><li><a class="keywords__item " href="<?php echo U('Home/Search/category', '', FALSE);?>/gc_id/<?php echo ($v1['gc_id']); ?>-<?php echo $v1['gc_name']; ?>/gc_id3/<?php echo ($v2['gc_id']); ?>-<?php echo $v2['gc_name']; ?>"><?php echo ($v2['gc_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>                          
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><?php endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
+        </div>
+    </div>
+<!-- 导航分类结束位置zhangkuan -->
+
+
+
+
+
+
+
                 <nav>
                     <ul class="navbar cf  log-mod-viewed" data-mod="lz" data-mod-deepview="1" id="yui_3_16_0_1_1465867114754_1864">
                         <li class="navbar__item-w ">
@@ -441,233 +323,75 @@
     </div>
 </header>
 
+<script type="text/javascript" src="/Public/Scripts/layer-v2.3/layer/layer.js"></script>
+<style>
+    .ncc-table-style {
+        width: 100%;
+        border-collapse: collapse;
+        border-style: solid;
+        border-width: 2px 1px;
+        border-color: #AAA #DDD;
+    }
+</style>
 <div id="bdw" class="bdw">
-<div id="bd" class="cf">
+    <div class="ncc-wrapper">
+        <div class="ncc-main">
+            <div class="ncc-title">
+                <h3>购买兑换码</h3>
+                <h5>设置购买数量</h5>
+            </div>
+            <form action="<?php echo U('Buy/buy_step2');?>" method="POST" id="form_buy" name="form_buy">
+                <input type="hidden" name="goods_id" value="<?php echo ($goods_info["goods_id"]); ?>">
+                <table class="ncc-table-style" nc_type="table_cart">
+                    <thead>
+                    <tr>
+                        <th colspan="3">商品</th>
+                        <th class="w120">单价(元)</th>
+                        <th class="w120">数量</th>
+                        <th class="w120">小计(元)</th>
+                        <th class="w80">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th colspan="20"><i class="icon-home"></i><a href="http://mxhhw-z.com/shop/index.php?act=show_store&amp;op=index&amp;store_id=1">官方店铺</a> <span member_id="1"></span>
+                        </th>
+                    </tr>
+                    <tr class="shop-list">
+                        <td class="w10"></td>
+                        <td class="w60"><a href="http://mxhhw-z.com/shop/index.php?act=goods&amp;op=index&amp;goods_id=3" target="_blank" class="ncc-goods-thumb"><img src="http://mxhhw-z.com/data/upload/shop/store/goods/1/1_04423412474341466_60.png" alt="123虚拟商品"></a></td>
+                        <td class="tl"><dl class="ncc-goods-info">
+                            <dt><a href="http://mxhhw-z.com/shop/index.php?act=goods&amp;op=index&amp;goods_id=3" target="_blank"><?php echo ($goods_info["goods_name"]); ?></a></dt>
+                            <dd>
+                                最多允许购买<?php echo ($goods_info["virtual_limit"]); ?>个</dd>
+                        </dl></td>
+                        <td class="w120"><em id="item_price"><?php echo ($goods_info["goods_price"]); ?></em></td>
+                        <td class="w120 ws0"><a href="JavaScript:void(0);" onclick="decrease_quantity();" class="add-substract-key ">-</a>
+                            <input id="quantity" name="quantity" value="<?php echo ($goods_info["quantity"]); ?>" maxvalue="10" price="10.00" onkeyup="change_quantity(this);" type="text" class="text w20">
+                            <a href="JavaScript:void(0);" title="最多允许购买10个" onclick="add_quantity();" class="add-substract-key tip">+</a></td>
+                        <td class="w120"><em id="item_subtotal"><?php echo ($goods_info["goods_total"]); ?></em></td>
+                        <td class="w80">
+                            <a href="javascript:void(0)" onclick="collect_goods('3');">收藏</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="20"><div class="ncc-all-account">商品总价￥<em id="cartTotal">60.00</em>元</div></td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <div class="ncc-bottom">
+                    <input type="submit" id="next_submit" class="ncc-btn ncc-btn-acidblue fr" value="下一步" />
 
-<div id="content">
-<form data-component="manual-boot-component-1" action="<?php echo U('Buy/buyStep2');?>" method="post" id="J-cart-form" class="common-form form J-wwwtracker-form mt-component--booted">
-
-<div class="mainbox" id="yui_3_16_0_1_1467448101261_122">
-<div class="cart-head cf" id="yui_3_16_0_1_1467448101261_1363">
-    <div class="cart-status" id="yui_3_16_0_1_1467448101261_1362">
-        <i class="cart-status-icon status-1"></i>
-        <span class="cart-title" id="yui_3_16_0_1_1467448101261_1361">我的购物车</span>
-                    <span title="您的购物车内有3种商品，共可放20种商品" class="number">
-                        <em class="count-in-carts">3</em>/20
-                    </span>
-    </div>
-    <div class="login-bar">
-        <span>现在</span>
-        <a href="javascript:void(0)" mb-onclick="login()">登录</a>
-        <span>，你的商品将被保存到购物车</span>
-    </div>
-</div>
-
-<div class="table-section summary-table" id="yui_3_16_0_1_1467448101261_379">
-    <table cellspacing="0" id="yui_3_16_0_1_1467448101261_378">
-        <tbody id="yui_3_16_0_1_1467448101261_377">
-        <tr>
-            <th width="60">
-                <input type="checkbox" id="cart-selectall" class="ui-checkbox" mb-checked="isAllChecked" mb-onchange="toggleAll($$checked)">
-                <label for="cart-selectall" class="cart-select-all">全选</label>
-            </th>
-            <th width="auto" class="desc">项目</th>
-            <th width="70">单价</th>
-            <th width="150">数量</th>
-            <th width="70" class="total">小计</th>
-            <th width="80">操作</th>
-        </tr>
-        <?php if(is_array($cart)): $i = 0; $__LIST__ = $cart;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr >
-                <td colspan="6" class="cartItem" >
-                    <table cellspacing="0" >
-                        <tbody >
-                            <tr id="yui_3_16_0_1_1467448101261_1136">
-                                <td width="60" rowspan="1" class="select-cartItem">
-                                    <input type="checkbox" class="ui-checkbox" name="cartItems[]" id="26263695" value="26263695-0" mb-checked="isChecked('26263695_0')" mb-onchange="toggleOne('26263695_0', $$checked)">
-                                    <label for="26263695">&nbsp;</label>
-                                </td>
-                                <td width="auto" class="desc">
-                                    <a href="<?php echo ($vo["url"]); ?>" target="_blank" title="美佳乐蛋糕：葡式蛋挞1个，提供免费WiFi" gaevent="cart/deal">
-                                        <img src="http://p0.meituan.net/75.46/deal/0af5e66e4363eb528f0442444f771eb7179883.jpg" width="63" height="39">
-                                        <span><?php echo ($vo["goods_name"]); ?></span>
-                                    </a>
-                                </td>
-                                <td width="70" class="price">
-                                    ¥<span class="J-price"><?php echo ($vo["goods_price"]); ?></span>
-                                </td>
-                                <td width="150" class="saleNum deal-component-quantity" id="yui_3_16_0_1_1467448101261_1135">
-                                    <div data-component="cart-quantity" class="component-cart-quantity mt-component--booted" mt-scope="[&quot;quantity=cartItems.26263695_0.list.0.quantity&quot;,&quot;onchange=onQuantityChange&quot;]" data-component-params="{&quot;dealid&quot;:26263695,&quot;calendarid&quot;:0,&quot;dealgoodsid&quot;:0,&quot;minNumPerOrder&quot;:1,&quot;maxNumPerOrder&quot;:0,&quot;remain&quot;:100,&quot;totalRemain&quot;:null}" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1467448101261_96"><div class="cart-quantity">
-                                        <button for="J-cart-minus" class="minus" data-action="-" gaevent="top/minus" type="button" mt-bind-onclick="decrease()">-</button><input type="text" autocomplete="off" goods_num="goods_num" class="f-text J-quantity J-cart-quantity" maxlength="4" mt-bind-onkeyup="keyup($event)" mt-bind-value="quantity" value="<?php echo ($vo["goods_num"]); ?>"><button for="J-cart-add" class="item plus" data-action="+" gaevent="top/plus" type="button" mt-bind-onclick="increase()">+</button>
-                                    </div>
-                                    </div>
-                                </td>
-                                <td width="70" rowspan="1" class="money total">
-                                    ¥<span class="J-total" mt-bind-html="fixNumber(cartItems.26263695_0.totalfee)"><?php echo ($vo["goods_total"]); ?></span>
-                                    <br>
-                                </td>
-                                <td width="80" class="op list-delete">
-                                    <?php if($db_cookie == 'db'): ?><a class="delete" href="javascript:void(0);"   onclick="delCart('db',<?php echo ($vo["cart_id"]); ?>);" >删除</a>
-                                    <?php else: ?>
-                                        <a class="delete" href="javascript:void(0);"   onclick="delCart('cookie',<?php echo ($vo["goods_id"]); ?>);" >删除</a><?php endif; ?>
-
-                                </td>
-                                <input type="hidden" class="goods_id" value="<?php echo ($vo["goods_id"]); ?>" />
-                                <input type="hidden" class="cart_id" value="<?php echo ($vo["cart_id"]); ?>" />
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
-
-
-        <tr id="yui_3_16_0_1_1467448101261_376">
-            <td colspan="6" class="extra-fee" id="yui_3_16_0_1_1467448101261_375">
-                <div data-component="cart-campaign" class="component-cart-campaign mt-component--booted" mt-scope="[&quot;campaigns&quot;,&quot;campaignids&quot;]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1467448101261_99"><div class="J-campaign-choose campaign-choose" mt-bind-show="campaignids" hidden="hidden" style="display: none;">
-    <span mt-bind-show="isTipDisplay" class="common-tip J-campaign-tip">
-        已自动为您选择力度最大的优惠
-        <span mt-bind-onclick="hideTip()" class="J-campaign-tip-close common-close common-close--small"></span>
-    </span>
-                    优惠:
-                    <select mt-bind-value="selectedCampaignId" mt-bind-onchange="changeSelect($this.get('value'))" class="J-campaign-select campaign-select ui-select-small" name="campaignid">
-                        <option mt-bind-value="campaignids" mt-bind-disabled="!canUse($this.get('value'))" disabled="" value=""> 使用优惠 </option>
-                        <option value="0" data-discount="0" selected="">不使用优惠</option>
-                    </select>：
-    <span class="inline-block money">
-        -¥<span mt-bind-html="reduce || 0" class="J-reduce-money">0</span>
-    </span>
                 </div>
-                </div>
-                <div data-component="dealbuy-card" class="component-dealbuy-card mt-component--booted" mt-scope="[&quot;cards&quot;,&quot;onSelectCard&quot;,&quot;selectedCard=card&quot;,&quot;isLogin&quot;,&quot;isNoneChecked&quot;,&quot;cardError&quot;]" id="yui_3_16_0_1_1467448101261_100"><div class="cardcode-type cf" mt-bind-show="usePlain">
-                    抵用券：
-    <span class="inline-block money">
-        -¥<span mt-bind-html="cardValue || 0">0</span>
-    </span>
-                </div>
+            </form>
 
-                    <div class="cardcode-type cf" style="display:none" mt-bind-show="useInteractive" hidden="hidden">
-                        <div style="margin-bottom:5px">
-                            <input mt-bind-onchange="toggleSelect($event.target.get('checked'))" id="discount-use-card" type="checkbox" class="ui-checkbox">
-                            <label for="discount-use-card" class="cardcode-trigger">使用抵用券抵扣：</label>
 
-        <span class="inline-block J-money-block money">
-            -¥<span mt-bind-html="cardValue || 0" mt-bind-class="{&quot;highlight-money&quot;:cardValue}" class="">0</span>
-        </span>
-                        </div>
+        </div>
 
-                        <div mt-bind-show="isShowCardList" class="J-cardcode-container discount__info cf" style="display:none;float:right;" hidden="hidden"><div class="outer-arrow"><div class="inner-arrow"></div></div>
-                            <div class="J-discount-cardlist discount-table">
-                            </div>
-                            <div class="addition-section">
-                                <div class="J-discount-cardcode-enter cardcode-section enter-card" style="float:right;">
-                                    <input type="text" mt-bind-onchange="setInputCardCode($this.get('value'))" mt-bind-onkeypress="keypress($event)" name="cardcode-input" class="f-text f-enter-card" id="J-enter-card" placeholder="输入抵用券密码"><a class="btn btn-mini" mt-bind-onclick="verifyInputCardCode()" style="vertical-align:baseline" href="javascript:void(0);">验证密码</a>
-                                    <p class="card-error" style="display: none;" mt-bind-show="cardError" mt-bind-html="cardError"></p>
-                                </div>
-                                <div class="add-desc">添加抵用券</div>
-                            </div>
-                        </div>
-                    </div></div>
-                <input type="hidden" value="" name="cardcode" id="J-cardcode">
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td colspan="4" class="extra-fee total-fee">
-                            <span class="amount">
-                                已选<strong class="amount__num" id="J-cart-amount" mt-bind-html="cartAmount">3</strong>件商品
-                            </span>
-                <strong>应付总额</strong>：
-                            <span class="inline-block money">
-                                ¥<strong id="J-cart-total" mt-bind-html="fixNumber(orderTotal)">76</strong>
-                            </span>
-            </td>
-        </tr>
-        </tbody></table>
-</div>
-<div class="form-submit" id="yui_3_16_0_1_1467448101261_1255">
-    <input gaevent="cart/orderconfirm" type="submit" class="btn btn-large btn-buy" name="buy" value="提交订单" mt-bind-onclick="submitDeal($event)" id="yui_3_16_0_1_1467448101261_1254" />
-</div>
-<div mt-bind-show="orderTotal >= 500" style="display:none" id="yui_3_16_0_1_1467448101261_121" hidden="hidden">
-    <div data-component="bigdeal-prompt" class="component-bigdeal-prompt mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1467448101261_101"><div class="blk-item big-deal">
-        <h3>大额单购买提示</h3>
-        <p class="text tip">* 本单总价超过500元，已超出工行口令卡、招行大众版等的单次支付限额。查看<a href="http://help.alipay.com/lab/help_detail.htm?help_id=211661" target="_blank">更多银行支付限额详情</a></p>
-        <p class="text tip">* 您也可以先<a href="http://www.meituan.com/account/charge" gaevent="buy/charge" target="_blank">为美团账户充值，</a>方便您的购买</p>
+
     </div>
-    </div>
-</div>
-</div>
-</form>
-<div data-component="recommend-deal" class="component-recommend-deal mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false}" id="yui_3_16_0_1_1467448101261_102"><div class="recommend-deals recommend-skin  cart-recommend wide-reco-pannel">
-    <h3>您可能感兴趣的团购</h3>
-    <div class="deal-list cf  data-mod=&quot;db&quot;">
-        <div class="deal ">
-            <a rel="nofollow" href="http://suzhousz.meituan.com/deal/35202613.html" data-mttcode="Aresys.Bcart" data-mtt="Aresys.Bcart" gaevent="cart/resysdeal/1/photo" target="_blank">
-                <img width="208" height="126" src="http://p1.meituan.net/208.126/deal/271bb65f408cc011864087114a35d9ee60293.jpg@0_24_800_484a%7C388h_640w_2e_90q" title="【华夏世贸广场】酷尚溜冰场" class="pic">
-            </a>
-            <h4>
-                <a href="http://suzhousz.meituan.com/deal/35202613.html" title="【华夏世贸广场】酷尚溜冰场" gaevent="cart/resysdeal/1/title" data-mttcode="Aresys.Bcart" data-mtt="Aresys.Bcart" class="deal-title" target="_blank">【华夏世贸广场】酷尚溜冰场</a>
-            </h4>
-            <div class="info">
-                    <span class="total">
-                        已售<span class="num">418</span>
-                    </span>
-                <strong class="price">¥ 8.8</strong>
-                <span class="original-price">门店价<span class="num">10</span></span>
-            </div>
-        </div>
-        <div class="deal ">
-            <a rel="nofollow" href="http://suzhousz.meituan.com/deal/37881896.html" data-mttcode="Aresys.Bcart" data-mtt="Aresys.Bcart" gaevent="cart/resysdeal/2/photo" target="_blank">
-                <img width="208" height="126" src="http://p0.meituan.net/dpdeal/87a30258f9383739bdc5b4b64a2e16b073734.jpg" title="【砀山县】喜牛国际娱乐会所" class="pic">
-            </a>
-            <h4>
-                <a href="http://suzhousz.meituan.com/deal/37881896.html" title="【砀山县】喜牛国际娱乐会所" gaevent="cart/resysdeal/2/title" data-mttcode="Aresys.Bcart" data-mtt="Aresys.Bcart" class="deal-title" target="_blank">【砀山县】喜牛国际娱乐会所</a>
-            </h4>
-            <div class="info">
-                    <span class="total">
-                        已售<span class="num">2465</span>
-                    </span>
-                <strong class="price">¥ 39</strong>
-                <span class="original-price">门店价<span class="num">345</span></span>
-            </div>
-        </div>
-        <div class="deal ">
-            <a rel="nofollow" href="http://suzhousz.meituan.com/deal/26263695.html" data-mttcode="Aresys.Bcart" data-mtt="Aresys.Bcart" gaevent="cart/resysdeal/3/photo" target="_blank">
-                <img width="208" height="126" src="http://p0.meituan.net/208.126/deal/0af5e66e4363eb528f0442444f771eb7179883.jpg" title="【百货大楼】美佳乐蛋糕" class="pic">
-            </a>
-            <h4>
-                <a href="http://suzhousz.meituan.com/deal/26263695.html" title="【百货大楼】美佳乐蛋糕" gaevent="cart/resysdeal/3/title" data-mttcode="Aresys.Bcart" data-mtt="Aresys.Bcart" class="deal-title" target="_blank">【百货大楼】美佳乐蛋糕</a>
-            </h4>
-            <div class="info">
-                    <span class="total">
-                        已售<span class="num">11988</span>
-                    </span>
-                <strong class="price">¥ 1.8</strong>
-                <span class="original-price">门店价<span class="num">3</span></span>
-            </div>
-        </div>
-        <div class="deal ">
-            <a rel="nofollow" href="http://www.meituan.com/deal/33387279.html" data-mttcode="Aresys.Bcart" data-mtt="Aresys.Bcart" gaevent="cart/resysdeal/4/photo" target="_blank">
-                <img width="208" height="126" src="http://p1.meituan.net/208.126/deal/13e367a38c6f59df4c6507f6d5ff746e234719.jpg" title="【金山商城】名客佳大鸡排" class="pic">
-            </a>
-            <h4>
-                <a href="http://www.meituan.com/deal/33387279.html" title="【金山商城】名客佳大鸡排" gaevent="cart/resysdeal/4/title" data-mttcode="Aresys.Bcart" data-mtt="Aresys.Bcart" class="deal-title" target="_blank">【金山商城】名客佳大鸡排</a>
-            </h4>
-            <div class="info">
-                    <span class="total">
-                        已售<span class="num">179</span>
-                    </span>
-                <strong class="price">¥ 2.9</strong>
-                <span class="original-price">门店价<span class="num">6</span></span>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-
-
-</div>
 </div>
 
 

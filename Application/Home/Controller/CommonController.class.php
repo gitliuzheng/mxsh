@@ -9,7 +9,10 @@ class CommonController extends Controller{
 	protected $vr_member_id = '';
 	protected $vr_member_name = '';
 
-	public function _initialize(){		
+	public function _initialize(){
+        //这句测试使用，不用可删除
+       $_SESSION['member_id'] = '44';
+
 		//导航分类数据 
 		$goodsModel = D('GoodsClass');
     	$floorData = $goodsModel->floorData();

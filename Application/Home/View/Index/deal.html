@@ -194,32 +194,33 @@
 
     
 
-<form action="http://suzhousz.meituan.com/deal/buy/26263695" method="GET" onsubmit="window._gaq.push([&#39;_trackEvent&#39;, &#39;InnerLink&#39;, &#39;Click&#39;, &#39;content/main/buy_new&#39;]);" class="J-wwwtracker-form deal-component-buy J-buy-form " id="yui_3_16_0_1_1465960232707_1859">
-    <div class="J-hotel-multiappoint" id="yui_3_16_0_1_1465960232707_1969">
-            
-                <div data-component="deal-digest-quantity" class="component-deal-digest-quantity mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465960232707_1968"><div class="deal-component-quantity">
+<form action="<{:U('buy/buy_step1')}>" method="GET"  class="J-wwwtracker-form deal-component-buy J-buy-form " >
+<div class="J-hotel-multiappoint" >
+<div data-component="deal-digest-quantity" class="component-deal-digest-quantity mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465960232707_1968"><div class="deal-component-quantity">
     <span class="deal-component-detail-leading">数量</span>
-    <button for="J-cart-minus" data-action="-" gaevent="top/minus" type="button">−</button><input type="text" class="J-cart-quantity" goods_num="goods_num" name="q" value="1" maxlength="9" data-max="500"><button for="J-cart-add" class="item" data-action="+" gaevent="top/plus" type="button">+</button>
+    <button for="J-cart-minus" data-action="-" gaevent="top/minus" type="button">−</button>
+    <input type="text" class="J-cart-quantity" goods_num="goods_num" name="quantity"  value="1" maxlength="9" data-max="500" />
+    <button for="J-cart-add" class="item" data-action="+" gaevent="top/plus" type="button">+</button>
     <span class="deal-component-quantity-warning orange"></span>
 </div>
 </div>
-        
-        <div data-component="deal-remind-delivery" class="component-deal-remind-delivery mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465960232707_1970"><div class="deal-component-remind J-type-remind" style="display:none">
+
+<div data-component="deal-remind-delivery" class="component-deal-remind-delivery mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465960232707_1970"><div class="deal-component-remind J-type-remind" style="display:none">
     <p class="remind__bottom">请勾选分店信息</p>
     <i class="F-glob F-glob-close close J-remind-close"></i>
     <div class="type__remind--continue J-remind-continue" style="display:none"></div>
 </div>
 </div>
-            <div class="deal-component-purchase-button" id="yui_3_16_0_1_1465960232707_2417">
-    <input type="submit" class="J-mini-cart-buy mini-cart-buy basic-deal data-mod-enabled log-mod-viewed" data-mtevent="{&quot;la&quot;:&quot;deal\/default\/buy&quot;,&quot;dealid&quot;:26263695}" data-mod="dn" value="抢购">
-        <a onclick="addCart();"  rel="nofollow" class="J-add-mini-cart mini-cart-button mini-cart-add log-mod-viewed" data-dealid="26263695" data-cityid="201" hidefocus="true" href="javascript:void(0);" data-mod="dc" title="加入购物车"><i class="F-glob F-glob-cart2"></i></a>
-        <a class="small-btn deal-component-add-favorite J-component-add-favorite item log-mod-viewed" data-mod="df" data-login="false"><i class="F-glob F-glob-star-border"></i><span>收藏</span>(<b class="J-fav-count">328</b>)</a>
+<div class="deal-component-purchase-button" id="yui_3_16_0_1_1465960232707_2417">
+    <input type="submit" class="J-mini-cart-buy mini-cart-buy basic-deal data-mod-enabled log-mod-viewed"   value="抢购" />
+    <a onclick="addCart();"  rel="nofollow" class="J-add-mini-cart mini-cart-button mini-cart-add log-mod-viewed" data-dealid="26263695" data-cityid="201" hidefocus="true" href="javascript:void(0);" data-mod="dc" title="加入购物车"><i class="F-glob F-glob-cart2"></i></a>
+    <a class="small-btn deal-component-add-favorite J-component-add-favorite item log-mod-viewed" data-mod="df" data-login="false"><i class="F-glob F-glob-star-border"></i><span>收藏</span>(<b class="J-fav-count">328</b>)</a>
     <a class="small-btn share-tip J-component-share-tip-dialog log-mod-viewed" data-mod="dy" id="yui_3_16_0_1_1465960232707_2416" data-mod-mtt="1.deal/default.dy.1-_anchor.ipgaveva"><i class="F-glob F-glob-share"></i>分享到</a>
 </div>
+</div>
 
-        <input type="hidden" class="J-dealgood-id" name="dealgoodsid" value="0">
-    </div>
-<input type="hidden" name="mtt" value="1.deal/default.0.0.ipgaveva"></form>
+<input type="hidden" name="goods_id" value="<{$data['goods_id']}>" />
+</form>
 
     <div data-component="deal-digest-countdown" class="component-deal-digest-countdown mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465960232707_1971"><div class="deal-component-remaining-time">
     <span class="deal-component-remaining-time-text hidden" data-remaining-time="1468684799000">
