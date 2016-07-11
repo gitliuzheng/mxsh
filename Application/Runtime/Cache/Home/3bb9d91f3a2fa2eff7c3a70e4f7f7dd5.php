@@ -105,7 +105,11 @@
                         <i class="vertical-bar"></i>
                     </a>
                     <div id="J-my-history-menu" class="dropdown-menu dropdown-menu--deal dropdown-menu--history">
-                        <p class="dropdown-menu--empty">暂无浏览记录</p>
+                       <p class="dropdown-menu--empty">暂无浏览记录</p> 
+
+
+                     
+
                     </div>
                 </li>
                 <li data-uix="dropdown" id="J-my-cart" class="dropdown dropdown--cart J-cart-updated" data-comboajax-uri="/index/navcart" data-comboajax-onsuccess="Y.mt.www.CartEx.update($response.data);" data-comboajax-state="5">
@@ -477,45 +481,28 @@
       
     </div>
 </div><div class="side-extension side-extension--single side-extension--lottery log-mod-viewed" data-mod="rd"><a href="http://suzhousz.meituan.com/lottery/past" target="_blank" hidefocus="true" gaevent="sidebar/lottery/about" class="old"></a><div id="lottery-list" class="J-hub" data-hubmodule="www-base" data-hubnamespace="Lottery"><ul class="lottery-result-list"><li class="lottery-result-list__item">薇拉宫邸私人婚礼会所，免费享 <a target="_blank" href="http://www.meituan.com/lottery/result/33366930" gaevent="sidebar/lottery/result">查结果</a></li><li class="lottery-result-list__item">浙江康恩贝健康科技有限公司，免费享 <a target="_blank" href="http://www.meituan.com/lottery/result/33011418" gaevent="sidebar/lottery/result">查结果</a></li><li class="lottery-result-list__item">福建省安溪闽绿茶业有限公司，免费享 <a target="_blank" href="http://www.meituan.com/lottery/result/33011730" gaevent="sidebar/lottery/result">查结果</a></li></ul><ul class="lottery-result-list" style="display:none;"><li class="lottery-result-list__item">中和澳亚，免费享 <a target="_blank" href="http://www.meituan.com/lottery/result/33010616" gaevent="sidebar/lottery/result">查结果</a></li><li class="lottery-result-list__item">谐缘，免费享 <a target="_blank" href="http://www.meituan.com/lottery/result/32688552" gaevent="sidebar/lottery/result">查结果</a></li><li class="lottery-result-list__item">ipad air2，免费送！ <a target="_blank" href="http://www.meituan.com/lottery/result/pingguoipadair0206" gaevent="sidebar/lottery/result">查结果</a></li></ul></div></div><div class="side-extension side-extension--single side-extension--recruit"><a href="http://campus.meituan.com/" target="_blank" hidefocus="true" gaevent="sidebar/campusrecruiting"></a></div><div class="side-extension side-extension--multiple side-extension--link"><a href="http://www.meituan.com/feedback/default/" target="_blank" hidefocus="true" gaevent="sidebar/feedback" class="side-extension__item side-extension__item--feedback">有您的建议，美团才能更好»</a><a href="http://pmc.e.meituan.com/public/register/choose" target="_blank" hidefocus="true" gaevent="sidebar/seller" class="side-extension__item side-extension__item--business side-extension__item--last"><span class="description">希望在美团网组织团购么？</span>请提交团购信息»</a></div><div class="side-extension side-extension--history J-side-history" style="display:none;"></div>
-    <div class="side-extension side-extension--history" style="" data-comboajax-uri="/combo/sidehistory" data-comboajax-config="www.History.side" data-comboajax-state="5" id="yui_3_16_0_1_1465867114754_2026"><div class="side-extension__item side-extension__item--last">
-    <h3>
-        <a href="javascript:;" gaevent="list/recent/qingkong" class="clear-history J-clear">清空</a>
-        最近浏览
-    </h3>
-    <ul class="history-list J-history-list">
-        <li class="history-list__item history-list__item--first" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/category_files/26c9f4e50185c4891ac74370b74a9853151923.jpg" width="80" height="50">
-        <h5>
-            <a href="http://suzhousz.meituan.com/deal/36306400.html" title="酷迪KTV-下午/午夜档5小时+小吃2份+1份爆米花" target="_blank" ref="nofollow">酷迪KTV-下午/午夜档5小时+小吃2份+1份爆米花</a>
-        </h5>
-        <p><em class="price">¥ <i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -60px -26px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -32px -13px;"></i><i class="inline-block ps_12 ps_12p pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -67px -39px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -21px -13px;"></i></em><span class="default-price">门店价 ¥<del>366</del></span></p>
-        </li>
-        <li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/category_files/0af5e66e4363eb528f0442444f771eb7179883.jpg" width="80" height="50">
-        <h5>
-            <a href="http://suzhousz.meituan.com/deal/26263695.html" title="美佳乐蛋糕葡式蛋挞1个" target="_blank" ref="nofollow">美佳乐蛋糕葡式蛋挞1个</a>
-        </h5>
-        <p><em class="price">¥ <i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -60px 0px;"></i><i class="inline-block ps_12 ps_12p pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -28px -39px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -21px -13px;"></i></em><span class="default-price">门店价 ¥<del>3</del></span></p>
-        </li>
-        <li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/category_files/aa63c620ca11691e6cbdd985c855d58d534450.jpeg" width="80" height="50">
-        <h5>
-            <a href="http://www.meituan.com/deal/27962815.html" title="国色天乡陆地乐园成人票1张" target="_blank" ref="nofollow">国色天乡陆地乐园成人票1张</a>
-        </h5>
-        <p><em class="price">¥ <i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -46px -39px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -7px -52px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -7px -52px;"></i></em><span class="default-price">门店价 ¥<del>120</del></span></p>
-        </li>
-        <li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/category_files/0883cf75eef1bfeb328a891b3e85ff1c139686.jpg" width="80" height="50">
-        <h5>
-            <a href="http://www.meituan.com/deal/30160327.html" title="环球中心电子票" target="_blank" ref="nofollow">环球中心电子票</a>
-        </h5>
-        <p><em class="price">¥ <i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -7px -13px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -32px -13px;"></i></em><span class="default-price">门店价 ¥<del>480</del></span></p>
-        </li>
-        <li class="history-list__item history-list__item--last" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/category_files/1bdb7273e684a5d996f2cf69e31340d4121016.jpg" width="80" height="50">
-        <h5>
-            <a href="http://xiaogan.meituan.com/deal/30053491.html" title="锅之恋时尚焖锅代金券1张" target="_blank" ref="nofollow">锅之恋时尚焖锅代金券1张</a>
-        </h5>
-        <p><em class="price">¥ <i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -35px -52px;"></i><i class="inline-block ps_12 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/12/e61b41eff6.png@b64babf);background-position: -67px -26px;"></i></em><span class="default-price">门店价 ¥<del>100</del></span></p>
-        </li>
-    </ul>
-</div>
-</div><div class="stickyPlugin-fix-placeholder" style="height: 493px; display: none;" id="yui_3_16_0_1_1465867114754_3332" hidden="hidden"></div>
+
+
+    
+<!-- cookie显示浏览记录   zhangkuan-->
+    <div class="side-extension side-extension--history" style="" data-comboajax-uri="/combo/sidehistory" data-comboajax-config="www.History.side" data-comboajax-state="5" id="yui_3_16_0_1_1465960232707_1770">
+        <div class="side-extension__item side-extension__item--last">
+            <h3>
+                <a href="javascript:void(0);" gaevent="list/recent/qingkong" class="clear-history J-clear" onclick="deldisplayHistory()">清空</a>
+                最近浏览
+            </h3>
+            <ul class="history-list J-history-list" id="display_history">               
+            </ul>
+        </div>
+    </div>
+<!-- cookie显示浏览记录结束   zhangkuan-->
+    
+
+
+
+
+
+<div class="stickyPlugin-fix-placeholder" style="height: 493px; display: none;" id="yui_3_16_0_1_1465867114754_3332" hidden="hidden"></div>
 </div>
 
 
@@ -996,3 +983,50 @@
 
 <script type="text/javascript" src="/mxsh/Public/JS/Home/index.js"></script>
 </body></html>
+
+<!-- 获取浏览记录 -->
+<script type="text/javascript">    
+    cookieajax();
+    function cookieajax(){
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('Index/displayHistory?id='.$data['goods_id']); ?>",
+            dataType : "json",
+            success : function(data)
+            {
+                if(data!=0){
+                var html = '';
+                var tophtml = '';
+                $(data).each(function(k,v){                 
+                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="#" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';
+                });
+                $(data).each(function(k,v){       
+                    tophtml += '<ul data-mttcode="Arecent" id="yui_3_16_0_1_1468227379514_3635"><li class="dropdown-menu__item" id="yui_3_16_0_1_1468227379514_3634"><a class="deal-link" href="http://hf.meituan.com/deal/29169062.html" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0"><img class="deal-cover" src="#" width="80" height="50"></a><h5 class="deal-title" id="yui_3_16_0_1_1468227379514_3633"><a class="deal-link" href="#" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0" id="yui_3_16_0_1_1468227379514_3632" data-mod-mtt="1.shop/default.0.0.iqhso8jg">'+v.goods_name+'</a></h5><a class="deal-price-w" target="_blank" href="http://hf.meituan.com/deal/29169062.html" gaevent="nav/browsingHistory/0"><em class="deal-price">¥'+v.goods_promotion_price+'</em><span class="old-price color-weaken">'+v.goods_price+'</span></a></li></ul>';        
+                });                         
+                $('#display_history').html(html);
+                tophtml+='<p id="J-clear-my-history" class="clear"><a class="clear__btn" href="javascript:void(0)" onclick="deldisplayHistory()">清空最近浏览记录</a></p>';
+                $('#J-my-history-menu').html(tophtml);
+                }
+            }
+        });
+    }
+       
+
+   //清空cookie浏览记录
+    function  deldisplayHistory(){
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('Index/deldisplayHistory'); ?>",
+            success : function(data){
+                if(data){
+                    html = '<li class="history-list__item" target="_blank" ref="nofollow"><h5><a href="#" title="" target="_blank" ref="nofollow"></a></h5><p><em class="price"></em><span class="default-price"><del></del></span></p></li>';
+                }else{
+                    html = '未删除成功！';
+                }
+                $('#display_history').html(html);
+                var tophtml = '<p class="dropdown-menu--empty">暂无浏览记录</p>';
+                $('#J-my-history-menu').html(tophtml);
+            }
+        });
+    }
+</script>

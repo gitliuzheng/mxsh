@@ -76,7 +76,9 @@ class IndexController extends CommonController {
         $id = I('get.id');
         $data = isset($_COOKIE['display_history']) ? unserialize($_COOKIE['display_history']) : array();
         // 把最新浏览的这件商品放到数组中的第一个位置上
+        if($id){
         array_unshift($data, $id);
+    }
         $data = array_unique($data);
         if(count($data) > 5)
             $data = array_slice($data, 0, 5);
@@ -84,6 +86,10 @@ class IndexController extends CommonController {
         // 再根据商品的ID取出商品的详细信息
         $goods = D('VrGoods'); 
         $data = implode(',', $data);
+        if(!$data){
+            echo json_encode(0);
+            die;
+        }
         $gData = $goods->field('goods_id,goods_name,goods_price,goods_promotion_price')->where(array(
             'goods_id' => array('in', $data),            
         ))->order("FIELD(goods_id,$data)")->select();        

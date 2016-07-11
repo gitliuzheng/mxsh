@@ -142,7 +142,11 @@
                         <i class="vertical-bar"></i>
                     </a>
                     <div id="J-my-history-menu" class="dropdown-menu dropdown-menu--deal dropdown-menu--history">
-                        <p class="dropdown-menu--empty">暂无浏览记录</p>
+                       <p class="dropdown-menu--empty">暂无浏览记录</p> 
+
+
+                     
+
                     </div>
                 </li>
                 <li data-uix="dropdown" id="J-my-cart" class="dropdown dropdown--cart J-cart-updated" data-comboajax-uri="/index/navcart" data-comboajax-onsuccess="Y.mt.www.CartEx.update($response.data);" data-comboajax-state="5">
@@ -1091,8 +1095,6 @@
 </body></html>
 
 
-
-
 <!-- 获取浏览记录 -->
 <script type="text/javascript">    
     cookieajax();
@@ -1103,11 +1105,19 @@
             dataType : "json",
             success : function(data)
             {
+                if(data!=0){
                 var html = '';
+                var tophtml = '';
                 $(data).each(function(k,v){                 
-                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="#" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';        
+                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="#" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';
+                });
+                $(data).each(function(k,v){       
+                    tophtml += '<ul data-mttcode="Arecent" id="yui_3_16_0_1_1468227379514_3635"><li class="dropdown-menu__item" id="yui_3_16_0_1_1468227379514_3634"><a class="deal-link" href="http://hf.meituan.com/deal/29169062.html" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0"><img class="deal-cover" src="#" width="80" height="50"></a><h5 class="deal-title" id="yui_3_16_0_1_1468227379514_3633"><a class="deal-link" href="#" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0" id="yui_3_16_0_1_1468227379514_3632" data-mod-mtt="1.shop/default.0.0.iqhso8jg">'+v.goods_name+'</a></h5><a class="deal-price-w" target="_blank" href="http://hf.meituan.com/deal/29169062.html" gaevent="nav/browsingHistory/0"><em class="deal-price">¥'+v.goods_promotion_price+'</em><span class="old-price color-weaken">'+v.goods_price+'</span></a></li></ul>';        
                 });                         
                 $('#display_history').html(html);
+                tophtml+='<p id="J-clear-my-history" class="clear"><a class="clear__btn" href="javascript:void(0)" onclick="deldisplayHistory()">清空最近浏览记录</a></p>';
+                $('#J-my-history-menu').html(tophtml);
+                }
             }
         });
     }
@@ -1125,10 +1135,16 @@
                     html = '未删除成功！';
                 }
                 $('#display_history').html(html);
+                var tophtml = '<p class="dropdown-menu--empty">暂无浏览记录</p>';
+                $('#J-my-history-menu').html(tophtml);
             }
         });
     }
 </script>
+
+
+
+
 
 
 <!-- 地图无刷新分页   zhangkuan-->
