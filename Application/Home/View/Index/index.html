@@ -1865,7 +1865,6 @@
 <!-- 改动楼层内容   zhangkuan-->
     <div data-component="category-list" class="component-category-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;css&quot;:&quot;fewww:\/www\/css\/category-list.css@6bb4e90&quot;}" id="yui_3_16_0_1_1464999326260_18">
         <div class="category-list log-mod-viewed" data-mod="im" id="yui_3_16_0_1_1464999326260_8699">
-            <div class="category-floor " id="yui_3_16_0_1_1464999326260_8698">                
                 <volist name='floorData' id='v'>
                     <volist name="v['recSubCat']" id="v1">
                     <!-- 显示八层，改变图标  无图标的显示为提包-->
@@ -1897,6 +1896,7 @@
                                 $p = "wanggou";
                             }
                         ?>
+                        <div class="category-floor">
                         <div id="floor-category--<?php echo $p;?>" class="category-floor__head cf" data-mtnode="Acategory">
                             <ul class="sub-categories">                                   
                                 <volist name="v1['threeCat']" id="v2">
@@ -1956,10 +1956,11 @@
                                 <span>更多<{$v1['gc_name']}>，请点击查看<i class="link__icon F-glob F-glob-caret-right-small"></i></span>
                             </a>
                         </div>
+                        </div>
                     <?php $p=null; ?>    
                     </volist>    
                 </volist>
-            </div>
+            
    
 <!-- 改动楼层内容 结束位置zhangkuan -->
         </div>
