@@ -142,11 +142,7 @@
                         <i class="vertical-bar"></i>
                     </a>
                     <div id="J-my-history-menu" class="dropdown-menu dropdown-menu--deal dropdown-menu--history">
-                       <p class="dropdown-menu--empty">暂无浏览记录</p> 
-
-
-                     
-
+                       <p class="dropdown-menu--empty">暂无浏览记录</p>                
                     </div>
                 </li>
                 <li data-uix="dropdown" id="J-my-cart" class="dropdown dropdown--cart J-cart-updated" data-comboajax-uri="/index/navcart" data-comboajax-onsuccess="Y.mt.www.CartEx.update($response.data);" data-comboajax-state="5">
@@ -225,7 +221,7 @@
 
 
 <!-- 关键字搜索  zhangkuan -->  
-    <form  class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1464999326260_126">
+    <div  class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1464999326260_126">
         <div class="search-box__tabs-container" style="float:left">
             <span class="tri"></span>
             <ul class="J-search-box__tabs search-box__tabs">
@@ -235,11 +231,28 @@
         </div>
         <input tabindex="1" type="text" name="name" autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1464999326260_132" class="name">
        <!--  搜索通过事件提交，增加key字段提交(区分类别跳转) -->
-        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr"  onclick="location.href='<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/'+$('#yui_3_16_0_1_1464999326260_132').val();">       
-    </form>
+        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr" >       
+    </div>
 <!-- 关键字搜索结束  zhangkuan -->  
 
-
+<script type="text/javascript">
+$(function(){
+    $('.s-submit').click(function(){    
+        var m = $('#yui_3_16_0_1_1464999326260_132').val();
+        if(m){
+            window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+m;
+        }
+    });
+    $("body").keyup(function(event) {
+        if (event.keyCode == "13") {//keyCode=13是回车键 
+            var m = $('#yui_3_16_0_1_1464999326260_132').val();
+            if(m){
+                window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+m;
+            }   
+        }
+    });
+});
+</script>
 
 
 
@@ -251,7 +264,26 @@
     <div class="smart-query-panel" style="display:none" id="yui_3_16_0_1_1465867114754_1880">
         <div class="smart-query-content"></div>
     </div>
-    <div class="J-search-box__hot search-box__hot log-mod-viewed" data-mod="st" id="yui_3_16_0_1_1465867114754_2107"><div class="s-hot" id="J-deal-hot-query"><a class="hot-link  hot-link--first" gaevent="search/hotquery/1" data-mttcode="Asearch.Bhotquery.C1.D" href="http://www.meituan.com/s/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="search/hotquery/2" data-mttcode="Asearch.Bhotquery.C2.D" href="http://www.meituan.com/s/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="search/hotquery/3" data-mttcode="Asearch.Bhotquery.C3.D" href="http://www.meituan.com/s/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="search/hotquery/4" data-mttcode="Asearch.Bhotquery.C4.D" href="http://www.meituan.com/s/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="search/hotquery/5" data-mttcode="Asearch.Bhotquery.C5.D" href="http://www.meituan.com/s/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="search/hotquery/6" data-mttcode="Asearch.Bhotquery.C6.D" href="http://www.meituan.com/s/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="search/hotquery/7" data-mttcode="Asearch.Bhotquery.C7.D" href="http://www.meituan.com/s/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="search/hotquery/8" data-mttcode="Asearch.Bhotquery.C8.D" href="http://www.meituan.com/s/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="search/hotquery/9" data-mttcode="Asearch.Bhotquery.C9.D" href="http://www.meituan.com/s/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="search/hotquery/10" data-mttcode="Asearch.Bhotquery.C10.D" href="http://www.meituan.com/s/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div><div class="s-hot" id="J-poi-hot-query" style="display:none"><a class="hot-link  hot-link--first" gaevent="poisearch/hotquery/1" data-mttcode="Apoisearch.Bhotquery.C1.D" href="http://www.meituan.com/shops/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="poisearch/hotquery/2" data-mttcode="Apoisearch.Bhotquery.C2.D" href="http://www.meituan.com/shops/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="poisearch/hotquery/3" data-mttcode="Apoisearch.Bhotquery.C3.D" href="http://www.meituan.com/shops/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="poisearch/hotquery/4" data-mttcode="Apoisearch.Bhotquery.C4.D" href="http://www.meituan.com/shops/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="poisearch/hotquery/5" data-mttcode="Apoisearch.Bhotquery.C5.D" href="http://www.meituan.com/shops/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="poisearch/hotquery/6" data-mttcode="Apoisearch.Bhotquery.C6.D" href="http://www.meituan.com/shops/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="poisearch/hotquery/7" data-mttcode="Apoisearch.Bhotquery.C7.D" href="http://www.meituan.com/shops/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="poisearch/hotquery/8" data-mttcode="Apoisearch.Bhotquery.C8.D" href="http://www.meituan.com/shops/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="poisearch/hotquery/9" data-mttcode="Apoisearch.Bhotquery.C9.D" href="http://www.meituan.com/shops/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="poisearch/hotquery/10" data-mttcode="Apoisearch.Bhotquery.C10.D" href="http://www.meituan.com/shops/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div></div></div>
+
+    <!-- 热门搜索 -->
+    <div class="J-search-box__hot search-box__hot log-mod-viewed" data-mod="st" id="yui_3_16_0_1_1465867114754_2107">
+        <div class="s-hot" id="J-deal-hot-query">
+            <?php if(is_array($setData)): $i = 0; $__LIST__ = $setData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><!-- 设置显示5个 -->
+                <?php static $m=0; if($m >= 5){break;} $m++; ?>
+                    <a class="hot-link  hot-link--first" href="javascript:void(0)" gaevent="search/hotquery/1" data-mttcode="Asearch.Bhotquery.C1.D" onclick="ff('<?php echo ($v); ?>')"><?php echo ($v); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+        </div>
+    <script type="text/javascript">
+        function ff(k){
+            if(k){
+                window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+k;
+            }  
+        }
+    </script>
+        <!-- <div class="s-hot" id="J-poi-hot-query" style="display:none"><a class="hot-link  hot-link--first" gaevent="poisearch/hotquery/1" data-mttcode="Apoisearch.Bhotquery.C1.D" href="http://www.meituan.com/shops/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="poisearch/hotquery/2" data-mttcode="Apoisearch.Bhotquery.C2.D" href="http://www.meituan.com/shops/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="poisearch/hotquery/3" data-mttcode="Apoisearch.Bhotquery.C3.D" href="http://www.meituan.com/shops/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="poisearch/hotquery/4" data-mttcode="Apoisearch.Bhotquery.C4.D" href="http://www.meituan.com/shops/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="poisearch/hotquery/5" data-mttcode="Apoisearch.Bhotquery.C5.D" href="http://www.meituan.com/shops/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="poisearch/hotquery/6" data-mttcode="Apoisearch.Bhotquery.C6.D" href="http://www.meituan.com/shops/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="poisearch/hotquery/7" data-mttcode="Apoisearch.Bhotquery.C7.D" href="http://www.meituan.com/shops/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="poisearch/hotquery/8" data-mttcode="Apoisearch.Bhotquery.C8.D" href="http://www.meituan.com/shops/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="poisearch/hotquery/9" data-mttcode="Apoisearch.Bhotquery.C9.D" href="http://www.meituan.com/shops/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="poisearch/hotquery/10" data-mttcode="Apoisearch.Bhotquery.C10.D" href="http://www.meituan.com/shops/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div> -->
+    </div>
+
+
+    </div>
 </div>
         <a class="site-commitment" gaevent="top/commitment" href="http://www.meituan.com/commitment/" target="_blank">
             <span class="commitment-item"><i class="F-glob F-glob-commitment-retire"></i>随时退</span>
@@ -362,7 +394,7 @@
             <div class="sans-serif">
                 <span class="deal-component-title-prefix">【*****】</span><h1 class="deal-component-title"> <?php echo ($data['goods_name']); ?></h1>
             </div>
-            <div class="deal-component-description">仅售 <?php echo ($data['goods_promotion_price']); ?>元！市场价<?php echo ($data['goods_marketprice']); ?>元，提供免费WiFi。</div>
+            <div class="deal-component-description"><?php echo ($data['goods_jingle']); ?></div>
     </div>
     <div class="deal-component-detail cf" id="yui_3_16_0_1_1465960232707_231">
         <div class="deal-component-left" id="yui_3_16_0_1_1465960232707_230">
@@ -445,7 +477,7 @@
         <span class="deal-component-detail-leading left">有效期</span>
         <span class="deal-component-inline-text-container left">
             <span class="deal-component-inline-text-wrapper">
-                    <span class="deal-component-expiry-valid-through">截止到2016.07.17</span><span class="deal-component-expiry-notice orange">周末、法定节假日通用</span>
+                    <span class="deal-component-expiry-valid-through">截止到<?php echo date('Y-m-d',$data['virtual_indate']);?></span><span class="deal-component-expiry-notice orange">周末、法定节假日通用</span>
                 <span class="deal-component-expiry-notice-detail"></span>
             </span>
         </span>
@@ -475,7 +507,7 @@
             <div class="deal-component-purchase-button" id="yui_3_16_0_1_1465960232707_2417">
     <input type="submit" class="J-mini-cart-buy mini-cart-buy basic-deal data-mod-enabled log-mod-viewed" data-mtevent="{&quot;la&quot;:&quot;deal\/default\/buy&quot;,&quot;dealid&quot;:26263695}" data-mod="dn" value="抢购">
         <a onclick="addCart();"  rel="nofollow" class="J-add-mini-cart mini-cart-button mini-cart-add log-mod-viewed" data-dealid="26263695" data-cityid="201" hidefocus="true" href="javascript:void(0);" data-mod="dc" title="加入购物车"><i class="F-glob F-glob-cart2"></i></a>
-        <a class="small-btn deal-component-add-favorite J-component-add-favorite item log-mod-viewed" data-mod="df" data-login="false"><i class="F-glob F-glob-star-border"></i><span>收藏</span>(<b class="J-fav-count">328</b>)</a>
+        <a class="small-btn deal-component-add-favorite J-component-add-favorite item log-mod-viewed" data-mod="df" data-login="false"><i class="F-glob F-glob-star-border"></i><span>收藏</span>(<b class="J-fav-count"><?php echo ($data['goods_collect']); ?></b>)</a><div id="dialog" title="收藏" style="display:none;"></div>
     <a class="small-btn share-tip J-component-share-tip-dialog log-mod-viewed" data-mod="dy" id="yui_3_16_0_1_1465960232707_2416" data-mod-mtt="1.deal/default.dy.1-_anchor.ipgaveva"><i class="F-glob F-glob-share"></i>分享到</a>
 </div>
 
@@ -510,7 +542,7 @@
 
 <div id="content" class="deal-content J-deal-content">
         <div class="detail-tips cf">
-            <div class="detail-tips-text"><p>亲爱的用户，本次团购有效期延长至2016年07月17日，感谢您的支持，祝消费愉快~</p></div>
+            <div class="detail-tips-text"><p>亲爱的用户，本次团购有效期延长至<?php echo date('Y-m-d',$data['virtual_indate']);?>，感谢您的支持，祝消费愉快~</p></div>
         </div>
         <div class="J-hub" data-huburl="deal/dealssamebiz" data-hubmodule="www-deal-detail" data-hubnamespace="DealDetail.SameBiz" data-hubconfig="{&quot;args&quot;:26263695,&quot;brand&quot;:&quot;\u7f8e\u4f73\u4e50\u86cb\u7cd5&quot;}" data-hubstamp="yui_3_16_0_1_1465960232707_919" data-hubstate="50" id="yui_3_16_0_1_1465960232707_1861"><div id="deal-other-biz" data-mod="do">
                 <h3 class="biz-title">该商家的其他团购
@@ -519,36 +551,18 @@
                     </div>
                 </h3>
                 <ul class="item-list">
-                    <li><a href="http://suzhousz.meituan.com/deal/25982118.html" class="first" gaevent="content/sameBiz/1/title" data-mttcode="Aresys.Botherdeal.C1" target="_blank">
+                    <!-- <li><a href="http://suzhousz.meituan.com/deal/25982118.html" class="first" gaevent="content/sameBiz/1/title" data-mttcode="Aresys.Botherdeal.C1" target="_blank">
                             <span class="biz-title">【百货大楼】立体芭比蛋糕1个，约2磅，立体</span><span class="price">¥<i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -20px -32px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -35px 0px;"></i></span><span class="value-cn">¥148 </span><span class="sale">2685</span>
                         </a>
                     </li>
-                    <li><a href="http://suzhousz.meituan.com/deal/26132337.html" gaevent="content/sameBiz/2/title" data-mttcode="Aresys.Botherdeal.C2" target="_blank">
-                            <span class="biz-title">【百货大楼】蛋糕3选1,约5.5英寸，立体</span><span class="price">¥<i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -85px -32px;"></i><i class="inline-block ps_16 ps_16p pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: 0px 0px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -40px -32px;"></i></span><span class="value-cn">¥15 </span><span class="sale">2407</span>
-                        </a>
-                    </li>
-                    <li><a href="http://suzhousz.meituan.com/deal/26132330.html" gaevent="content/sameBiz/3/title" data-mttcode="Aresys.Botherdeal.C3" target="_blank">
-                            <span class="biz-title">【百货大楼】蛋糕2选1,约8英寸</span><span class="price">¥<i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -10px -48px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -85px -32px;"></i><i class="inline-block ps_16 ps_16p pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: 0px -16px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -65px -16px;"></i></span><span class="value-cn">¥98 </span><span class="sale">1721</span>
-                        </a>
-                    </li>
-                    <li><a href="http://suzhousz.meituan.com/deal/28039171.html" gaevent="content/sameBiz/4/title" data-mttcode="Aresys.Botherdeal.C4" target="_blank">
-                            <span class="biz-title">【百货大楼】盆栽蛋糕1个，约2.5英寸，立体</span><span class="price">¥<i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -20px -32px;"></i><i class="inline-block ps_16 ps_16p pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: 0px 0px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: 0px -64px;"></i></span><span class="value-cn">¥12 </span><span class="sale">333</span>
-                        </a>
-                    </li>
-                    <li><a href="http://suzhousz.meituan.com/deal/33678749.html" gaevent="content/sameBiz/5/title" data-mttcode="Aresys.Botherdeal.C5" target="_blank">
-                            <span class="biz-title">【百货大楼】10寸蛋糕1个，约25厘米，立体</span><span class="price">¥<i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -65px -16px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -20px -48px;"></i></span><span class="value-cn">¥168 </span><span class="sale">157</span>
-                        </a>
-                    </li>
-                    <li><a href="http://suzhousz.meituan.com/deal/28039166.html" gaevent="content/sameBiz/6/title" data-mttcode="Aresys.Botherdeal.C6" target="_blank">
-                            <span class="biz-title">【百货大楼】新西兰玫瑰蛋糕1个，约8英寸，方形</span><span class="price">¥<i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -75px 0px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: 0px -64px;"></i><i class="inline-block ps_16 ps_16p pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -30px -16px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/16/ad431cd19a.png@b64babf);background-position: -35px 0px;"></i></span><span class="value-cn">¥98 </span><span class="sale">113</span>
-                        </a>
-                    </li>
+                  
                     <li class="more-deal-trigger hidden">
                         <a class="collapse--normal collapse--collapsed" gaevent="content/deal/moresamebiz" href="javascript:void(0);">
                             还有0个
                             <span class="triangle"></span>
                         </a>
-                    </li>
+                    </li> -->
+                    暂无其他团购，商家将尽快更新。。。
                 </ul>
             </div></div>
     <div data-uix="smoothscroll" data-params="{ lazyload: true, trigger: &#39;.tab-item&#39;, extraPx: -10, extraNode: &#39;#J-content-navbar&#39;, extraNodeSign: -1, easing: &#39;easeIn&#39; }" id="yui_3_16_0_1_1465960232707_1513">
@@ -585,7 +599,7 @@
                 <li id="yui_3_16_0_1_1465960232707_1829" class="">
                     <a class="tab-item" data-scroll="#anchor-reviews" href="http://suzhousz.meituan.com/deal/26263695.html#anchor-reviews" data-anchor="#anchor-reviews" id="yui_3_16_0_1_1465960232707_1835">
                         消费评价
-                        <span class="num J-hub" data-huburl="deal/reviewcount" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_944" data-hubstate="50">(1407)</span>
+                        <span class="num J-hub" data-huburl="deal/reviewcount" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_944" data-hubstate="50">(<?php echo ($data['evaluation_count']); ?>)</span>
                         
                     </a>
                 </li>
@@ -625,10 +639,21 @@
                     </div>
 <!-- 地理位置结束  zhangkuan -->
 
-<div class="deal-term"><h2 class="content-title" id="anchor-purchaseinfo">购买须知</h2><dl><dt>有效期</dt><dd>2014.9.26 至 2016.7.17（周末、法定节假日通用）</dd><dt>使用时间</dt><dd>09:00-21:00</dd><dt>预约提醒</dt><dd>无需预约，消费高峰时可能需要等位</dd><dt>限购限用提醒</dt><dd>每人最多使用8张美团券
-每张美团券建议1人使用</dd><dt>包间</dt><dd>店内无包间</dd><dt>堂食外带</dt><dd>仅限餐前外带，提供免费打包服务</dd><dt>温馨提示</dt><dd>团购用户不可同时享受商家其他优惠</dd><dt>商家服务</dt><dd>提供免费WiFi</dd></dl></div><h2 class="content-title" id="anchor-detail">本单详情</h2><p class="standard-bar">
-    美味尽享
-</p>
+<div class="deal-term">
+    <h2 class="content-title" id="anchor-purchaseinfo">购买须知</h2>
+    <dl>
+        <!-- <dt>有效期</dt><dd>2014.9.26 至 2016.7.17（周末、法定节假日通用）</dd>
+        <dt>使用时间</dt><dd>09:00-21:00</dd>
+        <dt>预约提醒</dt><dd>无需预约，消费高峰时可能需要等位</dd>
+        <dt>限购限用提醒</dt><dd>每人最多使用8张美团券每张美团券建议1人使用</dd>
+        <dt>包间</dt><dd>店内无包间</dd>
+        <dt>堂食外带</dt><dd>仅限餐前外带，提供免费打包服务</dd>
+        <dt>温馨提示</dt><dd>团购用户不可同时享受商家其他优惠</dd>
+        <dt>商家服务</dt><dd>提供免费WiFi</dd> -->
+    </dl>
+</div>
+<h2 class="content-title" id="anchor-detail">本单详情</h2>
+<!-- <p class="standard-bar">美味尽享</p> -->
             <style>
             .deal-menu { width:100%; margin-top:0px; border:none; font-size:14px; color:#222; }
             .deal-menu .name { width:auto; text-align:left; border-left:none; }
@@ -650,34 +675,61 @@
             .ps_16 {width: 10px;height: 17px;vertical-align: text-bottom;}
             .ps_16p {width: 5px;}
             </style>
-                    <table class="deal-menu">
-                    <tbody><tr>
-                    <th class="name" colspan="2">套餐内容</th>
-                    <th class="price">单价</th>
-                    <th class="amount">数量/规格</th>
-                    <th class="subtotal">小计</th>
-                    </tr><tr><td rowspan="1" class="subline subline-left"><span class="title">其他</span></td>
-                                <td class="name">葡式蛋挞</td>
-                                <td class="price">¥3</td>
-                                <td class="amount">1个</td>
-                                <td class="subtotal">¥3</td>
-                                </tr>
-                    </tbody></table>
-                        <p class="deal-menu-summary">价值: <span class="inline-block worth">¥3</span>美团价: <span class="inline-block worth price">¥<i class="inline-block ps_16 pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -30px -48px;"></i><i class="inline-block ps_16 ps_16p pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -60px -48px;"></i><i class="inline-block ps_16 pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -40px -64px;"></i></span></p><ul class="list">
-<li>免费提供餐巾纸</li>
- </ul><p class="standard-bar">美团推荐</p><div class="standard-content"><img class="" src="/mxsh/Public/deal_files/3c2cd9f196d64d4784507b4bfb037687117325.jpg@PC" alt="__33720999__1960475" height="388"><img class="" src="/mxsh/Public/deal_files/211e3e4874e1cfea99a4109fa365086e137890.jpg@PC" alt="__33720984__2087680" height="388"><img class="" src="/mxsh/Public/deal_files/3511a8302a0661ccb426b6662cdf5275122125.jpg@PC" alt="__33720996__1056767" height="388"><img class="" src="/mxsh/Public/deal_files/8b7fd5b7a4b223d4f4128f5180e845d9219639.jpg@PC" alt="__33721001__6541897" height="388"></div><div id="anchor-bizinfo"><h2 class="content-title">商家介绍</h2><p class="standard-bar">
-美佳乐蛋糕
-</p><div class="standard-content">
-
-    <img class="" src="/mxsh/Public/deal_files/78b9fd88d6676370cf500c172859d451290983.jpg@PC" alt="_MG_0206_副本" height="467">
-
-<p>
-美佳乐蛋糕位于胜利中路399号第一小学东50米，多年来主要做生日蛋糕和现烤现卖面包西饼，产品新鲜健康、成立二十多年至今口碑很好！ 本店的奶油蛋糕，纯正的天然美味，0反式脂肪酸，100%天然奶油从新鲜牛奶中提取，无任何色素和、香精、防腐剂，是纯正的天然美味。美嘉乐的慕斯蛋糕、芝士蛋糕、巧克力蛋糕是充满高贵感性、时尚品味的优质产品；在制作工艺中，集南北风味之所长，广泛吸取欧洲产品制作工艺精华，独特的设计与口感完美组合，让每一位食客享受到出乎意料的美味。
+<!-- <table class="deal-menu">
+    <tbody>
+        <tr>
+            <th class="name" colspan="2">套餐内容</th>
+            <th class="price">单价</th>
+            <th class="amount">数量/规格</th>
+            <th class="subtotal">小计</th>
+        </tr>
+        <tr>
+            <td rowspan="1" class="subline subline-left"><span class="title">其他</span></td>
+            <td class="name">葡式蛋挞</td>
+            <td class="price">¥3</td>
+            <td class="amount">1个</td>
+            <td class="subtotal">¥3</td>
+        </tr>
+    </tbody>
+</table>
+<p class="deal-menu-summary">价值: 
+    <span class="inline-block worth">¥3</span>美团价: 
+    <span class="inline-block worth price">¥
+        <i class="inline-block ps_16 pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -30px -48px;"></i>
+        <i class="inline-block ps_16 ps_16p pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -60px -48px;"></i>
+        <i class="inline-block ps_16 pngfix" style="background-image: url(http://s0.meituan.net/www/css/si/pricesp/16/e03af0a355.png);background-position: -40px -64px;"></i>
+    </span>
 </p>
+<ul class="list">
+    <li>免费提供餐巾纸</li>
+</ul> -->
 
-    <img class="" src="/mxsh/Public/deal_files/6895e158cc55903dcb212a4618b8be60284704.jpg@PC" alt="_MG_0917_副本" height="467">
-    <img class="" src="/mxsh/Public/deal_files/0d8ac9d39b3b007beef04723d04f55ea286793.jpg@PC" alt="_MG_0915_副本" height="467">
-    <img class="" src="/mxsh/Public/deal_files/353e46361548d575077522bf31873879327932.jpg@PC" alt="_MG_0918_副本" height="467"></div></div></div>
+
+
+ <p class="standard-bar">美团推荐</p>
+ <div class="standard-content">
+     <!-- <img class="" src="/mxsh/Public/deal_files/3c2cd9f196d64d4784507b4bfb037687117325.jpg@PC" alt="__33720999__1960475" height="388">
+     <img class="" src="/mxsh/Public/deal_files/211e3e4874e1cfea99a4109fa365086e137890.jpg@PC" alt="__33720984__2087680" height="388">
+     <img class="" src="/mxsh/Public/deal_files/3511a8302a0661ccb426b6662cdf5275122125.jpg@PC" alt="__33720996__1056767" height="388">
+     <img class="" src="/mxsh/Public/deal_files/8b7fd5b7a4b223d4f4128f5180e845d9219639.jpg@PC" alt="__33721001__6541897" height="388"> -->
+ </div>
+ <div id="anchor-bizinfo">
+    <h2 class="content-title">商家介绍</h2>
+    <p class="standard-bar"><?php echo ($data['goods_name']); ?></p>
+   <!--  <div class="standard-content">
+        <img class="" src="/mxsh/Public/deal_files/78b9fd88d6676370cf500c172859d451290983.jpg@PC" alt="_MG_0206_副本" height="467">
+        <p>
+            美佳乐蛋糕位于胜利中路399号第一小学东50米，多年来主要做生日蛋糕和现烤现卖面包西饼，产品新鲜健康、成立二十多年至今口碑很好！ 本店的奶油蛋糕，纯正的天然美味，0反式脂肪酸，100%天然奶油从新鲜牛奶中提取，无任何色素和、香精、防腐剂，是纯正的天然美味。美嘉乐的慕斯蛋糕、芝士蛋糕、巧克力蛋糕是充满高贵感性、时尚品味的优质产品；在制作工艺中，集南北风味之所长，广泛吸取欧洲产品制作工艺精华，独特的设计与口感完美组合，让每一位食客享受到出乎意料的美味。
+        </p>
+        <img class="" src="/mxsh/Public/deal_files/6895e158cc55903dcb212a4618b8be60284704.jpg@PC" alt="_MG_0917_副本" height="467">
+        <img class="" src="/mxsh/Public/deal_files/0d8ac9d39b3b007beef04723d04f55ea286793.jpg@PC" alt="_MG_0915_副本" height="467">
+        <img class="" src="/mxsh/Public/deal_files/353e46361548d575077522bf31873879327932.jpg@PC" alt="_MG_0918_副本" height="467">
+    </div> -->
+</div>
+
+
+
+</div>
                     <div id="anchor-reviews" class="user-reviews J-rate-wrapper J-hub" data-huburl="deal/userreviews" data-hubmodule="www-deal" data-hubnamespace="Deal.UserReviews" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_33" data-hubstate="50">
     
 
@@ -1108,12 +1160,14 @@
                 if(data!=0){
                 var html = '';
                 var tophtml = '';
-                $(data).each(function(k,v){                 
-                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="#" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';
+                $(data).each(function(k,v){ 
+                    var j = "<?php echo U('Home/Index/deal/id', '', FALSE);?>/"+v.goods_id;                              
+                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="'+j+'" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';
                 });
-                $(data).each(function(k,v){       
-                    tophtml += '<ul data-mttcode="Arecent" id="yui_3_16_0_1_1468227379514_3635"><li class="dropdown-menu__item" id="yui_3_16_0_1_1468227379514_3634"><a class="deal-link" href="http://hf.meituan.com/deal/29169062.html" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0"><img class="deal-cover" src="#" width="80" height="50"></a><h5 class="deal-title" id="yui_3_16_0_1_1468227379514_3633"><a class="deal-link" href="#" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0" id="yui_3_16_0_1_1468227379514_3632" data-mod-mtt="1.shop/default.0.0.iqhso8jg">'+v.goods_name+'</a></h5><a class="deal-price-w" target="_blank" href="http://hf.meituan.com/deal/29169062.html" gaevent="nav/browsingHistory/0"><em class="deal-price">¥'+v.goods_promotion_price+'</em><span class="old-price color-weaken">'+v.goods_price+'</span></a></li></ul>';        
-                });                         
+                $(data).each(function(k,v){  
+                var h = "<?php echo U('Home/Index/deal/id', '', FALSE);?>/"+v.goods_id;      
+                    tophtml += '<ul data-mttcode="Arecent" id="yui_3_16_0_1_1468227379514_3635"><li class="dropdown-menu__item" id="yui_3_16_0_1_1468227379514_3634"><a class="deal-link" href="'+h+'" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0"><img class="deal-cover" src="#" width="80" height="50"></a><h5 class="deal-title" id="yui_3_16_0_1_1468227379514_3633"><a class="deal-link" href="'+h+'" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0" id="yui_3_16_0_1_1468227379514_3632" data-mod-mtt="1.shop/default.0.0.iqhso8jg">'+v.goods_name+'</a></h5><a class="deal-price-w" target="_blank" href="" gaevent="nav/browsingHistory/0"><em class="deal-price">¥'+v.goods_promotion_price+'</em><span class="old-price color-weaken">'+v.goods_price+'</span></a></li></ul>';        
+                });                        
                 $('#display_history').html(html);
                 tophtml+='<p id="J-clear-my-history" class="clear"><a class="clear__btn" href="javascript:void(0)" onclick="deldisplayHistory()">清空最近浏览记录</a></p>';
                 $('#J-my-history-menu').html(tophtml);
@@ -1410,5 +1464,51 @@ a:hover{ text-decoration:none;}
 }
     $('.deal-component-rating-stars').click(function(){
          $('#yui_3_16_0_1_1465960232707_1835').click();
+    });
+</script>
+<!-- 收藏 -->
+<script type="text/javascript">
+    $('.small-btn').click(function(){
+        $.ajax({
+            type : "GET",
+            url : '<?php echo U("Index/favorites"); ?>',
+            data:'id=<?php echo $_GET["id"]; ?>',
+            dataType : "json",
+            success : function(data){ 
+                if(data==0){
+                    window.location.href="http://www.mxhhw.com/index.php?act=login&op=index";
+                    return false;
+                }else{
+                    if(data == '你已经收藏过该商品'){ 
+                        $('#dialog').dialog({
+                            resizable: false,
+                            height:230,
+                            width:440,
+                            modal: true,
+                            buttons: {
+                                关闭: function() {
+                                    $( this ).dialog( "close" );
+                                    }
+                            }
+                        });
+                        $('#dialog').text(data);
+                    }else{
+                        $('#dialog').dialog({
+                            resizable: false,
+                            height:230,
+                            width:440,
+                            modal: true,
+                            buttons: {
+                                关闭: function() {
+                                    $( this ).dialog( "close" );
+                                    }
+                            }
+                        });
+                        $('#dialog').text('收藏成功');
+                        $('.J-fav-count').text(data);
+                    }
+                }
+            }
+        });
     });
 </script>

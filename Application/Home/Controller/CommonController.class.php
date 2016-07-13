@@ -13,10 +13,16 @@ class CommonController extends Controller{
 		//导航分类数据 
 		$goodsModel = D('GoodsClass');
     	$floorData = $goodsModel->floorData();
-    	$this->assign(array(
+    	//热门搜索	
+    	$search = M('setting');
+        $wsearch['name'] = 'hot_search';
+        $daSearch = $search -> where($wsearch) ->find();
+        $setData = explode(',',$daSearch['value']);
+        $this->assign(array(
     		'floorData' => $floorData,
+    		'setData' => $setData,
     	));
-    	
+
 		if ($this->checkCookie()){
 			$this->is_cookie_login = 1;
 

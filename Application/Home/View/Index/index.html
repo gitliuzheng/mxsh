@@ -26,7 +26,7 @@
 
 
 </head>
-<body class="pg-floor-new-v2" style="position: static;">
+<body class="pg-floor-new-v2" style="position: static;" onkeydown='onEnterDown();'>
     <div class="yui3-widget mt-slider"><div class="mt-slider-content"></div></div>
     <header id="site-mast" class="site-mast">
     
@@ -53,7 +53,7 @@
             <div data-component="search-box" class="component-search-box mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_10"><div data-comboajax-uri="/index/hotqueries" data-comboajax-data="{&quot;isshowshops&quot;:true,&quot;isshopspage&quot;:false}" data-comboajax-onsuccess="this.append($response.html);" data-comboajax-state="5" class="J-search-box search-box ">
     
 <!-- 关键字搜索  zhangkuan -->  
-    <form  class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1464999326260_126">
+    <form  class="search-box__form J-search-form cf"  name="searchForm" method="get" >
         <div class="search-box__tabs-container" style="float:left">
             <span class="tri"></span>
             <ul class="J-search-box__tabs search-box__tabs">
@@ -61,12 +61,12 @@
                 <li class="search-box__tab J-search-box__tab--shops">商家</li>
             </ul>
         </div>
-        <input tabindex="1" type="text" name="name" autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1464999326260_132" class="name">
+        <input tabindex="1" type="text"   autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1464999326260_132" class="name">
        <!--  搜索通过事件提交，增加key字段提交(区分类别跳转) -->
-        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr"  onclick="location.href='<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/'+$('#yui_3_16_0_1_1464999326260_132').val();">       
+        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr" >       
     </form>
 <!-- 关键字搜索结束  zhangkuan -->  
-
+    
 
 
     <ul class="search-suggest J-search-suggest" style="display:none;">
@@ -74,20 +74,33 @@
     <div class="smart-query-panel" style="display:none" id="yui_3_16_0_1_1464999326260_122">
         <div class="smart-query-content"></div>
     </div>
-    <div class="J-search-box__hot search-box__hot log-mod-viewed" data-mod="st" id="yui_3_16_0_1_1464999326260_9573"><div class="s-hot" id="J-deal-hot-query">
-        <a class="hot-link  hot-link--first" gaevent="search/hotquery/1" data-mttcode="Asearch.Bhotquery.C1.D" href="http://www.meituan.com/s/?w=%E6%8A%AB%E8%90%A8">聚点主题KTV</a>
-        <a class="hot-link " gaevent="search/hotquery/2" data-mttcode="Asearch.Bhotquery.C2.D" href="http://www.meituan.com/s/?w=%E9%87%91%E6%BB%A1">7天连锁酒店</a>
-        <a class="hot-link " gaevent="search/hotquery/3" data-mttcode="Asearch.Bhotquery.C3.D" href="http://www.meituan.com/s/?w=%E7%81%AB%E9%94%85">爱玛电动车</a>
-        <a class="hot-link " gaevent="search/hotquery/4" data-mttcode="Asearch.Bhotquery.C4.D" href="http://www.meituan.com/s/?w=%E8%9B%8B%E7%B3%95">腾龙蛋糕</a>
-        <a class="hot-link " gaevent="search/hotquery/5" data-mttcode="Asearch.Bhotquery.C5.D" href="http://www.meituan.com/s/?w=%E9%A5%AD%E5%BA%97">烧鸡</a>        
-    </div>
-    <div class="s-hot" id="J-poi-hot-query" style="display:none">
+
+<!-- 热门搜索 -->
+    <div class="J-search-box__hot search-box__hot log-mod-viewed" data-mod="st" id="yui_3_16_0_1_1464999326260_9573">
+         <div class="s-hot" id="J-deal-hot-query">
+            <volist name='setData' id='v'>
+            <!-- 设置显示5个 -->
+                <?php static $m=0; if($m >= 5){break;} $m++; ?>
+                    <a class="hot-link  hot-link--first" href="javascript:void(0)" gaevent="search/hotquery/1" data-mttcode="Asearch.Bhotquery.C1.D" onclick="ff('<{$v}>')"><{$v}></a>
+            </volist>
+        </div>
+    <script type="text/javascript">
+        function ff(k){
+            if(k){
+                window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+k;
+            }  
+        }
+    </script>
+
+
+        
+   <!--  <div class="s-hot" id="J-poi-hot-query" style="display:none">
         <a class="hot-link  hot-link--first" gaevent="poisearch/hotquery/1" data-mttcode="Apoisearch.Bhotquery.C1.D" href="http://www.meituan.com/shops/?w=%E6%8A%AB%E8%90%A8">聚点主题KTV</a>
         <a class="hot-link " gaevent="poisearch/hotquery/2" data-mttcode="Apoisearch.Bhotquery.C2.D" href="http://www.meituan.com/shops/?w=%E9%87%91%E6%BB%A1">7天连锁酒店</a>
         <a class="hot-link " gaevent="poisearch/hotquery/3" data-mttcode="Apoisearch.Bhotquery.C3.D" href="http://www.meituan.com/shops/?w=%E7%81%AB%E9%94%85">爱玛电动车</a>
         <a class="hot-link " gaevent="poisearch/hotquery/4" data-mttcode="Apoisearch.Bhotquery.C4.D" href="http://www.meituan.com/shops/?w=%E8%9B%8B%E7%B3%95">腾龙蛋糕</a>
         <a class="hot-link " gaevent="poisearch/hotquery/5" data-mttcode="Apoisearch.Bhotquery.C5.D" href="http://www.meituan.com/shops/?w=%E9%A5%AD%E5%BA%97">烧鸡</a>        
-    </div>
+    </div> -->
     </div>
 </div>
 </div>
@@ -421,1428 +434,61 @@
         <div id="yui_3_16_0_1_1464999326260_9595" class="yui3-widget mt-slider"><div class="deals famous__body J-hots-deals mt-slider-content" id="yui_3_16_0_1_1464999326260_9554">
             <div class="reco-slides" id="yui_3_16_0_1_1464999326260_9553">
                 <ul class="reco-slides__slides cf J-slider-container mt-slider-sheet-container" id="yui_3_16_0_1_1464999326260_9552">
-                        <li class="deal-list--hots mt-slider-sheet mt-slider-current-sheet" style="left: -1170px; display: none;" id="yui_3_16_0_1_1464999326260_9551" hidden="hidden">
-                            <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9542">    <div class="deal-tile" data-mttcode="C1">
-                <a href="http://suzhousz.meituan.com/deal/33081451.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="巴萨诺瓦BossaNova手工披萨" src="__PUBLIC__/index_files/b60bc385841c4c478698edb3e329e65a130575.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
+    <li class="deal-list--hots mt-slider-sheet" style="left: 0px;" id="yui_3_16_0_1_1464999326260_9561">
+        <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9548">    
+            
+<!-- 名店抢购 -->
+        <volist name='xianshi_item' id='vo'>
+        <?php static $k3 = 0; if($k3>=5){break;} $k3++; ?>
+            <div class="deal-tile" data-mttcode="C1">
+                <a href="<{:U('Home/Index/deal/id/'.$vo['goods_id'], '', FALSE)}>" class="deal-tile__cover" hidefocus="true" target="_blank">
+                    <img class="J-webp" width="205" height="124" alt="皇家美幻蛋糕店" src="__PUBLIC__/index_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q.webp">
+                    <span class="deal-mark">
+                            <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
+                    </span>
+                </a>
+                <h3 class="deal-tile__title">
+                    <a href="http://suzhousz.meituan.com/deal/33657254.html" class="w-link" title="皇家美幻蛋糕店" hidefocus="true" target="_blank">
+                        <span class="xtitle"><{$vo.goods_name}></span>
+                        <span class="short-title">淡奶油蛋糕1个，约10寸，圆形</span>
+                    </a>
+                </h3>
+                <p class="deal-tile__detail">
+                    <span class="price">¥<strong><{$vo.xianshi_price}></strong></span>
+                    <span class="value"> <del class="num"></del></span>
+                    <span class="sales">
+                            已售<strong class="num">40</strong>
+                    </span>
+                </p>
+                <div class="deal-tile__extra">
+                    <p class="extra-inner">
+                        <span class="hots__discount">手机购买立减¥18.8</span>
+                        <a href="http://suzhousz.meituan.com/deal/33657254.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
+                            <span class="rate-info__bar common-rating">
+                                <span class="rate-stars" style="width: 80%;"></span>
+                            </span>
+                            <span class="rate-info__count">11人评价</span>
+                        </a>
+                    </p>
+                </div>
+            </div>  
+            </volist>
+
+
+
+        </div>
+    </li>
+
+
+
+
+
+</ul>
 
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33081451.html" class="w-link" title="巴萨诺瓦BossaNova手工披萨" hidefocus="true" target="_blank">
-        <span class="xtitle">【大润发】巴萨诺瓦BossaNova手工披萨</span>
-        <span class="short-title">思密达两人餐，提供免费WiFi</span>
-    </a>
-</h3>
 
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>88</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">849</strong>
-</span>
 
-</p>
 
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥8.8</span>
-                <a href="http://suzhousz.meituan.com/deal/33081451.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 82%;"></span>
-                </span>
-            <span class="rate-info__count">225人评价</span>
-        </a>
 
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C2">
-                <a href="http://suzhousz.meituan.com/deal/27844290.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="姥家大锅台" src="__PUBLIC__/index_files/078f15bd03eba7442070667d14500b3834868.jpg@0_0_460_278a-388h_640w_2e_90Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/27844290.html" class="w-link" title="姥家大锅台" hidefocus="true" target="_blank">
-        <span class="xtitle">【三里湾】姥家大锅台</span>
-        <span class="short-title">6人餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>148</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">2029</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/27844290.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 82%;"></span>
-                </span>
-            <span class="rate-info__count">704人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C3">
-                <a href="http://suzhousz.meituan.com/deal/33587885.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="馋猫恋渔" src="__PUBLIC__/index_files/0c6d618f14ebfe6d18b2cfec7328c0d538829.jpg@0_7_702_425a-388h_640w_2e_100q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33587885.html" class="w-link" title="馋猫恋渔" hidefocus="true" target="_blank">
-        <span class="xtitle">【百货大楼】馋猫恋渔</span>
-        <span class="short-title">爱相随套餐，建议2人使用，有赠品，包间免费</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>198</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">38</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥30</span>
-                <a href="http://suzhousz.meituan.com/deal/33587885.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 82%;"></span>
-                </span>
-            <span class="rate-info__count">15人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C4">
-                <a href="http://suzhousz.meituan.com/deal/33678749.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="美佳乐蛋糕" src="__PUBLIC__/index_files/48118649ab9fc6dba68e6881e14b66c6108175.jpg@0_92_1280_775a-388h_640w_2e_90q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33678749.html" class="w-link" title="美佳乐蛋糕" hidefocus="true" target="_blank">
-        <span class="xtitle">【百货大楼】美佳乐蛋糕</span>
-        <span class="short-title">10寸蛋糕1个，约25厘米，立体</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>98</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">143</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/33678749.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 92%;"></span>
-                </span>
-            <span class="rate-info__count">48人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile deal-tile--even" data-mttcode="C5">
-                <a href="http://suzhousz.meituan.com/deal/33812874.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="啦唔咪DIY蛋糕烘培坊" src="__PUBLIC__/index_files/b88149e02cddcbf9593e2428c76d3cef105939.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33812874.html" class="w-link" title="啦唔咪DIY蛋糕烘培坊" hidefocus="true" target="_blank">
-        <span class="xtitle">【大润发】啦唔咪DIY蛋糕烘培坊</span>
-        <span class="short-title">【大润发】鲜奶十英寸创意蛋糕一份1份，提供免费WiFi，享受美味，从此开始</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>88</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">107</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/33812874.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 86%;"></span>
-                </span>
-            <span class="rate-info__count">43人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-</div>
-                        </li>
-                        <li class="deal-list--hots mt-slider-sheet" style="left: -1170px; display: none;" id="yui_3_16_0_1_1464999326260_9557" hidden="hidden">
-                            <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9543">    <div class="deal-tile" data-mttcode="C1">
-                <a href="http://suzhousz.meituan.com/deal/28486730.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="爱溢烘焙工坊" src="__PUBLIC__/index_files/8bb664042d1007cdbddbfc8500449d7f88320.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/28486730.html" class="w-link" title="爱溢烘焙工坊" hidefocus="true" target="_blank">
-        <span class="xtitle">【埇桥区】爱溢烘焙工坊</span>
-        <span class="short-title">超值10寸绘图蛋糕1个，约10英寸，圆形/方形</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>88</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">344</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥9</span>
-                <a href="http://suzhousz.meituan.com/deal/28486730.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 86%;"></span>
-                </span>
-            <span class="rate-info__count">152人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C2">
-                <a href="http://suzhousz.meituan.com/deal/30229381.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="趣多客时尚烤鱼" src="__PUBLIC__/index_files/990b77eb7c18b5ea4a3a7658be21d35489141.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/30229381.html" class="w-link" title="趣多客时尚烤鱼" hidefocus="true" target="_blank">
-        <span class="xtitle">【两淮/乐天玛特】趣多客时尚烤鱼</span>
-        <span class="short-title">美味牛蛙套餐，建议3-4人使用，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>128</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">38</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/30229381.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 80%;"></span>
-                </span>
-            <span class="rate-info__count">10人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C3">
-                <a href="http://suzhousz.meituan.com/deal/35858362.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="桃花山庄" src="__PUBLIC__/index_files/70192cdaa000d7b12f86ea56a3973f69116382.jpg@0_92_1280_775a-388h_640w_2e_90Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--voucher" title="代金券">代金券</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/35858362.html" class="w-link" title="桃花山庄" hidefocus="true" target="_blank">
-        <span class="xtitle">【安厦时代广场/汽车站】桃花山庄</span>
-        <span class="short-title">100元代金券1张，除酒水饮料外全场通用</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>92</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">173</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/35858362.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 76%;"></span>
-                </span>
-            <span class="rate-info__count">42人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C4">
-                <a href="http://suzhousz.meituan.com/deal/30139253.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="G●M时光蛋糕烘焙坊" src="__PUBLIC__/index_files/90fa2221c0546aee347422fbc6bd37e165578.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/30139253.html" class="w-link" title="G●M时光蛋糕烘焙坊" hidefocus="true" target="_blank">
-        <span class="xtitle">【百货大楼】G●M时光蛋糕烘焙坊</span>
-        <span class="short-title">蛋糕2选1,约8寸，圆形</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>49.9</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">394</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥9.9</span>
-                <a href="http://suzhousz.meituan.com/deal/30139253.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 86%;"></span>
-                </span>
-            <span class="rate-info__count">148人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile deal-tile--even" data-mttcode="C5">
-                <a href="http://suzhousz.meituan.com/deal/33371009.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="董小姐的蛋糕房" src="__PUBLIC__/index_files/a8a715a12d641c71f652ff05c0d0f6b882133.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33371009.html" class="w-link" title="董小姐的蛋糕房" hidefocus="true" target="_blank">
-        <span class="xtitle">【大润发】董小姐的蛋糕房</span>
-        <span class="short-title">淡奶卡通蛋糕1个，约10寸，圆</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>86</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">60</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/33371009.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 84%;"></span>
-                </span>
-            <span class="rate-info__count">17人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-</div>
-                        </li>
-                        <li class="deal-list--hots mt-slider-sheet" style="left: -1170px; display: none;" id="yui_3_16_0_1_1464999326260_9558" hidden="hidden">
-                            <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9545">    <div class="deal-tile" data-mttcode="C1">
-                <a href="http://suzhousz.meituan.com/deal/36243155.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="德庄火锅" src="__PUBLIC__/index_files/58a991b1a3a65bd0e22f12494d462ab6102916.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--voucher" title="代金券">代金券</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/36243155.html" class="w-link" title="德庄火锅" hidefocus="true" target="_blank">
-        <span class="xtitle">【泗县】德庄火锅</span>
-        <span class="short-title">100元晚餐代金券1张，除烟酒饮料外全场通用</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>85</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">99</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥15</span>
-                <a href="http://suzhousz.meituan.com/deal/36243155.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 76%;"></span>
-                </span>
-            <span class="rate-info__count">15人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C2">
-                <a href="http://suzhousz.meituan.com/deal/37153169.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="徽府酒楼" src="__PUBLIC__/index_files/3cd3fe4e84a3d24d43a70640650d34e197071.jpg@0_24_800_484a-388h_640w_2e_90Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/37153169.html" class="w-link" title="徽府酒楼" hidefocus="true" target="_blank">
-        <span class="xtitle">【南苑宾馆】徽府酒楼</span>
-        <span class="short-title">徽府美味10人餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>388</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">49</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥20</span>
-                <a href="http://suzhousz.meituan.com/deal/37153169.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 74%;"></span>
-                </span>
-            <span class="rate-info__count">15人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C3">
-                <a href="http://suzhousz.meituan.com/deal/33996571.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="野人湾自助烤肉火锅" src="__PUBLIC__/index_files/7006e6769e29b625a5ac04230fad002a61987.jpg@0_9_800_484a-388h_640w_2e_90q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33996571.html" class="w-link" title="野人湾自助烤肉火锅" hidefocus="true" target="_blank">
-        <span class="xtitle">【两淮/乐天玛特】野人湾自助烤肉火锅</span>
-        <span class="short-title">单人自助晚餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>38.8</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">666</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥3.88</span>
-                <a href="http://suzhousz.meituan.com/deal/33996571.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 68%;"></span>
-                </span>
-            <span class="rate-info__count">98人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C4">
-                <a href="http://suzhousz.meituan.com/deal/28288082.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="摩德纳意式休闲餐厅" src="__PUBLIC__/index_files/6b31610c511f1df2d28d129ec7460b0596440.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/28288082.html" class="w-link" title="摩德纳意式休闲餐厅" hidefocus="true" target="_blank">
-        <span class="xtitle">【埇桥区】摩德纳意式休闲餐厅</span>
-        <span class="short-title">摩德纳特惠双人套餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>89.9</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">2118</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/28288082.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 76%;"></span>
-                </span>
-            <span class="rate-info__count">705人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile deal-tile--even" data-mttcode="C5">
-                <a href="http://suzhousz.meituan.com/deal/33249831.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="红不让" src="__PUBLIC__/index_files/a9c274a092d7b7a1e51c499c286a828b124079.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33249831.html" class="w-link" title="红不让" hidefocus="true" target="_blank">
-        <span class="xtitle">【裕城花园】红不让</span>
-        <span class="short-title">热饮拼盘双人餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>66.6</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">392</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥7</span>
-                <a href="http://suzhousz.meituan.com/deal/33249831.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 80%;"></span>
-                </span>
-            <span class="rate-info__count">112人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-</div>
-                        </li>
-                        <li class="deal-list--hots mt-slider-sheet" style="left: -1170px; display: none;" id="yui_3_16_0_1_1464999326260_9559" hidden="hidden">
-                            <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9546">    <div class="deal-tile" data-mttcode="C1">
-                <a href="http://suzhousz.meituan.com/deal/34411865.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="张居记私房菜" src="__PUBLIC__/index_files/3521ec26784ce0902ff6e0b8c9ec45fd195037.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/34411865.html" class="w-link" title="张居记私房菜" hidefocus="true" target="_blank">
-        <span class="xtitle">【华夏世贸广场】张居记私房菜</span>
-        <span class="short-title">6到8人餐，包间免费，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>188</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">207</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/34411865.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 80%;"></span>
-                </span>
-            <span class="rate-info__count">64人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C2">
-                <a href="http://suzhousz.meituan.com/deal/33511219.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="农家大锅台" src="__PUBLIC__/index_files/df8166a993dbce69208b5dd83616705396331.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33511219.html" class="w-link" title="农家大锅台" hidefocus="true" target="_blank">
-        <span class="xtitle">【埇桥区】农家大锅台</span>
-        <span class="short-title">6-7人套餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>128</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">419</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥11</span>
-                <a href="http://suzhousz.meituan.com/deal/33511219.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 82%;"></span>
-                </span>
-            <span class="rate-info__count">125人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C3">
-                <a href="http://suzhousz.meituan.com/deal/37408257.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="芙蓉小镇发面馍" src="__PUBLIC__/index_files/167675b1cd9ef86b06c86684b46d16e1110629.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/37408257.html" class="w-link" title="芙蓉小镇发面馍" hidefocus="true" target="_blank">
-        <span class="xtitle">【大花园】芙蓉小镇发面馍</span>
-        <span class="short-title">10-12人餐，包间免费，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>428</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">43</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥30</span>
-                <a href="http://suzhousz.meituan.com/deal/37408257.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 88%;"></span>
-                </span>
-            <span class="rate-info__count">20人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C4">
-                <a href="http://suzhousz.meituan.com/deal/33902464.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="韩记猪肚鸡" src="__PUBLIC__/index_files/33caa258c9991ffaab7bb71498e685d841957.jpg@0_29_960_581a-388h_640w_2e_90q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33902464.html" class="w-link" title="韩记猪肚鸡" hidefocus="true" target="_blank">
-        <span class="xtitle">【大花园】韩记猪肚鸡</span>
-        <span class="short-title">2到3人餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>59.9</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">190</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥14.9</span>
-                <a href="http://suzhousz.meituan.com/deal/33902464.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 82%;"></span>
-                </span>
-            <span class="rate-info__count">70人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile deal-tile--even" data-mttcode="C5">
-                <a href="http://suzhousz.meituan.com/deal/36144870.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="金满蛋糕" src="__PUBLIC__/index_files/e004f05ce5481c7d95b5330b58f8377d34642.jpg@0_27_702_425a-388h_640w_2e_100q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/36144870.html" class="w-link" title="金满蛋糕" hidefocus="true" target="_blank">
-        <span class="xtitle">【23店通用】金满蛋糕</span>
-        <span class="short-title">蛋糕2选1,约19厘米</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>98</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">616</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/36144870.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 74%;"></span>
-                </span>
-            <span class="rate-info__count">150人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-</div>
-                        </li>
-                        <li class="deal-list--hots mt-slider-sheet" style="left: -1170px; display: none;" id="yui_3_16_0_1_1464999326260_9560" hidden="hidden">
-                            <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9547">    <div class="deal-tile" data-mttcode="C1">
-                <a href="http://suzhousz.meituan.com/deal/36983163.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="青年主题餐厅" src="__PUBLIC__/index_files/96cae727c5ca39e6d201dc7e54db14ac36553.jpg@0_21_702_425a-388h_640w_2e_100Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/36983163.html" class="w-link" title="青年主题餐厅" hidefocus="true" target="_blank">
-        <span class="xtitle">【大润发】青年主题餐厅</span>
-        <span class="short-title">新春四人餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>108</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">128</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/36983163.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 82%;"></span>
-                </span>
-            <span class="rate-info__count">34人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C2">
-                <a href="http://suzhousz.meituan.com/deal/32346234.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="YoYoDIY蛋糕烘焙坊" src="__PUBLIC__/index_files/c1c4812f7e299d1e104ad31f51610317262489.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/32346234.html" class="w-link" title="YoYoDIY蛋糕烘焙坊" hidefocus="true" target="_blank">
-        <span class="xtitle">【大润发】YoYoDIY蛋糕烘焙坊</span>
-        <span class="short-title">10寸创意照片蛋糕1份，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>128</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">8</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥18</span>
-                <a href="http://suzhousz.meituan.com/deal/32346234.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 90%;"></span>
-                </span>
-            <span class="rate-info__count">2人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C3">
-                <a href="http://suzhousz.meituan.com/deal/34106256.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="金年华宿县老味道" src="__PUBLIC__/index_files/d57a0541297862fb98e7fa54a5cb4fb638313.jpg@0_0_640_387a-388h_640w_2e_100q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/34106256.html" class="w-link" title="金年华宿县老味道" hidefocus="true" target="_blank">
-        <span class="xtitle">【老花都/高架桥】金年华宿县老味道</span>
-        <span class="short-title">年会A套餐，建议14-16人使用，包间免费</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>1288</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">3</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥13</span>
-                <a href="http://suzhousz.meituan.com/deal/34106256.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 20%;"></span>
-                </span>
-            <span class="rate-info__count">1人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C4">
-                <a href="http://suzhousz.meituan.com/deal/37423690.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="圣世豪都大酒店" src="__PUBLIC__/index_files/fa827973cdfd5a328b4e31c002ecc46a97189.jpg@0_24_800_484a-388h_640w_2e_90q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/37423690.html" class="w-link" title="圣世豪都大酒店" hidefocus="true" target="_blank">
-        <span class="xtitle">【两淮/乐天玛特】圣世豪都大酒店</span>
-        <span class="short-title">美味8人餐，有赠品，包间免费，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>328</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">28</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥30</span>
-                <a href="http://suzhousz.meituan.com/deal/37423690.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 68%;"></span>
-                </span>
-            <span class="rate-info__count">5人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile deal-tile--even" data-mttcode="C5">
-                <a href="http://suzhousz.meituan.com/deal/30421282.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="腾龙蛋糕" src="__PUBLIC__/index_files/815b127c888e9c6e613331f48dfbde4367464.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/30421282.html" class="w-link" title="腾龙蛋糕" hidefocus="true" target="_blank">
-        <span class="xtitle">【5店通用】腾龙蛋糕</span>
-        <span class="short-title">韩式蛋糕1份</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>79.8</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">89</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥11</span>
-                <a href="http://suzhousz.meituan.com/deal/30421282.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 56%;"></span>
-                </span>
-            <span class="rate-info__count">27人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-</div>
-                        </li>
-                        <li class="deal-list--hots mt-slider-sheet" style="left: 0px;" id="yui_3_16_0_1_1464999326260_9561">
-                            <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9548">    <div class="deal-tile" data-mttcode="C1">
-                <a href="http://suzhousz.meituan.com/deal/33657254.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="皇家美幻蛋糕店" src="__PUBLIC__/index_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33657254.html" class="w-link" title="皇家美幻蛋糕店" hidefocus="true" target="_blank">
-        <span class="xtitle">【环城西路】皇家美幻蛋糕店</span>
-        <span class="short-title">淡奶油蛋糕1个，约10寸，圆形</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>108</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">40</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥18.8</span>
-                <a href="http://suzhousz.meituan.com/deal/33657254.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 80%;"></span>
-                </span>
-            <span class="rate-info__count">11人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C2">
-                <a href="http://suzhousz.meituan.com/deal/33395861.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="百岁鱼" src="__PUBLIC__/index_files/99c16ca492bec456032314fbbf7027ce66587.jpg@0_0_640_387a-388h_640w_2e_100Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33395861.html" class="w-link" title="百岁鱼" hidefocus="true" target="_blank">
-        <span class="xtitle">【大润发】百岁鱼</span>
-        <span class="short-title">金椒乌鱼4人餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>148</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">558</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/33395861.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 82%;"></span>
-                </span>
-            <span class="rate-info__count">168人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C3">
-                <a href="http://suzhousz.meituan.com/deal/37984784.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="卡奇卡洛寿司" src="__PUBLIC__/index_files/3973d2c4a8a30ba15eaa86690e98a2b7113784.jpg@0_159_810_491a-388h_640w_2e_90Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/37984784.html" class="w-link" title="卡奇卡洛寿司" hidefocus="true" target="_blank">
-        <span class="xtitle">【裕城花园】卡奇卡洛寿司</span>
-        <span class="short-title">卡卡寿司海鲜全套1份，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>38.8</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">29</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥5</span>
-                <a href="http://suzhousz.meituan.com/deal/37984784.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 76%;"></span>
-                </span>
-            <span class="rate-info__count">6人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C4">
-                <a href="http://suzhousz.meituan.com/deal/36176589.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="柠檬鱼时尚餐厅" src="__PUBLIC__/index_files/a728a582c1b442186d8cd1e3faf518b8152413.jpg@0_92_1280_775a-388h_640w_2e_90q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/36176589.html" class="w-link" title="柠檬鱼时尚餐厅" hidefocus="true" target="_blank">
-        <span class="xtitle">【泗县】柠檬鱼时尚餐厅</span>
-        <span class="short-title">美味2人餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>68</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">199</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/36176589.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 78%;"></span>
-                </span>
-            <span class="rate-info__count">48人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile deal-tile--even" data-mttcode="C5">
-                <a href="http://suzhousz.meituan.com/deal/27663858.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="农家大锅台总店" src="__PUBLIC__/index_files/80762be4f1e2d1ec654ebf86882790a4367823.jpg.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/27663858.html" class="w-link" title="农家大锅台总店" hidefocus="true" target="_blank">
-        <span class="xtitle">【2店通用】农家大锅台总店</span>
-        <span class="short-title">美味5-6人餐，包间免费，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>128</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">2189</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/27663858.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 86%;"></span>
-                </span>
-            <span class="rate-info__count">743人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-</div>
-                        </li>
-                        <li class="deal-list--hots mt-slider-sheet" style=" display:none " id="yui_3_16_0_1_1464999326260_9562" hidden="hidden">
-                            <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9549">    <div class="deal-tile" data-mttcode="C1">
-                <a href="http://suzhousz.meituan.com/deal/33515490.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="韩旭道韩国年糕" src="__PUBLIC__/index_files/f0fd8a952d149234c928edff402031e193858.jpg@0_24_800_484a-388h_640w_2e_90q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/33515490.html" class="w-link" title="韩旭道韩国年糕" hidefocus="true" target="_blank">
-        <span class="xtitle">【百货大楼】韩旭道韩国年糕</span>
-        <span class="short-title">精品小锅套餐，建议2-3人使用，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>53.9</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">837</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥5.39</span>
-                <a href="http://suzhousz.meituan.com/deal/33515490.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 76%;"></span>
-                </span>
-            <span class="rate-info__count">232人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C2">
-                <a href="http://suzhousz.meituan.com/deal/37360453.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="便宜坊酒楼" src="__PUBLIC__/index_files/554c30b4c362c5f4a38fdf3c58d2ad4b95864.jpg@0_24_800_484a-388h_640w_2e_90Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/37360453.html" class="w-link" title="便宜坊酒楼" hidefocus="true" target="_blank">
-        <span class="xtitle">【埇桥区】便宜坊酒楼</span>
-        <span class="short-title">美味10人餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>218</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">14</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥20</span>
-                <a href="http://suzhousz.meituan.com/deal/37360453.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 88%;"></span>
-                </span>
-            <span class="rate-info__count">5人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C3">
-                <a href="http://suzhousz.meituan.com/deal/38207339.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="大户时尚概念餐厅" src="__PUBLIC__/index_files/ff8966bc05e311275c1a747e4eaeee5c69022.jpg@0_58_800_484a-388h_640w_2e_90Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/38207339.html" class="w-link" title="大户时尚概念餐厅" hidefocus="true" target="_blank">
-        <span class="xtitle">【大润发】大户时尚概念餐厅</span>
-        <span class="short-title">龙虾加面，建议2人使用，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>35</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">126</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥5.1</span>
-                <a href="http://suzhousz.meituan.com/deal/38207339.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 88%;"></span>
-                </span>
-            <span class="rate-info__count">15人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile" data-mttcode="C4">
-                <a href="http://suzhousz.meituan.com/deal/38105334.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="熊也餐厅三汁焖锅焖面" src="__PUBLIC__/index_files/6bcd6c7ccc114878e34cfcf82213233056628.jpg@0_76_721_380a-388h_640w_2e_90Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/38105334.html" class="w-link" title="熊也餐厅三汁焖锅焖面" hidefocus="true" target="_blank">
-        <span class="xtitle">【大润发】熊也餐厅三汁焖锅焖面</span>
-        <span class="short-title">熊也双人套餐，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>43.8</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">84</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥5</span>
-                <a href="http://suzhousz.meituan.com/deal/38105334.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 66%;"></span>
-                </span>
-            <span class="rate-info__count">16人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-    <div class="deal-tile deal-tile--even" data-mttcode="C5">
-                <a href="http://suzhousz.meituan.com/deal/37648288.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="V多寿司" src="__PUBLIC__/index_files/487feb10ef38d3ca40565eb1073b2ab6194254.jpg@0_92_1280_775a-388h_640w_2e_90Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/37648288.html" class="w-link" title="V多寿司" hidefocus="true" target="_blank">
-        <span class="xtitle">【埇桥区】V多寿司</span>
-        <span class="short-title">至尊豪华套餐1份，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>38.72</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">25</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥5</span>
-                <a href="http://suzhousz.meituan.com/deal/37648288.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 96%;"></span>
-                </span>
-            <span class="rate-info__count">6人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-</div>
-                        </li>
-                        <li class="deal-list--hots mt-slider-sheet" style=" display:none " id="yui_3_16_0_1_1464999326260_9563" hidden="hidden">
-                            <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9550">    <div class="deal-tile" data-mttcode="C1">
-                <a href="http://suzhousz.meituan.com/deal/37969967.html" class="deal-tile__cover" hidefocus="true" target="_blank">
-            <img class="J-webp" width="205" height="124" alt="小丑西餐厅clown" src="__PUBLIC__/index_files/6c0826bf71da04ca175b638f4850eaf2198788.jpg@0_252_1280_775a-388h_640w_2e_90Q.webp">
-        <span class="deal-mark">
-                <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                <span class="deal-mark__item deal-mark__item--nnbooking" title="免预约">免预约</span>
-        </span>
-</a>
-
-<h3 class="deal-tile__title">
-    <a href="http://suzhousz.meituan.com/deal/37969967.html" class="w-link" title="小丑西餐厅clown" hidefocus="true" target="_blank">
-        <span class="xtitle">【大润发】小丑西餐厅clown</span>
-        <span class="short-title">披萨情侣，提供免费WiFi</span>
-    </a>
-</h3>
-
-<p class="deal-tile__detail">
-    <span class="price">¥<strong>78</strong></span>
-    <span class="value"> <del class="num"></del></span>
-    <span class="sales">
-            已售<strong class="num">34</strong>
-</span>
-
-</p>
-
-<div class="deal-tile__extra">
-    <p class="extra-inner">
-            <span class="hots__discount">手机购买立减¥10</span>
-                <a href="http://suzhousz.meituan.com/deal/37969967.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                <span class="rate-info__bar common-rating">
-                    <span class="rate-stars" style="width: 90%;"></span>
-                </span>
-            <span class="rate-info__count">10人评价</span>
-        </a>
-
-    </p>
-</div>
-
-    </div>
-</div>
-                        </li>
-                </ul>
                 <div class="pre-next" id="yui_3_16_0_1_1464999326260_9588">
                     <a style="opacity: 0;" href="javascript:void(0);" hidefocus="true" class="mt-slider-previous sp-slide--previous"></a>
                     <a style="opacity: 0;" href="javascript:void(0);" hidefocus="true" class="mt-slider-next sp-slide--next">
@@ -2476,3 +1122,64 @@ $(function(){
 }
 
     </style>
+
+    <!-- 获取浏览记录 -->
+<script type="text/javascript">    
+    cookieajax();
+    function cookieajax(){
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('Index/displayHistory?id='.$data['goods_id']); ?>",
+            dataType : "json",
+            success : function(data)
+            {
+                if(data!=0){               
+                var tophtml = '';            
+                $(data).each(function(k,v){  
+                var h = "<{:U('Home/Index/deal/id', '', FALSE)}>/"+v.goods_id;      
+                    tophtml += '<ul data-mttcode="Arecent" id="yui_3_16_0_1_1468227379514_3635"><li class="dropdown-menu__item" id="yui_3_16_0_1_1468227379514_3634"><a class="deal-link" href="'+h+'" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0"><img class="deal-cover" src="#" width="80" height="50"></a><h5 class="deal-title" id="yui_3_16_0_1_1468227379514_3633"><a class="deal-link" href="'+h+'" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0" id="yui_3_16_0_1_1468227379514_3632" data-mod-mtt="1.shop/default.0.0.iqhso8jg">'+v.goods_name+'</a></h5><a class="deal-price-w" target="_blank" href="" gaevent="nav/browsingHistory/0"><em class="deal-price">¥'+v.goods_promotion_price+'</em><span class="old-price color-weaken">'+v.goods_price+'</span></a></li></ul>';        
+                });                         
+                tophtml+='<p id="J-clear-my-history" class="clear"><a class="clear__btn" href="javascript:void(0)" onclick="deldisplayHistory()">清空最近浏览记录</a></p>';
+                $('#J-my-history-menu').html(tophtml);
+                }
+            }
+        });
+    }
+       
+
+   //清空cookie浏览记录
+    function  deldisplayHistory(){
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('Index/deldisplayHistory'); ?>",
+            success : function(data){
+                if(data){
+                    html = '<li class="history-list__item" target="_blank" ref="nofollow"><h5><a href="#" title="" target="_blank" ref="nofollow"></a></h5><p><em class="price"></em><span class="default-price"><del></del></span></p></li>';
+                }else{
+                    html = '未删除成功！';
+                }
+                $('#display_history').html(html);
+                var tophtml = '<p class="dropdown-menu--empty">暂无浏览记录</p>';
+                $('#J-my-history-menu').html(tophtml);
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+$(function(){
+    $('.s-submit').click(function(){    
+        var m = $('#yui_3_16_0_1_1464999326260_132').val();
+        if(m){
+            window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+m;
+        }
+    });
+    $("body").keyup(function(event) {
+        if (event.keyCode == "13") {//keyCode=13是回车键 
+            var m = $('#yui_3_16_0_1_1464999326260_132').val();
+            if(m){
+                window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+m;
+            }   
+        }
+    });
+});
+</script>

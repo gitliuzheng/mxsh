@@ -105,11 +105,7 @@
                         <i class="vertical-bar"></i>
                     </a>
                     <div id="J-my-history-menu" class="dropdown-menu dropdown-menu--deal dropdown-menu--history">
-                       <p class="dropdown-menu--empty">暂无浏览记录</p> 
-
-
-                     
-
+                       <p class="dropdown-menu--empty">暂无浏览记录</p>                
                     </div>
                 </li>
                 <li data-uix="dropdown" id="J-my-cart" class="dropdown dropdown--cart J-cart-updated" data-comboajax-uri="/index/navcart" data-comboajax-onsuccess="Y.mt.www.CartEx.update($response.data);" data-comboajax-state="5">
@@ -188,7 +184,7 @@
 
 
 <!-- 关键字搜索  zhangkuan -->  
-    <form  class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1464999326260_126">
+    <div  class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1464999326260_126">
         <div class="search-box__tabs-container" style="float:left">
             <span class="tri"></span>
             <ul class="J-search-box__tabs search-box__tabs">
@@ -198,11 +194,28 @@
         </div>
         <input tabindex="1" type="text" name="name" autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1464999326260_132" class="name">
        <!--  搜索通过事件提交，增加key字段提交(区分类别跳转) -->
-        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr"  onclick="location.href='<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/'+$('#yui_3_16_0_1_1464999326260_132').val();">       
-    </form>
+        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr" >       
+    </div>
 <!-- 关键字搜索结束  zhangkuan -->  
 
-
+<script type="text/javascript">
+$(function(){
+    $('.s-submit').click(function(){    
+        var m = $('#yui_3_16_0_1_1464999326260_132').val();
+        if(m){
+            window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+m;
+        }
+    });
+    $("body").keyup(function(event) {
+        if (event.keyCode == "13") {//keyCode=13是回车键 
+            var m = $('#yui_3_16_0_1_1464999326260_132').val();
+            if(m){
+                window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+m;
+            }   
+        }
+    });
+});
+</script>
 
 
 
@@ -214,7 +227,26 @@
     <div class="smart-query-panel" style="display:none" id="yui_3_16_0_1_1465867114754_1880">
         <div class="smart-query-content"></div>
     </div>
-    <div class="J-search-box__hot search-box__hot log-mod-viewed" data-mod="st" id="yui_3_16_0_1_1465867114754_2107"><div class="s-hot" id="J-deal-hot-query"><a class="hot-link  hot-link--first" gaevent="search/hotquery/1" data-mttcode="Asearch.Bhotquery.C1.D" href="http://www.meituan.com/s/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="search/hotquery/2" data-mttcode="Asearch.Bhotquery.C2.D" href="http://www.meituan.com/s/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="search/hotquery/3" data-mttcode="Asearch.Bhotquery.C3.D" href="http://www.meituan.com/s/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="search/hotquery/4" data-mttcode="Asearch.Bhotquery.C4.D" href="http://www.meituan.com/s/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="search/hotquery/5" data-mttcode="Asearch.Bhotquery.C5.D" href="http://www.meituan.com/s/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="search/hotquery/6" data-mttcode="Asearch.Bhotquery.C6.D" href="http://www.meituan.com/s/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="search/hotquery/7" data-mttcode="Asearch.Bhotquery.C7.D" href="http://www.meituan.com/s/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="search/hotquery/8" data-mttcode="Asearch.Bhotquery.C8.D" href="http://www.meituan.com/s/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="search/hotquery/9" data-mttcode="Asearch.Bhotquery.C9.D" href="http://www.meituan.com/s/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="search/hotquery/10" data-mttcode="Asearch.Bhotquery.C10.D" href="http://www.meituan.com/s/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div><div class="s-hot" id="J-poi-hot-query" style="display:none"><a class="hot-link  hot-link--first" gaevent="poisearch/hotquery/1" data-mttcode="Apoisearch.Bhotquery.C1.D" href="http://www.meituan.com/shops/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="poisearch/hotquery/2" data-mttcode="Apoisearch.Bhotquery.C2.D" href="http://www.meituan.com/shops/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="poisearch/hotquery/3" data-mttcode="Apoisearch.Bhotquery.C3.D" href="http://www.meituan.com/shops/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="poisearch/hotquery/4" data-mttcode="Apoisearch.Bhotquery.C4.D" href="http://www.meituan.com/shops/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="poisearch/hotquery/5" data-mttcode="Apoisearch.Bhotquery.C5.D" href="http://www.meituan.com/shops/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="poisearch/hotquery/6" data-mttcode="Apoisearch.Bhotquery.C6.D" href="http://www.meituan.com/shops/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="poisearch/hotquery/7" data-mttcode="Apoisearch.Bhotquery.C7.D" href="http://www.meituan.com/shops/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="poisearch/hotquery/8" data-mttcode="Apoisearch.Bhotquery.C8.D" href="http://www.meituan.com/shops/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="poisearch/hotquery/9" data-mttcode="Apoisearch.Bhotquery.C9.D" href="http://www.meituan.com/shops/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="poisearch/hotquery/10" data-mttcode="Apoisearch.Bhotquery.C10.D" href="http://www.meituan.com/shops/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div></div></div>
+
+    <!-- 热门搜索 -->
+    <div class="J-search-box__hot search-box__hot log-mod-viewed" data-mod="st" id="yui_3_16_0_1_1465867114754_2107">
+        <div class="s-hot" id="J-deal-hot-query">
+            <?php if(is_array($setData)): $i = 0; $__LIST__ = $setData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><!-- 设置显示5个 -->
+                <?php static $m=0; if($m >= 5){break;} $m++; ?>
+                    <a class="hot-link  hot-link--first" href="javascript:void(0)" gaevent="search/hotquery/1" data-mttcode="Asearch.Bhotquery.C1.D" onclick="ff('<?php echo ($v); ?>')"><?php echo ($v); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+        </div>
+    <script type="text/javascript">
+        function ff(k){
+            if(k){
+                window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+k;
+            }  
+        }
+    </script>
+        <!-- <div class="s-hot" id="J-poi-hot-query" style="display:none"><a class="hot-link  hot-link--first" gaevent="poisearch/hotquery/1" data-mttcode="Apoisearch.Bhotquery.C1.D" href="http://www.meituan.com/shops/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="poisearch/hotquery/2" data-mttcode="Apoisearch.Bhotquery.C2.D" href="http://www.meituan.com/shops/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="poisearch/hotquery/3" data-mttcode="Apoisearch.Bhotquery.C3.D" href="http://www.meituan.com/shops/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="poisearch/hotquery/4" data-mttcode="Apoisearch.Bhotquery.C4.D" href="http://www.meituan.com/shops/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="poisearch/hotquery/5" data-mttcode="Apoisearch.Bhotquery.C5.D" href="http://www.meituan.com/shops/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="poisearch/hotquery/6" data-mttcode="Apoisearch.Bhotquery.C6.D" href="http://www.meituan.com/shops/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="poisearch/hotquery/7" data-mttcode="Apoisearch.Bhotquery.C7.D" href="http://www.meituan.com/shops/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="poisearch/hotquery/8" data-mttcode="Apoisearch.Bhotquery.C8.D" href="http://www.meituan.com/shops/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="poisearch/hotquery/9" data-mttcode="Apoisearch.Bhotquery.C9.D" href="http://www.meituan.com/shops/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="poisearch/hotquery/10" data-mttcode="Apoisearch.Bhotquery.C10.D" href="http://www.meituan.com/shops/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div> -->
+    </div>
+
+
+    </div>
 </div>
         <a class="site-commitment" gaevent="top/commitment" href="http://www.meituan.com/commitment/" target="_blank">
             <span class="commitment-item"><i class="F-glob F-glob-commitment-retire"></i>随时退</span>
@@ -381,6 +413,12 @@
                                             </ul>
                                         </div>
                                     </div>
+<script type="text/javascript">
+    $(function(){
+        var name = '<?php echo I("get.name"); ?>';
+        $('#yui_3_16_0_1_1464999326260_132').val(name);
+    });
+</script>
                                 <?php } ?>  
                         <?php } ?> 
 <!-- zhangkuan -->
@@ -997,11 +1035,13 @@
                 if(data!=0){
                 var html = '';
                 var tophtml = '';
-                $(data).each(function(k,v){                 
-                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="#" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';
+                $(data).each(function(k,v){ 
+                    var j = "<?php echo U('Home/Index/deal/id', '', FALSE);?>/"+v.goods_id;                              
+                    html +='<li class="history-list__item" target="_blank" ref="nofollow"><img class="" src="/mxsh/Public/deal_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q" width="80" height="50"><h5><a href="'+j+'" title="'+v.goods_name+'" target="_blank" ref="nofollow">'+v.goods_name+'</a></h5><p><em class="price">¥ '+v.goods_promotion_price+'</em><span class="default-price">门店价 ¥<del>'+v.goods_price+'</del></span></p></li>';
                 });
-                $(data).each(function(k,v){       
-                    tophtml += '<ul data-mttcode="Arecent" id="yui_3_16_0_1_1468227379514_3635"><li class="dropdown-menu__item" id="yui_3_16_0_1_1468227379514_3634"><a class="deal-link" href="http://hf.meituan.com/deal/29169062.html" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0"><img class="deal-cover" src="#" width="80" height="50"></a><h5 class="deal-title" id="yui_3_16_0_1_1468227379514_3633"><a class="deal-link" href="#" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0" id="yui_3_16_0_1_1468227379514_3632" data-mod-mtt="1.shop/default.0.0.iqhso8jg">'+v.goods_name+'</a></h5><a class="deal-price-w" target="_blank" href="http://hf.meituan.com/deal/29169062.html" gaevent="nav/browsingHistory/0"><em class="deal-price">¥'+v.goods_promotion_price+'</em><span class="old-price color-weaken">'+v.goods_price+'</span></a></li></ul>';        
+                $(data).each(function(k,v){  
+                var h = "<?php echo U('Home/Index/deal/id', '', FALSE);?>/"+v.goods_id;      
+                    tophtml += '<ul data-mttcode="Arecent" id="yui_3_16_0_1_1468227379514_3635"><li class="dropdown-menu__item" id="yui_3_16_0_1_1468227379514_3634"><a class="deal-link" href="'+h+'" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0"><img class="deal-cover" src="#" width="80" height="50"></a><h5 class="deal-title" id="yui_3_16_0_1_1468227379514_3633"><a class="deal-link" href="'+h+'" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0" id="yui_3_16_0_1_1468227379514_3632" data-mod-mtt="1.shop/default.0.0.iqhso8jg">'+v.goods_name+'</a></h5><a class="deal-price-w" target="_blank" href="" gaevent="nav/browsingHistory/0"><em class="deal-price">¥'+v.goods_promotion_price+'</em><span class="old-price color-weaken">'+v.goods_price+'</span></a></li></ul>';        
                 });                         
                 $('#display_history').html(html);
                 tophtml+='<p id="J-clear-my-history" class="clear"><a class="clear__btn" href="javascript:void(0)" onclick="deldisplayHistory()">清空最近浏览记录</a></p>';

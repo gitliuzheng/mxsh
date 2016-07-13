@@ -66,7 +66,10 @@ class VrGoodsModel extends Model {
             default:
                 $p = "goods_id";
         }
+        $where['goods_state'] = 1;
+        $where['goods_verify'] = 1;
         //取出商品总数
+
         $gdata = $this -> where($where) -> select();
         $count = count($gdata);
         $page = new \Think\Page($count, 2);
@@ -95,24 +98,33 @@ class VrGoodsModel extends Model {
         ->where(array(
             'goods_name' => array('exp', " LIKE '%$key%' OR address LIKE '%$key%' OR message LIKE '%$key%'"),
         ))
-        ->find();
+        ->find();      
         $goods_id = $this -> field('GROUP_CONCAT(DISTINCT goods_commonid) gids')
         ->where(array(
             'goods_name' => array('exp', " LIKE '%$key%'"),
         ))
-        ->find();
-        //分割成数组 
-        $goodsId = explode(',',$goods_Id['gid']);
-        $goodsid = explode(',',$goods_id['gids']);
-        $gid = array_merge($goodsId,$goodsid);
-        $gsid = array_unique($gid);
-        
-        $data['count'] = count($gsid);
+        ->find();        
+        if(empty($goods_Id['gid']) && empty($goodsid['gids'])){
+            $data['count'] = 0;
+            if(empty($key)){
+                $data = null;
+            }
+            return $data;
+        }else{
+            //分割成数组 
+            $goodsId = explode(',',$goods_Id['gid']);
+            $goodsid = explode(',',$goods_id['gids']);
+            $gid = array_merge($goodsId,$goodsid);
+            $gsid = array_unique($gid);
+            $data['count'] = count($gsid);
+        }
         //return $goodsId;
         $page = new \Think\Page($data['count'], 2);  //设置页面商品显示个数
         // 配置翻页的样式
         $data['page'] = $page->show();
         $where1['goods_id'] = array('in',$gsid);
+        $where1['goods_state'] = 1;
+        $where1['goods_verify'] = 1;
         switch (I('odby')){
             case 'xl':
                 $p = "goods_salenum";
@@ -169,6 +181,78 @@ class VrGoodsModel extends Model {
         }
         return $data;
     }
+
+
+
+
+    /**
+     * 获取推荐限时折扣商品
+     * @param int $count 推荐数量
+     * @return array 推荐限时活动列表
+     *
+     */
+    public function getXianshiGoodsCommendList() {
+        $condition = array();
+        //是否正常状态
+        $condition['state'] = 1;
+      //  $condition['start_time'] = array('lt', time());
+      //  $condition['end_time'] = array('gt', time());
+        $xianshi_list = $this->getXianshiGoodsExtendList($condition, null, 'xianshi_recommend desc', '*');
+        return $xianshi_list;
+    }
+
+    /**
+     * 读取限时折扣商品列表
+     * @param array $condition 查询条件
+     * @param int $page 分页数
+     * @param string $order 排序
+     * @param string $field 所需字段
+     * @param int $limit 个数限制
+     * @return array 限时折扣商品列表
+     *
+     */
+    public function getXianshiGoodsExtendList($condition, $page=null, $order='', $field='*') {
+        $xianshi_goods_list = $this->getXianshiGoodsList($condition, $page, $order, $field);
+        if(!empty($xianshi_goods_list)) {
+            for($i=0, $j=count($xianshi_goods_list); $i < $j; $i++) {
+                $xianshi_goods_list[$i] = $this->getXianshiGoodsExtendInfo($xianshi_goods_list[$i]);
+            }
+        }
+        return $xianshi_goods_list;
+    }
+
+    /**
+     * 读取限时折扣商品列表
+     * @param array $condition 查询条件
+     * @param int $page 分页数
+     * @param string $order 排序
+     * @param string $field 所需字段
+     * @param int $limit 个数限制
+     * @return array 限时折扣商品列表
+     *
+     */
+     
+    public function getXianshiGoodsList($condition, $page=null, $order='', $field='*') {
+        $xianshiGoods = M('PXianshiGoods');
+        return $xianshi_goods_list = $xianshiGoods->field($field)->where($condition)->page($page)->order($order)->select();
+    }
+
+   
+      /**
+     * 获取限时折扣商品扩展信息
+     * @param array $xianshi_info
+     * @return array 扩展限时折扣信息
+     *
+     */
+    public function getXianshiGoodsExtendInfo($xianshi_info) {
+       // $xianshi_info['goods_url'] = urlShop('goods', 'index', array('goods_id' => $xianshi_info['goods_id']));
+       // $xianshi_info['image_url'] = cthumb($xianshi_info['goods_image'], 60, $xianshi_info['store_id']);
+        //$xianshi_info['xianshi_price'] = ncPriceFormat($xianshi_info['xianshi_price']);
+        $xianshi_info['xianshi_discount'] = number_format($xianshi_info['xianshi_price'] / $xianshi_info['goods_price'] * 10, 1).'折';
+       
+        return $xianshi_info;
+    }
+    
 }   
 
 

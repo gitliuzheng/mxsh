@@ -137,11 +137,7 @@
                         <i class="vertical-bar"></i>
                     </a>
                     <div id="J-my-history-menu" class="dropdown-menu dropdown-menu--deal dropdown-menu--history">
-                       <p class="dropdown-menu--empty">暂无浏览记录</p> 
-
-
-                     
-
+                       <p class="dropdown-menu--empty">暂无浏览记录</p>                
                     </div>
                 </li>
                 <li data-uix="dropdown" id="J-my-cart" class="dropdown dropdown--cart J-cart-updated" data-comboajax-uri="/index/navcart" data-comboajax-onsuccess="Y.mt.www.CartEx.update($response.data);" data-comboajax-state="5">
