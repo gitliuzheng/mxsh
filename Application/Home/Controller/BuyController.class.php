@@ -75,4 +75,12 @@ class BuyController extends CommonController {
         }
         return (date('y',time()) % 9+1) . sprintf('%013d', $pay_id) . sprintf('%02d', $num);
     }
+
+    /*
+    * 选择支付方式
+    * liuzhen 2016-07-12 20:23
+    */
+    public function buy_step2(){
+        $this->display();
+    }
 }

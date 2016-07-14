@@ -20,9 +20,8 @@ class IndexController extends CommonController {
     */ 
     public function deal(){
         $id = I('get.id');
-        $goods = D('VrGoods');     
-        $term['a.goods_id'] = array('eq',$id);       
-        $data = $goods -> where(array('goods_id' => array('eq',$id),))->find();
+        $goods = D('VrGoods');           
+        $data = $goods -> where(array('goods_id' => array('eq',$id),'goods_state' => array('eq',1),'goods_verify' =>array('eq',1),))->find();
         $goodsModel = D('GoodsClass'); 
         //获取此商品各级分类名称
         for($a=1;$a<=3;$a++){
@@ -54,6 +53,8 @@ class IndexController extends CommonController {
         }
         $total = $num[5]/$temp*5+$num[4]/$temp*4+$num[3]/$temp*3+$num[2]/$temp*2+$num[1]/$temp*1;
         $total_favourable = round(($total/5)*100).'%';
+        //print_r($data);
+        //exit;
         $this->assign(array(
             'gcname' => $gcname,
             'data' => $data,
@@ -67,6 +68,46 @@ class IndexController extends CommonController {
             'total_favourable' => $total_favourable
         ));
         $this->display();
+    }
+
+
+
+    /*
+    * 商品详情页收藏
+    */
+    public function favorites(){
+        $login = $this->is_cookie_login;
+        $member_id = $this->vr_member_id;
+        //判断是否登陆，是否已收藏
+        $login = 1;
+        $member_id = 6;
+        if($login){
+            $favorites = M('favorites');
+            $fwhere['member_id'] = $member_id;
+            $fwhere['fav_id'] = I('id');
+            $nufavorites = $favorites -> where($fwhere) ->find();
+            if($nufavorites){
+                echo json_encode('你已经收藏过该商品');
+                die;
+            }
+            $vrGoods = M('VrGoods');
+            $where['goods_id'] = I('id');
+            $data = $vrGoods -> where($where) ->find();
+            $temp['fav_id'] = $data['goods_id'];
+            $temp['fav_time'] = time();
+            $temp['goods_name'] = $data['goods_name'];
+            $temp['gc_id'] = $data['gc_id'];
+            $temp['goods_price'] = $data['log_price'];
+            $temp['member_id'] = $member_id;
+            $favorites-> data($temp) ->add();
+            $vrGoods -> where($where) ->setInc('goods_collect',1);
+            $dataNum = $vrGoods -> where($where) -> find();
+            $num = $dataNum['goods_collect'];
+            
+            echo json_encode($num);
+        }else{
+            echo json_encode(0);
+        }
     }
 
     /*
@@ -186,5 +227,8 @@ class IndexController extends CommonController {
         $sendSMS = new SendTemplateSMS();
         $sendSMS->send_template_SMS("15827323295",array('8888','30'),1);
     }
+
+
+
    
 }

@@ -66,7 +66,10 @@ class VrGoodsModel extends Model {
             default:
                 $p = "goods_id";
         }
+        $where['goods_state'] = 1;
+        $where['goods_verify'] = 1;
         //取出商品总数
+
         $gdata = $this -> where($where) -> select();
         $count = count($gdata);
         $page = new \Think\Page($count, 2);
@@ -95,24 +98,33 @@ class VrGoodsModel extends Model {
         ->where(array(
             'goods_name' => array('exp', " LIKE '%$key%' OR address LIKE '%$key%' OR message LIKE '%$key%'"),
         ))
-        ->find();
+        ->find();      
         $goods_id = $this -> field('GROUP_CONCAT(DISTINCT goods_commonid) gids')
         ->where(array(
             'goods_name' => array('exp', " LIKE '%$key%'"),
         ))
-        ->find();
-        //分割成数组 
-        $goodsId = explode(',',$goods_Id['gid']);
-        $goodsid = explode(',',$goods_id['gids']);
-        $gid = array_merge($goodsId,$goodsid);
-        $gsid = array_unique($gid);
-        
-        $data['count'] = count($gsid);
+        ->find();        
+        if(empty($goods_Id['gid']) && empty($goodsid['gids'])){
+            $data['count'] = 0;
+            if(empty($key)){
+                $data = null;
+            }
+            return $data;
+        }else{
+            //分割成数组 
+            $goodsId = explode(',',$goods_Id['gid']);
+            $goodsid = explode(',',$goods_id['gids']);
+            $gid = array_merge($goodsId,$goodsid);
+            $gsid = array_unique($gid);
+            $data['count'] = count($gsid);
+        }
         //return $goodsId;
         $page = new \Think\Page($data['count'], 2);  //设置页面商品显示个数
         // 配置翻页的样式
         $data['page'] = $page->show();
         $where1['goods_id'] = array('in',$gsid);
+        $where1['goods_state'] = 1;
+        $where1['goods_verify'] = 1;
         switch (I('odby')){
             case 'xl':
                 $p = "goods_salenum";
@@ -169,6 +181,7 @@ class VrGoodsModel extends Model {
         }
         return $data;
     }
+    
 }   
 
 
