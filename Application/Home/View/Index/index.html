@@ -53,7 +53,7 @@
             <div data-component="search-box" class="component-search-box mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_10"><div data-comboajax-uri="/index/hotqueries" data-comboajax-data="{&quot;isshowshops&quot;:true,&quot;isshopspage&quot;:false}" data-comboajax-onsuccess="this.append($response.html);" data-comboajax-state="5" class="J-search-box search-box ">
     
 <!-- 关键字搜索  zhangkuan -->  
-    <form  class="search-box__form J-search-form cf"  name="searchForm" method="get" >
+    <div  class="search-box__form J-search-form cf"  name="searchForm" method="get" >
         <div class="search-box__tabs-container" style="float:left">
             <span class="tri"></span>
             <ul class="J-search-box__tabs search-box__tabs">
@@ -64,7 +64,7 @@
         <input tabindex="1" type="text"   autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1464999326260_132" class="name">
        <!--  搜索通过事件提交，增加key字段提交(区分类别跳转) -->
         <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr" >       
-    </form>
+    </div>
 <!-- 关键字搜索结束  zhangkuan -->  
     
 
@@ -93,7 +93,7 @@
     </script>
 
 
-        
+
    <!--  <div class="s-hot" id="J-poi-hot-query" style="display:none">
         <a class="hot-link  hot-link--first" gaevent="poisearch/hotquery/1" data-mttcode="Apoisearch.Bhotquery.C1.D" href="http://www.meituan.com/shops/?w=%E6%8A%AB%E8%90%A8">聚点主题KTV</a>
         <a class="hot-link " gaevent="poisearch/hotquery/2" data-mttcode="Apoisearch.Bhotquery.C2.D" href="http://www.meituan.com/shops/?w=%E9%87%91%E6%BB%A1">7天连锁酒店</a>
@@ -438,41 +438,7 @@
         <div data-component="deal-list" class="component-deal-list mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1464999326260_9548">    
             
 <!-- 名店抢购 -->
-        <volist name='xianshi_item' id='vo'>
-        <?php static $k3 = 0; if($k3>=5){break;} $k3++; ?>
-            <div class="deal-tile" data-mttcode="C1">
-                <a href="<{:U('Home/Index/deal/id/'.$vo['goods_id'], '', FALSE)}>" class="deal-tile__cover" hidefocus="true" target="_blank">
-                    <img class="J-webp" width="205" height="124" alt="皇家美幻蛋糕店" src="__PUBLIC__/index_files/9e7dd447e1d70221f6a7223cd6e5d81072907.jpg@0_252_1280_775a-388h_640w_2e_90q.webp">
-                    <span class="deal-mark">
-                            <span class="deal-mark__item deal-mark__item--pois" title="多套餐">多套餐</span>
-                    </span>
-                </a>
-                <h3 class="deal-tile__title">
-                    <a href="http://suzhousz.meituan.com/deal/33657254.html" class="w-link" title="皇家美幻蛋糕店" hidefocus="true" target="_blank">
-                        <span class="xtitle"><{$vo.goods_name}></span>
-                        <span class="short-title">淡奶油蛋糕1个，约10寸，圆形</span>
-                    </a>
-                </h3>
-                <p class="deal-tile__detail">
-                    <span class="price">¥<strong><{$vo.xianshi_price}></strong></span>
-                    <span class="value"> <del class="num"></del></span>
-                    <span class="sales">
-                            已售<strong class="num">40</strong>
-                    </span>
-                </p>
-                <div class="deal-tile__extra">
-                    <p class="extra-inner">
-                        <span class="hots__discount">手机购买立减¥18.8</span>
-                        <a href="http://suzhousz.meituan.com/deal/33657254.html#anchor-reviews" class="rate-info" hidefocus="true" target="_blank">
-                            <span class="rate-info__bar common-rating">
-                                <span class="rate-stars" style="width: 80%;"></span>
-                            </span>
-                            <span class="rate-info__count">11人评价</span>
-                        </a>
-                    </p>
-                </div>
-            </div>  
-            </volist>
+       
 
 
 

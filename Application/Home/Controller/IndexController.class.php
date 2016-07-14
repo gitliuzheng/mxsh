@@ -12,12 +12,6 @@ class IndexController extends CommonController {
     * 首页
     */
     public function index(){
-        //限时折扣
-        $model_xianshi_goods = D('VrGoods');
-        $xianshi_item = $model_xianshi_goods->getXianshiGoodsCommendList();
-       // print_r($xianshi_item);
-       // exit;
-        $this->assign('xianshi_item', $xianshi_item);
         $this->display();
     }
 

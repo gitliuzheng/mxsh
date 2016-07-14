@@ -216,7 +216,7 @@
 
 
 <!-- 关键字搜索  zhangkuan -->  
-    <form  class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1464999326260_126">
+    <div  class="search-box__form J-search-form cf" name="searchForm" method="get" id="yui_3_16_0_1_1464999326260_126">
         <div class="search-box__tabs-container" style="float:left">
             <span class="tri"></span>
             <ul class="J-search-box__tabs search-box__tabs">
@@ -226,11 +226,28 @@
         </div>
         <input tabindex="1" type="text" name="name" autocomplete="off" data-smartbox="/search/smartboxv2/" class="s-text search-box__input J-search-box__input" value="" placeholder="请输入商品名称、地址等" id="yui_3_16_0_1_1464999326260_132" class="name">
        <!--  搜索通过事件提交，增加key字段提交(区分类别跳转) -->
-        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr"  onclick="location.href='<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/'+$('#yui_3_16_0_1_1464999326260_132').val();">       
-    </form>
+        <input type="button" class="s-submit search-box__button log-mod-viewed" hidefocus="true" value="搜索" data-mod="sr" >       
+    </div>
 <!-- 关键字搜索结束  zhangkuan -->  
 
-
+<script type="text/javascript">
+$(function(){
+    $('.s-submit').click(function(){    
+        var m = $('#yui_3_16_0_1_1464999326260_132').val();
+        if(m){
+            window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+m;
+        }
+    });
+    $("body").keyup(function(event) {
+        if (event.keyCode == "13") {//keyCode=13是回车键 
+            var m = $('#yui_3_16_0_1_1464999326260_132').val();
+            if(m){
+                window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+m;
+            }   
+        }
+    });
+});
+</script>
 
 
 
@@ -242,7 +259,26 @@
     <div class="smart-query-panel" style="display:none" id="yui_3_16_0_1_1465867114754_1880">
         <div class="smart-query-content"></div>
     </div>
-    <div class="J-search-box__hot search-box__hot log-mod-viewed" data-mod="st" id="yui_3_16_0_1_1465867114754_2107"><div class="s-hot" id="J-deal-hot-query"><a class="hot-link  hot-link--first" gaevent="search/hotquery/1" data-mttcode="Asearch.Bhotquery.C1.D" href="http://www.meituan.com/s/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="search/hotquery/2" data-mttcode="Asearch.Bhotquery.C2.D" href="http://www.meituan.com/s/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="search/hotquery/3" data-mttcode="Asearch.Bhotquery.C3.D" href="http://www.meituan.com/s/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="search/hotquery/4" data-mttcode="Asearch.Bhotquery.C4.D" href="http://www.meituan.com/s/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="search/hotquery/5" data-mttcode="Asearch.Bhotquery.C5.D" href="http://www.meituan.com/s/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="search/hotquery/6" data-mttcode="Asearch.Bhotquery.C6.D" href="http://www.meituan.com/s/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="search/hotquery/7" data-mttcode="Asearch.Bhotquery.C7.D" href="http://www.meituan.com/s/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="search/hotquery/8" data-mttcode="Asearch.Bhotquery.C8.D" href="http://www.meituan.com/s/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="search/hotquery/9" data-mttcode="Asearch.Bhotquery.C9.D" href="http://www.meituan.com/s/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="search/hotquery/10" data-mttcode="Asearch.Bhotquery.C10.D" href="http://www.meituan.com/s/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div><div class="s-hot" id="J-poi-hot-query" style="display:none"><a class="hot-link  hot-link--first" gaevent="poisearch/hotquery/1" data-mttcode="Apoisearch.Bhotquery.C1.D" href="http://www.meituan.com/shops/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="poisearch/hotquery/2" data-mttcode="Apoisearch.Bhotquery.C2.D" href="http://www.meituan.com/shops/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="poisearch/hotquery/3" data-mttcode="Apoisearch.Bhotquery.C3.D" href="http://www.meituan.com/shops/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="poisearch/hotquery/4" data-mttcode="Apoisearch.Bhotquery.C4.D" href="http://www.meituan.com/shops/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="poisearch/hotquery/5" data-mttcode="Apoisearch.Bhotquery.C5.D" href="http://www.meituan.com/shops/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="poisearch/hotquery/6" data-mttcode="Apoisearch.Bhotquery.C6.D" href="http://www.meituan.com/shops/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="poisearch/hotquery/7" data-mttcode="Apoisearch.Bhotquery.C7.D" href="http://www.meituan.com/shops/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="poisearch/hotquery/8" data-mttcode="Apoisearch.Bhotquery.C8.D" href="http://www.meituan.com/shops/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="poisearch/hotquery/9" data-mttcode="Apoisearch.Bhotquery.C9.D" href="http://www.meituan.com/shops/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="poisearch/hotquery/10" data-mttcode="Apoisearch.Bhotquery.C10.D" href="http://www.meituan.com/shops/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div></div></div>
+
+    <!-- 热门搜索 -->
+    <div class="J-search-box__hot search-box__hot log-mod-viewed" data-mod="st" id="yui_3_16_0_1_1465867114754_2107">
+        <div class="s-hot" id="J-deal-hot-query">
+            <?php if(is_array($setData)): $i = 0; $__LIST__ = $setData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><!-- 设置显示5个 -->
+                <?php static $m=0; if($m >= 5){break;} $m++; ?>
+                    <a class="hot-link  hot-link--first" href="javascript:void(0)" gaevent="search/hotquery/1" data-mttcode="Asearch.Bhotquery.C1.D" onclick="ff('<?php echo ($v); ?>')"><?php echo ($v); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+        </div>
+    <script type="text/javascript">
+        function ff(k){
+            if(k){
+                window.location.href="<?php echo U('Home/Search/category/key/1', '', FALSE); ?>/name/"+k;
+            }  
+        }
+    </script>
+        <!-- <div class="s-hot" id="J-poi-hot-query" style="display:none"><a class="hot-link  hot-link--first" gaevent="poisearch/hotquery/1" data-mttcode="Apoisearch.Bhotquery.C1.D" href="http://www.meituan.com/shops/?w=%E6%8A%AB%E8%90%A8">披萨</a><a class="hot-link " gaevent="poisearch/hotquery/2" data-mttcode="Apoisearch.Bhotquery.C2.D" href="http://www.meituan.com/shops/?w=%E8%9B%8B%E7%B3%95">蛋糕</a><a class="hot-link " gaevent="poisearch/hotquery/3" data-mttcode="Apoisearch.Bhotquery.C3.D" href="http://www.meituan.com/shops/?w=%E8%93%9D%E9%B2%B8">蓝鲸</a><a class="hot-link " gaevent="poisearch/hotquery/4" data-mttcode="Apoisearch.Bhotquery.C4.D" href="http://www.meituan.com/shops/?w=%E9%87%91%E6%BB%A1">金满</a><a class="hot-link " gaevent="poisearch/hotquery/5" data-mttcode="Apoisearch.Bhotquery.C5.D" href="http://www.meituan.com/shops/?w=%E8%87%AA%E5%8A%A9%E9%A4%90">自助餐</a><a class="hot-link " gaevent="poisearch/hotquery/6" data-mttcode="Apoisearch.Bhotquery.C6.D" href="http://www.meituan.com/shops/?w=%E5%90%8E%E5%8E%A8">后厨</a><a class="hot-link " gaevent="poisearch/hotquery/7" data-mttcode="Apoisearch.Bhotquery.C7.D" href="http://www.meituan.com/shops/?w=%E5%B8%8C%E5%B0%94%E9%A1%BF">希尔顿</a><a class="hot-link " gaevent="poisearch/hotquery/8" data-mttcode="Apoisearch.Bhotquery.C8.D" href="http://www.meituan.com/shops/?w=%E8%88%B9%E8%AF%B4%E5%90%A7">船说吧</a><a class="hot-link " gaevent="poisearch/hotquery/9" data-mttcode="Apoisearch.Bhotquery.C9.D" href="http://www.meituan.com/shops/?w=%E7%BF%B0%E6%9E%97%E8%BD%A9">翰林轩</a><a class="hot-link  last" gaevent="poisearch/hotquery/10" data-mttcode="Apoisearch.Bhotquery.C10.D" href="http://www.meituan.com/shops/?w=%E5%BF%85%E8%83%9C%E5%AE%A2">必胜客</a></div> -->
+    </div>
+
+
+    </div>
 </div>
         <a class="site-commitment" gaevent="top/commitment" href="http://www.meituan.com/commitment/" target="_blank">
             <span class="commitment-item"><i class="F-glob F-glob-commitment-retire"></i>随时退</span>
