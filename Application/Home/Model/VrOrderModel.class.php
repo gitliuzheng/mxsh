@@ -8,7 +8,6 @@ class VrOrderModel extends Model {
      * @return int 返回 insert_id
      */
     public function addOrder($data) {
-
         $insert = $this->data($data)->add();
         return $insert;
     }

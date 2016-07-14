@@ -1,242 +1,105 @@
-<!DOCTYPE html>
-<html class="yui3-js-enabled" id="yui_3_16_0_1_1465960232707_233">
+<!doctype html>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- 导入文件   zhangkuan-->
-    <script src="__PUBLIC__/Scripts/jquery.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/JS/Home/cart.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/JS/Home/cart_add_minus.js"></script>
-    <script src="__PUBLIC__/Scripts/jquery.page.js"></script>
-    <link href="__PUBLIC__/Stylesheets/jquery-ui.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="__PUBLIC__/Scripts/jquery-ui.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/JS/Home/index.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/JS/Home/deal.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Scripts/phpSerializer.js"></script>
-
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LXtbxUBZfNBXjuwrAljAiHIo"></script>
-
     <meta name="renderer" content="webkit">
     <meta name="applicable-device" content="pc">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-transform" >
     <meta name="application-name" content="美团网－美团一次 美一次，精品生活">
-    <meta name="baidu-site-verification" content="TiWCN4h5v3">
-    <meta name="description" content="美佳乐蛋糕团购,美团官网,提供最新美佳乐蛋糕团购、宿州美佳乐蛋糕葡式蛋挞团购优惠券。仅售1.8元！价值3元的葡式蛋挞1个，提供免费WiFi。">
-    <link rel="alternate" media="only screen and (max-width:640px)" href="http://i.meituan.com/deal/26263695.html">
-    <meta name="keywords" content="美佳乐蛋糕团购,美佳乐蛋糕优惠券,美佳乐蛋糕葡式蛋挞团购,美佳乐蛋糕图片">
-    <link rel="dns-prefetch" href="http://c.meituan.net/">
-    <link rel="dns-prefetch" href="http://s0.meituan.net/">
-    <link rel="dns-prefetch" href="http://s1.meituan.net/">
-    <link rel="dns-prefetch" href="http://p0.meituan.net/">
-    <link rel="dns-prefetch" href="http://p1.meituan.net/">
-    <link rel="dns-prefetch" href="http://analytics.meituan.com/">
+    <meta name="baidu-site-verification" content="TiWCN4h5v3" />
     <link rel="alternate" href="http://suzhousz.meituan.com/feed" title="订阅更新" type="application/rss+xml">
-    <link rel="shortcut icon" href="http://www.mxhhw.com/favicon.ico">
-    <link rel="canonical" href="http://suzhousz.meituan.com/deal/26263695.html">
-    <title>【梦想换货网】宿州商户</title>
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/index_saved_resource(4).css">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/index_saved_resource(9).css">
+    <link rel="apple-touch-icon" href="//s0.meituan.net/bs/file/?f=fewww:/www/img/apple-touch-icon-ipad.png@db943c9">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32">
+    <link rel="canonical" href="http://www.meituan.com/deal/buy/27625177">
+    <title>美团网</title>
+    <script src="__PUBLIC__/Scripts/jquery.js"></script>
+    <script src="__PUBLIC__/Scripts/jquery.validate.min.js"></script>
+    <script src="__PUBLIC__/Scripts/messages_zh.js"></script>
+    <link rel="stylesheet" type="text/css" href="//s0.meituan.net/bs/css/?f=fewww:/www/css/common.css,/www/css/base.css@db943c9" />
+    <link rel="stylesheet" type="text/css" href="//s0.meituan.net/bs/css/?f=fewww:/www/css/table-section.css,/www/css/buy.css,/www/css/deal.css,/www/css/calendar.css,/www/css/buy-process.css,/www/css/buyprocessbar.css@db943c9" />
+    <script src="__PUBLIC__/JS/Home/buy_add_minus.js"></script>
+    <script>
 
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/deal_saved_resource(3).css">
-    <link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(4).css">
-    <link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(6).css">
-    <link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(12).css">
-    <link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(14).css">
-    <link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(22).css">
-    <link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/deal_saved_resource(23).css">
-    <link charset="utf-8" rel="stylesheet" href="__PUBLIC__/CSS/cart.css">
-    <style type="text/css">@media screen{.smnoscreen {display:none}} @media print{.smnoprint{display:none}}</style>
-    <noscript hidden="" style="display:none;" class="J-hub" data-hublaziness="load" data-hubcss="fewww:www/css/lazyload.css,iconfont/css/global-iconfont.css@b64babf" data-hubstamp="yui_3_16_0_1_1465960232707_869" data-hubstate="40"></noscript>
+
+        // 手机号码验证
+        jQuery.validator.addMethod("isMobile", function(value, element) {
+            var length = value.length;
+            var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
+            return this.optional(element) || (length == 11 && mobile.test(value));
+        }, "请正确填写您的手机号码");
+
+        $().ready(function() {
+            $("#dealbuy-quantity").find("input[name='quantity']").blur(function(){
+                change_buy_total();
+            });
+            $("#dealbuy-quantity").find("input[name='quantity']").focus(function(){
+                change_buy_total();
+            });
+
+
+            $("#deal-buy-form").validate({
+                rules:{
+                    buyer_phone : {
+                        required : true,
+                        isMobile : true
+                    },
+                    quantity : {
+                        required : true,
+                        min : 1,
+                        max: <{$goods_info.virtual_limit}>
+            }
+        },messages: {
+            quantity : {
+                min: "最小1",
+                        max: "最多<{$goods_info.virtual_limit}>"
+
+            }
+        }
+        });
+        });
+    </script>
+
+    <style>
+        .error{
+            color:red;
+        }
+    </style>
+
+
+    <style type="text/css">html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}*{box-sizing:content-box}body{margin:0;color:#666;font-size:14px;line-height:1.5;font-family:Hiragino Sans GB,WenQuanYi Micro Hei,tahoma,sans-serif}img{border:0;vertical-align:middle}a{color:inherit;cursor:pointer;text-decoration:none}a:active,a:hover{outline:0}a,button,input,select{padding:0}a:focus,button:focus,input:focus,select:focus{outline:0}button,input[type=button],input[type=submit]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}button,input,select,textarea{margin:0;font:inherit;color:inherit}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=submit]{-webkit-appearance:button;cursor:pointer}input[type=radio]{cursor:pointer}input[type=radio]:active{outline:none}ul{margin:0;padding:0;list-style:none}h1,h2,h3,h4,h5,h6{margin:0;color:inherit;font-size:14px;font-weight:700;font-family:inherit;-webkit-font-smoothing:antialiased}p{margin:0 0 10px}.placeholder{color:#999}#body{padding:0 0 85px}.container{width:980px;margin:0 auto}.block-left,.block-right{width:50%;float:left}.block-right{text-align:right}.clear-fix{*zoom:1}.clear-fix:after,.clear-fix:before{display:table;content:" "}.clear-fix:after{clear:both}.icon{font-size:0;background-image:url(./img/icon-common@2x.KyXBh.png);background-size:168px}.icon,.icon-sand{display:inline-block}.icon-sand{width:40px;height:40px;vertical-align:middle;background-position:-120px -48px}.icon-ecom{top:5px;left:5px;width:60px;height:60px;position:absolute}.icon-close{top:13px;right:13px;width:13px;height:13px;z-index:5;cursor:pointer;position:absolute;background-position:-17px -88px}.icon-opinfo{width:48px;height:48px;position:absolute;background-position:-120px 0}.icon-qrcode{width:17px;height:17px;display:inline-block;vertical-align:middle;background-position:0 -88px}.icon-clock{width:12px;height:12px;margin-right:5px}@-webkit-keyframes slide-left-in{0%{opacity:0;-webkit-transform:translate3d(-15px,0,0);transform:translate3d(-15px,0,0)}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes slide-left-in{0%{opacity:0;-webkit-transform:translate3d(-15px,0,0);transform:translate3d(-15px,0,0)}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}@-webkit-keyframes scale-in{0%{opacity:0;-webkit-transform:scale3d(.8,.8,1);transform:scale3d(.8,.8,1)}to{opacity:1;-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes scale-in{0%{opacity:0;-webkit-transform:scale3d(.8,.8,1);transform:scale3d(.8,.8,1)}to{opacity:1;-webkit-transform:scaleX(1);transform:scaleX(1)}}.btn,.btn-primary{color:#fff;border:none;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border-radius:2px;letter-spacing:2px;padding:5px 12px 4px;display:inline-block;-webkit-font-smoothing:antialiased}.btn-primary{border:1px solid #e3e3e3;border-bottom-color:#aaa;background-image:-webkit-gradient(linear,left top,left bottom,from(#f7f7f7),to(#dedede));background-image:-webkit-linear-gradient(top,#f7f7f7,#dedede);background-image:linear-gradient(180deg,#f7f7f7,#dedede)}.btn-primary,.btn-primary:hover{color:#333;background-color:#e9e9e9}.btn-primary:hover{border-color:#e5e5e5;border-bottom-color:#b3b3b3;background-image:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#e9e9e9));background-image:-webkit-linear-gradient(top,#fff,#e9e9e9);background-image:linear-gradient(180deg,#fff,#e9e9e9)}.btn-primary:active{border-color:#ddd;border-bottom-color:#aaa;background-color:#efeffe;background-image:-webkit-gradient(linear,left top,left bottom,from(#ddd),to(#eee));background-image:-webkit-linear-gradient(top,#ddd,#eee);background-image:linear-gradient(180deg,#ddd,#eee)}.order{margin:20px 0;line-height:24px}.order-name{float:left;color:#333;width:420px;font-size:12px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-right:15px}.order-name a{color:#333}.order-price{color:#f76120;font-size:24px;font-weight:700;font-family:arial,sans-serif}.order .block-left{width:75%}.order .block-right{width:25%}.credit{height:62px;padding:0 15px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;line-height:60px;border:2px solid #ddd;-webkit-transition:border .1s;transition:border .1s}.credit-total{float:left;cursor:pointer;padding-left:10px}.credit-amount{margin-left:10px}.credit-amount,.credit-price{font-size:20px;font-family:arial,sans-serif}.credit-price{color:#f76120}.credit .block-right,.modal{display:none}.modal{position:fixed}.modal,.modal-mask{top:0;left:0;width:100%;height:100%;z-index:100}.modal-mask{position:absolute;background:#000;background:rgba(0,0,0,.2);filter:alpha(opacity=20)}.modal-box{top:50%;left:50%;z-index:101;overflow:hidden;position:absolute;border:6px solid #bbb;background-color:#fff;-webkit-animation:scale-in both cubic-bezier(.4,0,0,1.5) .3s;animation:scale-in both cubic-bezier(.4,0,0,1.5) .3s}.modal-head{height:40px;position:relative;background-color:#f7f7f7}.modal-title{margin-left:15px;line-height:40px}.modal-body{margin:40px;position:relative}.modal-content{padding-left:90px}.modal-content h3{font-size:16px;line-height:30px;margin-bottom:6px}.modal-content p{margin:0;line-height:20px}.modal-btn-group{margin:15px 0 20px}.modal-btn-group .btn{font-weight:700;padding:7px 20px 6px}.modal-btn-ok{margin-right:15px}.modal-back{cursor:pointer}.modal-back:hover{text-decoration:underline}.modal-input-line{height:64px}.modal-input-line button,.modal-input-line input,.modal-input-line label{float:left}.modal-input-line label{padding-left:5px;line-height:36px;padding-right:10px}.modal-input-password,.modal-input-text{height:24px;padding:5px 8px;line-height:24px;border:1px solid #ddd}.modal-input-password:hover,.modal-input-text:hover{border-color:#aaa}.modal-input-text{width:137px}.modal-input-password{width:230px;font-family:arial,sans-serif}.modal-input-error,.modal-input-error:hover{border-color:#ff8000}.modal-error-msg{top:38px;display:none;color:#f76120;font-size:12px;position:absolute}.modal-error-text{left:60px}.modal-error-password{left:71px}.modal-find-password{right:0;top:38px;color:#2bb8aa;font-size:12px;position:absolute}.modal-submit-btn{display:block;font-size:18px;margin-left:120px;padding:6px 20px 5px}.confirm-modal .modal-box{width:466px;height:286px;margin:-143px 0 0 -233px}.timeout-modal .modal-box{width:400px;height:246px;margin:-123px 0 0 -200px}.timeout-modal p{padding:25px 0}.timeout-modal .btn{width:130px;padding-left:0;padding-right:0;margin-left:12px}.weixinqr-modal .modal-box{width:716px;height:438px;margin:-219px 0 0 -358px}.weixinqr-modal p{font-size:18px;text-align:center;line-height:32px;margin-bottom:16px}.weixinqr-modal .modal-info{height:14px;color:#f80;font-size:12px;line-height:1;padding:13px 0;text-align:center;background-color:#f7f7f7}.weixinqr-modal .modal-left{float:left;width:250px;padding:20px 50px 25px 45px}.weixinqr-modal .modal-left span{vertical-align:middle}.weixinqr-modal .modal-right{float:left}.weixinqr-modal .modal-right img{width:371px;height:438px}.weixinqr-modal .orange{color:#f80}.weixinqr-modal .modal-qrcode{width:210px;height:210px;display:block;margin:0 auto 20px}.weixinqr-modal .modal-qr{padding-top:20px;border:1px solid #ddd}.verify-modal .modal-box{width:384px;height:254px;margin:-127px 0 0 -192px}.verify-modal .modal-body{margin:28px 30px}.verify-modal .modal-body p{font-size:18px;text-align:center;margin-bottom:24px}.verify-modal .modal-body form{width:324px;height:103px;position:relative}.verify-modal .modal-sms-btn{width:100px;font-size:14px;margin-left:10px;letter-spacing:0;padding:7px 0 6px;_padding:5px 0 4px}.verify-modal .modal-sms-btn-disabled{color:#bebebe;cursor:default;background:#f8f8f8;border-bottom-color:#e3e3e3}.alert-modal .modal-body{min-height:48px}.alert-modal .modal-box{width:360px;height:auto;margin:-70px 0 0 -180px}.alert-modal .modal-content{color:#333;font-size:16px;padding:12px 0 0 60px}.alert-modal .alert-modal-multi-line{padding-top:3px}.payment{margin-top:20px;position:relative}.payment-menu{height:42px;border-bottom:2px solid}.payment-tab{float:left;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;line-height:22px;padding:10px 15px;border:2px solid transparent;_border-color:tomato;_-webkit-filter:chroma(color=tomato);_filter:chroma(color=tomato)}.payment-0 .payment-tab-0,.payment-1 .payment-tab-1,.payment-2 .payment-tab-2{color:#000;background:#fff;border:2px solid;border-bottom:0}.payment-list{display:none;margin-top:20px;border-bottom:1px solid #ddd}.payment-list li{float:left;width:196px;cursor:pointer;margin:0 0 10px}.payment-list input{margin:0;padding:0;vertical-align:middle}.payment-bank-tip{font-size:12px;margin:-8px 0 10px}.payment-weak-tip{height:8px;display:block;color:#f76120;font-size:12px;line-height:14px;padding-left:20px;white-space:nowrap}.payment-0 .payment-list-0,.payment-1 .payment-list-1,.payment-2 .payment-list-2{display:block}.payment-unfold-list{float:left;cursor:pointer;line-height:34px;margin-left:-10px}.payment-unfold-list:hover{text-decoration:underline}.payment-icon{cursor:pointer;margin-left:7px;display:inline-block;border:1px solid #ddd}.payment-icon img{width:145px;height:32px}.payment-amount{text-align:right;font-weight:700;margin-top:15px}.payment-price{color:#f76120;font-size:20px;font-family:arial,sans-serif}.payment-back,.payment-submit{float:right;margin-top:30px}.payment-submit .btn{font-size:20px;padding:5px 20px 4px}.payment-back{line-height:40px;margin-right:20px}.payment-back a:hover{text-decoration:underline}.payment-tips{top:11px;right:0;font-size:12px;position:absolute}.payment-tips li{float:right;line-height:22px;margin-left:15px}.payment-tips-feedback{color:#666}.payment-tips-arrow{position:absolute;width:0;height:0;top:10px;right:5px;border:3px solid transparent;_border-color:tomato;_-webkit-filter:chroma(color=tomato);_filter:chroma(color=tomato);border-top-color:inherit}.payment-dropdown{cursor:pointer;position:relative;padding-right:15px;display:inline-block}.payment-dropdown.hover,.payment-dropdown:hover{zoom:1}.payment-dropdown.hover .payment-dropdown-menu,.payment-dropdown:hover .payment-dropdown-menu{color:#666;display:block;cursor:default}.payment-dropdown-menu{display:none;z-index:2;top:22px;right:-58px;width:260px;padding:15px;font-size:12px;background:#fff;line-height:1.5;position:absolute;border:1px solid #ccc}.payment-dropdown-more{margin-left:15px}.payment-dropdown-more:hover{text-decoration:underline}.payment-collapse h4{zoom:1;color:#333;cursor:pointer;font-size:12px;margin-bottom:5px;padding-left:15px;position:relative;font-weight:400}.payment-collapse p{display:none;color:#666}.payment-collapse-arrow{position:absolute;width:0;height:0;top:7px;left:0;font-size:0;border:4px solid transparent;_border-color:tomato;_-webkit-filter:chroma(color=tomato);_filter:chroma(color=tomato)}.payment-collapse-open p{display:block}.payment-collapse-open .payment-collapse-arrow{top:3px;border-top-color:transparent;_border-top-color:tomato;_-webkit-filter:chroma(color=tomato);_filter:chroma(color=tomato)}.checkbox{float:left;cursor:pointer;margin-top:22px}.checkbox-icon{width:16px;height:16px;display:block;position:relative;background-color:#fff;border:1px solid #ddd;-webkit-transition:background-color .1s;transition:background-color .1s}.checkbox-icon:after{top:1px;right:5px;content:'';width:5px;height:10px;position:absolute;border:solid #fff;border-width:0 2px 2px 0;-webkit-transform:rotate(45deg) scale(0);transform:rotate(45deg) scale(0);-webkit-transition:.2s cubic-bezier(.18,.89,.32,1.28) .1s;transition:.2s cubic-bezier(.18,.89,.32,1.28) .1s}.credit-expanded .checkbox-icon:after{-webkit-transform:rotate(45deg) scale(1);transform:rotate(45deg) scale(1)}.checkbox-shim{float:left;display:none;cursor:pointer;margin-top:25px;_margin-top:21px}.cd{height:40px;padding:10px;margin:16px 0;background-color:#fff5e4;border:1px solid #ffe4bf}.cd-icon{color:#fb8a00;font-size:40px}.cd-icon,.cd-text{vertical-align:middle}.cd-text{margin-left:8px;line-height:38px;display:inline-block}.cd-time{margin:0 5px;color:#f76120;font-size:18px}.common-tip{margin:15px 0;text-align:center;position:relative;padding:10px 30px;border-radius:2px;background:#fff6db;border:1px solid #f5d8a7}.pay-tip{display:none;text-align:left}.pay-tip h3{color:#333;font-size:18px;margin-bottom:10px}.pay-tip a{margin-left:20px;display:inline-block}.pay-tip a:hover{text-decoration:underline}.pay-tip-list{list-style:disc;padding-left:20px}.pay-tip-list h5{color:#333}.pay-tip-list p{margin-bottom:5px}.qr{*display:none;float:left;width:120px;height:98px;margin-right:14px;position:relative;border:1px solid #ddd}.qr-img{float:left;padding:5px}.qr-img,.qr-img img{width:88px;height:88px}.qr:hover .qr-explain{display:block}.qr-text{padding:4px;float:right;line-height:1;font-size:12px;width:13px;height:90px;border-left:1px solid #ddd}.qr-text span{float:right;color:#f76120}.qr-explain{display:none;top:-1px;right:-211px;padding-left:8px;position:absolute;-webkit-animation:slide-left-in both cubic-bezier(.4,0,0,1.5) .2s;animation:slide-left-in both cubic-bezier(.4,0,0,1.5) .2s}.qr-explain-box{font-size:12px;background:#fff;text-align:left;width:170px;height:74px;padding:12px 15px;border:1px solid #ddd}.qr-explain-box h3{font-size:18px;margin-bottom:5px}.qr-explain-box a:hover{text-decoration:underline}.qr-explain-box span{margin:0 3px}.qr-arrow:after,.qr-arrow:before{content:'';width:0;height:0;top:15px;position:absolute;border:7px solid transparent;_border-color:tomato;_-webkit-filter:chroma(color=tomato);_filter:chroma(color=tomato)}.qr-arrow:before{left:-6px;z-index:2;border-right-color:#ddd}.qr-arrow:after{left:-5px;z-index:3;border-right-color:#fff}.ie-modal .modal-box{font-size:12px;width:560px;height:340px;margin:-180px 0 0 -280px}.ie-modal .modal-box h3{color:#333;font-size:22px}.ie-modal .modal-box a{color:#2bb8aa;cursor:pointer}.ie-modal .modal-box a:hover{text-decoration:underline}.ie-modal .modal-body{margin:30px}.ie-modal .modal-content{padding:0}.ie-modal .btn-primary{float:left;padding:6px 20px}.ie-modal .modal-btn-group{width:310px;margin:10px auto 20px}.ie-browser-list{height:127px;margin:5px 0}.ie-browser-list a{float:left;margin:0 12px;text-align:center}.ie-recommend{margin-top:10px}.ie-browser{display:block;width:100px;height:100px;margin-bottom:5px;background-image:url(./img/icon-browser.3eKRIG.png)}.ie-chrome{background-position:0 -200px}.ie-firefox{background-position:0 -300px}.ie-qq{background-position:0 -100px}.ie8 .modal-btn-group:hover{background:#fff}.ie8 .checkbox{display:none}.ie8 .checkbox-shim{display:inline}.ie8 .icon{background-image:url(./img/icon-common.2a2dvA.png)}.ie8 .icon-sand{background-position:0 -61px}.ie8 .icon-close{background-position:-137px -48px}.ie8 .icon-opinfo{background-position:-120px 0}.ie8 .icon-qrcode{background-position:-120px -48px}</style>
+
+
+
+<style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style>
+
+
+    <style type="text/css">.hd .container{height:99px;padding:5px 0;border-bottom:1px solid #eee}.hd-commitment,.hd-logo{background-image:url(./img/icon-mtgroup@2x.4zl0bc.png);background-size:315px}.hd-logo{float:left;width:82px;height:54px;margin-top:21px;background-position:-233px 0}.hd-process{float:left;width:426px;margin:36px 0 0 25px}.hd-step{float:left;color:#999;width:142px;font-size:12px;line-height:30px;text-align:center}.hd-step-active{color:#333}.hd-progress{float:left;width:100%;height:3px;padding:1px;font-size:0;border-radius:4px;background-color:#eee;box-shadow:inset 0 1px 2px rgba(0,0,0,.1)}.hd-progress-bar{width:284px;height:3px;background:#2bb8aa;background-size:40px}.hd-commitment{float:right;width:171px;height:41px;margin-top:29px;background-position:-62px 0}.ie8 .hd-commitment,.ie8 .hd-logo{background-image:url(./img/icon-mtgroup.3daA8S.png)}.ie8 .hd-logo{background-position:-123px -41px}.ie8 .hd-commitment{background-position:-123px 0}.ft-site-container{height:195px;padding-top:20px;border-top:3px double #eee}.ft-site{float:left;width:170px;padding-left:10px}.ft-site h3{margin-bottom:12px}.ft-site a{font-size:12px;color:#999}.ft-site a:hover{color:#999;text-decoration:underline}.ft-service{width:229px;padding-left:30px;border-left:1px solid #eee}.ft-service a,.ft-service a:hover{color:#2bb8aa}.ft-sprite{background-image:url(./img/icon-mtgroup@2x.4zl0bc.png)}.ft-hotline{display:block;width:49px;height:45px;margin-bottom:5px;background-position:0 -80px}.ft-text{font-size:12px}.ft-contact{margin-bottom:27px}.ft-contact-number{font-size:18px;font-weight:700}.ft-contact-time{color:#999;font-size:12px;margin-left:5px}.ft-cert{height:85px;padding:25px 0 50px;background-color:#f9f9f9;border-top:1px solid #ddd}.ft-cert-list{width:558px;margin:30px auto 0}.ft-cert-list li{float:left;height:38px;margin-right:5px}.ft-cert-list a{height:38px;display:block}.ft-cert-record{width:109px;background-position:0 -167px}.ft-cert-alipay{width:123px}.ft-cert-tenpay{width:83px;background-position:0 -207px}.ft-cert-knet{width:107px;background-position:0 -127px}.ft-cert-12315{width:108px;background-position:0 -40px}.ft-copyright{color:#999;font-size:12px;text-align:center;font-family:STHeiti}.ft-copyright a{color:#999}.ft-copyright a:hover{color:#999;text-decoration:underline}.ie8 .ft-sprite{background-image:url(./img/icon-mtgroup.3daA8S.png)}.btn{background-color:#2bb8aa;background-image:-webkit-gradient(linear,left top,left bottom,from(#2fc9b9),to(#29b0a2));background-image:-webkit-linear-gradient(top,#2fc9b9,#29b0a2);background-image:linear-gradient(180deg,#2fc9b9,#29b0a2);border-bottom:1px solid #18655e}.btn:hover{color:#fff;background-color:#28ac9f;background-image:-webkit-gradient(linear,left top,left bottom,from(#2dc0b2),to(#27a79b));background-image:-webkit-linear-gradient(top,#2dc0b2,#27a79b);background-image:linear-gradient(180deg,#2dc0b2,#27a79b)}.credit-expanded,.credit-expanded .checkbox-icon,.modal-input-password:focus,.modal-input-text:focus,.payment-0 .payment-tab-0,.payment-1 .payment-tab-1,.payment-2 .payment-tab-2,.payment-list li:hover .payment-icon,.payment-menu{border-color:#2bb8aa}.common-tip a,.modal-back,.payment-back a,.payment-dropdown-more,.payment-dropdown:hover,.payment-unfold-list,.qr-explain-box a,a:hover{color:#2bb8aa}.credit-expanded .checkbox-icon{background-color:#2bb8aa}.payment-collapse-arrow{border-top-color:#2bb8aa}.payment-collapse-open .payment-collapse-arrow{border-bottom-color:#2bb8aa}.hd-progress-bar{background-color:#2bb8aa}</style>
+
 </head>
-<body class="pg-deal pg-deal-default pg-deal-detail" id="deal-default" style="position: static;">
-
-
-<div id="dialog-message" style="display:none;">
-</div>
-
-
-
-<!-- 引入的JS不好取值 -->
-<div style="display: none" id="cart_hidden">
-    <div class="delCart_url"><{:U('home/cart/delCart')}></div>
-    <div class="editCart_url"><{:U('home/cart/editCart')}></div>
-</div>
-
-
-
-<div id="yui_3_16_0_1_1465960232707_2566" class="yui3-widget widget-flashcopy"><div id="yui_3_16_0_1_1465960232707_2568" class="widget-flashcopy-content"></div></div><div id="qq-dialog" class="mt-overlay-container"><div id="yui_3_16_0_1_1465960232707_2479" class="yui3-widget yui3-overlay yui3-widget-positioned yui3-widget-stacked yui3-overlay-hidden" style="width: 500px; left: 701px; top: 400px; z-index: 102;"><div id="yui_3_16_0_1_1465960232707_2481" class="yui3-overlay-content yui3-widget-stdmod"><div class="yui3-widget-bd" id="yui_3_16_0_1_1465960232707_2592"><div class="mt-dialog" id="yui_3_16_0_1_1465960232707_2591"><h3 class="head" id="yui_3_16_0_1_1465960232707_2590">分享给QQ好友<span class="close" id="yui_3_16_0_1_1465960232707_2589">关闭</span></h3><div class="body" id="yui_3_16_0_1_1465960232707_2599"><p class="error" style="display:none">&nbsp;</p><div id="yui_3_16_0_1_1465960232707_2598">通过QQ、电子邮件发送链接给你的朋友</div><input type="text" class="deal-share-qq-input" value="http://suzhousz.meituan.com/u/15688577" maxlength="40" id="yui_3_16_0_1_1465960232707_2602"><input class="deal-share-qq-copy" type="button" value="复制" style="display:none"></div></div></div></div><div class="mt-overlay-underlay"></div></div></div><div id="mt-overlay-mask" style="width: 1903px; height: 8580px; z-index: 101; visibility: hidden;"></div>
+<body  id="deal-buy"   class="pg-buy pg-buy-process" >
 <!-- 顶部公共部分 -->
-<include file="Layout/other_top" />
-<style>
-    .ncc-table-style {
-        width: 100%;
-        border-collapse: collapse;
-        border-style: solid;
-        border-width: 2px 1px;
-        border-color: #AAA #DDD;
-    }
-</style>
-<div id="bdw" class="bdw">
-    <div class="ncc-wrapper">
-        <div class="ncc-main">
-            <div class="ncc-title">
-                <h3>填写核对购物信息</h3>
-                <h5>请仔细填写手机号，以确保电子兑换码准确发到您的手机。</h5>
-            </div>
-            <form action="<{:U('Buy/buy_step3')}>" method="POST" id="form_buy" name="form_buy">
-                <input type="hidden" name="goods_id" value="<{$goods_info.goods_id}>">
-                <input type="hidden" name="quantity" value="<{$goods_info.quantity}>">
-                <div class="ncc-receipt-info">
-                    <div class="ncc-receipt-info-title">
-                        <h3>电子兑换码/券接收方式</h3></div>
-                    <div id="invoice_list" class="ncc-candidate-items">
-                        <ul style="overflow: visible;">
-                            <li>手机号码：
-                                <div class="parentCls" style="position: relative;"><input name="buyer_phone" class="inputElem text error" autocomplete="off" type="text" id="buyer_phone" value="" maxlength="11"><label for="buyer_phone" class="error">请填写手机号码</label><div class="js-max-input" style="position: absolute; top: -34px; left: 0px; display: none;"></div></div>
-                            </li>
-                        </ul>
-                        <p><i class="icon-info-sign"></i>您本次购买的商品不需要收货地址，请正确输入接收手机号码，确保及时获得“电子兑换码”。可使用您已经绑定的手机或重新输入其它手机号码。</p>
-                    </div>
-                </div>
-                <div class="ncc-receipt-info">
-                    <div class="ncc-receipt-info-title">
-                <h3>虚拟服务类商品清单</h3><a href="index.php?act=buy_virtual&amp;op=buy_step1&amp;goods_id=3&amp;quantity=1">返回上一步</a></div>
-                <table class="ncc-table-style" nc_type="table_cart">
-                    <thead>
-                    <tr>
-                        <th colspan="3">商品</th>
-                        <th class="w150">单价(元)</th>
-                        <th class="w80">数量</th>
-                        <th class="w150">小计(元)</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th colspan="20">店铺：<a href="http://mxhhw-z.com/shop/index.php?act=show_store&amp;op=index&amp;store_id=1">官方店铺</a> <span member_id="1"></span>
-                        </th>
-                    </tr>
-
-                    <tr class="shop-list">
-                        <td class="w10"></td>
-                        <td class="w60"><a href="http://mxhhw-z.com/shop/index.php?act=goods&amp;op=index&amp;goods_id=3" target="_blank" class="ncc-goods-thumb"><img src="http://mxhhw-z.com/data/upload/shop/store/goods/1/1_04423412474341466_60.png" alt="123虚拟商品"></a></td>
-                        <td class="tl"><dl class="ncc-goods-info">
-                            <dt><a href="http://mxhhw-z.com/shop/index.php?act=goods&amp;op=index&amp;goods_id=3" target="_blank">123虚拟商品</a></dt>
-                            <dd>
-                            </dd>
-                        </dl></td>
-                        <td class="w120"><em id="item_price">10.00</em></td>
-                        <td class="w120">1</td>
-                        <td><em id="item_subtotal">10.00</em></td>
-                    </tr>
-
-                    <!-- S 留言 -->
-                    <tr>
-                        <td class="w10"></td>
-                        <td class="tl" colspan="2">买家留言：
-                            <textarea name="buyer_msg" class="ncc-msg-textarea valid" maxlength="150" placeholder="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）" title="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）"></textarea></td>
-                        <td class="tl" colspan="10"></td>
-                    </tr>
-                    <!-- E 留言 -->
-
-                    <!-- S 预存款/充值卡 -->
-                    <!-- E 预存款 -->
-
-                    <!-- S voucher list -->
-                    <!-- E voucher list -->
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                        <td colspan="20"><div class="ncc-all-account">商品总价<em id="orderTotal">10.00</em>元</div></td>
-                    </tr>
-                    </tfoot>
-                </table>
-                <div class="ncc-bottom">
-                    <input type="submit" id="submitOrder"  class="ncc-btn ncc-btn-acidblue fr" value="提交订单"/>
-                </div>
-            </div>
-
-            </form>
-
-
-
-            <script src="http://mxhhw-z.com/data/resource/js/input_max.js"></script>
-            <script>
-                //input内容放大
-                $(function(){
-                    new TextMagnifier({
-                        inputElem: '.inputElem',
-                        align: 'top'
-                    });
-                });
-
-                //计算应支付金额计算
-                function calcOrder() {
-                    var allTotal = parseFloat($('#item_subtotal').html());
-                    if ($('#storeVoucher').length > 0) {
-                        allTotal += parseFloat($('#storeVoucher').html());
-                    }
-                    $('#cartTotal').html(number_format(allTotal,2));
-                }
-
-                $(document).ready(function(){
-
-                    $('select[nctype="voucher"]').on('change',function(){
-                        if ($(this).val() == '') {
-                            $('#storeVoucher').html('-0.00');
-                        } else {
-                            var items = $(this).val().split('|');
-                            $('#storeVoucher').html('-'+number_format(items[1],2));
-                        }
-                        calcOrder();
-                    });
-
-
-
-
-                    $('#pd_pay_submit').on('click',function(){
-                        if ($('#pay-password').val() == '') {
-                            showDialog('请输入支付密码', 'error','','','','','','','','',2);return false;
-                        }
-                        $('#password_callback').val('');
-                        $.get("index.php?act=buy&op=check_pd_pwd", {'password':$('#pay-password').val()}, function(data){
-                            if (data == '1') {
-                                $('#password_callback').val('1');
-                                $('#pd_password').hide();
-                            } else {
-                                $('#pay-password').val('');
-                                showDialog('密码错误', 'error','','','','','','','','',2);
-                            }
-                        });
-                    });
-
-                    var SUBMIT_FORM = true;
-
-
-                    $("#form_buy").validate({
-                        onkeyup: false,
-                        rules: {
-                            buyer_phone : {
-                                required : true,
-                                digits : true,
-                                minlength : 11
-                            }
-                        },
-                        messages: {
-                            buyer_phone : {
-                                required : "请填写手机号码",
-                                digits : "请正确填写手机号码",
-                                minlength : "请正确填写手机号码"
-                            }
-                        }
-                    });
-                });
-            </script>
-
-
-        </div>
+<include file="Layout/buy_top" />
+<div data-component="system-message" class="component-system-message" mt-scope='["messages"]'  data-component-config='{"lazyRender":false,"afterLoad":false}'><img src='data:image/png,' onerror='M._autoinit.push(this.parentNode);this.parentNode.removeChild(this);' width=1 height=1 style='position:absolute;'><div class="sysmsgw common-tip" mt-bind-attr="{id: 'sysmsg-' + type}" mt-bind-show="isDisplay()" style="display:none">
+    <div class="sysmsg">
+        <span class="J-msg-content">
+            <span
+                    mt-bind-class="{
+                'J-tip-status':true,  
+                'tip-status': true, 
+                'tip-status--success': type == 'success', 
+                'tip-status--info': type == 'info',  
+                'tip-status--error': type == 'error'}"></span>
+            </span>
+        <span mt-bind-html="message"></span>
+        <span class="close common-close" mt-bind-onclick="hide()">关闭</span>
     </div>
 </div>
+</div>
 
+<div id="body" class="container clear-fix">
+    <div class="common-tip pay-tip"><h3>付款遇到问题了？先看看是不是由于下面的原因。</h3><ul class="pay-tip-list"><li><h5>要求开通网上银行？</h5><p>您可以联系对应银行开通网银，可以尝试使用支付宝、微信、财付通支付，或者下载美团APP在手机端完成支付。</p></li><li><h5>所需支付金额超过了银行支付限额？</h5><p>建议先分若干次充值到美团余额，或登录网上银行提高上限额度，即可轻松支付。</p></li><li><h5>收不到银行的短信验证码？</h5><p>建议重新获取短信验证码，如果还是收不到短信，直接打各银行的客服电话获取短信验证码。</p></li><li><h5>网银页面显示错误或者空白？</h5><p>建议刷新页面或更换到IE浏览器进行支付，您还可以选择支付宝、微信、财付通完成支付。</p></li><li><h5>网上银行扣款后，美团订单仍显示"未付款"怎么办？</h5><p>可能是由于银行的数据没有即时传输，请您不要担心，稍后刷新页面查看。如较长时间仍显示未付款，可先向银行或支付平台获取支付凭证（扣款订单号/第三方交易号），联系美团客服(400-660-5335)为您解决。</p></li></ul><span class="icon icon-close pay-tip-close"></span><a href="http://www.meituan.com/vote/survey/7" target="_blank">将您的问题反馈给我们</a></div><div class="order clear-fix"><span class="block-left"><span class="qr"><div class="qr-img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6AQMAAABKl9WnAAAABlBMVEUAAAD///+l2Z/dAAACjklEQVRIiXXVQQrlMAgGYMGtkKsI2Qa8upCt4FUEt0LGMouBl0wXD95HmybxjwXAUENeCEbF0NcvSIofXyUYy+Z5AM9lxLxHFfHEJ8xpELQ3rvwPnLlUgVYo5Aska6awkPvGPA8AnP+uv2v5gXO4CF2EaqccvUFyFkkAGLBtfYCTVxIH9ui9Rw8oHqXLGLiUEx+gZ8HwQxEyziC4YehiwtF3I8yEB7jrSYwxwXdAPQCVVJfsWv1O0weMXvk28YGkux+8YU3MWiMoUUbaA2TVYRuRhzlmL+6CEQI+TvlWHNRzv6BDsDt0doY7dDAe0EFT3eoWnrPLcMEQMqGYIVLwxfICj673BPX+f7pcN7BbYRpj71TH/AG5dXNAtntyPmD6MWEDRVlTO1IXKIfV8N5nWljyADTlVf1o18F7s25w6CFpdjx7l+BL4S+UTLLZmzDU+/cBNNFMYhIVeW/DDX28sLpaaw/a0ifogp7amE7wDUoADxjjdH340Fm+tj1ghnaUkvTMYkm9oXObfTcrBlnsB/BGlsCK7jvz+AOSsM/42QsPpz4hY20WRO4wjA7MBT136mT2U2Ob4gs2LQtx6A5atB+w117m3RddPb9BL6gt6KPrebYb4AN0BaOvlDqdraU3FOtep1ZZ7ToON0RRiCZmdizhPODg16QXlY3vAOkNTsR9e5nk8t3t4gIBw37pgeomub7ucMGQSPMwSqMz4IZuZiHGY3/ts4/8DbhoQSSEq9mXugv6ExLMCCJR4zseF5wjSvvIBOoVCNwA6Dy5u2IGxmS9QTLcz+rEbDbBB3SVD1U35/DRXxR4gaXVxK6RCMob1pl7UYdy4HmA5BE5qT3tVPMHAHZ3rP620uyjLDf8ATfLgIa9oHqqAAAAAElFTkSuQmCC" alt="qrcode"></div><span class="qr-text"><span>美团手机版</span>支付</span><div class="qr-explain"><div class="qr-explain-box"><h3>扫码支付</h3><div>美团手机版扫描二维码付款</div><div><a href="http://www.meituan.com/mobile/" target="_blank">美团手机版下载</a></div><i class="qr-arrow"></i></div></div></span><div class="order-name">项目1：【砀山县】小邵按摩</div><div class="order-name">项目2：下午场</div><div class="order-name">项目3：午夜场一小时欢唱券</div><div class="order-name">项目4：【官方】正新鸡排尊享版单人餐，提供免费WiFi</div></span><span class="block-right"><span>应付金额：<span class="order-price">¥54.69</span></span></span></div><div class="payment payment-0"><div class="payment-type"><ul class="payment-menu"><li class="payment-tab payment-tab-0" data-target="0">微信/财付通/支付宝</li><li class="payment-tab payment-tab-1" data-target="1">网银支付</li></ul><ul class="payment-tips"><li><a class="payment-tips-feedback" href="http://www.meituan.com/vote/survey/7" target="_blank">意见反馈</a></li><li><span class="payment-dropdown">支付帮助<span class="payment-tips-arrow"></span><div class="payment-dropdown-menu"><div class="payment-collapse"><h4><span class="payment-collapse-arrow"></span>没有开通网上银行如何购买？</h4><p>各银行已有支持无需网银的小额支付产品，可直接选择付款。或者，可选择银联在线支付或快捷支付（只支持信用卡）付款。</p></div><div class="payment-collapse"><h4><span class="payment-collapse-arrow"></span>没找到我常用的网上银行？</h4><p>建议选择银联在线支付付款，支持超过180家银行，包括主流银行和地方银行，例如华夏银行，江苏银行，南京银行等。</p></div><div class="payment-collapse"><h4><span class="payment-collapse-arrow"></span>什么是地方银行？</h4><p>地方银行主要指注册和经营在当地的城市商业银行、农村合作银行、村镇银行等中小金融机构，例如江苏银行，南京银行，华夏银行等。</p></div><div class="payment-collapse"><h4><span class="payment-collapse-arrow"></span>无法跳转到对应的支付页面支付？</h4><p>建议刷新当前页面，如果没恢复正常建议重启或更换到IE浏览器。</p></div><div class="payment-collapse"><h4><span class="payment-collapse-arrow"></span>网上银行扣款后，订单仍显示"未付款"怎么办？</h4><p>可能是由于银行的数据没有即时传输，请您不要担心，稍后刷新页面查看。如较长时间仍显示未付款，可先向银行或支付平台获取支付凭证（扣款订单号/第三方交易号），联系美团客服(400-660-5335)为您解决。</p></div><a class="payment-dropdown-more" href="http://www.meituan.com/help/faq" target="_blank">更多</a></div></span></li></ul><div class="payment-list payment-list-0"><ul class="clear-fix"><li><input type="radio" name="thirdpart_pay" id="thirdpart_pay_wxqrpay" data-type="wxqrpay" data-code="" data-bankcode="" checked=""><label class="payment-icon" for="thirdpart_pay_wxqrpay"><img src="https://p1.meituan.net/pay/pc_wxqrpay.png" disabled=""></label><span class="payment-weak-tip" style="visibility:visible;"></span></li><li><input type="radio" name="thirdpart_pay" id="thirdpart_pay_tenpay" data-type="tenpay" data-code="" data-bankcode=""><label class="payment-icon" for="thirdpart_pay_tenpay"><img src="https://p0.meituan.net/pay/tenpay2.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="thirdpart_pay" id="thirdpart_pay_alipay" data-type="alipay" data-code="" data-bankcode=""><label class="payment-icon" for="thirdpart_pay_alipay"><img src="https://p0.meituan.net/pay/alipaypcnew.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li></ul></div><div class="payment-list payment-list-1"><div class="payment-bank-tip">支持储蓄卡和信用卡，需要开通网银</div><ul class="clear-fix"><li><input type="radio" name="b2cebank" id="b2cebank_icbc" data-type="alipay" data-code="icbc" data-bankcode="ICBCB2C"><label class="payment-icon" for="b2cebank_icbc"><img src="https://p1.meituan.net/pay/icbc.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_cmb" data-type="alipay" data-code="cmb" data-bankcode="CMB"><label class="payment-icon" for="b2cebank_cmb"><img src="https://p1.meituan.net/pay/cmb.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_ccb" data-type="alipay" data-code="ccb" data-bankcode="CCB"><label class="payment-icon" for="b2cebank_ccb"><img src="https://p1.meituan.net/pay/ccb.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_abc" data-type="alipay" data-code="abc" data-bankcode="ABC"><label class="payment-icon" for="b2cebank_abc"><img src="https://p1.meituan.net/pay/abc.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_boc" data-type="tenpay" data-code="comm" data-bankcode="1020"><label class="payment-icon" for="b2cebank_boc"><img src="https://p0.meituan.net/pay/boc.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_bofc" data-type="alipay" data-code="boc" data-bankcode="BOCB2C"><label class="payment-icon" for="b2cebank_bofc"><img src="https://p1.meituan.net/pay/bofc.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;">若网银页面无法打开，请切换到IE浏览器重试</span></li><li><input type="radio" name="b2cebank" id="b2cebank_cib" data-type="alipay" data-code="cib" data-bankcode="CIB"><label class="payment-icon" for="b2cebank_cib"><img src="https://p1.meituan.net/pay/cib.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_cebb" data-type="alipay" data-code="ceb" data-bankcode="CEB-DEBIT"><label class="payment-icon" for="b2cebank_cebb"><img src="https://p1.meituan.net/pay/cebb.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;">若网银页面无法打开，请切换到IE浏览器重试</span></li><li><input type="radio" name="b2cebank" id="b2cebank_spdb" data-type="alipay" data-code="spdb" data-bankcode="SPDB"><label class="payment-icon" for="b2cebank_spdb"><img src="https://p0.meituan.net/pay/spdb.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_gdb" data-type="alipay" data-code="gdb" data-bankcode="GDB"><label class="payment-icon" for="b2cebank_gdb"><img src="https://p1.meituan.net/pay/gfyh.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_zxyh" data-type="tenpay" data-code="citic" data-bankcode="1021"><label class="payment-icon" for="b2cebank_zxyh"><img src="https://p0.meituan.net/pay/zxyh.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;">若网银页面无法打开，请切换到IE浏览器重试</span></li><li><input type="radio" name="b2cebank" id="b2cebank_cmbc" data-type="alipay" data-code="cmbc" data-bankcode="CMBC"><label class="payment-icon" for="b2cebank_cmbc"><img src="https://p0.meituan.net/pay/cmbc.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_pingan" data-type="alipay" data-code="pingan" data-bankcode="SPABANK"><label class="payment-icon" for="b2cebank_pingan"><img src="https://p1.meituan.net/pay/pingan.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_bob" data-type="alipay" data-code="bjbank" data-bankcode="BJBANK"><label class="payment-icon" for="b2cebank_bob"><img src="https://p0.meituan.net/pay/bob.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_bjrcb" data-type="alipay" data-code="bjrcb" data-bankcode="BJRCB"><label class="payment-icon" for="b2cebank_bjrcb"><img src="https://p0.meituan.net/pay/bjrcb.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_pspc" data-type="alipay" data-code="psbc" data-bankcode="PSBC-DEBIT"><label class="payment-icon" for="b2cebank_pspc"><img src="https://p1.meituan.net/pay/pspc.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_shrcb" data-type="alipay" data-code="srcb" data-bankcode="SHRCB"><label class="payment-icon" for="b2cebank_shrcb"><img src="https://p1.meituan.net/pay/shrcb.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li><li><input type="radio" name="b2cebank" id="b2cebank_hzcb" data-type="alipay" data-code="hzbank" data-bankcode="HZCBB2C"><label class="payment-icon" for="b2cebank_hzcb"><img src="https://p1.meituan.net/pay/hzcb.png" disabled=""></label><span class="payment-weak-tip" style="visibility:hidden;"></span></li></ul></div></div><div class="payment-amount">支付：<span class="payment-price">¥54.69</span></div><div class="payment-submit"><a class="btn">去付款</a></div><div class="payment-back"><a>返回修改订单</a></div></div></div>
 
 <footer class="site-info-w J-br" style="min-height:298px;" id="yui_3_16_0_1_1465960232707_803">
 
@@ -301,39 +164,19 @@
         </div>
     </div>
     <!-- 版权信息 -->
-    <include file="Layout/copyright" />
+    <div class="copyright">
+        <p>©<span title="I:2; Q:2; S:2; C:16; F:3; T:367.01; H:com">2016</span><a href="http://www.mxhhw.com/" target="_blank">梦想换货网</a> mxhhw.com <a href="http://www.beianbeian.com/beianxinxi/5e40326e-16f0-4c22-b329-b40104fd8e4e.html" target="_blank">皖ICP备14012689号-2</a>
+        </p>
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502025545" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/Public/Images/wangan.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备11010502025545号</p></a>
+        </div>
+    </div>
+    <ul class="cert cf">
+        <li class="cert__item"><a class="sp-ft sp-ft--record" title="备案信息" href="http://www.meituan.com/about/openinfo" hidefocus="true" target="_blank">备案信息</a></li>
+        <li class="cert__item"><a class="sp-ft sp-ft--knet" href="http://t.knet.cn/index_new.jsp" target="_blank" title="可信网站认证" rel="nofollow">可信网站</a></li>
+        <li class="cert__item"><a class="sp-ft sp-ft--12315" href="http://www.bj315.org/xfwq/lstd/201209/t20120910_3344.shtml?dnrpluojqxbceiqq" target="_blank" title="12315消费争议" rel="nofollow">12315消费争议</a></li>
+    </ul>
 </footer>
 
-<div data-component="rightbottom-sticky" class="component-rightbottom-sticky mt-component--booted" mt-scope="[]" data-component-config="{&quot;css&quot;:&quot;fewww:\/www\/css\/rightbottom-sticky.css@b64babf&quot;}" id="yui_3_16_0_1_1465960232707_120" style="bottom: 20px; right: 10px;"><div id="fixbar-container" class="new-index-triffle-w" data-config="{&quot;feedbackConfig&quot;:{&quot;url&quot;:&quot;\/vote\/survey\/19&quot;,&quot;ga&quot;:&quot;survey\/deal\/19&quot;}}" style="bottom: 20px; right: 10px;">
-    <div id="fixbar-item-top" style="bottom: 20px; right: 10px; display: block;" hidden="hidden">
-        <a class="J-go-top lift-nav new-index-triffle" hidefocus="true" href="javascript:;">
-            <i></i><span>回到顶部</span>
-        </a>
-    </div>
-    <div id="fixbar-item-vote" style="bottom: 20px; right: 10px;">
-        <a target="_blank" class="new-index-triffle lift-nav lift-nav--vote" hidefocus="true" href="http://survey.meituan.com/index.php?r=survey/index/sid/131119/lang/zh-Hans"><i></i><span>问卷调查</span></a>
-    </div>
-    <div id="fixbar-item-help">
-        <a class="J-lift-help new-index-triffle lift-nav lift-nav--help" href="javascript:;">
-            <i></i><span>帮助中心</span>
-        </a>
-    </div>
-    <div id="fixbar-item-feedback" style="bottom: 20px; right: 10px;"><a target="_blank" class="new-index-triffle lift-nav lift-nav--feedback" hidefocus="true" gaevent="survey/deal/19" href="http://suzhousz.meituan.com/vote/survey/19"><i></i><span>意见反馈</span></a></div>
-</div></div>
-
-<div id="mt-simpledialog-container"><div id="deal-component-share-dialog" class="yui3-widget mt-simpledialog" style="width: 118px; left: 1358.5px; bottom: auto; top: 538px; right: auto; display: none;" hidden="hidden"><div id="yui_3_16_0_1_1465960232707_2422" class="mt-simpledialog-content"><a class="close"></a><div class="body" id="yui_3_16_0_1_1465960232707_2459">
-
-    <div class="deal-share" id="yui_3_16_0_1_1465960232707_2458">
-        <ul id="yui_3_16_0_1_1465960232707_2457">
-            <li id="yui_3_16_0_1_1465960232707_2456"><a class="im deal-share-im" href="javascript:void(0);" data-slug="26263695" data-userid="" gaevent="content/main/share/im" id="yui_3_16_0_1_1465960232707_2455" data-mod-mtt="1.deal/default.0.0.ipgaveva"><i class="icon-share"></i><span id="yui_3_16_0_1_1465960232707_2454">QQ/MSN</span></a></li>
-            <li id="yui_3_16_0_1_1465960232707_2612"><a galabel="default" href="http://v.t.sina.com.cn/share/share.php?appkey=579809138&amp;url=http%3A%2F%2Fsuzhousz.meituan.com%2Fdeal%2F26263695.html%3Fr%3Dt&amp;title=%23%E5%AE%BF%E5%B7%9E%23+%40%E7%BE%8E%E5%9B%A2++%E4%BB%85%E5%94%AE1.8%E5%85%83%EF%BC%81%E4%BB%B7%E5%80%BC3%E5%85%83%E7%9A%84%E8%91%A1%E5%BC%8F%E8%9B%8B%E6%8C%9E1%E4%B8%AA%EF%BC%8C%E6%8F%90%E4%BE%9B%E5%85%8D%E8%B4%B9WiFi%E3%80%82&amp;pic=http%3A%2F%2Fp0.meituan.net%2Fdeal%2F0af5e66e4363eb528f0442444f771eb7179883.jpg" target="_blank" gaevent="content/main/share/sinat" id="yui_3_16_0_1_1465960232707_2611" data-mod-mtt="1.deal/default.0.0.ipgaveva"><i class="icon-share icon-share--sina"></i><span id="yui_3_16_0_1_1465960232707_2610">微博</span></a></li>
-            <li><a galabel="default" href="http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;title=%E7%BE%8E%E4%BD%B3%E4%B9%90%E8%9B%8B%E7%B3%95%E8%91%A1%E5%BC%8F%E8%9B%8B%E6%8C%9E%E4%BB%85%E5%94%AE%C2%A51.8%EF%BC%8C6%E6%8A%98%E4%BB%85%E5%94%AE1.8%E5%85%83%EF%BC%81%E4%BB%B7%E5%80%BC3%E5%85%83%E7%9A%84%E8%91%A1%E5%BC%8F%E8%9B%8B%E6%8C%9E1%E4%B8%AA%EF%BC%8C%E6%8F%90%E4%BE%9B%E5%85%8D%E8%B4%B9WiFi%E3%80%82&amp;url=http%3A%2F%2Fsuzhousz.meituan.com%2Fdeal%2F26263695.html%3Fr%3Dq&amp;appkey=51d04b4824744e71bd1e55baceb42562&amp;pic=http%3A%2F%2Fp0.meituan.net%2Fdeal%2F0af5e66e4363eb528f0442444f771eb7179883.jpg&amp;line1=%E4%BB%85%E5%94%AE%C2%A51.8%EF%BC%8C6%E6%8A%98&amp;line2=%E4%BB%85%E5%94%AE1.8%E5%85%83%EF%BC%81%E4%BB%B7%E5%80%BC3%E5%85%83%E7%9A%84%E8%91%A1%E5%BC%8F%E8%9B%8B%E6%8C%9E1%E4%B8%AA%EF%BC%8C%E6%8F%90%E4%BE%9B%E5%85%8D%E8%B4%B9WiFi%E3%80%82" target="_blank" gaevent="content/main/share/qqt"><i class="icon-share icon-share--qq"></i><span>腾讯微博</span></a></li>
-            <li><a galabel="default" href="http://share.renren.com/share/buttonshare.do?link=http%3A%2F%2Fsuzhousz.meituan.com%2Fdeal%2F26263695.html%3Fr%3Dr&amp;title=%E7%BE%8E%E5%9B%A2%E5%AE%BF%E5%B7%9E+%E4%BB%85%E5%94%AE1.8%E5%85%83%EF%BC%81%E4%BB%B7%E5%80%BC3%E5%85%83%E7%9A%84%E8%91%A1%E5%BC%8F%E8%9B%8B%E6%8C%9E1%E4%B8%AA%EF%BC%8C%E6%8F%90%E4%BE%9B%E5%85%8D%E8%B4%B9WiFi%E3%80%82" target="_blank" gaevent="content/main/share/renren"><i class="icon-share icon-share--renren"></i><span>人人</span></a></li>
-            <li><a galabel="default" href="http://www.douban.com/recommend/?url=http%3A%2F%2Fsuzhousz.meituan.com%2Fdeal%2F26263695.html%3Fr%3Dd&amp;title=%E7%BE%8E%E5%9B%A2%E5%AE%BF%E5%B7%9E+%E8%91%A1%E5%BC%8F%E8%9B%8B%E6%8C%9E1%E4%B8%AA%EF%BC%8C%E6%8F%90%E4%BE%9B%E5%85%8D%E8%B4%B9WiFi" target="_blank" gaevent="content/main/share/douban"><i class="icon-share icon-share--douban"></i><span>豆瓣</span></a></li>
-            <li><a galabel="default" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?title=%E7%BE%8E%E5%9B%A2%E5%AE%BF%E5%B7%9E+%E4%BB%85%E5%94%AE1.8%E5%85%83%EF%BC%81%E4%BB%B7%E5%80%BC3%E5%85%83%E7%9A%84%E8%91%A1%E5%BC%8F%E8%9B%8B%E6%8C%9E1%E4%B8%AA%EF%BC%8C%E6%8F%90%E4%BE%9B%E5%85%8D%E8%B4%B9WiFi%E3%80%82&amp;url=http%3A%2F%2Fsuzhousz.meituan.com%2Fdeal%2F26263695.html%3Fr%3Dz&amp;pics=http%3A%2F%2Fp0.meituan.net%2Fdeal%2F0af5e66e4363eb528f0442444f771eb7179883.jpg" target="_blank" gaevent="content/main/share/qzone"><i class="icon-share icon-share--qzone"></i><span>QQ空间</span></a></li>
-        </ul>
-        <span class="share-tip">分享到</span>
-    </div>
-</div></div></div></div><div style="position: absolute; left: 0px; top: 0px; width: 0px; height: 0px; z-index: 99;"><embed id="ZeroClipboardMovie_1" src="http://s0.meituan.net/fecore/mt-vendor/assets/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="0" height="0" name="ZeroClipboardMovie_1" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=0&amp;height=0" wmode="transparent"></div>
-
-</body></html>
+</body>
+</html>

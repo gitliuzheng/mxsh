@@ -8,61 +8,40 @@ class BuyController extends CommonController {
      * 虚拟商品购买第一步
      */
     public function buy_step1(){
-        $result = $this->getBuyStep1Data($_GET['goods_id'], $_GET['quantity'],$_SESSION['member_id']);
+        $result = $this->getBuyStepData($_GET['goods_id'], $_GET['quantity'],$_SESSION['member_id']);
         if (!$result['state']) {
             $this->error($result['msg']);
         }
 
         $this->assign('goods_info',$result['data']['goods_info']);
         $this->assign('store_info',$result['data']['store_info']);
-
+        $this->assign('member_info',$result['data']['member_info']);
         $this->display();
     }
+
 
     /**
      * 虚拟商品购买第二步
      */
     public function buy_step2(){
-
-        $result = $this->getBuyStep2Data($_POST['goods_id'], $_POST['quantity'], $_SESSION['member_id']);
-
-        if (!$result['state']) {
-            $this->error($result['msg']);
-        }
-
-        //处理会员信息
-        $member_info = array_merge($this->member_info,$result['data']['member_info']);
-
-        $this->assign('goods_info',$result['data']['goods_info']);
-        $this->assign('store_info',$result['data']['store_info']);
-        $this->assign('member_info',$member_info);
-        $this->display();
-    }
-
-    /**
-     * 虚拟商品购买第三步
-     */
-    public function buy_step3(){
         $_POST['order_from'] = 1;
-        $result = $this->buyStep3($_POST,$_SESSION['member_id']);
-        if (!$result['state']) {
-            $this->error($result['msg']);
+
+        $result1 = $this->buyStep2($_POST,$_SESSION['member_id']);
+        if (!$result1['state']) {
+            $this->error($result1['msg']);
         }
         //转向到商城支付页面
-        redirect('index.php?act=buy_virtual&op=pay&order_id='.$result['data']['order_id']);
+        echo "<script>window.location.href='/index.php/Home/Buy/pay_index'</script>";
+
+    }
+
+    //显示支付页面
+    public function pay_index(){
+        $this->display("buy_step2");
     }
 
 
-    /**
-     * 虚拟商品购买第一步，得到购买数据(商品、店铺、会员)
-     * @param int $goods_id 商品ID
-     * @param int $quantity 购买数量
-     * @param int $member_id 会员ID
-     * @return array
-     */
-    public function getBuyStep1Data($goods_id, $quantity, $member_id) {
-        return $this->getBuyStepData($goods_id, $quantity, $member_id);
-    }
+
 
     /**
      * 得到虚拟商品购买数据(商品、店铺、会员)
@@ -74,28 +53,27 @@ class BuyController extends CommonController {
     public function getBuyStepData($goods_id, $quantity, $member_id) {
         $model_VrGoods = D("VrGoods");
         $goods_info = $model_VrGoods->getVirtualGoodsOnlineInfoByID($goods_id);
-
-        if (empty($goods_info)) {
-            return '该商品不符合购买条件，可能的原因有：下架、不存在、过期等';
+        if(empty($goods_info)){
+            return $this->callback(false,'该商品不符合购买条件，可能的原因有：下架、不存在、过期等');
         }
 
+        //购买上限
         if ($goods_info['virtual_limit'] > $goods_info['goods_storage']) {
             $goods_info['virtual_limit'] = $goods_info['goods_storage'];
         }
 
-        //取得抢购信息
-        $goods_info = $this->_getGroupbuyInfo($goods_info);
-
+        //取得抢购信息 ,先不做，放着
+        //$goods_info = $this->_getGroupbuyInfo($goods_info);
         $quantity = abs(intval($quantity));
         $quantity = $quantity == 0 ? 1 : $quantity;
         $quantity = $quantity > $goods_info['virtual_limit'] ? $goods_info['virtual_limit'] : $quantity;
         if ($quantity > $goods_info['goods_storage']) {
-            return '该商品库存不足';
+            return $this->callback(false,'该商品库存不足');
         }
 
         $goods_info['quantity'] = $quantity;
         $goods_info['goods_total'] = ncPriceFormat($goods_info['goods_price'] * $goods_info['quantity']);
-        $goods_info['goods_image_url'] = '搁着';
+        $goods_info['goods_image_url'] = '暂时不会';
 
         $return = array();
         $return['goods_info'] = $goods_info;
@@ -103,42 +81,23 @@ class BuyController extends CommonController {
         $model_store = D('Store');
         $return['store_info'] = $model_store->getStoreOnlineInfoByID($goods_info['store_id'],'store_name,store_id,member_id');
 
+
         $model_member = D('Member');
         $return['member_info'] = $model_member->getMemberInfoByID($member_id);
 
         return $this->callback(true,'',$return);
     }
 
-    /**
-     * 取得抢购信息
-     * @param array $goods_info
-     * @return array
-     */
-    private function _getGroupbuyInfo($goods_info = array()) {
-        return $goods_info;
-    }
-
-
-    /**
-     * 虚拟商品购买第二步，得到购买数据(商品、店铺、会员)
-     * @param int $goods_id 商品ID
-     * @param int $quantity 购买数量
-     * @param int $member_id 会员ID
-     * @return array
-     */
-    public function getBuyStep2Data($goods_id, $quantity, $member_id) {
-        return $this->getBuyStepData($goods_id, $quantity, $member_id);
-    }
 
 
 
     /**
-     * 虚拟商品购买第三步
+     * 虚拟商品购买第二步
      * @param array $post 接收POST数据，必须传入goods_id:商品ID，quantity:购买数量,buyer_phone:接收手机,buyer_msg:买家留言
      * @param int $member_id
      * @return array
      */
-    public function buyStep3($post, $member_id) {
+    public function buyStep2($post, $member_id) {
         $result = $this->getBuyStepData($post['goods_id'], $post['quantity'], $member_id);
         if (!$result['state']) return $result;
 
@@ -159,40 +118,53 @@ class BuyController extends CommonController {
         $input['pay_total'] = $pay_total;
         $input['order_from'] = $post['order_from'];
 
+        try {
+            $model_VrGoods = D('VrGoods');
+            //开始事务
+            $model_VrGoods->startTrans();
 
-        $model_VrGoods = D('VrGoods');
+            //生成订单
+            $order_info = $this->_createOrder($input,$goods_info,$member_info);
 
-
-        //生成订单
-        $order_info = $this->_createOrder($input,$goods_info,$member_info);
-        /*
-                if (!empty($post['password'])) {
-                    if ($member_info['member_paypwd'] != '' && $member_info['member_paypwd'] == md5($post['password'])) {
-                        //充值卡支付
-                        if (!empty($post['rcb_pay'])) {
-                            $order_info = $this->_rcbPay($order_info, $post, $member_info);
-                        }
-                        //预存款支付
-                        if (!empty($post['pd_pay'])) {
-                            $this->_pdPay($order_info, $post, $member_info);
-                        }
+            /*
+            if (!empty($post['password'])) {
+                if ($member_info['member_paypwd'] != '' && $member_info['member_paypwd'] == md5($post['password'])) {
+                    //充值卡支付
+                    if (!empty($post['rcb_pay'])) {
+                        $order_info = $this->_rcbPay($order_info, $post, $member_info);
+                    }
+                    //预存款支付
+                    if (!empty($post['pd_pay'])) {
+                        $this->_pdPay($order_info, $post, $member_info);
                     }
                 }
+            }
+            */
+
+            //提交事务
+            $model_VrGoods->commit();
+
+        }catch (Exception $e){
+            //回滚事务
+            $model_VrGoods->rollback();
+            return $this->callback(false, $e->getMessage());
+        }
+
+        //变更库存和销量
+        /*QueueClient::push('createOrderUpdateStorage', array($goods_info['goods_id'] => $goods_info['quantity']));*/
+
+        //更新抢购信息
+        //$this->_updateGroupBuy($goods_info);
+
+        //发送兑换码到手机
+        /*
+        $param = array('order_id'=>$order_info['order_id'],'buyer_id'=>$member_id,'buyer_phone'=>$order_info['buyer_phone']);
+        QueueClient::push('sendVrCode', $param);
+        */
+
+        return $this->callback(true,'',array('order_id' => $order_info['order_id'],'order_sn'=>$order_info['order_sn']));
 
 
-
-
-                //变更库存和销量
-                QueueClient::push('createOrderUpdateStorage', array($goods_info['goods_id'] => $goods_info['quantity']));
-
-                //更新抢购信息
-                $this->_updateGroupBuy($goods_info);
-
-                //发送兑换码到手机
-                $param = array('order_id'=>$order_info['order_id'],'buyer_id'=>$member_id,'buyer_phone'=>$order_info['buyer_phone']);
-                QueueClient::push('sendVrCode', $param);
-                return callback(true,'',array('order_id' => $order_info['order_id'],'order_sn'=>$order_info['order_sn']));
-              */
     }
 
 
@@ -240,14 +212,16 @@ class BuyController extends CommonController {
 
         $order_id = $model_VrOrder->addOrder($order);
 
+
         if (!$order_id) {
             return '订单保存失败';
         }
 
         $order['order_id'] = $order_id;
 
-        /*
+
         // 提醒[库存报警]
+        /*
         if ($goods_info['goods_storage_alarm'] >= ($goods_info['goods_storage'] - $input['quantity'])) {
             $param = array();
             $param['common_id'] = $goods_info['goods_commonid'];

@@ -18,8 +18,7 @@ class VrGoodsModel extends Model {
      */
     public function getVirtualGoodsOnlineInfoByID($goods_id) {
         $goods_info = $this->getGoodsInfoByID($goods_id);
-        //return $goods_info['is_virtual'] == 1 && $goods_info['virtual_indate'] >= time() ? $goods_info : array();
-        return $goods_info['is_virtual'] == 1  ? $goods_info : array();
+        return $goods_info['is_virtual'] == 1  && $goods_info['virtual_indate'] >= time()   ?  $goods_info : array();
     }
 
     /**

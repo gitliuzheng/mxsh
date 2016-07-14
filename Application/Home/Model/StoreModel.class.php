@@ -39,9 +39,11 @@ class StoreModel extends Model {
             //商品数
             $model_VrGoods = D('VrGoods');
             $store_info['goods_count'] = $model_VrGoods->getGoodsCommonOnlineCount(array('store_id' => $store_info['store_id']));
+
             //店铺评价
             $model_EvaluateStore = D('EvaluateStore');
             $store_evaluate_info = $model_EvaluateStore->getEvaluateStoreInfoByStoreID($store_info['store_id'], $store_info['sc_id']);
+            
             $store_info = array_merge($store_info, $store_evaluate_info);
         }
         return $store_info;
