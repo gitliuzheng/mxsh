@@ -3,6 +3,75 @@ namespace Home\Model;
 use Think\Model;
 class VrGoodsModel extends Model {
 
+    const STATE1 = 1;       // 出售中
+    const STATE0 = 0;       // 下架
+    const STATE10 = 10;     // 违规
+    const VERIFY1 = 1;      // 审核通过
+    const VERIFY0 = 0;      // 审核失败
+    const VERIFY10 = 10;    // 等待审核
+
+    /**
+     * 由ID取得在售单个虚拟商品信息
+     * @param unknown $goods_id
+     * @param string $field 需要取得的缓存键值, 例如：'*','goods_name,store_name'
+     * @return array
+     */
+    public function getVirtualGoodsOnlineInfoByID($goods_id) {
+        $goods_info = $this->getGoodsInfoByID($goods_id);
+        return $goods_info['is_virtual'] == 1  && $goods_info['virtual_indate'] >= time()   ?  $goods_info : array();
+    }
+
+    /**
+     * 取得商品详细信息
+     * 如果未找到，则缓存所有字段
+     * @param int $goods_id
+     * @param string $fields 需要取得的缓存键值, 例如：'*','goods_name,store_name'
+     * @return array
+     */
+    public function getGoodsInfoByID($goods_id) {
+        $goods_info = $this->getGoodsInfo(array('goods_id'=>$goods_id));
+        return $goods_info;
+    }
+
+
+    /**
+     * 获取单条商品SKU信息
+     *
+     * @param array $condition
+     * @param string $field
+     * @return array
+     */
+    public function getGoodsInfo($condition, $field = '*') {
+        $model_VrGoods = D("VrGoods");
+        return $model_VrGoods->field($field)->where($condition)->find();
+    }
+
+
+    /**
+     * 出售中的商品数量
+     *
+     * @param array $condition
+     * @return int
+     */
+    public function getGoodsCommonOnlineCount($condition) {
+        $condition['goods_state']   = self::STATE1;
+        $condition['goods_verify']  = self::VERIFY1;
+        return $this->getGoodsCommonCount($condition);
+    }
+
+
+    /**
+     * 获得商品数量
+     *
+     * @param array $condition
+     * @param string $field
+     * @return int
+     */
+    public function getGoodsCommonCount($condition) {
+        return $this->table(C('DB_PREFIX') . 'vr_goods_common')->where($condition)->count();
+    }
+
+
 	//取出二级或三级分类的所有商品ID(如有三级以下分类需再增加判断)
 	public function getGoodsIdByCatId($catId){
 		$catModel = D('GoodsClass');
