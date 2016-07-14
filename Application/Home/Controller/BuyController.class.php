@@ -57,19 +57,12 @@ class BuyController extends CommonController {
             return $this->callback(false,'该商品不符合购买条件，可能的原因有：下架、不存在、过期等');
         }
 
-        //购买上限
-        if ($goods_info['virtual_limit'] > $goods_info['goods_storage']) {
-            $goods_info['virtual_limit'] = $goods_info['goods_storage'];
-        }
-
-        //取得抢购信息 ,先不做，放着
+        //取得抢购信息
         //$goods_info = $this->_getGroupbuyInfo($goods_info);
+
+
         $quantity = abs(intval($quantity));
         $quantity = $quantity == 0 ? 1 : $quantity;
-        $quantity = $quantity > $goods_info['virtual_limit'] ? $goods_info['virtual_limit'] : $quantity;
-        if ($quantity > $goods_info['goods_storage']) {
-            return $this->callback(false,'该商品库存不足');
-        }
 
         $goods_info['quantity'] = $quantity;
         $goods_info['goods_total'] = ncPriceFormat($goods_info['goods_price'] * $goods_info['quantity']);
@@ -120,9 +113,9 @@ class BuyController extends CommonController {
 
         try {
             $model_VrGoods = D('VrGoods');
+
             //开始事务
             $model_VrGoods->startTrans();
-
             //生成订单
             $order_info = $this->_createOrder($input,$goods_info,$member_info);
 
@@ -218,17 +211,6 @@ class BuyController extends CommonController {
         }
 
         $order['order_id'] = $order_id;
-
-
-        // 提醒[库存报警]
-        /*
-        if ($goods_info['goods_storage_alarm'] >= ($goods_info['goods_storage'] - $input['quantity'])) {
-            $param = array();
-            $param['common_id'] = $goods_info['goods_commonid'];
-            $param['sku_id'] = $goods_info['goods_id'];
-            QueueClient::push('sendStoreMsg', array('code' => 'goods_storage_alarm', 'store_id' => $goods_info['store_id'], 'param' => $param));
-        }
-        */
 
         return $order;
     }

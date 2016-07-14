@@ -7,6 +7,7 @@
 <script src="__PUBLIC__/Scripts/jquery.page.js"></script>
 <link href="__PUBLIC__/Stylesheets/jquery-ui.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="__PUBLIC__/Scripts/jquery-ui.js"></script>
+<script type="text/javascript" src="__PUBLIC__/JS/Home/common.js"></script>
 <script type="text/javascript" src="__PUBLIC__/JS/Home/index.js"></script>
 <script type="text/javascript" src="__PUBLIC__/JS/Home/deal.js"></script>
 <script type="text/javascript" src="__PUBLIC__/JS/Home/Cart.js"></script>
@@ -198,7 +199,7 @@
 
     
 
-<form action="<{:U('buy/buy_step1')}>" method="GET"  class="J-wwwtracker-form deal-component-buy J-buy-form " >
+<form action="<{:U('buy/buy_step1')}>" method="GET" id="buy_form"  class="J-wwwtracker-form deal-component-buy J-buy-form " >
 <div class="J-hotel-multiappoint" >
 <div data-component="deal-digest-quantity" class="component-deal-digest-quantity mt-component--booted" mt-scope="[]" data-component-config="{&quot;lazyRender&quot;:false,&quot;afterLoad&quot;:false}" id="yui_3_16_0_1_1465960232707_1968"><div class="deal-component-quantity">
     <span class="deal-component-detail-leading">数量</span>
@@ -315,7 +316,9 @@
                     </a>
                 </li>
         </ul>
-            <div id="J-nav-buy" class="buy-group J-hub" data-hubmodule="www-deal" data-hubnamespace="Deal.NavBuyBtn" data-huburl="deal/navbuybtn" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_969" data-hubstate="50" hidden="hidden" style="display: none;"><a rel="nofollow" class="J-buy btn-hot buy" href="http://suzhousz.meituan.com/deal/buy/26263695">抢购</a><a rel="nofollow" class="J-add-cart btn-normal cart" data-dealid="26263695" data-cityid="201" data-quantity="1" hidefocus="true" href="javascript:void(0);"><i class="F-glob F-glob-cart"></i>加入购物车</a></div>
+            <div id="J-nav-buy" class="buy-group J-hub" data-hubmodule="www-deal" data-hubnamespace="Deal.NavBuyBtn" data-huburl="deal/navbuybtn" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_969" data-hubstate="50" hidden="hidden" style="display: none;">
+                <a rel="nofollow" onclick="form_submit_by_id('buy_form');" class="J-buy btn-hot buy" href="javascript:void(0);">抢购</a>
+                <a rel="nofollow" class="J-add-cart btn-normal cart" data-dealid="26263695" data-cityid="201" data-quantity="1" hidefocus="true" href="javascript:void(0);"><i class="F-glob F-glob-cart"></i>加入购物车</a></div>
     </div><div class="common-fix-placeholder" style="height: 41px; display: none;" id="yui_3_16_0_1_1465960232707_2242" hidden="hidden"></div>
 </div>
 
@@ -544,7 +547,9 @@
             </div>
                 <div class="deal-buy-bottom">
     <span class="price">¥<strong><i class="inline-block ps_36 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/36/4d620b0804.png@b64babf);background-position: -40px -108px;"></i><i class="inline-block ps_36 ps_36p pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/36/4d620b0804.png@b64babf);background-position: -120px -108px;"></i><i class="inline-block ps_36 pngfix" style="background-image: url(//s0.meituan.net/bs/file/?f=fewww:/www/css/si/pricesp/36/4d620b0804.png@b64babf);background-position: -80px -36px;"></i></strong></span>
-    <div id="J-bottom-buy" class="btn-wrapper J-hub" data-huburl="deal/bottombuybtn" data-hubmodule="www-deal" data-hubnamespace="Deal.BottomBuyBtn" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_52" data-hubstate="50"><a rel="nofollow" class="J-buy btn-hot buy" href="http://suzhousz.meituan.com/deal/buy/26263695">抢购</a><a rel="nofollow" class="J-add-cart btn-normal cart" data-dealid="26263695" data-cityid="201" data-quantity="1" hidefocus="true" href="javascript:void(0);"><i class="F-glob F-glob-cart"></i>加入购物车</a></div>
+    <div id="J-bottom-buy" class="btn-wrapper J-hub" data-huburl="deal/bottombuybtn" data-hubmodule="www-deal" data-hubnamespace="Deal.BottomBuyBtn" data-hubconfig="26263695" data-hubstamp="yui_3_16_0_1_1465960232707_52" data-hubstate="50">
+        <a rel="nofollow" onclick="form_submit_by_id('buy_form');" class="J-buy btn-hot buy" href="javascript:void(0);">抢购</a>
+        <a rel="nofollow" class="J-add-cart btn-normal cart" data-dealid="26263695" data-cityid="201" data-quantity="1" hidefocus="true" href="javascript:void(0);"><i class="F-glob F-glob-cart"></i>加入购物车</a></div>
     <ul class="serif buy-bottom-text cf">
         <li>门店价<br><del class="num"><span>¥</span>3</del></li>
         <li>折扣<br><span class="num">6折</span></li>
@@ -676,7 +681,7 @@
 </script>
 
 <script type="text/x-template" id="search-path-markup">
-<form action="http://map.qq.com/" method="get" target="_blank" class="common-form">
+<form action="http://map.qq.com/" method="get" target="_blank"  class="common-form">
     <div class="field-group">
         <label class="text">目的地</label>
         {shopName}
@@ -701,7 +706,8 @@
 
 
 <script type="text/x-template" id="correct-poi-markup">
-<form action="/deal/correctpoi/mt" method="post" class="common-form"><span style="display:none"><input type="hidden" name="csrf" value="oo8xr0Xq9dPnNA44SY5vU63SJEldkmZlLLaspTC47xOT4XJMTfre3b3qA9JtmGO2" /></span>
+<form action="/deal/correctpoi/mt" method="post" class="common-form">
+    <span style="display:none"><input type="hidden" name="csrf" value="oo8xr0Xq9dPnNA44SY5vU63SJEldkmZlLLaspTC47xOT4XJMTfre3b3qA9JtmGO2" /></span>
     <h6>
         <span>{shopName}</span>
         <input type="hidden" name="name" value="{shopName}" />
