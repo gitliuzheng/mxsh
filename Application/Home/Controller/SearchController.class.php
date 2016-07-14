@@ -15,7 +15,6 @@ class SearchController extends CommonController {
         if(I('get.key')){
             $goodsModel = D('VrGoods');
             $data = $goodsModel->key_search();
-            
             $this -> assign(array(
                 'page' => $data['page'],
                 'data' => $data['data'],
