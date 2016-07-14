@@ -143,17 +143,10 @@ class BuyController extends CommonController {
             return $this->callback(false, $e->getMessage());
         }
 
-        //变更库存和销量
+        //变更销量
         /*QueueClient::push('createOrderUpdateStorage', array($goods_info['goods_id'] => $goods_info['quantity']));*/
-
-        //更新抢购信息
-        //$this->_updateGroupBuy($goods_info);
-
-        //发送兑换码到手机
-        /*
-        $param = array('order_id'=>$order_info['order_id'],'buyer_id'=>$member_id,'buyer_phone'=>$order_info['buyer_phone']);
-        QueueClient::push('sendVrCode', $param);
-        */
+        $model_Order = D("Order");
+        $model_Order->createOrderUpdateSaleNum(array($goods_info['goods_id'] => $goods_info['quantity']));
 
         return $this->callback(true,'',array('order_id' => $order_info['order_id'],'order_sn'=>$order_info['order_sn']));
 

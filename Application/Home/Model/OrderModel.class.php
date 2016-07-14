@@ -23,6 +23,21 @@ class OrderModel extends Model {
         $insert = $this->data($data)->add();
         return $insert;
     }
+
+
+    /**
+     * 下单变更销量
+     *
+     */
+    public function createOrderUpdateSaleNum($goods_buy_quantity){
+        $model_VrGoods = D('VrGoods');
+        foreach ($goods_buy_quantity as $goods_id => $quantity) {
+            $data = array();
+            $data['goods_salenum'] = array('exp','goods_salenum+'.$quantity);
+            $model_VrGoods->editGoodsById($data, $goods_id);
+        }
+
+    }
 }
 
 
