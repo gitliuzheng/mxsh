@@ -148,19 +148,9 @@ class VrGoodsModel extends Model {
 		return $data;
 	}
 
-
-//顶部搜索关键字及分页
+    //顶部搜索关键字及分页
     public function key_search(){
         $key = I('get.name');
-        // $term['a.goods_commend'] = 1;
-        // $term['a.is_virtual'] = 1;
-        // if(!empty($key)){        
-        //     $where['b.goods_name'] = array('like',"%$key%");
-        //     $where['address'] = array('like',"%$key%");
-        //     $where['message'] = array('like',"%$key%");
-        //     $where['_logic'] = 'or';
-        //     $term['_complex'] = $where;
-        // }
         //根据关键字(商品名称，地址，信息窗口取出相应商品ID)
         $goodsaddr = M('VrGoodsAddress');
         $goods_Id = $goodsaddr ->field('GROUP_CONCAT(DISTINCT goods_commonid) gid')
@@ -211,45 +201,32 @@ class VrGoodsModel extends Model {
                 $p = "goods_id";
         }
          $data['data'] = $this ->field('goods_id,goods_commonid,goods_promotion_price,goods_name,goods_price,goods_marketprice,goods_salenum,evaluation_count,gc_id_1,gc_id_2,gc_id_3')-> where($where1) ->limit($page->firstRow.','.$page->listRows)
-        ->order(array($p => "desc")) ->select(); 
-        // $gadata['data'] = $this->alias('a')
-        // ->field('a.goods_id,a.goods_commonid,a.goods_name,a.goods_price,a.goods_marketprice,a.goods_salenum,a.evaluation_count,a.gc_id_1,a.gc_id_2,a.gc_id_3')
-        // ->join('RIGHT JOIN __VR_GOODS_ADDRESS__ b 
-        //        ON a.goods_commonid = b.goods_commonid')
-        // ->where($term)       
-        // ->select();
-        // //二维数组去重
-        // foreach ($gadata['data'] as $k=>$v){
-        //   $v=join(',',$v); //降维,也可以用implode,将一维数组转换为用逗号连接的字符串
-        //   $temp[$k]=$v;
-        // }
-        // $temp=array_unique($temp); //去掉重复的字符串,也就是重复的一维数组 
-        // foreach ($temp as $k => $v){
-        //     $array=explode(',',$v); //再将拆开的数组重新组装
-        //     //下面的索引根据自己的情况进行修改即可
-        //     $data['data'][$k]['goods_id'] =$array[0];
-        //     $data['data'][$k]['goods_commonid'] =$array[1];
-        //     $data['data'][$k]['goods_name'] =$array[2];
-        //     $data['data'][$k]['goods_price'] =$array[3];
-        //     $data['data'][$k]['goods_marketprice'] =$array[4];
-        //     $data['data'][$k]['goods_salenum'] =$array[5];
-        //     $data['data'][$k]['evaluation_count'] =$array[6];
-        //     $data['data'][$k]['gc_id_1'] =$array[7];
-        //     $data['data'][$k]['gc_id_2'] =$array[8];
-        //     $data['data'][$k]['gc_id_3'] =$array[9];
-        // }        
-        // foreach ($data['data'] as $k => $v) {
-        //      $goodsclass['gc_id_2'][] = $v['gc_id_2'];
-        //      $goodsclass['gc_id_3'][] = $v['gc_id_3'];
-        // }
-        // //数组去重 
-        // $data['gc_id_2'] = array_unique($goodsclass['gc_id_2']);
-        // $data['gc_id_3'] = array_unique($goodsclass['gc_id_3']);      
+        ->order(array($p => "desc")) ->select();
         if(empty($key)){
             $data = null;
         }
         return $data;
     }
+
+    /**
+     * 更新商品SUK数据
+     * @param array $update
+     * @param int|array $goods_id
+     * @return boolean|unknown
+     */
+    public function editGoodsById($date, $goods_id) {
+        if (empty($goods_id)) {
+            return false;
+        }
+
+        $condition['goods_id'] = $goods_id;
+        $date['goods_edittime'] = time();
+        $result = $this->where($condition)->save($date);
+        return $result;
+    }
+
+
+
     
 }   
 

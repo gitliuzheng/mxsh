@@ -14,10 +14,6 @@ function decrease(){
 function increase(max_goods_num){
     var goods_num = $("#dealbuy-quantity").find("input[name='quantity']").val();
     goods_num = parseInt(goods_num) + 1;
-    if(goods_num > max_goods_num){
-        goods_num = max_goods_num;
-        alert("最多购买" + max_goods_num + "个");
-    }
 
     $("#dealbuy-quantity").find("input[name='quantity']").val(goods_num);
     change_buy_total();
@@ -28,7 +24,9 @@ function change_buy_total(){
     var goods_price = $("#deal-buy-price").html();
 
     html = goods_num * goods_price;
+    html = html.toFixed(2);
     $("#J-deal-buy-total").html(html);
+    $("#deal-buy-total-t").html(html);
 }
 /*
 $(document).ready(function(){
