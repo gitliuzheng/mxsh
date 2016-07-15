@@ -8,7 +8,7 @@ class BuyController extends CommonController {
      * 虚拟商品购买第一步
      */
     public function buy_step1(){
-        $result = $this->getBuyStepData($_GET['goods_id'], $_GET['quantity'],$_SESSION['member_id']);
+        $result = $this->getBuyStepData($_GET['goods_id'], $_GET['quantity'],$this->vr_member_id);
         if (!$result['state']) {
             $this->error($result['msg']);
         }
@@ -24,9 +24,15 @@ class BuyController extends CommonController {
      * 虚拟商品购买第二步
      */
     public function buy_step2(){
+        //判断现在有没有登录
+        if(!($this->is_cookie_login)){
+            echo "<script>window.location.href='http://www.mxhhw.com/index.php?act=login&op=index'</script>";
+        }
+
+        //电脑用1，手机用2
         $_POST['order_from'] = 1;
 
-        $result1 = $this->buyStep2($_POST,$_SESSION['member_id']);
+        $result1 = $this->buyStep2($_POST,$this->vr_member_id);
         if (!$result1['state']) {
             $this->error($result1['msg']);
         }
@@ -37,6 +43,9 @@ class BuyController extends CommonController {
 
     //显示支付页面
     public function pay_index(){
+
+        //样式标记
+        $this->assign("buy_step","buy_step2");
         $this->display("buy_step2");
     }
 
