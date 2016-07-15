@@ -147,7 +147,6 @@ class BuyController extends CommonController {
         /*QueueClient::push('createOrderUpdateStorage', array($goods_info['goods_id'] => $goods_info['quantity']));*/
         $model_Order = D("Order");
         $model_Order->createOrderUpdateSaleNum(array($goods_info['goods_id'] => $goods_info['quantity']));
-
         return $this->callback(true,'',array('order_id' => $order_info['order_id'],'order_sn'=>$order_info['order_sn']));
 
 

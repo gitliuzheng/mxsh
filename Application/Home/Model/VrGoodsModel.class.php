@@ -215,9 +215,10 @@ class VrGoodsModel extends Model {
      * @return boolean|unknown
      */
     public function editGoodsById($date, $goods_id) {
-        if (empty($goodsid_array)) {
+        if (empty($goods_id)) {
             return false;
         }
+
         $condition['goods_id'] = $goods_id;
         $date['goods_edittime'] = time();
         $result = $this->where($condition)->save($date);
