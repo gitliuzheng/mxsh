@@ -172,8 +172,8 @@ class VrGoodsModel extends Model {
         ->where(array(
             'goods_name' => array('exp', " LIKE '%$key%'"),
         ))
-        ->find();        
-        if(empty($goods_Id['gid']) && empty($goodsid['gids'])){
+        ->find();
+        if(empty($goods_Id['gid']) && empty($goods_id['gids'])){
             $data['count'] = 0;
             if(empty($key)){
                 $data = null;
@@ -184,7 +184,7 @@ class VrGoodsModel extends Model {
             $goodsId = explode(',',$goods_Id['gid']);
             $goodsid = explode(',',$goods_id['gids']);
             $gid = array_merge($goodsId,$goodsid);
-            $gsid = array_unique($gid);
+            $gsid = array_filter(array_unique($gid));
             $data['count'] = count($gsid);
         }
         //return $goodsId;
