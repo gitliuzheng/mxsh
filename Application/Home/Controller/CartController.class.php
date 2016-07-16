@@ -4,56 +4,10 @@ use Think\Controller;
 
 class CartController extends CommonController {
 
-
-
-    //模拟登陆
-    public function login(){
-        $vr_member_id = 44;
-        //print_r(unserialize(cookie('cart')));die;
-        //如果当前购物车COOKIE存在，就把它放到数据库
-        if(cookie("cart")){
-            foreach(unserialize(cookie("cart")) as $key => $val){
-                $model_cart = D("cart");
-                //查询该商品是否已经放到数据库里
-                $data = array();
-                $data['store_id'] = 1;
-                $data['buyer_id'] = $vr_member_id;
-                $data['goods_id'] = $val['goods_id'];
-                $res = $model_cart->where($data)->find();
-                if($res){
-                    $data = array();
-                    $data['cart_id'] = $res['cart_id'];
-                    $data['goods_num'] = $res['goods_num'] + $val['goods_num'];
-                    $model_cart->save($data);
-
-                }else{
-                    $data = array();
-                    $data['buyer_id'] = $vr_member_id;
-                    $data['store_id'] = 1;
-                    $data['store_name'] = "官方店铺";
-                    $data['goods_id'] = $val['goods_id'];
-                    $data['goods_name'] = $val['goods_name'];
-                    $data['goods_price'] = $val['goods_price'];
-                    $data['goods_num'] = $val['goods_num'];
-                    $data['goods_image'] = '1_04423412434387147.png';
-                    $model_cart->data($data)->add();
-                }
-            }
-
-            //清空购物车cookie
-            cookie("cart",null);
-            $this->success('登陆成功', U('cart/index'));
-        }
-
-    }
-
-
-
     /**
      * 购物车首页
      */
     public function index(){
-        //cookie("cart",null);die;
         if($this->vr_member_id){
             $model_cart = D("Cart");
             $data = array();

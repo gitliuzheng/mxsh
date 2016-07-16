@@ -1,8 +1,8 @@
 $(function(){
     //返回顶部
     document.getElementById("fixbar-item-top").onclick = function(){
-        //document.documentElement.scrollTop = document.body.scrollTop =0;                
-        $('html,body').animate({scrollTop: 0}, 500);                
+        //document.documentElement.scrollTop = document.body.scrollTop =0;
+        $('html,body').animate({scrollTop: 0}, 500);
     };
 
     // 楼层导航居中显示       

@@ -13,15 +13,12 @@
     <script src="__PUBLIC__/Scripts/jquery.js"></script>
     <script src="__PUBLIC__/Scripts/jquery.validate.min.js"></script>
     <script src="__PUBLIC__/Scripts/messages_zh.js"></script>
+    <script src="__PUBLIC__/JS/Home/index.js"></script>
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/buy_1.css" />
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/buy_2.css" />
-
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/CSS/index_saved_resource(9).css" />
-
     <script src="__PUBLIC__/JS/Home/buy_add_minus.js"></script>
     <script>
-
-
         // 手机号码验证
         jQuery.validator.addMethod("isMobile", function(value, element) {
             var length = value.length;
@@ -102,7 +99,7 @@
 
                     <tr>
                         <td class="desc">
-                            <a href="http://www.meituan.com/deal/27625177.html" target="_blank">
+                            <a href="<{:U('Index/deal',array('id'=>$goods_info['goods_id']))}>" target="_blank">
                                 <{$goods_info.goods_name}>
                             </a>
                         </td>
@@ -252,5 +249,65 @@
     </ul>
 </footer>
 
+<div style="display:none;" data-component="rightbottom-sticky" class="component-rightbottom-sticky mt-component--booted" mt-scope="[]" data-component-config="{&quot;css&quot;:&quot;fewww:\/www\/css\/rightbottom-sticky.css@6bb4e90&quot;}" id="yui_3_16_0_1_1464999326260_24" style="bottom: 20px; right: 10px;"><div id="fixbar-container" class="new-index-triffle-w" data-config="{&quot;feedbackConfig&quot;:{&quot;url&quot;:&quot;\/feedback\/default\/serach&quot;,&quot;ga&quot;:&quot;survey\/floornew&quot;}}" style="bottom: 20px; right: 10px;">
+    <div id="fixbar-item-top" style="bottom: 20px; right: 10px; display: block;" hidden="hidden">
+        <a class="J-go-top lift-nav new-index-triffle" hidefocus="true" href="javascript:;">
+            <i></i><span>回到顶部</span>
+        </a>
+    </div>
+    <div id="fixbar-item-vote" style="bottom: 20px; right: 10px;">
+        <a target="_blank" class="new-index-triffle lift-nav lift-nav--vote" hidefocus="true" href="http://survey.meituan.com/index.php?r=survey/index/sid/278592/lang/zh-Hans"><i></i><span>问卷调查</span></a>
+    </div>
+    <div id="fixbar-item-help">
+        <a class="J-lift-help new-index-triffle lift-nav lift-nav--help" href="javascript:;">
+            <i></i><span>帮助中心</span>
+        </a>
+    </div>
+    <div id="fixbar-item-feedback" style="bottom: 20px; right: 10px;"><a target="_blank" class="new-index-triffle lift-nav lift-nav--feedback" hidefocus="true" gaevent="survey/floornew" href="http://suzhousz.meituan.com/feedback/default/serach"><i></i><span>意见反馈</span></a></div>
+</div>
+</div>
+
 </body>
 </html>
+<!-- 获取浏览记录 -->
+<script type="text/javascript">
+    cookieajax();
+    function cookieajax(){
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('Index/displayHistory?id='.$data['goods_id']); ?>",
+            dataType : "json",
+            success : function(data)
+            {
+                if(data!=0){
+                    var tophtml = '';
+                    $(data).each(function(k,v){
+                        var h = "<{:U('Home/Index/deal/id', '', FALSE)}>/"+v.goods_id;
+                        tophtml += '<ul data-mttcode="Arecent" id="yui_3_16_0_1_1468227379514_3635"><li class="dropdown-menu__item" id="yui_3_16_0_1_1468227379514_3634"><a class="deal-link" href="'+h+'" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0"><img class="deal-cover" src="#" width="80" height="50"></a><h5 class="deal-title" id="yui_3_16_0_1_1468227379514_3633"><a class="deal-link" href="'+h+'" title="'+v.goods_name+'" target="_blank" rel="nofollow" gaevent="nav/browsingHistory/0" id="yui_3_16_0_1_1468227379514_3632" data-mod-mtt="1.shop/default.0.0.iqhso8jg">'+v.goods_name+'</a></h5><a class="deal-price-w" target="_blank" href="" gaevent="nav/browsingHistory/0"><em class="deal-price">¥'+v.goods_promotion_price+'</em><span class="old-price color-weaken">'+v.goods_price+'</span></a></li></ul>';
+                    });
+                    tophtml+='<p id="J-clear-my-history" class="clear"><a class="clear__btn" href="javascript:void(0)" onclick="deldisplayHistory()">清空最近浏览记录</a></p>';
+                    $('#J-my-history-menu').html(tophtml);
+                }
+            }
+        });
+    }
+
+
+    //清空cookie浏览记录
+    function  deldisplayHistory(){
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('Index/deldisplayHistory'); ?>",
+            success : function(data){
+                if(data){
+                    html = '<li class="history-list__item" target="_blank" ref="nofollow"><h5><a href="#" title="" target="_blank" ref="nofollow"></a></h5><p><em class="price"></em><span class="default-price"><del></del></span></p></li>';
+                }else{
+                    html = '未删除成功！';
+                }
+                $('#display_history').html(html);
+                var tophtml = '<p class="dropdown-menu--empty">暂无浏览记录</p>';
+                $('#J-my-history-menu').html(tophtml);
+            }
+        });
+    }
+</script>
