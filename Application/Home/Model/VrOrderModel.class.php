@@ -11,6 +11,21 @@ class VrOrderModel extends Model {
         $insert = $this->data($data)->add();
         return $insert;
     }
+
+
+    /**
+     * 获取订单
+     */
+    public function getOrder($condition = array(),$fields = '*',$order = array()){
+        $order_info = $this->field($fields)->where($condition)->order($order)->find();
+        if(empty($order_info)){
+            return array();
+        }
+
+        return $order_info;
+    }
+
+
 }
 
 

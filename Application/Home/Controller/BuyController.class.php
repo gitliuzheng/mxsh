@@ -32,18 +32,29 @@ class BuyController extends CommonController {
         //电脑用1，手机用2
         $_POST['order_from'] = 1;
 
-        $result1 = $this->buyStep2($_POST,$this->vr_member_id);
-        if (!$result1['state']) {
-            $this->error($result1['msg']);
+        $result = $this->buyStep2($_POST,$this->vr_member_id);
+        if (!$result['state']) {
+            $this->error($result['msg']);
         }
-        //转向到商城支付页面
-        echo "<script>window.location.href='/index.php/Home/Buy/pay_index'</script>";
+
+        //跳到支付页面
+        if($result['data']['order_id']){
+            echo "<script>window.location.href='/index.php/Home/Buy/pay_index/order_id/".
+                $result['data']['order_id']
+                ."';</script>";
+        }
 
     }
 
-    //显示支付页面
-    public function pay_index(){
 
+    public function pay_index(){
+        //根据订单ID获取订单
+        $model_VrOrder = D("VrOrder");
+        $where = array();
+        $where['order_id'] = $_GET['order_id'];
+        $VrOrder = $model_VrOrder->getOrder($where);
+
+        $this->assign("VrOrder",$VrOrder);
         //样式标记
         $this->assign("buy_step","buy_step2");
         $this->display("buy_step2");
